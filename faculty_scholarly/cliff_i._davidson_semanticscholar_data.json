@@ -1,0 +1,102 @@
+{
+  "name": "C. Davidson",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 8552,
+  "h_index": 54,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Airborne Particulate Matter and Human Health: A Review",
+      "year": 2005,
+      "abstract": "Results of recent research show that particulate matter (PM) composition and size vary widely with both space and time. Despite the variability in PM characteristics, which are believed to influence human health risks, the observed relative health risk estimates per unit PM mass falls within a narrow range of values. Furthermore, no single chemical species appears to dominate health effects; rather the effects appear to be due to a combination of species. Non-PM factors such as socioeconomic status and lifestyle are also believed to affect the health risk, although accounting for these confounding factors is challenging. Airborne PM is also responsible for a number of effects aside from human health, such as alterations in visibility and climate. Because the PM problem is associated with a range of societal issues such as energy production and economic development, making progress on reducing the effects of PM will require integrated strategies that bring together scientists and decision makers from different disciplines to consider tradeoffs holistically.",
+      "venue": "",
+      "citations": 770,
+      "authors": [
+        "C. Davidson",
+        "R. Phalen",
+        "P. Solomon"
+      ],
+      "url": "https://www.semanticscholar.org/paper/164dce5d2b608f031398cf716bb6983ec0a54fff"
+    },
+    {
+      "title": "Dry Deposition of Particles and Vapors",
+      "year": 1990,
+      "abstract": null,
+      "venue": "",
+      "citations": 169,
+      "authors": [
+        "C. Davidson",
+        "Yee-Lin Wu"
+      ],
+      "url": "https://www.semanticscholar.org/paper/8a374029a0975cf29180838e6d02a4bd7828a6f3"
+    },
+    {
+      "title": "Dry deposition of sulfate onto surrogate surfaces",
+      "year": 1985,
+      "abstract": "Measurements of SO42− fluxes to surrogate surfaces have been conducted as part of the Dry Deposition Intercomparison Study in Champaign, Illinois. Data for Teflon plates without rims and for polycarbonate petri dishes with 1-cm rims have been obtained and compared with data for Teflon sheets and polyethylene dustfall buckets used by other investigators. Results show that deposition velocities for the Teflon plates are in the range of 0.17–0.42 cm/s, while corresponding values for the petri dishes are in the range of 0.18–0.61 cm/s. Comparisons among the four types of surrogate surfaces show deposition velocities which increase in the order Teflon sheets ∼ Teflon plates < petri dishes < dustfall buckets. Differences in collector geometry as well as composition are responsible for these trends. Airborne size distribution data obtained during the study show that much of the SO42− mass is associated with particles of 0.5–1-μm aerodynamic diameter. However, using the size distributions as inputs to dry deposition models in the literature suggests that larger particles are responsible for most of the SO42− mass deposition onto the surrogate surfaces. The calculated values for natural grass surfaces are in reasonable agreement with measured deposition velocities onto the petri dishes. Overall, the results of this study suggest that inertial impaction and sedimentation of supermicron airborne particles are more important than deposition of submicron material in influencing total SO42− mass deposition onto surrogate surfaces and onto natural vegetation at this site.",
+      "venue": "",
+      "citations": 132,
+      "authors": [
+        "C. Davidson",
+        "S. Lindberg",
+        "Jill A. Schmidt",
+        "L. Cartwright",
+        "Laurence R. Landis"
+      ],
+      "url": "https://www.semanticscholar.org/paper/b8751a264dc777790c9c89ba0a3b53e752154c4e"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "An international comparative analysis of sustainability transformation across seven universities",
+      "year": 2008,
+      "abstract": "Purpose – The purpose of this paper is to identify the key aspects of transformation of universities towards sustainability, such as the ideal characteristics of the “sustainable university”, and the drivers and barriers in the transformation, by comparing the strategies of seven universities world-wide. \nDesign/methodology/approach – A systems transformation analysis of seven case studies has been applied through a self-evaluation based on the tridimensional Framework-Level-Actors (FLA) method. \nFindings – The study shows that none of the three dimensions of change is predominant over the others. The main barrier to be overcome is the lack of incentive structure for promoting changes at the individual level. The main drivers for change are the presence of “connectors” with society, the existence of coordination bodies and projects, and the availability of funding, all of which are important for progress. Enhancing interdisciplinarity is a strategic objective at almost all of these universities, while transformative learning is less present. A common characteristic for most of the institutions is establishing and supporting networks of expertise within the universities. These universities show important strategic efforts and initiatives that drive and nucleate change for sustainable development, the result of a combination of drivers. \nPractical implications – The FLA-method has proved useful for being used at the level of comparing case-studies through a bird’s-eye perspective. \nOriginality/value – The paper demonstrates the application of a simple tool that gives a global perspective on transformational strategies used in seven cases world-wide in the search for commonalities and differences.",
+      "venue": "",
+      "citations": 363,
+      "authors": [
+        "D. Ferrer-Balas",
+        "Jun Adachi",
+        "S. Banas",
+        "C. Davidson",
+        "A. Hoshikoshi",
+        "A. Mishra",
+        "Y. Motodoa",
+        "M. Onga",
+        "M. Ostwald"
+      ],
+      "url": "https://www.semanticscholar.org/paper/15e8852eafbafa1b92b437173c44176a6d43665a"
+    },
+    {
+      "title": "Airborne reduced nitrogen: ammonia emissions from agriculture and other sources.",
+      "year": 2003,
+      "abstract": null,
+      "venue": "Environment International",
+      "citations": 216,
+      "authors": [
+        "Natalie Anderson",
+        "R. Strader",
+        "C. Davidson"
+      ],
+      "url": "https://www.semanticscholar.org/paper/072711120aeefe57de3c16732c303fb5b4f24a77"
+    },
+    {
+      "title": "Sulfate and Nitrate Concentrations from a South Greenland Ice Core",
+      "year": 1986,
+      "abstract": "An ice core in south Greenland covering the period 1869 to 1984 was analyzed for oxygen isotopes and chloride, nitrate, and sulfate concentrations. The data show that the \"excess\" (nonsea-salt) sulfate concentration has tripled since approximately 1900 to 1910 and the nitrate concentration has doubled since approximately 1955. The increases may be attributable to the deposition of these chemical specis from air masses carrying North American and Eurasian anthropogenic emissions.",
+      "venue": "Science",
+      "citations": 214,
+      "authors": [
+        "P. Mayewski",
+        "W. Lyons",
+        "M. Spencer",
+        "M. Twickler",
+        "W. Dansgaard",
+        "B. Koci",
+        "C. Davidson",
+        "R. Honrath"
+      ],
+      "url": "https://www.semanticscholar.org/paper/104a17ae09cd105c189b13389d0f7ba3c6369beb"
+    }
+  ]
+}

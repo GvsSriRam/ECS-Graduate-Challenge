@@ -1,0 +1,108 @@
+{
+  "name": "Era Jain",
+  "affiliation": "Assistant Professor, Syracuse University",
+  "interests": [
+    "Tissue engineering",
+    "biomaterials",
+    "Drug delivery"
+  ],
+  "citedby": 1512,
+  "h_index": 23,
+  "i10_index": 28,
+  "top_primary_author_publications": [
+    {
+      "title": "Upstream processes in antibody production: evaluation of critical parameters",
+      "year": 2008,
+      "abstract": "The demand for monoclonal antibody for therapeutic and diagnostic applications is rising constantly which puts up a need to bring down the cost of its production. In this context it becomes a prerequisite to improve the efficiency of the existing processes used for monoclonal antibody production. This review describes various upstream processes used for monoclonal antibody production and evaluates critical parameters and efforts which are being made to enhance the efficiency of the process. The upstream technology has tremendously been upgraded from host cells used for manufacturing to bioreactors type and capacity. The host cells used range from microbial, mammalian to plant cells with mammalian cells dominating the scenario. Disposable bioreactors are being promoted for small scale production due to easy adaptation to process validation and flexibility, though they are limited by the scale of production …",
+      "venue": "",
+      "citations": 182,
+      "authors": [
+        "Era Jain",
+        "Ashok Kumar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "The physical characterization of supermacroporous poly (N-isopropylacrylamide) cryogel: mechanical strength and swelling/de-swelling kinetics",
+      "year": 2007,
+      "abstract": "Poly(N-isopropylacrylamide) [poly(NiPAAm)] and poly(acrylamide) [poly(AAm)] cryogels were synthesized by radical polymerization at −12°C for 12h using monomers of N-isopropylacrylamide (NiPAAm) and acrylamide (AAm) with N,N-methylene bisacrylamide (MBAAm) as cross-linking agent, respectively. The cryogels synthesized in freezing conditions provided spongy, elastic and supermacroporous character as compared to the hydrogels synthesized at ambient temperatures. Our earlier observations revealed that the elastic deformation of cryogels either by external forces (mechanical deformation) or internal forces (shrinkage-swelling of poly(NiPAAm) cryogels) led to detachment of affinity bound bioparticles to these gels, which promises great potential in understanding cell interactions on elastic matrices [M.B. Dainiak, A. Kumar, I.Y. Galaev, B. Mattiasson, Proc. Natl. Acad. Sci. U.S.A. 103 (2006) 849–854 …",
+      "venue": "Materials Science and Engineering: A",
+      "citations": 105,
+      "authors": [
+        "Akshay Srivastava",
+        "Era Jain",
+        "Ashok Kumar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Design of electrohydrodynamic sprayed polyethylene glycol hydrogel microspheres for cell encapsulation",
+      "year": 2017,
+      "abstract": "Electrohydrodynamic spraying (EHS) has recently gained popularity for microencapsulation of cells for applications in cell delivery and tissue engineering. Some of the polymers compatible with EHS are alginate, chitosan, and other similar natural polymers, which are subject to ionotropic or physical gelation. It is desirable to further extend the use of the EHS technique beyond such polymers for wider biofabrication applications. Here, building upon our previous work of making PEG microspheres via EHS, we utilized the principles of EHS to fabricate cell-laden polyethylene glycol (PEG) hydrogel microspheres. The gelation of PEG hydrogel microspheres was achieved by forming covalent crosslinks between multiarm PEG acrylate and dithiol crosslinkers via Michael-type addition. We conducted a detailed investigation of the critical parameters of EHS, such as the applied voltage, inner needle diameter (id needle …",
+      "venue": "Biofabrication",
+      "citations": 86,
+      "authors": [
+        "Anisa S Qayyum",
+        "Era Jain",
+        "Grant Kolar",
+        "Yonghyun Kim",
+        "Scott A Sell",
+        "Silviya P Zustiak"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Bilayer cryogel wound dressing and skin regeneration grafts for the treatment of acute skin wounds",
+      "year": 2016,
+      "abstract": "In this study, the potential of cryogel bilayer wound dressing and skin regenerating graft for the treatment of surgically created full thickness wounds was evaluated. The top layer was composed of polyvinylpyrrolidone-iodine (PVP-I) cryogel and served as the antiseptic layer, while the bottom regenerative layer was made using gelatin cryogel. Both components of the bilayer showed typical features of a cryogel interconnected macropore network, rapid swelling, high water uptake capacity of about 90%. Both PVP and gelatin cryogel showed high tensile strength of 45 and 10 kPa, respectively. Gelatin cryogel sheets were essentially elastic and could be stretched without any visible deformation. The antiseptic PVP-I layer cryogel sheet showed sustained iodine release and suppressed microbial growth when tested with skin pathogens (zone of inhibition ∼2 cm for sheet of 0.9 cm diameter). The gelatin cryogel sheet …",
+      "venue": "ACS applied materials & interfaces",
+      "citations": 125,
+      "authors": [
+        "S Geetha Priya",
+        "Ankur Gupta",
+        "Era Jain",
+        "Joyita Sarkar",
+        "Apeksha Damania",
+        "Pankaj R Jagdale",
+        "Bhushan P Chaudhari",
+        "Kailash C Gupta",
+        "Ashok Kumar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Whispering gallery mode resonator sensor for in situ measurements of hydrogel gelation",
+      "year": 2018,
+      "abstract": "Whispering gallery mode (WGM) resonators are compact and ultrasensitive devices, which enable label-free sensing at the single-molecule level. Despite their high sensitivity, WGM resonators have not been thoroughly investigated for use in dynamic biochemical processes including molecular diffusion and polymerization. In this work, the first report of using WGM sensors to continuously monitor a chemical reaction (i.e. gelation) in situ in a hydrogel is described. Specifically, we monitor and quantify the gelation dynamics of polyacrylamide hydrogels using WGM resonators and compare the results to an established measurement method based on rheology. Rheology measures changes in viscoelasticity, while WGM resonators measure changes in refractive index. Different gelation conditions were studied by varying the total monomer concentration and crosslinker concentration of the hydrogel precursor solution …",
+      "venue": "Optics express",
+      "citations": 50,
+      "authors": [
+        "Steven H Huang",
+        "Saahil Sheth",
+        "Era Jain",
+        "Xuefeng Jiang",
+        "Silviya P Zustiak",
+        "Lan Yang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A comparison of cryogel scaffolds to identify an appropriate structure for promoting bone regeneration",
+      "year": 2016,
+      "abstract": "To create an ideal graft substitute for regenerating bone, the scaffold should possess osteoconductive, osteoinductive, and osteogenic properties. Hydrogels are a very common scaffold, but the mechanical integrity and nanoporous structure are not advantageous for bone regeneration. Cryogelation is a technique in which the controlled freezing and thawing of a polymer creates a spongy, macroporous structure with ideal structural characteristics and promising mechanical stability. Hydrogels and cryogels of three different materials (chitosan–gelatin, N-vinyl-2-pyrrolidone, and silk fibroin (SF)) were compared to assess the optimal material and form of scaffold for this application. Cryogel and hydrogel structures were tested in parallel to evaluate porosity, swelling, mechanical integrity, cellular infiltration, and mineralization potential. Cryogels proved superior to hydrogels based on swelling potential and mechanical …",
+      "venue": "Biomedical Physics & Engineering Express",
+      "citations": 50,
+      "authors": [
+        "KR Hixon",
+        "CT Eberlin",
+        "PU Kadakia",
+        "SH McBride-Gagyi",
+        "E Jain",
+        "SA Sell"
+      ],
+      "url": ""
+    }
+  ]
+}

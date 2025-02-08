@@ -1,0 +1,45 @@
+{
+  "name": "Gabriela C. Bermudez",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 3,
+  "h_index": 1,
+  "i10_index": 0,
+  "top_primary_author_publications": [],
+  "top_secondary_author_publications": [
+    {
+      "title": "Biological Effects of Modifications of the Englerin A Glycolate.",
+      "year": 2022,
+      "abstract": "Modifications at the glycolate moiety of englerin A were made to explore variations at the most sensitive site on the molecule for activity in the NCI 60 screen, wherein englerin A is highly potent and selective for renal cancer cells. Replacement of the glycolate by other functionalities as well as esterification of the glycolate hydroxyl yielded compounds which displayed excellent selectivity and potency compared with the natural product. TRPC4/5 ion channel experiments with five compounds showed delayed or reduced agonism with TRPC5, at much higher concentrations than englerin A. With TRPC4, these compounds all had no effect at 10 μM. The same compounds were not detectable in mouse serum after a single oral dose of 12.5 mg/kg. At 100 mg/kg p.o., no toxicity was observed, and blood levels were barely detectable. Intravenous administration led to toxicity but at substantially lower doses than for englerin A.",
+      "venue": "ACS Medicinal Chemistry Letters",
+      "citations": 3,
+      "authors": [
+        "Sarath P. D. Seenadera",
+        "Sa Long",
+        "R. Akee",
+        "Gabriela C. Bermudez",
+        "Gregory Parsonage",
+        "J. Strope",
+        "C. Peer",
+        "W. Figg",
+        "K. A. Parker",
+        "D. Beech",
+        "J. Beutler"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a7773bd34e5d01dfee59668bf3d3373fb3b1530b"
+    },
+    {
+      "title": "Multi-gram-scale synthesis of a versatile syn-anti stereotriad by a short and cost-effective route",
+      "year": 2019,
+      "abstract": "The polyketide family of natural products includes numerous biologically important molecules that exhibit a variety of complex structures. The biosynthesis of these diverse structures relies on the iterative assembly of individual segments controlled by the enzymes of the polyketide synthase (PKS) family. In the synthesis laboratory, access to stereospecifically-prepared ketide building blocks can be both challenging and cost-limiting. We report an efficient, multigram-scale synthesis of the syn-anti synthon (2 S ,3 R ,4 S )( E )-6-cyclohexyl-3- [(4-methoxybenzyl)oxy]-2,4-dimethylhex-5-en-1-ol from the commercially available cyclohexane-carboxaldehyde in excellent overall yield and purity.",
+      "venue": "ARKIVOC",
+      "citations": 0,
+      "authors": [
+        "David J. Galler",
+        "Gabriela C. Bermudez",
+        "K. A. Parker"
+      ],
+      "url": "https://www.semanticscholar.org/paper/5c5801649d289fe829c37186789542c59bd6babc"
+    }
+  ]
+}

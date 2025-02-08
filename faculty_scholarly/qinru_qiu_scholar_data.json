@@ -1,0 +1,127 @@
+{
+  "name": "Qinru Qiu",
+  "affiliation": "Professor of Computer Engineering, Syracuse University",
+  "interests": [
+    "Neuromorphic Computing",
+    "Energy Efficient Computing",
+    "System-on-chip"
+  ],
+  "citedby": 7293,
+  "h_index": 45,
+  "i10_index": 100,
+  "top_primary_author_publications": [
+    {
+      "title": "Dynamic power management based on continuous-time Markov decision processes",
+      "year": 1999,
+      "abstract": "This paper introduces a continuous-time, controllable Markov process model of a power-managed system. The system model is composed of the corresponding stochastic models of the service queue and the service provider. The system environment is modeled by a stochastic service request process. The problem of dynamic power management in such a system is formulated as a policy optimization problem and solved using an efficient “policy iteration” algorithm. Compared to previous work on dynamic power management, our formulation allows better modeling of the various system components, the power-managed system as a whole, and its environment. In addition it captures dependencies between the service queue and service provider status. Finally, the resulting power management policy is asynchronous, hence it is more power-efficient and more useful in practice. Experimental results demonstrate the …",
+      "venue": "",
+      "citations": 371,
+      "authors": [
+        "Qinru Qiu",
+        "Massoud Pedram"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Stochastic modeling of a power-managed system: construction and optimization",
+      "year": 1999,
+      "abstract": "The goal of a dynamic power management policy is to reduce the power consumption of an electronic system by putting system components into dtflerent states, each representing certain pevormance and power consumption level. The policy determines the type and timing of these transitions based on the system history, workload and pe $ ormance constraints. In this paper, we propose a new abstract model of a power-managed electronic system, We formulate the problem of system-level power management as a controlled optimization problem based on the theories of continuous-time Markov decision processes and stochastic networks. This problem is solved exactly and eficiently using a “‘policy iteration” approach. Our method is compared with existing heuristic approaches for different workload statistics. Experimental results show that power management method based on Markov decision process …",
+      "venue": "",
+      "citations": 213,
+      "authors": [
+        "Qinru Qiu",
+        "Qing Wu",
+        "Massoud Pedram"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Energy aware dynamic voltage and frequency selection for real-time systems with energy harvesting",
+      "year": 2008,
+      "abstract": "In this paper, an energy aware dynamic voltage and frequency selection (EA-DVFS) algorithm is proposed. The EA-DVFS algorithm adjusts the processor's behavior depending on the summation of the stored energy and the harvested energy in a future duration. Specifically, if the system has sufficient energy, tasks are executed at full speed; otherwise, the processor slows down task execution to save energy. Simulation results show that when the utilization is low, the EA-DVFS algorithm gives a deadline miss rate that is at least 50% lower than the one given by the lazy scheduling policy. Similarly, when the workload is low, the minimum storage size is reduced by at least 25%.",
+      "venue": "",
+      "citations": 144,
+      "authors": [
+        "Shaobo Liu",
+        "Qinru Qiu",
+        "Qing Wu"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "CirCNN: accelerating and compressing deep neural networks using block-circulant weight matrices",
+      "year": 2017,
+      "abstract": "Large-scale deep neural networks (DNNs) are both compute and memory intensive. As the size of DNNs continues to grow, it is critical to improve the energy efficiency and performance while maintaining accuracy. For DNNs, the model size is an important factor affecting performance, scalability and energy efficiency. Weight pruning achieves good compression ratios but suffers from three drawbacks: 1) the irregular network structure after pruning, which affects performance and throughput; 2) the increased training complexity; and 3) the lack of rigirous guarantee of compression ratio and inference accuracy.To overcome these limitations, this paper proposes CirCNN, a principled approach to represent weights and process neural networks using block-circulant matrices. CirCNN utilizes the Fast Fourier Transform (FFT)-based fast multiplication, simultaneously reducing the computational complexity (both in …",
+      "venue": "",
+      "citations": 346,
+      "authors": [
+        "Caiwen Ding",
+        "Siyu Liao",
+        "Yanzhi Wang",
+        "Zhe Li",
+        "Ning Liu",
+        "Youwei Zhuo",
+        "Chao Wang",
+        "Xuehai Qian",
+        "Yu Bai",
+        "Geng Yuan",
+        "Xiaolong Ma",
+        "Yipeng Zhang",
+        "Jian Tang",
+        "Qinru Qiu",
+        "Xue Lin",
+        "Bo Yuan"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A hierarchical framework of cloud resource allocation and power management using deep reinforcement learning",
+      "year": 2017,
+      "abstract": "Automatic decision-making approaches, such as reinforcement learning (RL), have been applied to (partially) solve the resource allocation problem adaptively in the cloud computing system. However, a complete cloud resource allocation framework exhibits high dimensions in state and action spaces, which prohibit the usefulness of traditional RL techniques. In addition, high power consumption has become one of the critical concerns in design and control of cloud computing systems, which degrades system reliability and increases cooling cost. An effective dynamic power management (DPM) policy should minimize power consumption while maintaining performance degradation within an acceptable level. Thus, a joint virtual machine (VM) resource allocation and power management framework is critical to the overall cloud computing system. Moreover, novel solution framework is necessary to address the even …",
+      "venue": "2017 IEEE 37th international conference on distributed computing systems (ICDCS)",
+      "citations": 346,
+      "authors": [
+        "Ning Liu",
+        "Zhe Li",
+        "Jielong Xu",
+        "Zhiyuan Xu",
+        "Sheng Lin",
+        "Qinru Qiu",
+        "Jian Tang",
+        "Yanzhi Wang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Reinforcement learning with analogue memristor arrays",
+      "year": 2019,
+      "abstract": "Reinforcement learning algorithms that use deep neural networks are a promising approach for the development of machines that can acquire knowledge and solve problems without human input or supervision. At present, however, these algorithms are implemented in software running on relatively standard complementary metal–oxide–semiconductor digital platforms, where performance will be constrained by the limits of Moore’s law and von Neumann architecture. Here, we report an experimental demonstration of reinforcement learning on a three-layer 1-transistor 1-memristor (1T1R) network using a modified learning algorithm tailored for our hybrid analogue–digital platform. To illustrate the capabilities of our approach in robust in situ training without the need for a model, we performed two classic control problems: the cart–pole and mountain car simulations. We also show that, compared with conventional …",
+      "venue": "Nature electronics",
+      "citations": 344,
+      "authors": [
+        "Zhongrui Wang",
+        "Can Li",
+        "Wenhao Song",
+        "Mingyi Rao",
+        "Daniel Belkin",
+        "Yunning Li",
+        "Peng Yan",
+        "Hao Jiang",
+        "Peng Lin",
+        "Miao Hu",
+        "John Paul Strachan",
+        "Ning Ge",
+        "Mark Barnell",
+        "Qing Wu",
+        "Andrew G Barto",
+        "Qinru Qiu",
+        "R Stanley Williams",
+        "Qiangfei Xia",
+        "J Joshua Yang"
+      ],
+      "url": ""
+    }
+  ]
+}

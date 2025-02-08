@@ -1,0 +1,113 @@
+{
+  "name": "Yuzhe Tang",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "cyber-security",
+    "distributed systems",
+    "blockchains",
+    "ethereum",
+    "defi"
+  ],
+  "citedby": 1667,
+  "h_index": 22,
+  "i10_index": 34,
+  "top_primary_author_publications": [
+    {
+      "title": "Privacy-preserving GWAS analysis on federated genomic datasets",
+      "year": 2015,
+      "abstract": "The biomedical community benefits from the increasing availability of genomic data to support meaningful scientific research, e.g., Genome-Wide Association Studies (GWAS). However, high quality GWAS usually requires a large amount of samples, which can grow beyond the capability of a single institution. Federated genomic data analysis holds the promise of enabling cross-institution collaboration for effective GWAS, but it raises concerns about patient privacy and medical information confidentiality (as data are being exchanged across institutional boundaries), which becomes an inhibiting factor for the practical use.We present a privacy-preserving GWAS framework on federated genomic datasets. Our method is to layer the GWAS computations on top of secure multi-party computation (MPC) systems. This approach allows two …",
+      "venue": "BMC medical informatics and decision making",
+      "citations": 88,
+      "authors": [
+        "Scott D Constable",
+        "Yuzhe Tang",
+        "Shuang Wang",
+        "Xiaoqian Jiang",
+        "Steve Chapin"
+      ],
+      "url": ""
+    },
+    {
+      "title": "LIGHT: A query-efficient yet low-maintenance indexing scheme over DHTs",
+      "year": 2009,
+      "abstract": "DHT is a widely used building block for scalable P2P systems. However, as uniform hashing employed in DHTs destroys data locality, it is not a trivial task to support complex queries (e.g., range queries and k-nearest-neighbor queries) in DHT-based P2P systems. In order to support efficient processing of such complex queries, a popular solution is to build indexes on top of the DHT. Unfortunately, existing over-DHT indexing schemes suffer from either query inefficiency or high maintenance cost. In this paper, we propose LIGhtweight Hash Tree (LIGHT)—a query-efficient yet low-maintenance indexing scheme. LIGHT employs a novel naming mechanism and a tree summarization strategy for graceful distribution of its index structure. We show through analysis that it can support various complex queries with near-optimal performance. Extensive experimental results also demonstrate that, compared with state of the …",
+      "venue": "IEEE Transactions on Knowledge and Data Engineering",
+      "citations": 65,
+      "authors": [
+        "Yuzhe Tang",
+        "Shuigeng Zhou",
+        "Jianliang Xu"
+      ],
+      "url": ""
+    },
+    {
+      "title": "ChainFS: Blockchain-secured cloud storage",
+      "year": 2018,
+      "abstract": "This work presents ChainFS, a middleware system that secures cloud storage services using a minimally trusted Blockchain. ChainFS hardens the cloud-storage security against forking attacks. The ChainFS middleware exposes a file-system interface to end users. Internally, ChainFS stores data files in the cloud and exports minimal and necessary functionalities to the Blockchain for key distribution and file operation logging. We implement the ChainFS system on Ethereum and S3FS and closely integrate it with FUSE clients and Amazon S3 cloud storage. We measure the system performance and demonstrate low overhead.",
+      "venue": "2018 IEEE 11th international conference on cloud computing (CLOUD)",
+      "citations": 51,
+      "authors": [
+        "Yuzhe Tang",
+        "Qiwu Zou",
+        "Ju Chen",
+        "Kai Li",
+        "Charles A Kamhoua",
+        "Kevin Kwiat",
+        "Laurent Njilla"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Vfchain: Enabling verifiable and auditable federated learning via blockchain systems",
+      "year": 2021,
+      "abstract": "Advanced artificial intelligence techniques, such as federated learning, has been applied to broad areas, e.g., image classification, speech recognition, smart city, and healthcare. Despite intensive research on federated learning, existing schemes are vulnerable to attacks and can hardly meet the security requirements for real-world applications. The problem of designing a secure federated learning framework to ensure the correctness of training procedure has not been sufficiently studied and remains open. In this paper, we propose VFChain, a verifiable and auditable federated learning framework based on the blockchain system. First, to provide the verifiability, a committee is selected through the blockchain to collectively aggregate models and record verifiable proofs in the blockchain. Then, to provide the auditability, a novel authenticated data structure is proposed for blockchain to improve the search efficiency …",
+      "venue": "IEEE Transactions on Network Science and Engineering",
+      "citations": 183,
+      "authors": [
+        "Zhe Peng",
+        "Jianliang Xu",
+        "Xiaowen Chu",
+        "Shang Gao",
+        "Yuan Yao",
+        "Rong Gu",
+        "Yuzhe Tang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "HEALER: homomorphic computation of ExAct Logistic rEgRession for secure rare disease variants analysis in GWAS",
+      "year": 2016,
+      "abstract": " Motivation: Genome-wide association studies (GWAS) have been widely used in discovering the association between genotypes and phenotypes. Human genome data contain valuable but highly sensitive information. Unprotected disclosure of such information might put individual’s privacy at risk. It is important to protect human genome data. Exact logistic regression is a bias-reduction method based on a penalized likelihood to discover rare variants that are associated with disease susceptibility. We propose the HEALER framework to facilitate secure rare variants analysis with a small sample size. Results: We target at the algorithm design aiming at reducing the computational and storage costs to learn a homomorphic exact logistic regression model (i.e. evaluate P-values of coefficients), where the circuit depth is proportional to the logarithmic scale of data size. We evaluate the algorithm …",
+      "venue": "Bioinformatics",
+      "citations": 167,
+      "authors": [
+        "Shuang Wang",
+        "Yuchen Zhang",
+        "Wenrui Dai",
+        "Kristin Lauter",
+        "Miran Kim",
+        "Yuzhe Tang",
+        "Hongkai Xiong",
+        "Xiaoqian Jiang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Gem^ 2-tree: A gas-efficient structure for authenticated range queries in blockchain",
+      "year": 2019,
+      "abstract": "Blockchain technology has attracted much attention due to the great success of the cryptocurrencies. Owing to its immutability property and consensus protocol, blockchain offers a new solution for trusted storage and computation services. To scale up the services, prior research has suggested a hybrid storage architecture, where only small meta-data are stored onchain and the raw data are outsourced to off-chain storage. To protect data integrity, a cryptographic proof can be constructed online for queries over the data stored in the system. However, the previous schemes only support simple key-value queries. In this paper, we take the first step toward studying authenticated range queries in the hybrid-storage blockchain. The key challenge lies in how to design an authenticated data structure (ADS) that can be efficiently maintained by the blockchain, in which a unique gas cost model is employed. By analyzing …",
+      "venue": "2019 IEEE 35th international conference on data engineering (ICDE)",
+      "citations": 163,
+      "authors": [
+        "Ce Zhang",
+        "Cheng Xu",
+        "Jianliang Xu",
+        "Yuzhe Tang",
+        "Byron Choi"
+      ],
+      "url": ""
+    }
+  ]
+}

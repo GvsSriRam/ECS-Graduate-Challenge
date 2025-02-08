@@ -1,0 +1,112 @@
+{
+  "name": "Teng Zeng",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Aquatic Photochemistry",
+    "Non-Targeted Analysis",
+    "Wastewater Surveillance"
+  ],
+  "citedby": 2915,
+  "h_index": 31,
+  "i10_index": 41,
+  "top_primary_author_publications": [
+    {
+      "title": "Pesticide Photolysis in Prairie Potholes: Probing Photosensitized Processes",
+      "year": 2013,
+      "abstract": "Prairie pothole lakes (PPLs) are glacially derived, ecologically important water bodies found in central North America and represent a unique setting in which extensive agriculture occurs within wetland ecosystems. In the Prairie Pothole Region (PPR), elevated pesticide use and increasing hydrologic connectivity have raised concerns about the impact of nonpoint source agricultural pollution on the water quality of PPLs and downstream aquatic systems. Despite containing high dissolved organic matter (DOM) levels, the photoreactivity of the PPL water and the photochemical fate of pesticides entering PPLs are largely unknown. In this study, the photodegradation of sixteen pesticides was investigated in PPL waters sampled from North Dakota, under simulated and natural sunlight. Enhanced pesticide removal rates in the irradiated PPL water relative to the control buffer pointed to the importance of indirect …",
+      "venue": "Environmental Science & Technology",
+      "citations": 268,
+      "authors": [
+        "Teng Zeng",
+        "William A Arnold"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Enhanced Formation of Disinfection Byproducts in Shale Gas Wastewater-Impacted Drinking Water Supplies",
+      "year": 2014,
+      "abstract": "The disposal and leaks of hydraulic fracturing wastewater (HFW) to the environment pose human health risks. Since HFW is typically characterized by elevated salinity, concerns have been raised whether the high bromide and iodide in HFW may promote the formation of disinfection byproducts (DBPs) and alter their speciation to more toxic brominated and iodinated analogues. This study evaluated the minimum volume percentage of two Marcellus Shale and one Fayetteville Shale HFWs diluted by fresh water collected from the Ohio and Allegheny Rivers that would generate and/or alter the formation and speciation of DBPs following chlorination, chloramination, and ozonation treatments of the blended solutions. During chlorination, dilutions as low as 0.01% HFW altered the speciation toward formation of brominated and iodinated trihalomethanes (THMs) and brominated haloacetonitriles (HANs), and dilutions …",
+      "venue": "Environmental Science & Technology",
+      "citations": 221,
+      "authors": [
+        "Kimberly M Parker",
+        "Teng Zeng",
+        "Jennifer Harkness",
+        "Avner Vengosh",
+        "William Armistead Mitch"
+      ],
+      "url": ""
+    },
+    {
+      "title": "N-Nitrosamines and Halogenated Disinfection Byproducts in US Full Advanced Treatment Trains for Potable Reuse",
+      "year": 2016,
+      "abstract": "Water utilities are increasingly considering indirect and direct potable reuse of municipal wastewater effluents. Disinfection byproducts (DBPs), particularly N-nitrosamines, are key contaminants of potential health concern for potable reuse. This study quantified the concentrations of N-nitrosamines and a suite of regulated and unregulated halogenated DBPs across five U.S. potable reuse Full Advanced Treatment trains incorporating microfiltration, reverse osmosis, and UV-based advanced oxidation. Low μg/L concentrations of trihalomethanes, haloacetic acids, dichloroacetonitrile, and dichloroacetamide were detected in the secondary or tertiary wastewater effluents serving as influents to potable reuse treatment trains, while the concentrations of N-nitrosamines were more variable (e.g., <2–320 ng/L for N-nitrosodimethylamine). Ozonation promoted the formation of N-nitrosamines, haloacetaldehydes, and …",
+      "venue": "Water Research",
+      "citations": 217,
+      "authors": [
+        "Teng Zeng",
+        "Michael J Plewa",
+        "William A Mitch"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Co-quantification of crAssphage Increases Confidence in Wastewater-Based Epidemiology for SARS-CoV-2 in Low Prevalence Areas",
+      "year": 2021,
+      "abstract": "Wastewater surveillance of SARS-CoV-2 RNA is increasingly being incorporated into public health efforts to respond to the COVID-19 pandemic. In order to obtain the maximum benefit from these efforts, approaches to wastewater monitoring need to be rapid, sensitive, and relatable to relevant epidemiological parameters. In this study, we present an ultracentrifugation-based method for the concentration of SARS-CoV-2 wastewater RNA and use crAssphage, a bacteriophage specific to the human gut, to help account for RNA loss during transit in the wastewater system and sample processing. With these methods, we were able to detect, and sometimes quantify, SARS-CoV-2 RNA from 20 mL wastewater samples within as little as 4.5 hours. Using known concentrations of bovine coronavirus RNA and deactivated SARS-CoV-2, we estimate recovery rates of approximately 7-12% of viral RNA using our method …",
+      "venue": "Water Research X",
+      "citations": 129,
+      "authors": [
+        "Maxwell L Wilder",
+        "Frank Middleton",
+        "David A Larsen",
+        "Qian Du",
+        "Ariana Fenty",
+        "Teng Zeng",
+        "Tabassum Insaf",
+        "Pruthvi Kilaru",
+        "Mary Collins",
+        "Brittany Kmush",
+        "Hyatt C Green"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Quantification of SARS-CoV-2 and cross-assembly phage (crAssphage) from wastewater to monitor coronavirus transmission within communities",
+      "year": 2020,
+      "abstract": "Wastewater surveillance of SARS-CoV-2 has become an attractive tool for combating the spread of COVID-19 by assessing the presence or levels of the virus shed in a population. However, the methods to quantify viral RNA and to link those quantities to the level of infection within the community vary. In this study, we sought to identify and optimize scalable methods for recovery of viral nucleic acids from wastewater and attempted to use a constitutive member of the gut virome, human-specific crAssphage, to help account for unknown levels of SARS-CoV-2 decay and dilution in the wastewater infrastructure. Results suggest that ultracentrifugation of a small volume of wastewater through a 50% sucrose cushion followed by total nucleic acid extraction yielded quantifiable virus in an area with a modest number of COVID-19 cases. Further, the ratio of log10(SARS-CoV-2):log10(crAssphage) appears to be associated with the cumulative incidence of COVID-19 in the Syracuse, NY area. In areas where ultracentrifuges are available, these methods may be used to link SARS-CoV-2 quantities in wastewater to levels of transmission within communities with sewer service.",
+      "venue": "MedRxiv",
+      "citations": 93,
+      "authors": [
+        "Hyatt Green",
+        "Maxwell Wilder",
+        "Mary Collins",
+        "Ariana Fenty",
+        "Karen Gentile",
+        "Brittany L Kmush",
+        "Teng Zeng",
+        "Frank A Middleton",
+        "David A Larsen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Simultaneous Adsorption and Electrochemical Reduction of N-Nitrosodimethylamine Using Carbon-Ti4O7 Composite Reactive Electrochemical Membranes",
+      "year": 2018,
+      "abstract": "This study focused on synthesis and characterization of Ti4O7 reactive electrochemical membranes (REMs) amended with powder-activated carbon (PAC) or multiwalled carbon nanotubes (MWCNTs). These composite REMs were evaluated for simultaneous adsorption and electrochemical reduction of N-nitrosodimethylamine (NDMA). The carbon-Ti4O7 composite REMs had high electrical conductivities (1832 to 2991 S m–1), where carbon and Ti4O7 were in direct electrical contact. Addition of carbonaceous materials increased the residence times of NDMA in the REMs by a factor of 3.8 to 5.4 and therefore allowed for significant electrochemical NDMA reduction. The treatment of synthetic solutions containing 10 μM NDMA achieved >4-log NDMA removal in a single pass (liquid residence time of 11 to 22 s) through the PAC-REM and MWCNT-REM with the application of a −1.1 V/SHE cathodic potential, with …",
+      "venue": "Environmental Science & Technology",
+      "citations": 79,
+      "authors": [
+        "Soroush Almassi",
+        "Zhao Li",
+        "Wenqing Xu",
+        "Changcheng Pu",
+        "Teng Zeng",
+        "Brian P Chaplin"
+      ],
+      "url": ""
+    }
+  ]
+}

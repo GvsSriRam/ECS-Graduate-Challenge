@@ -1,0 +1,103 @@
+{
+  "name": "Svetoslava Todorova",
+  "affiliation": "Syracuse University",
+  "interests": [],
+  "citedby": 553,
+  "h_index": 9,
+  "i10_index": 9,
+  "top_primary_author_publications": [
+    {
+      "title": "Evidence for regulation of monomethyl mercury by nitrate in a seasonally stratified, eutrophic lake",
+      "year": 2009,
+      "abstract": "The accumulation of monomethyl mercury (CH3Hg+) in aquatic ecosystems is a redox sensitive process that is accelerated under sulfate-reducing conditions. While nitrate (NO3−) reduction is energetically favored over sulfate reduction, the influence of NO3− on the accumulation of CH3Hg+ has not been reported in the literature. We examined temporal and vertical patterns in redox constituents and CH3Hg+ concentrations in the hypolimnion of a dimictic lake, Onondaga Lake, prior to and following increases in NO3− inputs. Detailed water-column profiles and a long-term record revealed marked decreases in the accumulation of CH3Hg+ in the anoxic hypolimnion coinciding with long-term decreases in the deposition of organic matter coupled with recent increases in NO3− concentrations. CH3Hg+ concentrations in the hypolimnion were substantially abated when NO3− was present above the sediment−water …",
+      "venue": "Environmental Science & Technology",
+      "citations": 101,
+      "authors": [
+        "Svetoslava G Todorova",
+        "Charles T Driscoll Jr",
+        "David A Matthews",
+        "Steven W Effler",
+        "Mark E Hines",
+        "Elizabeth A Henry"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Microbial Fe (III) reduction in a minerotrophic wetland–geochemical controls and involvement in organic matter decomposition",
+      "year": 2005,
+      "abstract": "This paper presents the results of a study on the geochemistry of Fe in a minerotrophic wetland in Central New York. Fine-scale geochemical trends in the peat and peat porewater were investigated to evaluate detailed vertical profiles of Fe in solution. Two sites within the wetland were examined: one site adjacent to an agricultural field receiving nutrient inputs and another (pristine) site in the middle of the wetland. Results revealed that Fe(II) was produced in situ in the wetland, most probably as a result of microbial Fe(III) reduction. Iron(II) concentration profiles suggested the existence of Fe(III) reduction in the zone adjacent to the agricultural field, whereas no significant evidence for Fe(III) reduction occurred in the pristine zone. Theoretical equilibrium modeling predicted that the difference in soluble Fe concentrations between the two zones was probably caused by abiotic reactions, such as pyrite precipitation …",
+      "venue": "Applied geochemistry",
+      "citations": 38,
+      "authors": [
+        "Svetoslava G Todorova",
+        "Donald I Siegel",
+        "Andria M Costello"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Design of Shewanella‐specific 16S rRNA primers and application to analysis of Shewanella in a minerotrophic wetland",
+      "year": 2006,
+      "abstract": "In this study, an existing probe was used as a polymerase chain reaction (PCR) primer to study iron‐reducing members of the genus Shewanella in a minerotrophic wetland where iron reduction had previously been implicated. The probe was found to be non‐specific and a new set of PCR primers were developed that were specific for Shewanella. These primers were used to analyse the wetland iron‐reducing communities by characterizing 16S rRNA genes amplified from DNA extracted from peat. Polymerase chain reaction clone libraries were screened using restriction fragment length polymorphism and diagnostic operational taxonomic units for Shewanella species were identified. A statistical method was used to determine the coverage of the clone libraries, which was found to be between 83% and 97%. The dominant species in the wetland samples at two geochemically distinct zones were phylogenetically …",
+      "venue": "Environmental Microbiology",
+      "citations": 37,
+      "authors": [
+        "Svetoslava G Todorova",
+        "Andria M Costello"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Mercury contamination in riverine sediments and fish associated with artisanal and small-scale gold mining in Madre de Dios, Peru",
+      "year": 2018,
+      "abstract": "Artisanal and small-scale gold mining (ASGM) in Madre de Dios, Peru, continues to expand rapidly, raising concerns about increases in loading of mercury (Hg) to the environment. We measured physicochemical parameters in water and sampled and analyzed sediments and fish from multiple sites along one ASGM-impacted river and two unimpacted rivers in the region to examine whether Hg concentrations were elevated and possibly related to ASGM activity. We also analyzed the 308 fish samples, representing 36 species, for stable isotopes (δ15N and δ13C) to estimate their trophic position. Trophic position was positively correlated with the log-transformed Hg concentrations in fish among all sites. There was a lack of relationship between Hg concentrations in fish and either Hg concentrations in sediments or ASGM activity among sites, suggesting that fish Hg concentrations alone is not an ideal bioindicator of site-specific Hg contamination in the region. Fish Hg concentrations were not elevated in the ASGM-impacted river relative to the other two rivers; however, sediment Hg concentrations were highest in the ASGM-impacted river. Degraded habitat conditions and commensurate shifts in fish species and ecological processes may influence Hg bioaccumulation in the ASGM-impacted river. More research is needed on food web dynamics in the region to elucidate any effects caused by ASGM, especially through feeding relationships and food sources.",
+      "venue": "International journal of environmental research and public health",
+      "citations": 116,
+      "authors": [
+        "Gerardo Martinez",
+        "Stephen A McCord",
+        "Charles T Driscoll",
+        "Svetoslava Todorova",
+        "Steven Wu",
+        "Julio F Araújo",
+        "Claudia M Vega",
+        "Luis E Fernandez"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Whole-lake nitrate addition for control of methylmercury in mercury-contaminated Onondaga Lake, NY",
+      "year": 2013,
+      "abstract": "Methylmercury (MeHg) strongly bioaccumulates in aquatic food webs resulting in exposure to humans and wildlife through consumption of fish. Production of MeHg is promoted by anaerobic conditions and the supply of inorganic Hg (Hg2+), sulfate (SO42−), and labile organic carbon. The anaerobic sediments of stratified lakes are particularly active zones for methylation of Hg2+ and can be an important source of MeHg to the water column during summer anoxia and fall turnover. Nitrate (NO3–) addition has recently been proposed as a novel approach for the control of MeHg accumulation in the hypolimnia of Hg-contaminated lakes. In 2011, a whole-lake NO3– addition pilot test was conducted in Hg-contaminated Onondaga Lake, NY with the objective of limiting release of MeHg from the pelagic sediments to the hypolimnion through maintenance of NO3––N concentrations >1 mg N/L. A liquid calcium-nitrate …",
+      "venue": "Environmental Research",
+      "citations": 92,
+      "authors": [
+        "David A Matthews",
+        "David B Babcock",
+        "John G Nolan",
+        "Anthony R Prestigiacomo",
+        "Steven W Effler",
+        "Charles T Driscoll",
+        "Svetoslava G Todorova",
+        "Kenneth M Kuhr"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Water quality function of an extensive vegetated roof",
+      "year": 2018,
+      "abstract": "In this paper we present the results of a four-year study of water quality in runoff from an extensive, sedum covered, vegetated roof on an urban commercial building. Monitoring commenced seven months after the roof was constructed, with the first growing season. Stormwater drainage quality function of the vegetated roof was compared to a conventional (impermeable, high-albedo) membrane roof in addition to paired measurements of wet and bulk depositions at the study site. We present concentrations and fluxes of nutrients and major solutes. We discuss seasonal and year-to-year variation in water quality of drainage from the vegetated roof and how it compares with atmospheric deposition and drainage from the impermeable roof. Drainage waters from the vegetated roof exhibited a high concentration of nutrients compared to atmospheric deposition, particularly during the warm temperature growing season …",
+      "venue": "Science of the Total Environment",
+      "citations": 64,
+      "authors": [
+        "Dimitar Todorov",
+        "Charles T Driscoll",
+        "Svetoslava Todorova",
+        "Mario Montesdeoca"
+      ],
+      "url": ""
+    }
+  ]
+}

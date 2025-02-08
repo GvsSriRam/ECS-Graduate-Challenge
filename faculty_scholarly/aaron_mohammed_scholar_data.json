@@ -1,0 +1,104 @@
+{
+  "name": "Aaron Mohammed",
+  "affiliation": "Assistant Professor, Syracuse University",
+  "interests": [
+    "hydrology",
+    "hydrogeology",
+    "cold regions",
+    "permafrost"
+  ],
+  "citedby": 509,
+  "h_index": 14,
+  "i10_index": 17,
+  "top_primary_author_publications": [
+    {
+      "title": "Snowmelt infiltration and macropore flow in frozen soils: overview, knowledge gaps and a conceptual framework",
+      "year": 2018,
+      "abstract": " Review highlights the hydrological importance of macropore flow in frozen soils. Governing flow mechanisms and infiltration and refreezing dynamics are discussed. Research is needed to integrate macropore flow and soil freeze–thaw theory. Dual‐domain models of macropore flow should be adapted to frozen ground. A conceptual framework for modeling frozen macroporous soils is proposed. Macropore flow in frozen soils plays a critical role in partitioning snowmelt at the land surface and modulating snowmelt‐driven hydrological processes. Previous descriptions of macropore flow processes in frozen soil do not explicitly represent the physics of water and heat transfer between macropores and the soil matrix, and there is a need to adapt recent conceptual and numerical models of unfrozen macropore flow to account for frozen ground. Macropores remain air filled under partially saturated …",
+      "venue": "Vadose Zone Journal",
+      "citations": 98,
+      "authors": [
+        "Aaron A Mohammed",
+        "Barret L Kurylyk",
+        "Edwin E Cey",
+        "Masaki Hayashi"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Effects of preferential flow on snowmelt partitioning and groundwater recharge in frozen soils",
+      "year": 2019,
+      "abstract": "Snowmelt is a major source of groundwater recharge in cold regions. Throughout many landscapes snowmelt occurs when the ground is still frozen; thus frozen soil processes play an important role in snowmelt routing, and, by extension, the timing and magnitude of recharge. This study investigated the vadose zone dynamics governing snowmelt infiltration and groundwater recharge at three grassland sites in the Canadian Prairies over the winter and spring of 2017. The region is characterized by numerous topographic depressions where the ponding of snowmelt runoff results in focused infiltration and recharge. Water balance estimates showed infiltration was the dominant sink (35 %–85 %) of snowmelt under uplands (i.e. areas outside of depressions), even when the ground was frozen, with soil moisture responses indicating flow through the frozen layer. The refreezing of infiltrated meltwater during winter melt events enhanced runoff generation in subsequent melt events. At one site, time lags of up to 3 d between snow cover depletion on uplands and ponding in depressions demonstrated the role of a shallow subsurface transmission pathway or interflow through frozen soil in routing snowmelt from uplands to depressions. At all sites, depression-focused infiltration and recharge began before complete ground thaw and a significant portion (45 %–100 %) occurred while the ground was partially frozen. Relatively rapid infiltration rates and non-sequential soil moisture and groundwater responses, observed prior to ground thaw, indicated preferential flow through frozen soils. The preferential flow dynamics are attributed to macropore …",
+      "venue": "Hydrology and Earth System Sciences",
+      "citations": 67,
+      "authors": [
+        "Aaron A Mohammed",
+        "Igor Pavlovskii",
+        "Edwin E Cey",
+        "Masaki Hayashi"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Effects of antecedent moisture and macroporosity on infiltration and water flow in frozen soil",
+      "year": 2020,
+      "abstract": "Infiltration into frozen soil plays an important role in soil freeze–thaw and snowmelt‐driven hydrological processes. To better understand the complex thermal energy and water transport mechanisms involved, the influence of antecedent moisture content and macroporosity on infiltration into frozen soil was investigated. Ponded infiltration experiments on frozen macroporous and non‐macroporous soil columns revealed that dry macroporous soil produced infiltration rates reaching 103 to 104 mm day−1, two to three orders of magnitude larger than dry non‐macroporous soil. Results suggest that rapid infiltration and drainage were a result of preferential flow through initially air‐filled macropores. Using recorded flow rates and measured macropore characteristics, calculations indicated that a combination of both saturated flow and unsaturated film flow likely occurred within macropores. Under wet conditions …",
+      "venue": "Hydrological Processes",
+      "citations": 55,
+      "authors": [
+        "Freda Pittman",
+        "Aaron Mohammed",
+        "Edwin Cey"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Transient and transition factors in modeling permafrost thaw and groundwater flow",
+      "year": 2020,
+      "abstract": "Permafrost covers approximately 24% of the Northern Hemisphere, and much of it is degrading, which causes infrastructure failures and ecosystem transitions. Understanding groundwater and heat flow processes in permafrost environments is challenging due to spatially and temporarily varying hydraulic connections between water above and below the near‐surface discontinuous frozen zone. To characterize the transitional period of permafrost degradation, a three‐dimensional model of a permafrost plateau that includes the supra‐permafrost zone and surrounding wetlands was developed. The model is based on the Scotty Creek basin in the Northwest Territories, Canada. FEFLOW groundwater flow and heat transport modeling software is used in conjunction with the piFreeze plug‐in, to account for phase changes between ice and water. The Simultaneous Heat and Water (SHAW) flow model is used to …",
+      "venue": "Groundwater",
+      "citations": 35,
+      "authors": [
+        "Joelle E Langford",
+        "Robert A Schincariol",
+        "Ranjeet M Nagare",
+        "William L Quinton",
+        "Aaron A Mohammed"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A coupled soil water balance model for simulating depression‐focused groundwater recharge",
+      "year": 2018,
+      "abstract": " Ephemeral ponds in depressions are the foci of groundwater recharge in the Canadian Prairies. Freeze–thaw processes influence snowmelt runoff and depression‐focused recharge. A new water balance model was developed to represent these processes. The water balance model successfully simulated the observed soil processes. This model will provide a tool to estimate recharge in the prairie landscape. In arid and semiarid environments, focused infiltration of rain and snowmelt water under topographic depressions is an important mechanism of groundwater recharge. Quantifying the aggregated recharge from numerous small depressions is a major challenge in water resource management. Building on field‐based investigations into the surface water–groundwater interaction of individual depressions and their catchments (i.e., uplands) in the Canadian Prairies, we have developed a simple …",
+      "venue": "Vadose Zone Journal",
+      "citations": 26,
+      "authors": [
+        "Saskia L Noorduijn",
+        "Masaki Hayashi",
+        "Getachew A Mohammed",
+        "Aaron A Mohammed"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Rethinking the use of seabed sediment temperature profiles to trace submarine groundwater flow",
+      "year": 2018,
+      "abstract": "Submarine groundwater fluxes across the seafloor facilitate important hydrological and biogeochemical exchanges between oceans and seabed sediment, yet few studies have investigated spatially distributed groundwater fluxes in deep‐ocean environments such as continental slopes. Heat has been previously applied as a submarine groundwater tracer using an analytical solution to a heat flow equation assuming steady state conditions and homogeneous thermal conductivity. These assumptions are often violated in shallow seabeds due to ocean bottom temperature changes or sediment property variations. Here heat tracing analysis techniques recently developed for terrestrial settings are applied in concert to examine the influences of groundwater flow, ocean temperature changes, and seabed thermal conductivity variations on deep‐ocean sediment temperature profiles. Temperature observations from the …",
+      "venue": "Water Resources Research",
+      "citations": 18,
+      "authors": [
+        "Barret L Kurylyk",
+        "Dylan J Irvine",
+        "Aaron A Mohammed",
+        "Victor F Bense",
+        "Martin A Briggs",
+        "John W Loder",
+        "Yuri Geshelin"
+      ],
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "Ian D. Hosein",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Energy",
+    "Polymers",
+    "Composites",
+    "Synthesis and Processing",
+    "Devices"
+  ],
+  "citedby": 1576,
+  "h_index": 24,
+  "i10_index": 46,
+  "top_primary_author_publications": [
+    {
+      "title": "Convectively assembled nonspherical mushroom cap-based colloidal crystals",
+      "year": 2007,
+      "abstract": "Monolayers from mushroom cap-shaped polymer colloids were fabricated by a vertical substrate deposition technique. As confirmed by SEM and autocorrelation analysis, the monolayers show long-range hexagonal packing with particle orientational freedom restricted to either “heads up” or “heads down” alignment with respect to the substrate. The monolayers are modeled as a 2D diffraction grating and were studied with selected area laser diffraction. The stacking of ordered monolayers into the third dimension was achieved via layer-by-layer deposition. Convective assembly is shown as a viable approach to the large-scale crystallization of monodisperse nonspherical colloids. ",
+      "venue": "Langmuir",
+      "citations": 103,
+      "authors": [
+        "Ian D Hosein",
+        "Chekesha M Liddell"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Convectively assembled asymmetric dimer-based colloidal crystals",
+      "year": 2007,
+      "abstract": "Monolayer films from polystyrene asymmetric dimer colloidal particles were formed on a silicon substrate using a heat assisted vertical deposition technique. In dilute particle suspensions of systematically varied concentrations, the system maximizes the packing efficiency within a thin meniscus region. Structures with positional order and orientational order in and out of the substrate plane were observed in surface and cross-sectional scanning electron microscopy (SEM) images. The confining effect of the meniscus height drove the formation of the resulting oblique and hexagonal lattices with controlled orientation. The crystals exhibited features similar to the planes of the boron nitride and zinc sulfide atomic structures. The diffraction properties of both colloidal crystal structures were demonstrated via selected area diffraction for laser light in the visible region. ",
+      "venue": "Langmuir",
+      "citations": 96,
+      "authors": [
+        "Ian D Hosein",
+        "Chekesha M Liddell"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Homogeneous, core− shell, and hollow-shell ZnS colloid-based photonic crystals",
+      "year": 2007,
+      "abstract": "Ordered ZnS-based colloidal crystals from homogeneous, core−shell, and hollow building blocks were prepared via electrosteric colloid stabilization combined with a convective assembly technique. The polyelectrolyte stabilized colloids assembled into face-centered cubic arrays with the (111) face perpendicular to the substrate. Structure−property correlations were made using scanning electron microscopy, scanning transmission electron microscopy, and UV/visible/near-IR spectroscopy. Multilayer film growth, with film thickness of several micrometers, was achieved. Optical spectra showed (111) stopgaps along with pronounced higher order peaks. The spectral position of the photonic stopgap can be predicted using a volume average refractive index and the Maxwell−Garnett formula for the homogeneous and core−shell particles, respectively. This work holds the promise of harnessing ZnS for optical property …",
+      "venue": "Langmuir",
+      "citations": 86,
+      "authors": [
+        "Ian D Hosein",
+        "Chekesha M Liddell"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A novel calcium-ion solid polymer electrolyte based on crosslinked poly (ethylene glycol) diacrylate",
+      "year": 2019,
+      "abstract": "A solid polymer electrolyte (SPE) for calcium-ion conduction was produced and characterized. Poly(ethylene glycol) diacrylate was photocrosslinked under blue light in the presence of calcium salt to form a stable network with high thermal stability and promising conductivity. An ionic conductivity of 3.4 × 10−4 S/cm at 110 °C and 3.0 × 10−6 S/cm at room temperature was achieved, which is similar to early-stage lithium SPEs. The electrolytes evaluated under thermogravimetric analysis (TGA) remained stable up to temperatures of approximately 140 °C. XRD confirmed no salt precipitation within the polymer matrix, and Raman analysis indicated the complexation of the calcium ions to the PEGDA network. This study is a contribution towards suitable polymer electrolytes for solid-state calcium-ion batteries.",
+      "venue": "Journal of Power Sources",
+      "citations": 66,
+      "authors": [
+        "Francielli S Genier",
+        "Cameron V Burdin",
+        "Saeid Biria",
+        "Ian D Hosein"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Plating and stripping calcium at room temperature in an ionic-liquid electrolyte",
+      "year": 2020,
+      "abstract": "Calcium batteries are an emerging, next generation energy storage technology undergoing intense research toward viable operation. A key aspect in their development is plating and stripping of a calcium metal anode in suitable electrolytes. Herein, we report that calcium can be plated and stripped at room temperature in an ionic-liquid-based electrolyte. Thick continuous deposits (∼20 μm) of crystalline calcium are plated and stripped over 10 cycles to areal capacities of 2.2 mAh cm–2 at a current density of 0.56 mA/cm2. This work presents ionic liquids as viable electrolytes for calcium anodes to enable redox activity for calcium batteries.",
+      "venue": "ACS Applied Energy Materials",
+      "citations": 47,
+      "authors": [
+        "Saeid Biria",
+        "Shreyas Pathreeker",
+        "Francielli S Genier",
+        "Hansheng Li",
+        "Ian D Hosein"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A highly conductive and thermally stable ionic liquid gel electrolyte for calcium-ion batteries",
+      "year": 2020,
+      "abstract": "Calcium-ion batteries are promising alternatives for post-lithium-ion batteries. However, their progress remains limited by challenges associated with the development of stable and effective electrolytes. We report for the first time an ionic liquid polymer gel membrane as both the electrolyte and the separator for use in a calcium-ion battery operating at room temperature. The membrane is prepared via single-step photo-cross-linking of poly(ethylene glycol) diacrylate in the presence of calcium salt dissolved in an ionic liquid and shows room temperature ionic conductivities between 10–4 and 10–3 S/cm, ∼4 V stability vs Ca/Ca2+, a cationic transference number of 0.17, high thermal stability up to ∼300 °C, and full dissociation of the calcium salts in the ionic liquid. A prototype battery demonstrates intercalation-based room-temperature operation, delivering a promising initial discharge capacity of ∼140 mAh/g.",
+      "venue": "ACS Applied Polymer Materials",
+      "citations": 43,
+      "authors": [
+        "Saeid Biria",
+        "Shreyas Pathreeker",
+        "Francielli S Genier",
+        "Ian D Hosein"
+      ],
+      "url": ""
+    }
+  ]
+}

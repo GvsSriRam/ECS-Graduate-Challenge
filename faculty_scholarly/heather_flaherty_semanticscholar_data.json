@@ -1,0 +1,66 @@
+{
+  "name": "Heather A. Flaherty",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 371,
+  "h_index": 9,
+  "i10_index": 0,
+  "top_primary_author_publications": [],
+  "top_secondary_author_publications": [
+    {
+      "title": "Mouse-adapted MERS coronavirus causes lethal lung disease in human DPP4 knockin mice",
+      "year": 2017,
+      "abstract": "Significance Middle East respiratory syndrome, caused by a zoonotically transmitted coronavirus (MERS-CoV), has a high mortality (∼36%). Because of limited autopsy data on tissues from MERS fatalities, a small animal model can provide an important tool to better understand the disease. We humanized the mouse locus of the virus receptor DPP4, preserving native DPP4 expression. After inoculating hDPP4 knockin mice with MERS-CoV, there was virus replication without disease. We then generated a mouse-adapted MERS-CoV by serial passage in hDPP4 knockin mice. The resultant virus causes fatal lung disease that includes diffuse alveolar damage and immune dysregulation. Here, we characterize the pathologic features of the model and elucidate key aspects of the immunopathology and factors contributing to virulence. The Middle East respiratory syndrome (MERS) emerged in Saudi Arabia in 2012, caused by a zoonotically transmitted coronavirus (CoV). Over 1,900 cases have been reported to date, with ∼36% fatality rate. Lack of autopsies from MERS cases has hindered understanding of MERS-CoV pathogenesis. A small animal model that develops progressive pulmonary manifestations when infected with MERS-CoV would advance the field. As mice are restricted to infection at the level of DPP4, the MERS-CoV receptor, we generated mice with humanized exons 10–12 of the mouse Dpp4 locus. Upon inoculation with MERS-CoV, human DPP4 knockin (KI) mice supported virus replication in the lungs, but developed no illness. After 30 serial passages through the lungs of KI mice, a mouse-adapted virus emerged (MERSMA) that grew in lungs to over 100 times higher titers than the starting virus. A plaque-purified MERSMA clone caused weight loss and fatal infection. Virus antigen was observed in airway epithelia, pneumocytes, and macrophages. Pathologic findings included diffuse alveolar damage with pulmonary edema and hyaline membrane formation associated with accumulation of activated inflammatory monocyte–macrophages and neutrophils in the lungs. Relative to the parental MERS-CoV, MERSMA viruses contained 13–22 mutations, including several within the spike (S) glycoprotein gene. S-protein mutations sensitized viruses to entry-activating serine proteases and conferred more rapid entry kinetics. Recombinant MERSMA bearing mutant S proteins were more virulent than the parental virus in hDPP4 KI mice. The hDPP4 KI mouse and the MERSMA provide tools to investigate disease causes and develop new therapies.",
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "citations": 164,
+      "authors": [
+        "Kun Li",
+        "C. Wohlford-Lenane",
+        "Rudragouda Channappanavar",
+        "Jung-Eun Park",
+        "J. T. Earnest",
+        "T. Bair",
+        "A. Bates",
+        "K. Brogden",
+        "Heather A. Flaherty",
+        "T. Gallagher",
+        "D. Meyerholz",
+        "S. Perlman",
+        "P. McCray"
+      ],
+      "url": "https://www.semanticscholar.org/paper/7e6d97d08250898f748f8501649be0052d251804"
+    },
+    {
+      "title": "Approaches to Evaluate Lung Inflammation in Translational Research",
+      "year": 2018,
+      "abstract": "Inflammation is a common feature in several types of lung disease and is a frequent end point to validate lung disease models, evaluate genetic or environmental impact on disease severity, or test the efficacy of new therapies. Questions relevant to a study should be defined during experimental design and techniques selected to specifically address these scientific queries. In this review, the authors focus primarily on the breadth of techniques to evaluate lung inflammation that have both clinical and preclinical applications. Stratification of approaches to assess lung inflammation can diminish weaknesses inherent to each technique, provide data validation, and increase the reproducibility of a study. Specialized techniques (eg, imaging, pathology) often require experienced personnel to collect, evaluate, and interpret the data; these experts should be active contributors to the research team through reporting of the data. Scoring of tissue lesions is a useful method to transform observational pathologic data into semiquantitative or quantitative data for statistical analysis and enhanced rigor. Each technique to evaluate lung inflammation has advantages and limitations; understanding these parameters can help identify approaches that best complement one another to increase the rigor and translational significance of data.",
+      "venue": "Veterinary Pathology-Supplement",
+      "citations": 38,
+      "authors": [
+        "D. Meyerholz",
+        "J. Sieren",
+        "A. Beck",
+        "Heather A. Flaherty"
+      ],
+      "url": "https://www.semanticscholar.org/paper/67b22d53f038c924c49a775932b93f0043fe71dd"
+    },
+    {
+      "title": "Allograft Inflammatory Factor 1 as an Immunohistochemical Marker for Macrophages in Multiple Tissues and Laboratory Animal Species.",
+      "year": 2018,
+      "abstract": "Allograft inflammatory factor 1 (AIF1) is a commonly used marker for microglia in the brains of humans and some animal models but has had limited applications elsewhere. We sought to determine whether AIF1 can be used as a macrophage marker across common laboratory animal species and tissues. We studied tissues (that is, spleen, liver, and lung) with defined macrophage populations by using an AIF1 immunostaining technique previously validated in human tissue. Tissues were collected from various mouse strains (n = 20), rat strains (n = 15), pigs (n = 4), ferrets (n = 4), and humans (n = 4, lung only). All samples of liver had scattered immunostaining in interstitial cells, consistent with resident tissue macrophages (Kupffer cells). Spleen samples had cellular immunostaining of macrophages in both the red and white pulp compartments, but the red pulp had more immunostained cellular aggregates and, in some species, increased immunostaining intensity compared with white pulp. In lung, alveolar macrophages had weak to moderate staining, whereas interstitial and perivascular macrophages demonstrated moderate to robust staining. Incidental lesions and tissue changes were detected in some sections, including a tumor, inducible bronchus-associated lymphoid tissue, and inflammatory lesions that demonstrated AIF1 immunostaining of macrophages. Finally, we compared AIF1 immunostaining of alveolar macrophages between a hypertensive rat model (SHR strain) and a normotensive model (WKY strain). SHR lungs had altered intensity and distribution of immunostaining in activated macrophages compared with macrophages of WKY lungs. Overall, AIF1 immunostaining demonstrated reproducible macrophage staining across multiple species and tissue types. Given the increasing breadth of model species used to study human disease, the use of cross-species markers and techniques can reduce some of the inherent variability within translational research.",
+      "venue": "Comparative medicine",
+      "citations": 29,
+      "authors": [
+        "Kathleen M Donovan",
+        "Mariah Leidinger",
+        "Logan McQuillen",
+        "J. Goeken",
+        "Christin M. Hogan",
+        "S. Harwani",
+        "Heather A. Flaherty",
+        "D. Meyerholz"
+      ],
+      "url": "https://www.semanticscholar.org/paper/b4b9507ceea1f609be30ec30a6ae150b99dbba89"
+    }
+  ]
+}

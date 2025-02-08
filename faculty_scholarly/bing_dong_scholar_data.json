@@ -1,0 +1,121 @@
+{
+  "name": "Bing Dong",
+  "affiliation": "Professor, Ph.D. IBPSA Fellow. Mechanical and Aerospace Engineering, Syracuse University",
+  "interests": [
+    "Buildings-to-Grid Integration",
+    "Occupant Behavior",
+    "Energy Efficient Buildings",
+    "MPC",
+    "Fault Detection"
+  ],
+  "citedby": 11169,
+  "h_index": 55,
+  "i10_index": 124,
+  "top_primary_author_publications": [
+    {
+      "title": "Applying support vector machines to predict building energy consumption in tropical region",
+      "year": 2005,
+      "abstract": "The methodology to predict building energy consumption is increasingly important for building energy baseline model development and measurement and verification protocol (MVP). This paper presents support vector machines (SVM), a new neural network algorithm, to forecast building energy consumption in the tropical region. The objective of this paper is to examine the feasibility and applicability of SVM in building load forecasting area. Four commercial buildings in Singapore are selected randomly as case studies. Weather data including monthly mean outdoor dry-bulb temperature (T0), relative humidity (RH) and global solar radiation (GSR) are taken as three input features. Mean monthly landlord utility bills are collected for developing and testing models. In addition, the performance of SVM with respect to two parameters, C and ɛ, was explored using stepwise searching method based on radial-basis …",
+      "venue": "Energy and Buildings",
+      "citations": 1008,
+      "authors": [
+        "Bing Dong",
+        "Cheng Cao",
+        "Siew Eang Lee"
+      ],
+      "url": ""
+    },
+    {
+      "title": "An information technology enabled sustainability test-bed (ITEST) for occupancy detection through an environmental sensing network",
+      "year": 2010,
+      "abstract": "This paper describes a large-scale wireless and wired environmental sensor network test-bed and its application to occupancy detection in an open-plan office building. Detection of occupant presence has been used extensively in built environments for applications such as demand-controlled ventilation and security; however, the ability to discern the actual number of people in a room is beyond the scope of current sensing techniques. To address this problem, a complex sensor network is deployed in the Robert L. Preger Intelligent Workplace comprising a wireless ambient-sensing system, a wired carbon dioxide sensing system, and a wired indoor air quality sensing system. A wired camera network is implemented as well for establishing true occupancy levels to be used as ground truth information for deriving algorithmic relationships with the environment conditions. To our knowledge, this extensive and …",
+      "venue": "Energy and Buildings",
+      "citations": 424,
+      "authors": [
+        "Bing Dong",
+        "Burton Andrews",
+        "Khee Poh Lam",
+        "Michael Höynck",
+        "Rui Zhang",
+        "Yun-Shang Chiou",
+        "Diego Benitez"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A real-time model predictive control for building heating and cooling systems based on the occupancy behavior pattern detection and local weather forecasting",
+      "year": 2014,
+      "abstract": "Current research studies show that building heating, cooling and ventilation energy consumption account for nearly 40% of the total building energy use in the U.S. The potential for saving energy through building control systems varies from 5% to 20% based on recent market surveys. This papers introduces and illustrates a methodology for integrated building heating and cooling control to reduce energy consumption and maintain indoor temperature set-point, based on the prediction of occupant behavior patterns and local weather conditions. Advanced machine learning methods including Adaptive Gaussian Process, Hidden Markov Model, Episode Discovery and Semi-Markov Model are modified and implemented into this study. A Nonlinear Model Predictive Control (NMPC) is designed and implemented in real-time based on dynamic programming. The experiment test-bed is setup in the Solar House …",
+      "venue": "Building Simulation",
+      "citations": 373,
+      "authors": [
+        "Bing Dong",
+        "Khee Poh Lam"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "IEA EBC Annex 66: Definition and simulation of occupant behavior in buildings",
+      "year": 2017,
+      "abstract": "More than 30% of the total primary energy in the world is consumed in buildings. It is crucial to reduce building energy consumption in order to preserve energy resources and mitigate global climate change. Building performance simulations have been widely used for the estimation and optimization of building performance, providing reference values for the assessment of building energy consumption and the effects of energy-saving technologies. Among the various factors influencing building energy consumption, occupant behavior has drawn increasing attention. Occupant behavior includes occupant presence, movement, and interaction with building energy devices and systems. However, there are gaps in occupant behavior modeling as different energy modelers have employed varied data and tools to simulate occupant behavior, therefore producing different and incomparable results. Aiming to address …",
+      "venue": "Energy and Buildings",
+      "citations": 486,
+      "authors": [
+        "Da Yan",
+        "Tianzhen Hong",
+        "Bing Dong",
+        "Ardeshir Mahdavi",
+        "Simona D’Oca",
+        "Isabella Gaetani",
+        "Xiaohang Feng"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A survey on energy consumption and energy usage behavior of households and residential building in urban China",
+      "year": 2017,
+      "abstract": "Building performance, equipment efficiency, and occupant behavior play important roles in China urban residential building energy conservation. An online survey was conducted in 2015 to study the urban residential energy and usage behavior. A total of 4964 Chinese urban households participated in the survey, answering questions about their family composition, buildings, energy use and conservation behaviors, and reactions to specific energy conservation policies. The results suggest that the general trend in Chinese urban households is larger unit sizes (on average, 109 m2 per household) and smaller families. The average electricity consumption of urban residential buildings is 1690 kWh per year per household in 2015 and it continues to grow as home electronics become more widespread and the demand for higher quality of life increases. China urban residential buildings energy use has the following …",
+      "venue": "Energy and Buildings",
+      "citations": 364,
+      "authors": [
+        "B. Hu",
+        "S.",
+        "Yan",
+        "D.",
+        "Guo",
+        "S.",
+        "Cui",
+        "Y.",
+        "Dong"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Introducing IEA EBC annex 79: Key challenges and opportunities in the field of occupant-centric building design and operation",
+      "year": 2020,
+      "abstract": "Despite the fact that buildings are designed for occupants in principle, evidence suggests buildings are often uncomfortable compared to the requirements of standards; difficult to control by occupants; and, operated inefficiently with regards to occupants’ preferences and presence. Meanwhile, practitioners –architects, engineers, technology companies, building managers and operators, and policymakers – lack the knowledge, tools, and precedent to design and operate buildings optimally considering the complex and diverse nature of occupants. Building on the success of IEA EBC Annex 66 (“Definition and simulation of occupant behavior in buildings”; 2013–2017), a follow-up IEA EBC Annex 79 (“Occupant-centric building design and operation”; 2018–2023) has been developed to address gaps in knowledge, practice, and technology. Annex 79 involves international researchers from diverse disciplines like …",
+      "venue": "",
+      "citations": 282,
+      "authors": [
+        "William O'Brien",
+        "Andreas Wagner",
+        "Marcel Schweiker",
+        "Ardeshir Mahdavi",
+        "Julia Day",
+        "Mikkel Baun Kjærgaard",
+        "Salvatore Carlucci",
+        "Bing Dong",
+        "Farhang Tahmasebi",
+        "Da Yan",
+        "Tianzhen Hong",
+        "H Burak Gunay",
+        "Zoltan Nagy",
+        "Clayton Miller",
+        "Christiane Berger"
+      ],
+      "url": ""
+    }
+  ]
+}

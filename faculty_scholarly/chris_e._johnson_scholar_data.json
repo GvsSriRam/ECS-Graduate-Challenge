@@ -1,0 +1,123 @@
+{
+  "name": "Chris E. Johnson",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Soil chemistry",
+    "Soil Organic Matter",
+    "Forest Soils",
+    "Biogeochemistry",
+    "Water Chemistry"
+  ],
+  "citedby": 7353,
+  "h_index": 48,
+  "i10_index": 79,
+  "top_primary_author_publications": [
+    {
+      "title": "Characterization of organic matter in a northern hardwood forest soil by 13C NMR spectroscopy and chemical methods",
+      "year": 2003,
+      "abstract": "Soil organic matter plays an important role in soil properties and influences ecosystem cycles of C, N, Al, Fe, and other major and trace elements. We examined spatial variations in the structure and chemistry of soil organic matter at the Hubbard Brook Experimental Forest in New Hampshire, USA. Humic substances were extracted and isolated chromatographically into humic acid, fulvic acid, and polysaccharide fractions. Chemical methods and solid-state 13C NMR spectroscopy were used to determine structural chemistry. On average, extractable humic substances accounted for nearly 50% of soil organic matter, with alkyl and O-alkyl C (carbohydrate) being the largest C fractions in whole soils and isolated humic substances. Alkyl C ranged from 33% to 56% of C, while O-alkyl C comprised 20–45% of C. Alkyl C increased, while O-alkyl C decreased with soil depth in whole soils, humin, and humic acid. Aromatic …",
+      "venue": "Geoderma",
+      "citations": 264,
+      "authors": [
+        "David AN Ussiri",
+        "Chris E Johnson"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Whole‐tree clear‐cutting effects on soil horizons and organic‐matter pools",
+      "year": 1991,
+      "abstract": "Timber harvest results in physical disturbance and relocation of soil materials. This study was undertaken to assess the degree to which logging altered soil horizonation, bulk density, and organic‐matter pools at a northern hardwood forest site underlain by Spodosols. Soils were sampled immediately before and 3 yr after the commercial whole‐tree harvest of Watershed 5 at the Hubbard Brook Exerpimental Forest in central New Hampshire. The activity of logging machinery resulted in redistribution of organic matter within the solum. Thus, the thickness of the O horizon decreased from 6.9 cm to 5.5 cm, while O horizon mass and organic‐matter content increased (from 8.7–12.2 kg m−2 and from 5.4–5.7 kg m−2, respectively). One‐fourth of the postharvest soil pits exhibited an Ap horizon, which was not present prior to harvesting and was formed from soil of the O, E, and Bh horizons. Compaction of the soil during …",
+      "venue": "Soil Science Society of America Journal",
+      "citations": 257,
+      "authors": [
+        "Chris E Johnson",
+        "Arthur H Johnson",
+        "Thomas G Huntington",
+        "Thomas G Siccama"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Element fluxes and landscape position in a northern hardwood forest watershed ecosystem",
+      "year": 2000,
+      "abstract": " Chemical changes along headwater streams at the Hubbard Brook Experimental Forest in New Hampshire suggest that important differences exist in biogeochemical cycles along an altitudinal gradient within small watershed ecosystems. Using data collected during the period 1982–92, we have constructed element budgets [Ca, Mg, K, Na, Si, Al, dissolved organic carbon (DOC), S, and N] for three subcatchments within watershed 6, a forested watershed last logged around 1917–20. The biogeochemistry of the high-elevation spruce-fir–white birch subcatchment was dominated by processes involving naturally occuring organic compounds. Stream water and soil solutions in this zone had elevated concentrations of organic acidity, DOC, and organically bound monomeric aluminum (Alo), relative to lower-elevation sites. The middle-elevation subcatchment, dominated by hardwood vegetation, had the …",
+      "venue": "Ecosystems",
+      "citations": 239,
+      "authors": [
+        "Chris E Johnson",
+        "Charles T Driscoll",
+        "Thomas G Siccama",
+        "Gene E Likens"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "The biogeochemistry of calcium at Hubbard Brook",
+      "year": 1998,
+      "abstract": "A synthesis of the biogeochemistry of Ca was done during 1963–1992in reference and human-manipulated forest ecosystems of the Hubbard BrookExperimental Forest (HBEF), NH. Results showed that there has been a markeddecline in concentration and input of Ca in bulk precipitation, an overalldecline in concentration and output of Ca in stream water, and markeddepletion of Ca in soils of the HBEF since 1963. The decline in streamwaterCa was related strongly to a decline in SO   +NO   in stream water during the period. The soildepletion of Ca was the result of leaching due to inputs of acid rain duringthe past 50 yr or so, to decreasing atmospheric inputs of Ca, and tochanging amounts of net storage of Ca in biomass. As a result of thedepletion of Ca, forest ecosystems at HBEF are much more sensitive tocontinuing inputs of strong acids in atmospheric deposition than expectedbased on long-term …",
+      "venue": "Biogeochemistry",
+      "citations": 615,
+      "authors": [
+        "GE Likens",
+        "CT Driscoll",
+        "DC Buso",
+        "TG Siccama",
+        "CE Johnson",
+        "GM Lovett",
+        "TJ Fahey",
+        "WA Reiners",
+        "DF Ryan",
+        "CW Martin",
+        "SW Bailey"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Mycorrhizal weathering of apatite as an important calcium source in base-poor forest ecosystems",
+      "year": 2002,
+      "abstract": "The depletion of calcium in forest ecosystems of the northeastern USA,, is thought to be a consequence of acidic deposition and to be at present restricting the recovery of forest and aquatic systems,,, now that acidic deposition itself is declining. This depletion of calcium has been inferred from studies,, showing that sources of calcium in forest ecosystems—namely, atmospheric deposition and mineral weathering of silicate rocks such as plagioclase, a calcium-sodium silicate—do not match calcium outputs observed in forest streams. It is therefore thought that calcium is being lost from exchangeable and organically bound calcium in forest soils. Here we investigate the sources of calcium in the Hubbard Brook experimental forest, through analysis of calcium and strontium abundances and strontium isotope ratios within various soil, vegetation and hydrological pools. We show that the dissolution of apatite (calcium …",
+      "venue": "Nature",
+      "citations": 441,
+      "authors": [
+        "Joel D Blum",
+        "Andrea Klaue",
+        "Carmen A Nezat",
+        "Charles T Driscoll",
+        "Chris E Johnson",
+        "Thomas G Siccama",
+        "Christopher Eagar",
+        "Timothy J Fahey",
+        "Gene E Likens"
+      ],
+      "url": ""
+    },
+    {
+      "title": "The biogeochemistry of carbon at Hubbard Brook",
+      "year": 2005,
+      "abstract": "The biogeochemical behavior of carbon in the forested watersheds of the Hubbard Brook Experimental Forest (HBEF) was analyzed in long-term studies. The largest pools of C in the reference watershed (W6) reside in mineral soil organic matter (43% of total ecosystem C) and living biomass (40.5%), with the remainder in surface detritus (14.5%). Repeated sampling indicated that none of these pools was changing significantly in the late-1990s, although high spatial variability precluded the detection of small changes in the soil organic matter pools, which are large; hence, net ecosystem productivity (NEP) in this 2nd growth forest was near zero (± about 20 g C/m2-yr) and probably similar in magnitude to fluvial export of organic C. Aboveground net primary productivity (ANPP) of the forest declined by 24% between the late-1950s (462 g C/m2-yr) and the late-1990s (354 g C/m2-yr), illustrating age-related …",
+      "venue": "Biogeochemistry",
+      "citations": 325,
+      "authors": [
+        "TJ Fahey",
+        "TG Siccama",
+        "CT Driscoll",
+        "GE Likens",
+        "J Campbell",
+        "CE Johnson",
+        "JJ Battles",
+        "JD Aber",
+        "JJ Cole",
+        "MC Fisk",
+        "PM Groffman",
+        "SP Hamburg",
+        "RT Holmes",
+        "PA Schwarz",
+        "RD Yanai"
+      ],
+      "url": ""
+    }
+  ]
+}

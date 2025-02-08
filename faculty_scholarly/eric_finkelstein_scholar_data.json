@@ -1,0 +1,110 @@
+{
+  "name": "Eric B. Finkelstein",
+  "affiliation": "Research Assistant Professor, Syracuse University",
+  "interests": [
+    "Tissue engineering",
+    "Developmental Biology",
+    "Vascular Biology",
+    "Materials"
+  ],
+  "citedby": 585,
+  "h_index": 8,
+  "i10_index": 6,
+  "top_primary_author_publications": [
+    {
+      "title": "The role of FGF and VEGF in angioblast induction and migration during vascular development",
+      "year": 2001,
+      "abstract": "The embryonic vasculature forms by the processes of vasculogenesis and angiogenesis. Angioblasts (endothelial cell precursors) appear to be induced by fibroblast growth factor 2 (FGF‐2). The angioblasts contributing to the dorsal aortae arise by an epithelial to mesenchymal transformation of cells originating from the splanchnic mesoderm. QH‐l and vascular endothelial growth factor receptor 2 (VEGFR‐2) both appear to label these cells as they adopt a mesenchymal morphology. Since VEGFR‐2 is the earliest known VEGF receptor this suggests that VEGF is not involved in angioblast induction. VEGF does appear to be critical, however, for growth and morphogenesis of angioblasts into the initial vascular pattern. Controlled delivery of FGF‐2 from beads and aggregates of cells transfected with quail VEGF have been used in our laboratory to study the role of these growth factors in angioblast induction and …",
+      "venue": "",
+      "citations": 328,
+      "authors": [
+        "Thomas J Poole",
+        "Eric B Finkelstein",
+        "Christopher M Cox"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Synthesis and characterization of a zwitterionic hydrogel blend with low coefficient of friction",
+      "year": 2016,
+      "abstract": "Hydrogels display a great deal of potential for a wide variety of biomedical applications. Often times the performance of these biomimetic materials is limited due to inferior friction and wear properties. This manuscript presents a method inspired by the tribological phenomena observed in nature for enhancing the lubricious properties of poly(vinyl alcohol) (PVA) hydrogels. This was achieved by blending PVA with various amounts of zwitterionic polymer, poly([2-(methacryloyloxy) ethyl] dimethyl-(3-sulfopropyl) ammonium hydroxide) (pMEDSAH). Our results indicate that pMEDSAH acts as an effective boundary lubricant, allowing for reduction in coefficient of friction by more than 80%. This reduction in friction coefficient was achieved while maintaining comparable mechanical and physical properties to that of the neat material. Also, these zwitterionic blends were found to be cytocompatible. Analysis of the structure to …",
+      "venue": "Acta Biomaterialia",
+      "citations": 48,
+      "authors": [
+        "Allen O Osaheni",
+        "Eric B Finkelstein",
+        "Patrick T Mather",
+        "Michelle M Blum"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Vascular endothelial growth factor: a regulator of vascular morphogenesis in the Japanese quail embryo",
+      "year": 2003,
+      "abstract": "Experiments in mouse embryos indicate that a critical level of VEGF is required for normal vascular development, as mice lacking a single VEGF allele die at midgestation. Thus VEGF concentration may be a determinant of the size and location of major blood vessels during formation of the primary capillary plexus. Ectopic VEGF delivery was used to examine the effect of VEGF concentration on early vascular patterning in the quail embryo. VEGF was delivered by implanting VEGF‐soaked heparin chromatography beads at three rostral‐caudal locations in embryos with six somite pairs, which allowed us to study the effect of VEGF on different cellular activities. Ectopic VEGF resulted in significant changes in the vascular pattern at three rostral‐caudal levels. Quantitation demonstrated an increased vascularity in the area of the implanted VEGF bead compared to the vascular pattern of embryos with control beads …",
+      "venue": "The Anatomical Record Part A: Discoveries in Molecular, Cellular, and Evolutionary Biology: An Official Publication of the American Association of Anatomists",
+      "citations": 22,
+      "authors": [
+        "Eric B Finkelstein",
+        "Thomas J Poole"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Biologic properties of surgical scaffold materials derived from dermal ECM",
+      "year": 2013,
+      "abstract": "Surgical scaffold materials manufactured from donor human or animal tissue are increasingly being used to promote soft tissue repair and regeneration. The clinical product consists of the residual extracellular matrix remaining after a rigorous decellularization process. Optimally, the material provides both structural support during the repair period and cell guidance cues for effective incorporation into the regenerating tissue. Surgical scaffold materials are available from several companies and are unique products manufactured by proprietary methodology. A significant need exists for a more thorough understanding of scaffold properties that impact the early steps of host cell recruitment and infiltration. In this study, a panel of in vitro assays was used to make direct comparisons of several similar, commercially-available materials: Alloderm, Medeor Matrix, Permacol, and Strattice. Differences in the materials were …",
+      "venue": "Biomaterials",
+      "citations": 50,
+      "authors": [
+        "Katherine M Kulig",
+        "Xiao Luo",
+        "Eric B Finkelstein",
+        "Xiang-Hong Liu",
+        "Scott M Goldman",
+        "Cathryn A Sundback",
+        "Joseph P Vacanti",
+        "Craig M Neville"
+      ],
+      "url": ""
+    },
+    {
+      "title": "The role of fibroblasts in self-assembled skeletal muscle",
+      "year": 2011,
+      "abstract": "Small facial skeletal muscles often have no autologous donor source to effect surgical reconstruction. Autologously derived muscles could be engineered for replacement tissue, but must be vascularized and innervated to be functional. As a critical step, engineered muscle must mimic the morphology, protein and gene expression, and function of native muscle. This study utilized a self-assembly process to engineer three-dimensional (3D) muscle from a statically strained muscle cell monolayer. Primary mouse myoblasts (PMMs) and mouse embryonic fibroblasts (MEFs) were separately proliferated and coseeded on a fibrin sheet with anchored sutures. Within 10 days of initiating PMM differentiation, the cell-gel layer contracted, lifted, and rolled into a cylindrical 3D structure around the tendon-like suture anchors; the myotubes longitudinally aligned along the lines of tensile force. The objectives of this study were to …",
+      "venue": "Tissue Engineering Part A",
+      "citations": 49,
+      "authors": [
+        "Mei Li",
+        "Caitlyn E Dickinson",
+        "Eric B Finkelstein",
+        "Craig M Neville",
+        "Cathryn A Sundback"
+      ],
+      "url": ""
+    },
+    {
+      "title": "In vitro evaluation of decellularized ECM‐derived surgical scaffold biomaterials",
+      "year": 2017,
+      "abstract": "Decellularized extracellular matrix (ECM) biomaterials are increasingly used in regenerative medicine for abdominal tissue repair. Emerging ECM biomaterials with greater compliance target surgical procedures like breast and craniofacial reconstruction to enhance aesthetic outcome. Clinical studies report improved outcomes with newly designed ECM scaffolds, but their comparative biological characteristics have received less attention. In this study, we investigated scaffolds derived from dermis (AlloDerm Regenerative Tissue Matrix), small intestinal submucosa (Surgisis 4‐layer Tissue Graft and OASIS Wound Matrix), and mesothelium (Meso BioMatrix Surgical Mesh and Veritas Collagen Matrix) and evaluated biological properties that modulate cellular responses and recruitment. An assay panel was utilized to assess the ECM scaffold effects upon cells. Results of the material‐conditioned media study …",
+      "venue": "Journal of Biomedical Materials Research Part B: Applied Biomaterials",
+      "citations": 47,
+      "authors": [
+        "Xiao Luo",
+        "Katherine M Kulig",
+        "Eric B Finkelstein",
+        "Margaret F Nicholson",
+        "Xiang‐Hong Liu",
+        "Scott M Goldman",
+        "Joseph P Vacanti",
+        "Brian E Grottkau",
+        "Irina Pomerantseva",
+        "Cathryn A Sundback",
+        "Craig M Neville"
+      ],
+      "url": ""
+    }
+  ]
+}

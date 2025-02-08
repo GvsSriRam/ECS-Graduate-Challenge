@@ -1,0 +1,102 @@
+{
+  "name": "Yeqing Wang",
+  "affiliation": "Assistant Professor, Syracuse University",
+  "interests": [
+    "Composite Materials and Structures",
+    "Multifunctional Composites",
+    "Damage Tolerance",
+    "Durability",
+    "Laser Machining of Composites"
+  ],
+  "citedby": 1106,
+  "h_index": 18,
+  "i10_index": 29,
+  "top_primary_author_publications": [
+    {
+      "title": "Lightning strike thermal damage model for glass fiber reinforced polymer matrix composites and its application to wind turbine blades",
+      "year": 2015,
+      "abstract": "A physics-based model describing the thermal interaction between a lightning channel and a composite structure has been developed. The model includes: (i) spatial and temporal evolution of the lightning channel as a function of the electric current waveform; (ii) temporary and spatially non-uniform heat flux generated at the composite structure, where the heat flux is an explicit function of the electric current waveform and the instant lightning channel radius; (iii) nonlinear transient heat transfer problem formulation for layered anisotropic composites that accounts for temperature-dependent material properties, a moving boundary of the expanding lightning channel, and phase transition moving boundary associated with instantaneous material removal due to sublimation. The model is applied for evaluation of thermal damage of the tip glass fiber reinforced polymer matrix composite panel of the Sandia 100-meter All …",
+      "venue": "Composite Structures",
+      "citations": 121,
+      "authors": [
+        "Y Wang",
+        "OI Zhupanska"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Multiphysics analysis of lightning strike damage in laminated carbon/glass fiber reinforced polymer matrix composite materials: A review of problem formulation and computational modeling",
+      "year": 2017,
+      "abstract": "Laminated carbon/glass fiber reinforced polymer matrix composite structures experience rapid temperature rise, resin decomposition, delamination, thermal ablation, and possible dielectric breakdown subjected to lightning strikes. The predictive analysis of these damage is challenging due to the complicated electric-thermal-mechanical-chemical coupling effects. In this paper, the basic physics, problem formulations, and numerical approaches for such multiphysics analysis are thoroughly reviewed. Limitations of the existing problem formulations and numerical approaches are extensively discussed. Possible solutions to overcome those limitations and future directions on improving the fidelity and accuracy of such predictive analysis are also provided. In addition, part of the material properties that are required for these analyses, such as the temperature-dependent thermal, electrical, and mechanical properties of …",
+      "venue": "",
+      "citations": 89,
+      "authors": [
+        "Yeqing Wang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Modeling pulsed laser ablation of aluminum with finite element analysis considering material moving front",
+      "year": 2017,
+      "abstract": "During the pulsed laser ablation (PLA) of solid materials, the surface of the target material progressively recedes which in turn necessitates to account for the moving front boundary in the formulation of the laser heat conduction problem. Hence, developing an accurate predictive simulation model that captures the material moving front and updates simultaneously the laser source boundary conditions is an important and yet challenging task. In this paper, the PLA of aluminum is formulated and modeled with finite element analysis (FEA) that considers the instant material removal during the ablation process. Here, the implementation of such an FEA enables a strong coupling between the progressive surface recession (i.e., the shape change of the target material) and the laser heat conduction. Moreover, the proposed numerical simulation model not only predicts the progressive surface recession due to the material …",
+      "venue": "International Journal of Heat and Mass Transfer",
+      "citations": 72,
+      "authors": [
+        "Yeqing Wang",
+        "Ninggang Shen",
+        "Getachew K Befekadu",
+        "Crystal L Pasiliao"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A computational framework for coating fatigue analysis of wind turbine blades due to rain erosion",
+      "year": 2021,
+      "abstract": "The rain-induced fatigue damage in the wind turbine blade coating has attracted increasing attention owing to significant repair and maintenance costs. The present paper develops an improved computational framework for analyzing the wind turbine blade coating fatigue induced by rain erosion. The paper first presents an extended stochastic rain field simulation model that considers different raindrop shapes (spherical, flat, and spindle), raindrop sizes, impact angles, and impact speeds. The influence of these raindrop characteristics on the impact stress of the blade coating is investigated by a smoothed particle hydrodynamics approach. To address the expensive computational time, a stress interpolation method is proposed to calculate the impact stress of all raindrops in a random rain event. Furthermore, coating fatigue analysis is performed by including the fatigue crack initiation in the incubation period and …",
+      "venue": "Renewable Energy",
+      "citations": 35,
+      "authors": [
+        "Weifei Hu",
+        "Weiyi Chen",
+        "Xiaobo Wang",
+        "Zhiyu Jiang",
+        "Yeqing Wang",
+        "Amrit Shankar Verma",
+        "Julie JE Teuwen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Discharge and ground electrode design considerations for the lightning strike damage tolerance assessment of CFRP matrix composite laminates",
+      "year": 2020,
+      "abstract": "Lightning strike damage tolerance of carbon fiber reinforced polymer (CFRP) composites is prone to misinterpretation. This study demonstrates that the design of lightning strike testbeds can be a major cause of the misinterpretation. The risk of misinterpretation originates from the lack of standards clearly defining testbed design requirements including electrode size and ground electrode edge configuration. Here we report the impact of electrode size and ground electrode edge configuration on the damage characteristics of CFRP matrix composite laminates caused by simulated lightning strikes. The results suggest that the level of damage is influenced by discharge current amplitude, discharge diameter, and the existence of electrical insulation covering ground electrode edges. Specifically, the damage increases with increasing discharge current amplitude and decreasing discharge diameter. Most importantly …",
+      "venue": "Composites Part B: Engineering",
+      "citations": 32,
+      "authors": [
+        "Kamran Yousefpour",
+        "Wenhua Lin",
+        "Yeqing Wang",
+        "Chanyeop Park"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Epoxy Resin with Carbon Nanotube Additives for Lightning Strike Damage Mitigation of Carbon Fiber Composite Laminates",
+      "year": 2019,
+      "abstract": "Carbon fiber composites are paving the way for light weight, high strength structures in the aerospace industry. While the benefits of carbon fiber composites are undeniable, they also have their drawbacks. Crippling damage due to lightning strikes is one of them. The current solutions to reducing the damage due to lightning includes adding expensive and heavy copper mesh into the laminate. A potential solution to this problem would be to add a lightweight conductive additive to the epoxy resin instead of a copper mesh. Carbon nanotubes are chosen as the additive to create an electrically conductive resin matrix and hence increase the overall electrical conductivity of the composite. Increasing the conductivity will decrease the damage owing to a faster dissipation of lightning-strike-induced Joule heating, and more importantly increase the residual strength. In this work, we quantified the increase in conductivity through measuring the electrical resistance using the four-probe method. Results showed that the electrical resistance of the sample with carbon nanotube additives is 31% lower than the one with no additives when the same resin system is used. In addition, lightning strike tests have also been carried out with both samples using an artificially generated waveform A impulse current with a peak of 100 kA. The current results showed no visible damage to both the samples with and without CNT additives in the epoxy. Time-resolved camera images taken for the lightning strike tests showed that",
+      "venue": "Proceedings of the American Society for Composites—Thirty-fourth Technical Conference",
+      "citations": 19,
+      "authors": [
+        "Spencer Lampkin",
+        "Wenhua Lin",
+        "Mojtaba Rostaghi-chalaki",
+        "Kamran Yousefpour",
+        "Yeqing Wang",
+        "Joni Kluss"
+      ],
+      "url": ""
+    }
+  ]
+}

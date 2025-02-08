@@ -1,0 +1,100 @@
+{
+  "name": "Younes Radi",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Applied electromagnetics",
+    "Artificial materials"
+  ],
+  "citedby": 4301,
+  "h_index": 29,
+  "i10_index": 44,
+  "top_primary_author_publications": [
+    {
+      "title": "Thin perfect absorbers for electromagnetic waves: theory, design, and realizations",
+      "year": 2015,
+      "abstract": "With recent advances in nanophotonics and nanofabrication, considerable progress has been achieved in realizations of thin composite layers designed for full absorption of incident electromagnetic radiation, from microwaves to the visible. If the layer is structured at a subwavelength scale, thin perfect absorbers are usually called “metamaterial absorbers,” because these composite structures are designed to emulate some material responses not reachable with any natural material. On the other hand, many thin absorbing composite layers were designed and used already in the time of the introduction of radar technology, predominantly as a means to reduce radar visibility of targets. In view of a wide variety of classical and new topologies of optically thin metamaterial absorbers and plurality of applications, there is a need for a general, conceptual overview of the fundamental mechanisms of full absorption of light …",
+      "venue": "",
+      "citations": 600,
+      "authors": [
+        "Younes Ra’di",
+        "Constantin R Simovski",
+        "Sergei A Tretyakov"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Metagratings: Beyond the limits of graded metasurfaces for wave front control",
+      "year": 2017,
+      "abstract": "Graded metasurfaces exploit the local momentum imparted by an impedance gradient to mold the impinging wave front. This approach suffers from fundamental limits on the overall conversion efficiency, and it is challenged by fabrication limitations on the spatial resolution. Here, we introduce the concept of metagratings, formed by periodic arrays of carefully tailored bianisotropic inclusions and show that they enable wave front engineering with unitary efficiency and significantly lower fabrication demands. We employ this concept to design reflective metasurfaces for wave front steering without limitations on efficiency. A similar approach can be extended to transmitted beams and arbitrary wave front transformation, opening opportunities for highly efficient metasurfaces for extreme wave manipulation.",
+      "venue": "Physical review letters",
+      "citations": 535,
+      "authors": [
+        "Younes Ra’di",
+        "Dimitrios L Sounas",
+        "Andrea Alù"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Functional metamirrors using bianisotropic elements",
+      "year": 2015,
+      "abstract": "Conventional mirrors obey the simple reflection law that a plane wave is reflected as a plane wave, at the same angle. To engineer spatial distributions of fields reflected from a mirror, one can either shape the reflector or position some phase-correcting elements on top of a mirror surface. Here we show, both theoretically and experimentally, that full-power reflection with general control over the reflected wave phase is possible with a single-layer array of deeply subwavelength inclusions. These proposed artificial surfaces, metamirrors, provide various functions of shaped or nonuniform reflectors without utilizing any mirror. This can be achieved only if the forward and backward scattering of the inclusions in the array can be engineered independently, and we prove that it is possible using electrically and magnetically polarizable inclusions. The proposed subwavelength inclusions possess desired reflecting …",
+      "venue": "Physical review letters",
+      "citations": 189,
+      "authors": [
+        "Viktar S Asadchy",
+        "Y Ra’Di",
+        "J Vehmas",
+        "SA Tretyakov"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Perfect control of reflection and refraction using spatially dispersive metasurfaces",
+      "year": 2016,
+      "abstract": "Nonuniform metasurfaces (electrically thin composite layers) can be used for shaping refracted and reflected electromagnetic waves. However, known design approaches based on the generalized refraction and reflection laws do not allow realization of perfectly performing devices: there are always some parasitic reflections into undesired directions. In this paper we introduce and discuss a general approach to the synthesis of metasurfaces for full control of transmitted and reflected plane waves and show that perfect performance can be realized. The method is based on the use of an equivalent impedance matrix model which connects the tangential field components at the two sides on the metasurface. With this approach we are able to understand what physical properties of the metasurface are needed in order to perfectly realize the desired response. Furthermore, we determine the required polarizabilities of …",
+      "venue": "Physical Review B",
+      "citations": 556,
+      "authors": [
+        "Viktar S Asadchy",
+        "Mohammad Albooyeh",
+        "Svetlana N Tcvetkova",
+        "Ana Díaz-Rubio",
+        "Younes Ra'di",
+        "Sergei A Tretyakov"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Broadband reflectionless metasheets: frequency-selective transmission and perfect absorption",
+      "year": 2015,
+      "abstract": "Energy of propagating electromagnetic waves can be fully absorbed in a thin lossy layer, but only in a narrow frequency band, as follows from the causality principle. On the other hand, it appears that there are no fundamental limitations on broadband matching of thin resonant absorbing layers. However, known thin absorbers produce significant reflections outside of the resonant absorption band. In this paper, we explore possibilities to realize a thin absorbing layer that produces no reflected waves in a very wide frequency range, while the transmission coefficient has a narrow peak of full absorption. Here we show, both theoretically and experimentally, that a thin resonant absorber, invisible in reflection in a very wide frequency range, can be realized if one and the same resonant mode of the absorbing array unit cells is utilized to create both electric and magnetic responses. We test this concept using chiral …",
+      "venue": "Physical Review X",
+      "citations": 240,
+      "authors": [
+        "Viktar S Asadchy",
+        "Ihar A Faniayeu",
+        "Y Ra’Di",
+        "SA Khakhomov",
+        "IV Semchenko",
+        "SA Tretyakov"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Total absorption of electromagnetic waves in ultimately thin layers",
+      "year": 2013,
+      "abstract": "We consider single-layer arrays of electrically small lossy particles that completely absorb electromagnetic waves at normal incidence. Required conditions for electromagnetic properties of bi-anisotropic particles have been identified in the most general case of uniaxial reciprocal and nonreciprocal particles. We consider the design possibilities offered by the particles of all four fundamental classes of bi-anisotropic inclusions: reciprocal chiral and omega particles and nonreciprocal Tellegen and moving particles. We also study the reflection/transmission properties of asymmetric structures with different properties when illuminated from the opposite sides of the sheet. It has been found that it is possible to realize single-layer grids which exhibit the total absorption property when illuminated from one side but are totally transparent when illuminated from the other side (an ultimately thin isolator). Other possible …",
+      "venue": "IEEE Transactions on Antennas and Propagation",
+      "citations": 171,
+      "authors": [
+        "Younes Ra'Di",
+        "Viktar S Asadchy",
+        "Sergei A Tretyakov"
+      ],
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "name": "Makan Fardad",
+  "affiliation": "Engineering & Computer Science, Syracuse University",
+  "interests": [
+    "Analysis and optimization of large-scale networks"
+  ],
+  "citedby": 4106,
+  "h_index": 31,
+  "i10_index": 50,
+  "top_primary_author_publications": [
+    {
+      "title": "Design of optimal sparse feedback gains via the alternating direction method of multipliers",
+      "year": 2013,
+      "abstract": "We design sparse and block sparse feedback gains that minimize the variance amplification (i.e., the H 2  norm) of distributed systems. Our approach consists of two steps. First, we identify sparsity patterns of feedback gains by incorporating sparsity-promoting penalty functions into the optimal control problem, where the added terms penalize the number of communication links in the distributed controller. Second, we optimize feedback gains subject to structural constraints determined by the identified sparsity patterns. In the first step, the sparsity structure of feedback gains is identified using the alternating direction method of multipliers, which is a powerful algorithm well-suited to large optimization problems. This method alternates between promoting the sparsity of the controller and optimizing the closed-loop performance, which allows us to exploit the structure of the corresponding objective functions. In particular …",
+      "venue": "IEEE Transactions on Automatic Control",
+      "citations": 576,
+      "authors": [
+        "Fu Lin",
+        "Makan Fardad",
+        "Mihailo R Jovanović"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Augmented Lagrangian approach to design of structured optimal state feedback gains",
+      "year": 2011,
+      "abstract": "We consider the design of optimal state feedback gains subject to structural constraints on the distributed controllers. These constraints are in the form of sparsity requirements for the feedback matrix, implying that each controller has access to information from only a limited number of subsystems. The minimizer of this constrained optimal control problem is sought using the augmented Lagrangian method. Notably, this approach does not require a stabilizing structured gain to initialize the optimization algorithm. Motivated by the structure of the necessary conditions for optimality of the augmented Lagrangian, we develop an alternating descent method to determine the structured optimal gain. We also utilize the sensitivity interpretation of the Lagrange multiplier to identify favorable communication architectures for structured optimal design. Examples are provided to illustrate the effectiveness of the developed method.",
+      "venue": "IEEE Transactions on Automatic Control",
+      "citations": 236,
+      "authors": [
+        "Fu Lin",
+        "Makan Fardad",
+        "Mihailo R Jovanovic"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Optimal control of vehicular formations with nearest neighbor interactions",
+      "year": 2011,
+      "abstract": "We consider the design of optimal localized feedback gains for one-dimensional formations in which vehicles only use information from their immediate neighbors. The control objective is to enhance coherence of the formation by making it behave like a rigid lattice. For the single-integrator model with symmetric gains, we establish convexity, implying that the globally optimal controller can be computed efficiently. We also identify a class of convex problems for double-integrators by restricting the controller to symmetric position and uniform diagonal velocity gains. To obtain the optimal non-symmetric gains for both the single- and the double-integrator models, we solve a parameterized family of optimal control problems ranging from an easily solvable problem to the problem of interest as the underlying parameter increases. When this parameter is kept small, we employ perturbation analysis to decouple the matrix …",
+      "venue": "IEEE Transactions on Automatic Control",
+      "citations": 231,
+      "authors": [
+        "Fu Lin",
+        "Makan Fardad",
+        "Mihailo R Jovanovic"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A systematic dnn weight pruning framework using alternating direction method of multipliers",
+      "year": 2018,
+      "abstract": "Weight pruning methods for deep neural networks (DNNs) have been investigated recently, but prior work in this area is mainly heuristic, iterative pruning, thereby lacking guarantees on the weight reduction ratio and convergence time. To mitigate these limitations, we present a systematic weight pruning framework of DNNs using the alternating direction method of multipliers (ADMM). We first formulate the weight pruning problem of DNNs as a nonconvex optimization problem with combinatorial constraints specifying the sparsity requirements, and then adopt the ADMM framework for systematic weight pruning. By using ADMM, the original nonconvex optimization problem is decomposed into two subproblems that are solved iteratively. One of these subproblems can be solved using stochastic gradient descent, the other can be solved analytically. Besides, our method achieves a fast convergence rate. The weight pruning results are very promising and consistently outperform the prior work. On the LeNet-5 model for the MNIST data set, we achieve 71.2 times weight reduction without accuracy loss. On the AlexNet model for the ImageNet data set, we achieve 21 times weight reduction without accuracy loss. When we focus on the convolutional layer pruning for computation reductions, we can reduce the total computation by five times compared with the prior work (achieving a total of 13.4 times weight reduction in convolutional layers). Our models and codes are released at https://github. com/KaiqiZhang/admm-pruning.",
+      "venue": "Proceedings of the European conference on computer vision (ECCV)",
+      "citations": 563,
+      "authors": [
+        "Tianyun Zhang",
+        "Shaokai Ye",
+        "Kaiqi Zhang",
+        "Jian Tang",
+        "Wujie Wen",
+        "Makan Fardad",
+        "Yanzhi Wang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Sensor selection for estimation with correlated measurement noise",
+      "year": 2016,
+      "abstract": "In this paper, we consider the problem of sensor selection for parameter estimation with correlated measurement noise. We seek optimal sensor activations by formulating an optimization problem, in which the estimation error, given by the trace of the inverse of the Bayesian Fisher information matrix, is minimized subject to energy constraints. Fisher information has been widely used as an effective sensor selection criterion. However, existing information-based sensor selection methods are limited to the case of uncorrelated noise or weakly correlated noise due to the use of approximate metrics. By contrast, here we derive the closed form of the Fisher information matrix with respect to sensor selection variables that is valid for any arbitrary noise correlation regime and develop both a convex relaxation approach and a greedy algorithm to find near-optimal solutions. We further extend our framework of sensor …",
+      "venue": "IEEE Transactions on Signal Processing",
+      "citations": 219,
+      "authors": [
+        "Sijia Liu",
+        "Sundeep Prabhakar Chepuri",
+        "Makan Fardad",
+        "Engin Maşazade",
+        "Geert Leus",
+        "Pramod K Varshney"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Adam-admm: A unified, systematic framework of structured weight pruning for dnns",
+      "year": 2018,
+      "abstract": "Weight pruning methods of deep neural networks (DNNs) have been demonstrated to achieve a good model pruning ratio without loss of accuracy, thereby alleviating the significant computation/storage requirements of large-scale DNNs. Structured weight pruning methods have been proposed to overcome the limitation of irregular network structure and demonstrated actual GPU acceleration. However, the pruning ratio (degree of sparsity) and GPU acceleration are limited (to less than 50%) when accuracy needs to be maintained.In this work, we overcome pruning ratio and GPU acceleration limitations by proposing a unified, systematic framework of structured weight pruning for DNNs, named ADAM-ADMM (Adaptive Moment Estimation-Alternating Direction Method of Multipliers). It is a framework that can be used to induce different types of structured sparsity, such as filter-wise, channel-wise, and shape-wise sparsity, as well non-structured sparsity. The proposed framework incorporates stochastic gradient descent with ADMM, and can be understood as a dynamic regularization method in which the regularization target is analytically updated in each iteration. A significant improvement in weight pruning ratio is achieved without loss of accuracy, along with fast convergence rate. With a small sparsity degree of 33% on the convolutional layers, we achieve 1.64% accuracy enhancement for the AlexNet (CaffeNet) model. This is obtained by mitigation of overfitting. Without loss of accuracy on the AlexNet model, we achieve 2.6× and 3.65× average measured speedup on two GPUs, clearly outperforming the prior work. The average speedups reach …",
+      "venue": "arXiv preprint arXiv:1807.11091",
+      "citations": 79,
+      "authors": [
+        "Tianyun Zhang",
+        "Kaiqi Zhang",
+        "Shaokai Ye",
+        "Jiayu Li",
+        "Jian Tang",
+        "Wujie Wen",
+        "Xue Lin",
+        "Makan Fardad",
+        "Yanzhi Wang"
+      ],
+      "url": ""
+    }
+  ]
+}

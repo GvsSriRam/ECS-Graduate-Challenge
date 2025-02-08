@@ -1,0 +1,103 @@
+{
+  "name": "Kristopher Micinski",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Programming Languages",
+    "Automated Reasoning",
+    "Reverse Engineering"
+  ],
+  "citedby": 1364,
+  "h_index": 13,
+  "i10_index": 13,
+  "top_primary_author_publications": [
+    {
+      "title": "Dr. Android and Mr. Hide: fine-grained permissions in android applications",
+      "year": 2012,
+      "abstract": "Google's Android platform includes a permission model that protects access to sensitive capabilities, such as Internet access, GPS use, and telephony. While permissions provide an important level of security, for many applications they allow broader access than actually required. In this paper, we introduce a novel framework that addresses this issue by adding finer-grained permissions to Android. Underlying our framework is a taxonomy of four major groups of Android permissions, each of which admits some common strategies for deriving sub-permissions. We used these strategies to investigate fine-grained versions of five of the most common Android permissions, including access to the Internet, user contacts, and system settings. We then developed a suite of tools that allow these fine-grained permissions to be inferred on existing apps; to be enforced by developers on their own apps; and to be retrofitted by …",
+      "venue": "",
+      "citations": 418,
+      "authors": [
+        "Jinseong Jeon",
+        "Kristopher K Micinski",
+        "Jeffrey A Vaughan",
+        "Ari Fogel",
+        "Nikhilesh Reddy",
+        "Jeffrey S Foster",
+        "Todd Millstein"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Distributed Cooperative Caching In Social Wireless Networks",
+      "year": 2012,
+      "abstract": "This paper introduces cooperative caching policies for minimizing electronic content provisioning cost in Social Wireless Networks (SWNET). SWNETs are formed by mobile devices, such as data enabled phones, electronic book readers etc., sharing common interests in electronic content, and physically gathering together in public places. Electronic object caching in such SWNETs are shown to be able to reduce the content provisioning cost which depends heavily on the service and pricing dependences among various stakeholders including content providers (CP), network service providers, and End Consumers (EC). Drawing motivation from Amazon's Kindle electronic book delivery business, this paper develops practical network, service, and pricing models which are then used for creating two object caching strategies for minimizing content provisioning costs in networks with homogenous and heterogeneous …",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citations": 120,
+      "authors": [
+        "Mahmoud Taghizadeh",
+        "Kristopher Micinski",
+        "Subir Biswas"
+      ],
+      "url": ""
+    },
+    {
+      "title": "SymDroid: Symbolic execution for Dalvik bytecode",
+      "year": 2012,
+      "abstract": "Apps on Google’s Android mobile device platform are written in Java, but are compiled to a special bytecode language called Dalvik. In this paper, we introduce SymDroid, a symbolic executor that operates directly on Dalvik bytecode. SymDroid begins by first translating Dalvik into µ-Dalvik, a simpler language that has only 16 instructions, in contrast to Dalvik’s more than 200 instructions. We present a formalism for SymDroid’s symbolic executor, which can be described with a small number of operational semantics rules; this semantics may be of independent interest. In addition to modeling bytecode instructions, SymDroid also contains models of some key portions of the Android platform, including libraries and the platform’s lifecycle control code. We evaluated SymDroid in two ways. First, we ran it on the Android Compatibility Test Suite, and found it passed all tests except ones that used library or system routines we have not yet implemented. On this test suite, SymDroid runs about twice as slow as the Dalvik VM, and about twice as fast as the Java VM. Second, we used SymDroid to discover the (path) conditions under which contacts may be accessed on an Android app, and found it was able to do so successfully. These results suggest that SymDroid, while still a prototype, is a promising first step in enabling direct, precise analysis of Android apps.",
+      "venue": "University of Maryland, Tech. Rep",
+      "citations": 80,
+      "authors": [
+        "Jinseong Jeon",
+        "Kristopher K Micinski",
+        "Jeffrey S Foster"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Temporal logics for hyperproperties",
+      "year": 2014,
+      "abstract": "Two new logics for verification of hyperproperties are proposed. Hyperproperties characterize security policies, such as noninterference, as a property of sets of computation paths. Standard temporal logics such as LTL, CTL, and CTL* can refer only to a single path at a time, hence cannot express many hyperproperties of interest. The logics proposed here, HyperLTL and HyperCTL*, add explicit and simultaneous quantification over multiple paths to LTL and to CTL*. This kind of quantification enables expression of hyperproperties. A model checking algorithm for the proposed logics is given. For a fragment of HyperLTL, a prototype model checker has been implemented.",
+      "venue": "Principles of Security and Trust: Third International Conference, POST 2014, Held as Part of the European Joint Conferences on Theory and Practice of Software, ETAPS 2014, Grenoble, France, April 5-13, 2014, Proceedings 3",
+      "citations": 361,
+      "authors": [
+        "Michael R Clarkson",
+        "Bernd Finkbeiner",
+        "Masoud Koleini",
+        "Kristopher K Micinski",
+        "Markus N Rabe",
+        "César Sánchez"
+      ],
+      "url": ""
+    },
+    {
+      "title": "An Observational Investigation of Reverse Engineers’ Processes",
+      "year": 2020,
+      "abstract": "Reverse engineering is a complex process essential to software-security tasks such as vulnerability discovery and malware analysis. Significant research and engineering effort has gone into developing tools to support reverse engineers. However, little work has been done to understand the way reverse engineers think when analyzing programs, leaving tool developers to make interface design decisions based only on intuition.",
+      "venue": "29th USENIX Security Symposium (USENIX '20)",
+      "citations": 98,
+      "authors": [
+        "Daniel Votipka",
+        "Seth Rabin",
+        "Kristopher Micinski",
+        "Jeffrey S Foster",
+        "Michelle L Mazurek"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Seamless deductive inference via macros",
+      "year": 2022,
+      "abstract": "We present an approach to integrating state-of-art bottom-up logic programming within the Rust ecosystem, demonstrating it with Ascent, an extension of Datalog that performs well against comparable systems. Rust’s powerful macro system permits Ascent to be compiled uniformly with the Rust code it’s embedded in and to interoperate with arbitrary user-defined components written in Rust, addressing a challenge in real-world use of logic programming languages: the fact that logical programs are parts of bigger software systems and need to interoperate with other components written in imperative programming languages. We leverage Rust’s trait system to extend Datalog semantics with non-powerset lattices, much like Flix, and with user-defined data types much like Formulog and Souffle. We use Ascent to re-implement the Rust borrow checker, a static analysis required by the Rust compiler. We evaluate our …",
+      "venue": "",
+      "citations": 21,
+      "authors": [
+        "Arash Sahebolamri",
+        "Thomas Gilray",
+        "Kristopher Micinski"
+      ],
+      "url": ""
+    }
+  ]
+}

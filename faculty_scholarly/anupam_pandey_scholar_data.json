@@ -1,0 +1,106 @@
+{
+  "name": "Anupam Pandey",
+  "affiliation": "Mechanical & Aerospace Engineering, BioInspired Institute, Syracuse University",
+  "interests": [
+    "Soft matter",
+    "Capillarity",
+    "Viscous flow",
+    "Geometry"
+  ],
+  "citedby": 791,
+  "h_index": 14,
+  "i10_index": 15,
+  "top_primary_author_publications": [
+    {
+      "title": "Dynamics of snapping beams and jumping poppers",
+      "year": 2014,
+      "abstract": "We consider the dynamic snapping instability of elastic beams and shells. Using the Kirchhoff rod and Föppl-von Kármán plate equations, we study the stability, deformation modes, and snap-through dynamics of an elastic arch with clamped boundaries and subject to a concentrated load. For parameters typical of everyday and technological applications of snapping, we show that the stretchability of the arch plays a critical role in determining not only the post-buckling mode of deformation but also the timescale of snapping and the frequency of the arch's vibrations about its final equilibrium state. We show that the growth rate of the snap-through instability and its subsequent ringing frequency can both be interpreted physically as the result of a sound wave in the material propagating over a distance comparable to the length of the arch. Finally, we extend our analysis of the ringing frequency of indented arches to …",
+      "venue": "Europhysics Letters",
+      "citations": 157,
+      "authors": [
+        "Anupam Pandey",
+        "Derek E Moulton",
+        "Dominic Vella",
+        "Douglas P Holmes"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Liquid drops attract or repel by the inverted Cheerios effect",
+      "year": 2016,
+      "abstract": "Solid particles floating at a liquid interface exhibit a long-ranged attraction mediated by surface tension. In the absence of bulk elasticity, this is the dominant lateral interaction of mechanical origin. Here, we show that an analogous long-range interaction occurs between adjacent droplets on solid substrates, which crucially relies on a combination of capillarity and bulk elasticity. We experimentally observe the interaction between droplets on soft gels and provide a theoretical framework that quantitatively predicts the interaction force between the droplets. Remarkably, we find that, although on thick substrates the interaction is purely attractive and leads to drop–drop coalescence, for relatively thin substrates a short-range repulsion occurs, which prevents the two drops from coming into direct contact. This versatile interaction is the liquid-on-solid analog of the “Cheerios effect.” The effect will strongly influence the …",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "citations": 139,
+      "authors": [
+        "Stefan Karpitschka",
+        "Anupam Pandey",
+        "Luuk A Lubbers",
+        "Joost H Weijs",
+        "Lorenzo Botto",
+        "Siddhartha Das",
+        "Bruno Andreotti",
+        "Jacco H Snoeijer"
+      ],
+      "url": ""
+    },
+    {
+      "title": "The relationship between viscoelasticity and elasticity",
+      "year": 2020,
+      "abstract": "Soft materials that are subjected to large deformations exhibit an extremely rich phenomenology, with properties lying in between those of simple fluids and those of elastic solids. In the continuum description of these systems, one typically follows either the route of solid mechanics (Lagrangian description) or the route of fluid mechanics (Eulerian description). The purpose of this review is to highlight the relationship between the theories of viscoelasticity and of elasticity, and to leverage this connection in contemporary soft matter problems. We review the principles governing models for viscoelastic liquids, for example solutions of flexible polymers. Such materials are characterized by a relaxation time λ, over which stresses relax. We recall the kinematics and elastic response of large deformations, and show which polymer models do (and which do not) correspond to a nonlinear elastic solid in the limit λ → ∞ …",
+      "venue": "",
+      "citations": 89,
+      "authors": [
+        "JH Snoeijer",
+        "A Pandey",
+        "MA Herrada",
+        "J Eggers"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Cusp-shaped Elastic Creases and Furrows",
+      "year": 2017,
+      "abstract": "The surfaces of growing biological tissues, swelling gels, and compressed rubbers do not remain smooth, but frequently exhibit highly localized inward folds. We reveal the morphology of this surface folding in a novel experimental setup, which permits us to deform the surface of a soft gel in a controlled fashion. The interface first forms a sharp furrow, whose tip size decreases rapidly with deformation. Above a critical deformation, the furrow bifurcates to an inward folded crease of vanishing tip size. We show experimentally and numerically that both creases and furrows exhibit a universal cusp shape, whose width scales like  at a distance  from the tip. We provide a similarity theory that captures the singular profiles before and after the self-folding bifurcation, and derive the length of the fold from finite deformation elasticity.",
+      "venue": "Physical Review Letters",
+      "citations": 29,
+      "authors": [
+        "S Karpitschka",
+        "J Eggers",
+        "A Pandey",
+        "JH Snoeijer"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Rising beyond elastocapillarity",
+      "year": 2016,
+      "abstract": "We consider the elastocapillary rise between swellable structures using a favorable solvent. We characterize the dynamic deformations and resulting equilibrium configurations for various beams. Our analysis reveals the importance of the spacing between the two beams, and the elastocapillary length ec, which prescribes the relative magnitude of surface tension and bending stiffness in the system. In particular, we rationalize the transition between coalescence-dominated, bending-dominated, and swelling-dominated regimes, and enumerate the subtle interfacial mechanisms at play in the ratcheting of a fluid droplet trapped between the curling beams.",
+      "venue": "Soft matter",
+      "citations": 24,
+      "authors": [
+        "Douglas P Holmes",
+        "P-T Brun",
+        "Anupam Pandey",
+        "Suzie Protière"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Pinning-induced folding-unfolding asymmetry in adhesive creases",
+      "year": 2021,
+      "abstract": "The compression of soft elastic matter and biological tissue can lead to creasing, an instability where a surface folds sharply into periodic self-contacts. Intriguingly, the unfolding of the surface upon releasing the strain is usually not perfect: small scars remain that serve as nuclei for creases during repeated compressions. Here we present creasing experiments with sticky polymer surfaces, using confocal microscopy, which resolve the contact line region where folding and unfolding occurs. It is found that surface tension induces a second fold, at the edge of the self-contact, which leads to a singular elastic stress and self-similar crease morphologies. However, these profiles exhibit an intrinsic folding-unfolding asymmetry that is caused by contact line pinning, in a way that resembles wetting of liquids on imperfect solids. Contact line pinning is therefore a key element of creasing: it inhibits complete unfolding and gives …",
+      "venue": "Phys. Rev. Lett.",
+      "citations": 21,
+      "authors": [
+        "Michiel AJ van Limbeek",
+        "Martin H Essink",
+        "Anupam Pandey",
+        "Jacco H Snoeijer",
+        "Stefan Karpitschka"
+      ],
+      "url": ""
+    }
+  ]
+}

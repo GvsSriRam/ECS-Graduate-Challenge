@@ -1,0 +1,104 @@
+{
+  "name": "Jeongmin Ahn",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Energy Conversion",
+    "Combustion",
+    "Thermal Management",
+    "Power MEMS"
+  ],
+  "citedby": 3820,
+  "h_index": 29,
+  "i10_index": 45,
+  "top_primary_author_publications": [
+    {
+      "title": "Gas-phase and catalytic combustion in heat-recirculating burners",
+      "year": 2005,
+      "abstract": "An experimental study of a spiral counterflow “Swiss roll” burner was conducted, with emphasis on the determination of extinction limits and comparison of results with and without bare-metal Pt catalyst. A wide range of Reynolds numbers (Re) were tested using propane–air mixtures. Both lean and rich extinction limits were extended with the catalyst, though rich limits were extended much further. With the catalyst, combustion could be sustained at Re as low as 1.2 with peak temperatures as low as 350K. A heat transfer parameter characterizing the thermal performance of both gas-phase and catalytic combustion at all Re was identified. At low Re, the “lean” extinction limit was actually rich of stoichiometric, and rich-limit had equivalence ratios exceeded 40 in some cases. No corresponding behavior was observed without the catalyst. Gas-phase combustion, in general, occurred in a “flameless” mode near the …",
+      "venue": "Proceedings of the Combustion Institute",
+      "citations": 423,
+      "authors": [
+        "Jeongmin Ahn",
+        "Craig Eastwood",
+        "Lars Sitzki",
+        "Paul D Ronney"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Advances and challenges in the development of power-generation systems at small scales",
+      "year": 2011,
+      "abstract": "The miniaturization of electro-mechanical devices, and the resulting need for micro-power generation (milliwatts to watts) with low weight, long life devices, has lead to the recent development of the field of micro-scale combustion and power generation. The primary objective of this new field is to leverage the high energy density of fuels, specifically liquid hydrocarbon fuels relative to batteries and all other energy storage devices other than nuclear fission, fusion or decay. As such, a miniaturized device even with a moderately efficient conversion of hydrocarbon fuels to power would result in increased lifetime and/or reduced weight of an electronic or mechanical system that are currently most often powered by electrochemical cells. Furthermore, improvements in this field may make possible novel applications and/or capability. In addition to the interest in miniaturization, the field is also driven by the potential …",
+      "venue": "",
+      "citations": 328,
+      "authors": [
+        "David C Walther",
+        "Jeongmin Ahn"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Progress in microtubular solid oxide fuel cells",
+      "year": 2010,
+      "abstract": "The benefits of microtubular solid oxide fuel cells (SOFCs) are addressed, including increased power density, rapid start‐up, and cycling performance. Several international developments are discussed, especially small portable applications, which demand fast start and multiple cycles. Extrusion is the main method for making microtubular SOFCs because improved structure and properties can result from better mixing of the component particles and coextrusion can integrate several cell components in one process step. When the tubes are <3 mm in diameter, it is shown that the power density and thermal shock resistance are much increased, with start‐up in a few seconds rather than hours for planar designs, as demonstrated in a single‐cell hand‐held system running on butane. The problems of cycling, both thermal and redox, are then considered in detail. Thermal cycling degradation follows a fatigue curve …",
+      "venue": "International Journal of Applied Ceramic Technology",
+      "citations": 184,
+      "authors": [
+        "Kevin Kendall"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A thermally self-sustained micro solid-oxide fuel-cell stack with high power density",
+      "year": 2005,
+      "abstract": "High energy efficiency and energy density, together with rapid refuelling capability, render fuel cells highly attractive for portable power generation,. Accordingly, polymer-electrolyte direct-methanol fuel cells are of increasing interest as possible alternatives to Li ion batteries. However, such fuel cells face several design challenges and cannot operate with hydrocarbon fuels of higher energy density. Solid-oxide fuel cells (SOFCs) enable direct use of higher hydrocarbons,,, but have not been seriously considered for portable applications because of thermal management difficulties at small scales, slow start-up and poor thermal cyclability. Here we demonstrate a thermally self-sustaining micro-SOFC stack with high power output and rapid start-up by using single chamber operation on propane fuel. The catalytic oxidation reactions supply sufficient thermal energy to maintain the fuel cells at 500–600 °C. A power …",
+      "venue": "Nature",
+      "citations": 808,
+      "authors": [
+        "Zongping Shao",
+        "Sossina M Haile",
+        "Jeongmin Ahn",
+        "Paul D Ronney",
+        "Zhongliang Zhan",
+        "Scott A Barnett"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Extinction limits of catalytic combustion in microchannels",
+      "year": 2002,
+      "abstract": "The limits to self-sustaining catalytic combustion in a microscale channel were studied computationally using a cylindrical tube reactor. The tube, 1 mm in diameter, 10 mm long, and coated with Pt catalyst, was assumed to be thermally thin, and the boundary condition on the wall was set to be either adiabatic or non-adiabatic with fixed heat transfer coefficient. Methane/air mixtures with average velocities of 0.0375–0.96 m/s (corresponding to Reynolds number, Re, ranging from 2.5 to 60) were used. When the wall boundary condition was adiabatic, the equivalence ratio at the extinction limit monotonically decreased with increasing Re. In contrast, for non-adiabatic conditions, the extinction curve exhibited U-shaped dual limit behavior, that is, the extinction limits increased/decreased with decreasing Re in smaller/larger Re regions, respectively. The former extinction limit is caused by heat loss through the wall, and …",
+      "venue": "Proceedings of the combustion institute",
+      "citations": 233,
+      "authors": [
+        "Kaoru Maruta",
+        "Koichi Takeda",
+        "Jeongmin Ahn",
+        "Kevin Borer",
+        "Lars Sitzki",
+        "Paul D Ronney",
+        "Olaf Deutschmann"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Evaluation of Ba0. 5Sr0. 5Co0. 8Fe0. 2O3− δ as a potential cathode for an anode-supported proton-conducting solid-oxide fuel cell",
+      "year": 2008,
+      "abstract": "The potential application of Ba0.5Sr0.5Co0.8Fe0.2O3−δ (BSCF) as a cathode for a proton-conducting solid-oxide fuel cell based on BaCe0.9Y0.1O2.95 (BCY) electrolyte was investigated. Cation diffusion from BCY to BSCF with the formation of a perovskite-type Ba2+-enriched BSCF and a Ba2+-deficient BCY at a firing temperature as low as 900°C was observed, the higher the firing temperature the larger deviation of the A to B ratio from unit for the perovskites. Symmetric cell tests demonstrated the impurity phases did not induce a significant change of the cathodic polarization resistance, however, the ohmic resistance of the cell increased obviously. Anode-supported cells with the electrolyte thickness of ∼50μm were successfully fabricated via a dual-dry pressing process for the single-cell test. Under optimized conditions, a maximum peak power density of ∼550 and 100mWcm−2 was achieved at 700 and 400 …",
+      "venue": "Journal of Power Sources",
+      "citations": 207,
+      "authors": [
+        "Ye Lin",
+        "Ran Ran",
+        "Yao Zheng",
+        "Zongping Shao",
+        "Wanqin Jin",
+        "Nanping Xu",
+        "Jeongmin Ahn"
+      ],
+      "url": ""
+    }
+  ]
+}

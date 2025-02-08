@@ -1,0 +1,70 @@
+{
+  "name": "Xiyuan Liu",
+  "affiliation": "Ph.D., Syracuse University",
+  "interests": [
+    "Microfluidic",
+    "biosensor",
+    "portable sensor",
+    "wearable sensor"
+  ],
+  "citedby": 269,
+  "h_index": 6,
+  "i10_index": 4,
+  "top_primary_author_publications": [
+    {
+      "title": "Embroidered electrochemical sensors for biomolecular detection",
+      "year": 2016,
+      "abstract": "Electrochemical sensors are powerful analytical tools which possess the capacity for rapid detection of biomarkers in clinical specimens. While most electrochemical sensors are fabricated on rigid substrates, there is a growing need for sensors that can be manufactured on inexpensive and flexible materials. Here, we present a unique embroidered electrochemical sensor that is capable of quantitative analytical measurements using raw biofluid samples. Conductive threads immobilized with enzyme probes were generated using a simple and robust fabrication process and used to fabricate flexible, mechanically robust electrodes on textiles. For proof of concept, measurements were performed to detect glucose and lactate in buffer and whole blood samples, which exhibited excellent specificity and accuracy. We also demonstrate that our embroidered biosensor can be readily fabricated in two-dimensional (2D …",
+      "venue": "Lab on a Chip",
+      "citations": 112,
+      "authors": [
+        "Xiyuan Liu",
+        "Peter B Lillehoj"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Smartphones for cell and biomolecular detection",
+      "year": 2014,
+      "abstract": "Recent advances in biomedical science and technology have played a significant role in the development of new sensors and assays for cell and biomolecular detection. Generally, these efforts are aimed at reducing the complexity and costs associated with diagnostic testing so that it can be performed outside of a laboratory or hospital setting, requiring minimal equipment and user involvement. In particular, point-of-care (POC) testing offers immense potential for many important applications including medical diagnosis, environmental monitoring, food safety, and biosecurity. When coupled with smartphones, POC systems can offer portability, ease of use and enhanced functionality while maintaining performance. This review article focuses on recent advancements and developments in smartphone-based POC systems within the last 6 years with an emphasis on cell and biomolecular detection. These …",
+      "venue": "",
+      "citations": 69,
+      "authors": [
+        "Xiyuan Liu",
+        "Tung-Yi Lin",
+        "Peter B Lillehoj"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Embroidered electrochemical sensors on gauze for rapid quantification of wound biomarkers",
+      "year": 2017,
+      "abstract": "Electrochemical sensors are an attractive platform for analytical measurements due to their high sensitivity, portability and fast response time. These attributes also make electrochemical sensors well suited for wearable applications which require excellent flexibility and durability. Towards this end, we have developed a robust electrochemical sensor on gauze via a unique embroidery fabrication process for quantitative measurements of wound biomarkers. For proof of principle, this biosensor was used to detect uric acid, a biomarker for wound severity and healing, in simulated wound fluid which exhibits high specificity, good linearly from 0 to 800 µM, and excellent reproducibility. Continuous sensing of uric acid was also performed using this biosensor which reveals that it can generate consistent and accurate measurements for up to 7 h. Experiments to evaluate the robustness of the embroidered gauze sensor …",
+      "venue": "Biosensors and Bioelectronics",
+      "citations": 63,
+      "authors": [
+        "Xiyuan Liu",
+        "Peter B Lillehoj"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Self-ranging thumb-sized multichannel electrochemical instrument for global wearable point-of-care sensing",
+      "year": 2018,
+      "abstract": "This paper presents a self-ranging, multichannel, multi-technique electrochemical instrument with the size, power, and performance suitable for wearable applications, such as point-of-care sensing. It comprises a custom analog interface and a commercial low-power microcontroller and hosts two independent readout channels that are capable of dynamically adjusting to a wide range of input currents exhibited by various electrochemical sensors. To evaluate its functionality and versatility, the system was tested with multiple sensors using multiple electrochemical methods and was benchmarked against two commercial electrochemical instruments. While occupying only 8.5 cm 3  and consuming an average active power of 250 mW, the instrument provides nearly 10-bit accuracy over a 115 dB dynamic operational range and matches benchtop instrument results within 1.8%, demonstrating its capability to serve as a …",
+      "venue": "2018 IEEE 61st International Midwest Symposium on Circuits and Systems (MWSCAS)",
+      "citations": 10,
+      "authors": [
+        "Sina Parsnejad",
+        "Yousef Gtat",
+        "Tung-Yi Lin",
+        "Xiyuan Liu",
+        "Peter B Lillehoj",
+        "Andrew J Mason"
+      ],
+      "url": ""
+    }
+  ]
+}

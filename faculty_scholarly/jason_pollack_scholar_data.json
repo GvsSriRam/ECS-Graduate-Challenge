@@ -1,0 +1,102 @@
+{
+  "name": "Jason Pollack",
+  "affiliation": "Assistant Professor, Syracuse University",
+  "interests": [
+    "quantum information",
+    "decoherence",
+    "thermalization",
+    "emergent spacetime",
+    "quantum gravity"
+  ],
+  "citedby": 1001,
+  "h_index": 15,
+  "i10_index": 23,
+  "top_primary_author_publications": [
+    {
+      "title": "Supermassive black holes from ultra-strongly self-interacting dark matter",
+      "year": 2015,
+      "abstract": "We consider the cosmological consequences if a small fraction () of the dark matter is ultra-strongly self-interacting, with an elastic self-interaction cross section per unit mass $\\sigma\\gg 1\\{\\rm c}{{{\\rm m}}^{2}}\\;{{{\\rm g}}^{-1}} $. This possibility evades all current constraints that assume that the self-interacting component makes up the majority of the dark matter. Nevertheless, even a small fraction of ultra-strongly self-interacting dark matter (uSIDM) can have observable consequences on astrophysical scales. In particular, the uSIDM subcomponent can undergo gravothermal collapse and form seed black holes in the center of a halo. These seed black holes, which form within several hundred halo interaction times, contain a few percent of the total uSIDM mass in the halo. For reasonable values of , these black holes can form at high enough redshifts to grow to  quasars by , alleviating tension …",
+      "venue": "The Astrophysical Journal",
+      "citations": 151,
+      "authors": [
+        "Jason Pollack",
+        "David N Spergel",
+        "Paul J Steinhardt"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Eigenstate thermalization and disorder averaging in gravity",
+      "year": 2020,
+      "abstract": "Naively, resolving the black hole information paradox requires microscopic details about quantum gravity. Recent work suggests that, instead, a unitary Page curve can be recovered by adding disorder-averaged replica instantons to the path integral, though their origin is unclear. In this Letter, we show how replica instantons and disorder averaging emerge naturally in an effective theory built from typical microscopic states. We relate replica instantons to a moment expansion of simple operators, and find a microcanonical description in terms of wormholes and Euclidean black holes.",
+      "venue": "Physical Review Letters",
+      "citations": 119,
+      "authors": [
+        "Jason Pollack",
+        "Moshe Rozali",
+        "James Sully",
+        "David Wakeham"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Wormhole and entanglement (non-) detection in the ER= EPR correspondence",
+      "year": 2015,
+      "abstract": "The recently proposed ER= EPR correspondence postulates the existence of wormholes (Einstein-Rosen bridges) between entangled states (such as EPR pairs). Entanglement is famously known to be unobservable in quantum mechanics, in that there exists no observable (or, equivalently, projector) that can accurately pick out whether a generic state is entangled. Many features of the geometry of spacetime, however, are observables, so one might worry that the presence or absence of a wormhole could identify an entangled state in ER= EPR, violating quantum mechanics, specifically, the property of state-independence of observables. In this note, we establish that this cannot occur: there is no measurement in general relativity that unambiguously detects the presence of a generic wormhole geometry. This statement is the ER= EPR dual of the undetectability of entanglement.",
+      "venue": "Journal of High Energy Physics",
+      "citations": 27,
+      "authors": [
+        "Ning Bao",
+        "Jason Pollack",
+        "Grant N Remmen"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Consistency conditions for an AdS multiscale entanglement renormalization ansatz correspondence",
+      "year": 2015,
+      "abstract": "The multiscale entanglement renormalization ansatz (MERA) is a tensor network that provides an efficient way of variationally estimating the ground state of a critical quantum system. The network geometry resembles a discretization of spatial slices of an anti–de Sitter (AdS) spacetime and “geodesics” in the MERA reproduce the Ryu-Takayanagi formula for the entanglement entropy of a boundary region in terms of bulk properties. It has therefore been suggested that there could be an AdS/MERA correspondence, relating states in the Hilbert space of the boundary quantum system to ones defined on the bulk lattice. Here we investigate this proposal and derive necessary conditions for it to apply, using geometric features and entropy inequalities that we expect to hold in the bulk. We show that, perhaps unsurprisingly, the MERA lattice can only describe physics on length scales larger than the AdS radius. Further …",
+      "venue": "Physical Review D",
+      "citations": 134,
+      "authors": [
+        "Ning Bao",
+        "ChunJun Cao",
+        "Sean M Carroll",
+        "Aidan Chatwin-Davies",
+        "Nicholas Hunter-Jones",
+        "Jason Pollack",
+        "Grant N Remmen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Consistent effective theory of long-wavelength cosmological perturbations",
+      "year": 2014,
+      "abstract": "Effective field theory provides a perturbative framework to study the evolution of cosmological large-scale structure. We investigate the underpinnings of this approach, and suggest new ways to compute correlation functions of cosmological observables. We find that, in contrast with quantum field theory, the appropriate effective theory of classical cosmological perturbations involves interactions that are nonlocal in time. We describe an alternative to the usual approach of smoothing the perturbations, based on a path-integral formulation of the renormalization group equations. This technique allows for improved handling of short-distance modes that are perturbatively generated by long-distance interactions.",
+      "venue": "Physical Review D",
+      "citations": 131,
+      "authors": [
+        "Sean M Carroll",
+        "Stefan Leichenauer",
+        "Jason Pollack"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Towards a bit threads derivation of holographic entanglement of purification",
+      "year": 2019,
+      "abstract": "We apply the bit thread formulation of holographic entanglement entropy to reduced states describing only the geometry contained within an entanglement wedge. We argue that a certain optimized bit thread configuration, which we construct, gives a purification of the reduced state to a full holographic state obeying a precise set of conditional mutual information relations. When this purification exists, we establish, under certain assumptions, the conjectured E P= E W relation equating the entanglement of purification with the area of the minimal cross section partitioning the bulk entanglement wedge. Along the way, we comment on minimal purifications of holographic states, geometric purifications, and black hole geometries.",
+      "venue": "Journal of High Energy Physics",
+      "citations": 60,
+      "authors": [
+        "Ning Bao",
+        "Aidan Chatwin-Davies",
+        "Jason Pollack",
+        "Grant N Remmen"
+      ],
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "Vir V Phoha",
+  "affiliation": "Syracuse University",
+  "interests": [],
+  "citedby": 5662,
+  "h_index": 41,
+  "i10_index": 84,
+  "top_primary_author_publications": [
+    {
+      "title": "K-Means+ ID3: A novel method for supervised anomaly detection by cascading K-Means clustering and ID3 decision tree learning methods",
+      "year": 2007,
+      "abstract": "In this paper, we present \"k-means+ID3\", a method to cascade k-means clustering and the ID3 decision tree learning methods for classifying anomalous and normal activities in a computer network, an active electronic circuit, and a mechanical mass-beam system. The k-means clustering method first partitions the training instances into k clusters using Euclidean distance similarity. On each cluster, representing a density region of normal or anomaly instances, we build an ID3 decision tree. The decision tree on each cluster refines the decision boundaries by learning the subgroups within the cluster. To obtain a final decision on classification, the decisions of the k-means and ID3 methods are combined using two rules: 1) the nearest-neighbor rule and 2) the nearest-consensus rule. We perform experiments on three data sets: 1) network anomaly data (NAD), 2) Duffing equation data (DED), and 3) mechanical system …",
+      "venue": "IEEE transactions on knowledge and data engineering",
+      "citations": 284,
+      "authors": [
+        "Shekhar R Gaddam",
+        "Vir V Phoha",
+        "Kiran S Balagani"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Which verifiers work?: A benchmark evaluation of touch-based authentication algorithms",
+      "year": 2013,
+      "abstract": "Despite the tremendous need for the evaluation of touch-based authentication as an extra security layer for mobile devices, the huge disparity in the experimental methodology used by different researchers makes it hard to determine how much research in this area has progressed. Critical variables such as the types of features and how they are pre-processed, the training and testing methodology and the performance evaluation metrics, to mention but a few, vary from one study to the next. Additionally, most datasets used for these evaluations are not openly accessible, making it impossible for researchers to carry out comparative analysis on the same data. This paper takes the first steps towards bridging this gap. We evaluate the performance of ten state-of-the-art touch-based authentication classification algorithms under a common experimental protocol, and present the associated benchmark dataset for the …",
+      "venue": "2013 IEEE sixth international conference on biometrics: theory, applications and systems (BTAS)",
+      "citations": 176,
+      "authors": [
+        "Abdul Serwadda",
+        "Vir V Phoha",
+        "Zibo Wang"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Context-aware active authentication using smartphone accelerometer measurements",
+      "year": 2014,
+      "abstract": "While body movement patterns recorded by a smartphone accelerometer are now well understood to be discriminative enough to separate users, little work has been done to address the question of if or how the position in which the phone is held affects user authentication. In this work, we show through a combination of supervised learning methods and statistical tests, that there are certain users for whom exploitation of information of how a phone is held drastically improves classification performance. We propose a two-stage authentication framework that identifies the location of the phone before performing authentication, and show its benefits based on a dataset of 30 users. Our work represents a first step towards bridging the gap between accelerometer-based authentication systems analyzed from the context of a laboratory environment and a real accelerometer-based authentication system in the wild where phone positioning cannot be assumed.",
+      "venue": "Proceedings of the IEEE conference on computer vision and pattern recognition workshops",
+      "citations": 172,
+      "authors": [
+        "Abena Primo",
+        "Vir V Phoha",
+        "Rajesh Kumar",
+        "Abdul Serwadda"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Fake news early detection: A theory-driven model",
+      "year": 2020,
+      "abstract": "Massive dissemination of fake news and its potential to erode democracy has increased the demand for accurate fake news detection. Recent advancements in this area have proposed novel techniques that aim to detect fake news by exploring how it propagates on social networks. Nevertheless, to detect fake news at an early stage, i.e., when it is published on a news outlet but not yet spread on social media, one cannot rely on news propagation information as it does not exist. Hence, there is a strong need to develop approaches that can detect fake news by focusing on news content. In this article, a theory-driven model is proposed for fake news detection. The method investigates news content at various levels: lexicon-level, syntax-level, semantic-level, and discourse-level. We represent news at each level, relying on well-established theories in social and forensic psychology. Fake news detection is then …",
+      "venue": "Digital Threats: Research and Practice",
+      "citations": 366,
+      "authors": [
+        "Xinyi Zhou",
+        "Atishay Jain",
+        "Vir V Phoha",
+        "Reza Zafarani"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A survey on gait recognition",
+      "year": 2018,
+      "abstract": "Recognizing people by their gait has become more and more popular nowadays due to the following reasons. First, gait recognition can work well remotely. Second, gait recognition can be done from low-resolution videos and with simple instrumentation. Third, gait recognition can be done without the cooperation of individuals. Fourth, gait recognition can work well while other features such as faces and fingerprints are hidden. Finally, gait features are typically difficult to be impersonated.Recent ubiquity of smartphones that capture gait patterns through accelerometers and gyroscope and advances in machine learning have opened new research directions and applications in gait recognition. A timely survey that addresses current advances is missing.In this article, we survey research works in gait recognition. In addition to recognition based on video, we address new modalities, such as recognition based on …",
+      "venue": "",
+      "citations": 349,
+      "authors": [
+        "Changsheng Wan",
+        "Li Wang",
+        "Vir V Phoha"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Beware, your hands reveal your secrets!",
+      "year": 2014,
+      "abstract": "Research on attacks which exploit video-based side-channels to decode text typed on a smartphone has traditionally assumed that the adversary is able to leverage some information from the screen display (say, a reflection of the screen or a low resolution video of the content typed on the screen). This paper introduces a new breed of side-channel attack on the PIN entry process on a smartphone which entirely relies on the spatio-temporal dynamics of the hands during typing to decode the typed text. Implemented on a dataset of 200 videos of the PIN entry process on an HTC One phone, we show, that the attack breaks an average of over 50% of the PINs on the first attempt and an average of over 85% of the PINs in ten attempts. Because the attack can be conducted in such a way not to raise suspicion (i.e., since the adversary does not have to direct the camera at the screen), we believe that it is very likely to be …",
+      "venue": "",
+      "citations": 192,
+      "authors": [
+        "Diksha Shukla",
+        "Rajesh Kumar",
+        "Abdul Serwadda",
+        "Vir V Phoha"
+      ],
+      "url": ""
+    }
+  ]
+}

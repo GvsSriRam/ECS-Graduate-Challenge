@@ -48,7 +48,7 @@ def save_to_csv(data, filename):
         writer.writerows(data)
 
 if __name__ == "__main__":
-    url = "https://ecs.syracuse.edu/faculty-staff"
+    url = "https://ecs.syracuse.edu/faculty-staff?category=full-time-fac&people="
     faculty_data = scrape_ecs_faculty(url)
     
     # Print the data

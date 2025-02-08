@@ -1,0 +1,110 @@
+{
+  "name": "Bryan S. Kim",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Storage systems"
+  ],
+  "citedby": 489,
+  "h_index": 10,
+  "i10_index": 11,
+  "top_primary_author_publications": [
+    {
+      "title": "Ozone (O3): An out-of-order flash memory controller architecture",
+      "year": 2011,
+      "abstract": "Ozone (O3) is a flash memory controller that increases the performance of a flash storage system by executing multiple flash operations out of order. In the O3 flash controller, data dependencies are the only ordering constraints on the execution of multiple flash operations. This allows O3 to exploit the multichip parallelism inherent in flash memory much more effectively than interleaving. The O3 controller also provides a prioritized handling of flash operations, equipping flash management software, such as the FTL (flash translation layer), with control knobs for managing flash operations of different time criticalities. Running a range of workloads on an FPGA implementation showed that the O3 flash controller achieves 3 to 100 percent more throughput than interleaving, with 46 to 88 percent lower response times.",
+      "venue": "IEEE Transactions on Computers",
+      "citations": 117,
+      "authors": [
+        "Eyee Hyun Nam",
+        "Bryan Suk Joon Kim",
+        "Hyeonsang Eom",
+        "Sang Lyul Min"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Design Tradeoffs for SSD Reliability",
+      "year": 2019,
+      "abstract": "Flash memory-based SSDs are popular across a wide range of data storage markets, while the underlying storage medium—flash memory—is becoming increasingly unreliable. As a result, modern SSDs employ a number of in-device reliability enhancement techniques, but none of them offers a one size fits all solution when considering the multi-dimensional requirements for SSDs: performance, reliability, and lifetime. In this paper, we examine the design tradeoffs of existing reliability enhancement techniques such as data re-read, intra-SSD redundancy, and data scrubbing. We observe that an uncoordinated use of these techniques adversely affects the performance of the SSD, and careful management of the techniques is necessary for a graceful performance degradation while maintaining a high reliability standard. To that end, we propose a holistic reliability management scheme that selectively employs redundancy, conditionally re-reads, judiciously selects data to scrub. We demonstrate the effectiveness of our scheme by evaluating it across a set of I/O workloads and SSDs wear states.",
+      "venue": "17th USENIX Conference on File and Storage Technologies (FAST 19)",
+      "citations": 69,
+      "authors": [
+        "Bryan S Kim",
+        "Jongmoo Choi",
+        "Sang Lyul Min"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Overcoming the Memory Wall with {CXL-Enabled}{SSDs}",
+      "year": 2023,
+      "abstract": "This paper investigates the feasibility of using inexpensive flash memory on new interconnect technologies such as CXL (Compute Express Link) to overcome the memory wall. We explore the design space of a CXL-enabled flash device and show that techniques such as caching and prefetching can help mitigate the concerns regarding flash memory’s performance and lifetime. We demonstrate using real-world application traces that these techniques enable the CXL device to have an estimated lifetime of at least 3.1 years and serve 68–91% of the memory requests under a microsecond. We analyze the limitations of existing techniques and suggest system-level changes to achieve a DRAM-level performance using flash.",
+      "venue": "2023 USENIX Annual Technical Conference (USENIX ATC 23)",
+      "citations": 32,
+      "authors": [
+        "Shao-Peng Yang",
+        "Minjae Kim",
+        "Sanghyun Nam",
+        "Juhyung Park",
+        "Jin-yong Choi",
+        "Eyee Hyun Nam",
+        "Eunji Lee",
+        "Sungjin Lee",
+        "Bryan S Kim"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Chameleon: A high performance flash/fram hybrid solid state disk architecture",
+      "year": 2008,
+      "abstract": "Flash memory solid state disk (SSD) is gaining popularity and replacing hard disk drive (HDD) in mobile computing systems such as ultra mobile PCs (UMPCs) and notebook PCs because of lower power consumption, faster random access, and higher shock resistance. One of the key challenges in designing a high-performance flash memory SSD is an efficient handling of small random writes to non-volatile data whose performance suffers from the inherent limitation of flash memory that prohibits in-placc update. In this paper, we propose a high performance Flash/FRAM hybrid SSD architecture called Chameleon. In Chameleon, metadata used by the flash translation layer (FTL), a software layer in the flash memory SSD, is maintained in a small FRAM since this metadata is a target of intensive small random writes, whereas the bulk data is kept in the flash memory. Performance evaluation based on an FPGA …",
+      "venue": "IEEE computer architecture letters",
+      "citations": 70,
+      "authors": [
+        "Jin Hyuk Yoon",
+        "Eyee Hyun Nam",
+        "Yoon Jae Seong",
+        "Hongseok Kim",
+        "Bryan Kim",
+        "Sang Lyul Min",
+        "Yookun Cho"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Modernizing File System through In-Storage Indexing",
+      "year": 2021,
+      "abstract": "We argue that a key-value interface between a file system and an SSD is superior to the legacy block interface by presenting KEVIN. KEVIN combines a fast, lightweight, and POSIX compliant file system with a key-value storage device that performs in-storage indexing. We implement a variant of a log-structured merge tree in the storage device that not only indexes file objects, but also supports transactions and manages physical storage space. As a result, the design of a file system with respect to space management and crash consistency is simplified, requiring only 10.8 K LOC for full functionality. We demonstrate that KEVIN reduces the amount of I/O traffic between the host and the device, and remains particularly robust as the system ages and the data become fragmented. Our approach outperforms existing file systems on a block SSD by a wide margin–6.2× on average–for metadata-intensive benchmarks. For realistic workloads, KEVIN improves throughput by 68% on average.",
+      "venue": "15th {USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 21)",
+      "citations": 21,
+      "authors": [
+        "Jinhyung Koo",
+        "Junsu Im",
+        "Jooyoung Song",
+        "Juhyung Park",
+        "Eunji Lee",
+        "Bryan S Kim",
+        "Sungjin Lee"
+      ],
+      "url": ""
+    },
+    {
+      "title": "ConfZNS: A Novel Emulator for Exploring Design Space of ZNS SSDs",
+      "year": 2023,
+      "abstract": "The ZNS (Zoned NameSpace) interface shifts much of the storage maintenance responsibility to the host from the underlying SSDs (Solid-State Drives). In addition, it opens a new opportunity to exploit the internal parallelism of SSDs at both hardware and software levels. By orchestrating the mapping between zones and SSD-internal resources and by controlling zone allocation among threads, ZNS SSDs provide a distinct performance trade-off between parallelism and isolation. To understand and explore the design space of ZNS SSDs, we present ConfZNS (Configurable ZNS), an easy-to-configure and timing-accurate emulator based on QEMU. ConfZNS allows users to investigate a variety of ZNS SSD's internal architecture and how it performs with existing host software. We validate the accuracy of ConfZNS using real ZNS SSDs and explore performance characteristics of different ZNS SSD designs with real …",
+      "venue": "",
+      "citations": 14,
+      "authors": [
+        "Inho Song",
+        "Myounghoon Oh",
+        "Bryan Suk Joon Kim",
+        "Seehwan Yoo",
+        "Jaedong Lee",
+        "Jongmoo Choi"
+      ],
+      "url": ""
+    }
+  ]
+}

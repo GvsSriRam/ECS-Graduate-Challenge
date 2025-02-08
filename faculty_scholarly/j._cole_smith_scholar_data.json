@@ -1,0 +1,97 @@
+{
+  "name": "J. Cole Smith",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Operations Research",
+    "Mathematical Programming",
+    "Integer Programming"
+  ],
+  "citedby": 4775,
+  "h_index": 36,
+  "i10_index": 81,
+  "top_primary_author_publications": [
+    {
+      "title": "A multiple-criterion model for machine scheduling",
+      "year": 2003,
+      "abstract": "We consider a scheduling problem involving a single processor being utilized by two or more customers. Traditionally, such scenarios are modeled by assuming that each customer has the same criterion. In practice, this assumption may not hold. Instead of using a single criterion, we examine the implications of minimizing an aggregate scheduling objective function in which jobs belonging to different customers are evaluated based on their individual criteria. We examine three basic scheduling criteria: minimizing makespan, minimizing maximum lateness, and minimizing total weighted completion time. Although determining a minimum-cost schedule according to any one of these criteria is polynomially solvable, we demonstrate that when minimizing a mix of these criteria, the problem becomes NP-hard.",
+      "venue": "Journal of Scheduling",
+      "citations": 437,
+      "authors": [
+        "Kenneth R Baker",
+        "J Cole Smith"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Algorithms for discrete and continuous multicommodity flow network interdiction problems",
+      "year": 2007,
+      "abstract": "We consider a network interdiction problem on a multicommodity flow network, in which an attacker disables a set of network arcs in order to minimize the maximum profit that can be obtained from shipping commodities across the network. The attacker is assumed to have some budget for destroying (or “interdicting”) arcs, and each arc is associated with a positive interdiction expense. In this paper, we examine problems in which interdiction must be discrete (i.e., each arc must either be left alone or completely destroyed), and in which interdiction can be continuous (the capacities of arcs may be partially reduced). For the discrete problem, we describe a linearized model for optimizing network interdiction that is similar to previous studies in the field, and compare it to a penalty model that does not require linearization constraints. For the continuous case, we prescribe an optimal partitioning algorithm along with a …",
+      "venue": "IIE Transactions",
+      "citations": 317,
+      "authors": [
+        "Churlzu Lim",
+        "J Cole Smith"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Improving discrete model representations via symmetry considerations",
+      "year": 2001,
+      "abstract": "In this paper, we focus on a useful modeling concept that is frequently ignored while formu lating discrete optimization problems. Very often, there exists a natural symmetry inherent in the problem itself that, if propagated to the model, can hopelessly mire a branch-and-bound solver by burdening it to explore and eliminate such alternative symmetric solutions. We discuss three applications where such a symmetry arises: a telecommunications network design problem, a noise pollution problem, and a machine procurement and operation problem. For each case, we identify the indistinguishable objects in the model that create the problem symmetry and show how imposing certain decision hierarchies within the model significantly enhances its solvability, while using a popular modern-day commercial branch-and-cut software (CPLEX 6.5).",
+      "venue": "Management Science",
+      "citations": 311,
+      "authors": [
+        "Hanif D Sherali",
+        "J Cole Smith"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Distributed algorithm for lifetime maximization in a delay-tolerant wireless sensor network with a mobile sink",
+      "year": 2012,
+      "abstract": "We propose an algorithm for maximizing the lifetime of a wireless sensor network when there is a mobile sink and the underlying application can tolerate some amount of delay in delivering the data to the sink. The algorithm is distributed, and in addition, mostly uses local information. Such an algorithm can be implemented by parallel and/or distributed execution and the overhead of message passing is low. It is also possible to embed the algorithm into a network protocol so that the sensor nodes and the sink can run it directly as part of the network operation. We give a proof of the algorithm's optimality and the boundedness of the queue sizes, both in the long-run average sense. The proof is based on analyzing a Lyapunov drift.",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citations": 124,
+      "authors": [
+        "YoungSang Yun",
+        "Ye Xia",
+        "Behnam Behdani",
+        "J Cole Smith"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Distributed algorithm for lifetime maximization in a delay-tolerant wireless sensor network with a mobile sink",
+      "year": 2012,
+      "abstract": "We propose an algorithm for maximizing the lifetime of a wireless sensor network when there is a mobile sink and the underlying application can tolerate some amount of delay in delivering the data to the sink. The algorithm is distributed, and in addition, mostly uses local information. Such an algorithm can be implemented by parallel and/or distributed execution and the overhead of message passing is low. It is also possible to embed the algorithm into a network protocol so that the sensor nodes and the sink can run it directly as part of the network operation. We give a proof of the algorithm's optimality and the boundedness of the queue sizes, both in the long-run average sense. The proof is based on analyzing a Lyapunov drift.",
+      "venue": "IEEE Transactions on Mobile Computing",
+      "citations": 124,
+      "authors": [
+        "YoungSang Yun",
+        "Ye Xia",
+        "Behnam Behdani",
+        "J Cole Smith"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Wiley encyclopedia of operations research and management science",
+      "year": 2010,
+      "abstract": "",
+      "venue": "",
+      "citations": 108,
+      "authors": [
+        "SA Erdogan",
+        "BT Denton",
+        "JJ Cochran",
+        "LA Cox",
+        "P Keskinocak",
+        "JP Kharoufeh",
+        "JC Smith"
+      ],
+      "url": ""
+    }
+  ]
+}

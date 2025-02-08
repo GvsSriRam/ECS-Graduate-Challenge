@@ -1,0 +1,96 @@
+{
+  "name": "Aoyi Luo",
+  "affiliation": "Assistant Professor of Mechanical and Aerospace Engineering, Syracuse University",
+  "interests": [
+    "Mechanics",
+    "Soft robotics",
+    "Adhesion",
+    "Manufacturing",
+    "Heat transfer"
+  ],
+  "citedby": 438,
+  "h_index": 10,
+  "i10_index": 11,
+  "top_primary_author_publications": [
+    {
+      "title": "Critical review of membrane distillation performance criteria",
+      "year": 2016,
+      "abstract": "The number of published papers about membrane distillation (MD) has been growing exponentially and many evaluation and performance criteria are used to measure it; but, there is no established tradition or evaluation standard for them. This makes the evaluations difficult to compare, or even incomplete. This paper presents therefore a comprehensive critical review and clarification of the major evaluation criteria for the MD components and systems, aimed to offer some recommendations for their more uniform usage, provide clearer quantitative goals in research and industrial use, and to facilitate more correct and honest representations and comparisons. General description and models of MD are presented first, followed by criteria used to characterize the membranes, and performance criteria to evaluate the distillate production rate, product quality, energy efficiency (including conventional energy …",
+      "venue": "",
+      "citations": 94,
+      "authors": [
+        "Aoyi Luo",
+        "Noam Lior"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Study of advancement to higher temperature membrane distillation",
+      "year": 2017,
+      "abstract": "It is well known that the mass flux (J) and the membrane thermal efficiency (η) of membrane distillation increase with the feed flow temperature. A comprehensive laminar and turbulent flow model for simulating and evaluating the performance of direct contact membrane distillation (DCMD) when operated at inlet feed temperature (Tf,i) from 80 °C to 180 °C, higher than the customary maximum of ~ 80 °C, was developed and used to explain and assess the performance of such high temperature DCMD, as well as the potential associated problems of the needed higher operating pressure, and provide knowledge useful for their future design and optimization. Some of the key results are that raising Tf,i from 80 °C to 180 °C, increases J 9.4-fold, and η 2.1-fold, and decreases the specific energy consumption (SEC) 2.9-fold. Raising the flow Reynolds number from 1200 to 7000 increases J 2.6-fold and η by 15%, but SEC …",
+      "venue": "Desalination",
+      "citations": 64,
+      "authors": [
+        "Aoyi Luo",
+        "Noam Lior"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Switchable adhesion via subsurface pressure modulation",
+      "year": 2020,
+      "abstract": "Materials and devices with tunable dry adhesion have many applications, including transfer printing, climbing robots, and gripping in pick-and-place processes. In this paper, a novel soft device to achieve dynamically tunable dry adhesion via modulation of subsurface pneumatic pressure is introduced. Specifically, a cylindrical elastomer pillar with a mushroom-shaped cap and annular chamber that can be pressurized to tune the adhesion is investigated. Finite element-based mechanics models and experiments are used to design, understand, and demonstrate the adhesion of the device. Specifically, the device is designed using mechanics modeling such that the pressure applied inside the annular chamber significantly alters the stress distribution at the adhered interface and thus changes the effective adhesion strength. Devices made of polydimethylsiloxane (PDMS) with different elastic moduli were tested …",
+      "venue": "ACS applied materials & interfaces",
+      "citations": 27,
+      "authors": [
+        "Amir Mohammadi Nasab†",
+        "Aoyi Luo†",
+        "Siavash Sharifi",
+        "Kevin T Turner",
+        "Wanliang Shan"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Hybrid surface patterns mimicking the design of the adhesive toe pad of tree frog",
+      "year": 2017,
+      "abstract": "Biological materials achieve directional reinforcement with oriented assemblies of anisotropic building blocks. One such example is the nanocomposite structure of keratinized epithelium on the toe pad of tree frogs, in which hexagonal arrays of (soft) epithelial cells are crossed by densely packed and oriented (hard) keratin nanofibrils. Here, a method is established to fabricate arrays of tree-frog-inspired composite micropatterns composed of polydimethylsiloxane (PDMS) micropillars embedded with polystyrene (PS) nanopillars. Adhesive and frictional studies of these synthetic materials reveal a benefit of the hierarchical and anisotropic design for both adhesion and friction, in particular, at high matrix–fiber interfacial strengths. The presence of PS nanopillars alters the stress distribution at the contact interface of micropillars and therefore enhances the adhesion and friction of the composite micropattern. The results …",
+      "venue": "ACS nano",
+      "citations": 140,
+      "authors": [
+        "Longjian Xue",
+        "Belén Sanz",
+        "Aoyi Luo",
+        "Kevin T Turner",
+        "Xin Wang",
+        "Di Tan",
+        "Rui Zhang",
+        "Hang Du",
+        "Martin Steinhart",
+        "Carmen Mijangos",
+        "Markus Guttmann",
+        "Michael Kappl",
+        "Aránzazu Del Campo"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Dynamically tunable dry adhesion through a subsurface thin layer with tunable stiffness",
+      "year": 2022,
+      "abstract": "Recently, a novel concept to realize dynamically tunable dry adhesion via subsurface stiffness modulation (SSM) in a composite core–shell structure has been introduced and demonstrated for gripping and release of objects. Here, a variant form of the composite core–shell design is proposed to significantly improve the performance of dynamically tunable dry adhesion in terms of activation time and activation voltage. Specifically, composite pillars with an embedded microfluidic channel filled with a low melting point alloy (LMPA) are fabricated, and the adhesion of the pillars is characterized as a function of LMPA state: either melted or solid. The effects of the thickness and in‐plane pattern of the LMPA channel, as well as the depth at which it is embedded on tunable adhesion are investigated. Experiments show that the effective adhesion strength can be reduced up to 50%, equivalent to a 2× change in dry …",
+      "venue": "Advanced Materials Interfaces",
+      "citations": 12,
+      "authors": [
+        "Amir Mohammadi Nasab",
+        "Patrick Stampfli",
+        "Siavash Sharifi",
+        "Aoyi Luo",
+        "Kevin T Turner",
+        "Wanliang Shan"
+      ],
+      "url": ""
+    }
+  ]
+}

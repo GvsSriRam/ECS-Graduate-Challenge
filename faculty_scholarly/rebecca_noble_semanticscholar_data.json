@@ -1,0 +1,121 @@
+{
+  "name": "Rebecca Noble",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 163,
+  "h_index": 5,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Long-Term Outcomes in Patients with Acute Kidney Injury.",
+      "year": 2020,
+      "abstract": "The long-term sequelae of AKI have received increasing attention so that its associations with a number of adverse outcomes, including higher mortality and development of CKD, are now widely appreciated. These associations take on particular importance when considering the high incidence of AKI, with a lack of proven interventions and uncertainties around optimal care provision meaning that the long-term sequelae of AKI present a major unmet clinical need. In this review, we examine the published data that inform our current understanding of long-term outcomes following AKI and discuss potential knowledge gaps, covering long-term mortality, CKD, progression to ESKD, proteinuria, cardiovascular events, recurrent AKI, and hospital readmission.",
+      "venue": "American Society of Nephrology. Clinical Journal",
+      "citations": 60,
+      "authors": [
+        "Rebecca Noble",
+        "Bethany Lucas",
+        "N. Selby"
+      ],
+      "url": "https://www.semanticscholar.org/paper/4b09745912ed6df470e7d388264ddd6326895550"
+    },
+    {
+      "title": "Collapsing Glomerulopathy Affecting Native and Transplant Kidneys in Individuals with COVID-19",
+      "year": 2020,
+      "abstract": "Since the emergency of novel coronavirus COVID-19 (SARS-CoV-2) in December 2019, infections have spread rapidly across the world. The reported incidence of acute kidney injury (AKI) in the context of COVID-19 is variable, and its mechanism is not well understood. Data are emerging about possible mechanisms of AKI including virus-induced cytopathic effect and cytokine storm-induced injury. To date, there have been few reports of kidney biopsy findings in the context of AKI in COVID-19 infection. This article describes 2 cases of collapsing glomerulopathy, 1 in a native kidney and, for the first time, 1 in a kidney transplant. Both individuals were black, and both presented without significant respiratory compromise. Indeed, the 2 patients we describe remained systemically well for the majority of their inpatient stay, which would support the hypothesis that for these patients, AKI was caused by a cytopathic viral effect, rather than that of a cytokine storm or acute tubular necrosis caused by prolonged hypovolaemia or the effect of medication known to exacerbate AKI. Here, we report 2 cases of AKI with collapsing glomerulopathy in COVID-19, one of which is in a kidney transplant recipient, not previously described elsewhere.",
+      "venue": "Nephron",
+      "citations": 33,
+      "authors": [
+        "Rebecca Noble",
+        "M. Y. Tan",
+        "T. Mcculloch",
+        "Mohamed Shantier",
+        "C. Byrne",
+        "M. Hall",
+        "M. Jesky"
+      ],
+      "url": "https://www.semanticscholar.org/paper/2df684448efa690501af9126584d2b6f8efc1bec"
+    },
+    {
+      "title": "Evaluating a process of academic detailing in primary care: an educational programme for acute kidney injury",
+      "year": 2019,
+      "abstract": null,
+      "venue": "BMC Medical Education",
+      "citations": 4,
+      "authors": [
+        "Rebecca Noble",
+        "J. Mckinnell",
+        "S. Shaw",
+        "Sally Bassett",
+        "L. Woods",
+        "M. Asrar",
+        "N. Kolhe",
+        "N. Selby"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a8b6067be8d288d14e1fd578b9bd828775b2dd31"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Phase-contrast magnetic resonance imaging to assess renal perfusion: a systematic review and statement paper",
+      "year": 2019,
+      "abstract": null,
+      "venue": "Magnetic Resonance Materials in Physics, Biology and Medicine",
+      "citations": 32,
+      "authors": [
+        "G. Villa",
+        "S. Ringgaard",
+        "Ingo Hermann",
+        "Rebecca Noble",
+        "P. Brambilla",
+        "D. Khatir",
+        "F. Zöllner",
+        "S. Francis",
+        "N. Selby",
+        "A. Remuzzi",
+        "A. Caroli"
+      ],
+      "url": "https://www.semanticscholar.org/paper/471ebad673b756436839932b2c7559692c3d1bff"
+    },
+    {
+      "title": "Multiparametric MRI assessment of renal structure and function in acute kidney injury and renal recovery",
+      "year": 2021,
+      "abstract": "Abstract Background Acute kidney injury (AKI) is associated with a marked increase in mortality as well as subsequent chronic kidney disease (CKD) and end-stage kidney disease. We performed multiparametric magnetic resonance imaging (MRI) with the aim of identifying potential non-invasive MRI markers of renal pathophysiology in AKI and during recovery. Methods Nine participants underwent inpatient MRI scans at time of AKI; seven had follow-up scans at 3 months and 1 year following AKI. Multiparametric renal MRI assessed total kidney volume (TKV), renal perfusion using arterial spin labelling, T1 mapping and blood oxygen level-dependent (BOLD) R2* mapping. Results Serum creatinine concentration had recovered to baseline levels at 1-year post-AKI in all participants. At the time of AKI, participants had increased TKV, increased cortex/medulla T1 and reduced cortical perfusion compared with the expected ranges in healthy volunteers and people with CKD. TKV and T1 values decreased over time after AKI and returned to expected values in most but not all patients by 1 year. Cortical perfusion improved to a lesser extent and remained below the expected range in the majority of patients by 1-year post-AKI. BOLD R2* data showed a non-significant trend to increase over time post-AKI. Conclusions We observed a substantial increase in TKV and T1 during AKI and a marked decrease in cortical perfusion. Despite biochemical recovery at 1-year post-AKI, MRI measures indicated persisting abnormalities in some patients. We propose that such patients may be more likely to have further AKI episodes or progress to CKD and further longitudinal studies are required to investigate this. ",
+      "venue": "Clinical Kidney Journal",
+      "citations": 22,
+      "authors": [
+        "Charlotte E Buchanan",
+        "Huda Mahmoud",
+        "E. Cox",
+        "Rebecca Noble",
+        "Benjamin L Prestwich",
+        "Isma Kasmi",
+        "M. Taal",
+        "S. Francis",
+        "N. Selby"
+      ],
+      "url": "https://www.semanticscholar.org/paper/fad61f38d44a8903c9e7111eb7a890addbc9b5f7"
+    },
+    {
+      "title": "Correction to: Phase-contrast magnetic resonance imaging to assess renal perfusion: a systematic review and statement paper",
+      "year": 2020,
+      "abstract": null,
+      "venue": "Magnetic Resonance Materials in Physics, Biology and Medicine",
+      "citations": 7,
+      "authors": [
+        "G. Villa",
+        "S. Ringgaard",
+        "Ingo Hermann",
+        "Rebecca Noble",
+        "P. Brambilla",
+        "D. Khatir",
+        "F. Zöllner",
+        "S. Francis",
+        "N. Selby",
+        "A. Remuzzi",
+        "A. Caroli"
+      ],
+      "url": "https://www.semanticscholar.org/paper/315b621df09b680eb140ea196508f793b22efc6f"
+    }
+  ]
+}

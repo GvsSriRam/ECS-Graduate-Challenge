@@ -1,0 +1,86 @@
+{
+  "name": "K. Laurent",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 29,
+  "h_index": 2,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Turbulence explains the accelerations of an eagle in natural flight",
+      "year": 2021,
+      "abstract": "Significance Although soaring birds spend a significant portion of their lives navigating turbulent environments, the role turbulence plays in their lives is unclear. This holds especially when turbulent air currents fluctuate on similar timescales as avian flight behaviors. Against a backdrop of complicated behavior and aerodynamics, we find that a simple linear model almost fully explains the interactions between an eagle and turbulence, and that this interaction, in turn, almost fully explains the accelerations of the eagle’s body throughout its airborne life. The turbulent nature of the atmosphere is not merely a subtle nuance to which the eagle adjusts but rather a fundamental characteristic that leaves its imprint on all modes of flight. Turbulent winds and gusts fluctuate on a wide range of timescales from milliseconds to minutes and longer, a range that overlaps the timescales of avian flight behavior, yet the importance of turbulence to avian behavior is unclear. By combining wind speed data with the measured accelerations of a golden eagle (Aquila chrysaetos) flying in the wild, we find evidence in favor of a linear relationship between the eagle’s accelerations and atmospheric turbulence for timescales between about 1/2 and 10 s. These timescales are comparable to those of typical eagle behaviors, corresponding to between about 1 and 25 wingbeats, and to those of turbulent gusts both larger than the eagle’s wingspan and smaller than large-scale atmospheric phenomena such as convection cells. The eagle’s accelerations exhibit power spectra and intermittent activity characteristic of turbulence and increase in proportion to the turbulence intensity. Intermittency results in accelerations that are occasionally several times stronger than gravity, which the eagle works against to stay aloft. These imprints of turbulence on the bird’s movements need to be further explored to understand the energetics of birds and other volant life-forms, to improve our own methods of flying through ceaselessly turbulent environments, and to engage airborne wildlife as distributed probes of the changing conditions in the atmosphere.",
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "citations": 24,
+      "authors": [
+        "K. Laurent",
+        "Bob Fogg",
+        "Tobias Ginsburg",
+        "Casey Halverson",
+        "Michael Lanzone",
+        "T. Miller",
+        "D. Winkler",
+        "G. Bewley"
+      ],
+      "url": "https://www.semanticscholar.org/paper/b44dc9878e477c6817208abebca0b20b4b74695f"
+    },
+    {
+      "title": "How vertical oscillatory motion above a saturated sand bed leads to heap formation.",
+      "year": 2022,
+      "abstract": "We show how oscillations in fluid flow over a fluid-saturated and porous sediment bed leads to the development of a bedform. To understand the role of pressure fluctuations on the bed associated with flow oscillations, we analyze how the flow penetrates into and through the bed. We then calculate the corresponding vertical pressure gradients within the bed that tend to expand the bed along the vertical direction. When these pressure gradients are large enough, they facilitate small irreversible rearrangements of the grains within the bed, and so cause granular creep. We conjecture that this granular creep alternates with jamming to produce a granular ratchet that slowly lifts the surface of the bed locally where pressure gradients dominate, and depresses the surface where shear stresses dominate. We observe that the shape of the resulting heap exhibits a constant characteristic width. The height of this heap evolves approximately as the square root of time, in agreement with dimensional arguments predicated on a coarse-grained viscous deformation of the bed. The surface of the heap contracts initially with the square root of time, consistent with an incompressible analysis of the flow of grains within the heap. Near its peak the heap grows due to a dilatation of the bed, to inward radial flux, or to a combination of the two.",
+      "venue": "Physical Review E",
+      "citations": 1,
+      "authors": [
+        "K. Laurent",
+        "L. La Ragione",
+        "J. Jenkins",
+        "G. Bewley"
+      ],
+      "url": "https://www.semanticscholar.org/paper/3bf74e08df2cd793b7876acd0253099033f5a23d"
+    },
+    {
+      "title": "Flight performance of autonomous quadrotors in von Karman wakes",
+      "year": 2019,
+      "abstract": null,
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "K. Laurent",
+        "Josh Solberg",
+        "Marigot Fackenthal",
+        "Grace Ding",
+        "G. Bewley"
+      ],
+      "url": "https://www.semanticscholar.org/paper/9ed93d6b1377cc44d7bccd1a52c80323f4097938"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Bedforms Produced on a Particle Bed by Vertical Oscillations of a Plate.",
+      "year": 2019,
+      "abstract": "We describe a new mechanism that produces bedforms and characterize the conditions under which it operates. The mechanism is associated with pressure gradients generated in a fluid saturated particle bed by a plate oscillating in the water above it. These vertical pressure gradients cause oscillatory bed failure. This facilitates particle displacement in its interior and transport at and near its surface that contribute to the formation of a heap under the plate. Flows over erodible beds generally cause shear stresses on the bed and these induce bed failure. Failure driven by pressure gradients is different from this. We report on bedforms in a bed of glass beads associated with such fluctuating pressure gradients. We measure the development of the profiles of heaps as a function of time and determine the tangential and normal motion of areas on the beds surface and estimate the depth of penetration of the tangential transport. The measurements compare favorably with a simple model that describes the onset of failure due to oscillations in pressure.",
+      "venue": "Physical Review Letters",
+      "citations": 4,
+      "authors": [
+        "L. La Ragione",
+        "K. Laurent",
+        "J. Jenkins",
+        "G. Bewley"
+      ],
+      "url": "https://www.semanticscholar.org/paper/054741c129abe02b4eeba8b2edd3181cf4f24ba5"
+    },
+    {
+      "title": "Maximum likelihood filtering for particle tracking in turbulent flows",
+      "year": 2023,
+      "abstract": null,
+      "venue": "Experiments in Fluids",
+      "citations": 0,
+      "authors": [
+        "Griffin Kearney",
+        "K. Laurent",
+        "R. Kearney"
+      ],
+      "url": "https://www.semanticscholar.org/paper/6b7deb68dd063348221719fd91f356f88b476533"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import time
 
-BASE_URL = "https://ecs.syracuse.edu"
+BASE_URL = "https://ecs.syracuse.edu/faculty-staff?category=full-time-fac&people="
 
 def scrape_directory(directory_url):
     """

@@ -1,0 +1,98 @@
+{
+  "name": "Dacheng Ren",
+  "affiliation": "Professor, Syracuse University",
+  "interests": [
+    "Biofilms",
+    "Persister cells",
+    "Biotechnology"
+  ],
+  "citedby": 8310,
+  "h_index": 42,
+  "i10_index": 68,
+  "top_primary_author_publications": [
+    {
+      "title": "Antimicrobial peptides",
+      "year": 2013,
+      "abstract": "The rapid increase in drug-resistant infections has presented a serious challenge to antimicrobial therapies. The failure of the most potent antibiotics to kill “superbugs” emphasizes the urgent need to develop other control agents. Here we review the history and new development of antimicrobial peptides (AMPs), a growing class of natural and synthetic peptides with a wide spectrum of targets including viruses, bacteria, fungi, and parasites. We summarize the major types of AMPs, their modes of action, and the common mechanisms of AMP resistance. In addition, we discuss the principles for designing effective AMPs and the potential of using AMPs to control biofilms (multicellular structures of bacteria embedded in extracellular matrixes) and persister cells (dormant phenotypic variants of bacterial cells that are highly tolerant to antibiotics).",
+      "venue": "",
+      "citations": 1829,
+      "authors": [
+        "Ali Adem Bahar",
+        "Dacheng Ren"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Gene expression in Escherichia coli biofilms",
+      "year": 2004,
+      "abstract": "DNA microarrays were used to study the gene expression profile of Escherichia coli JM109 and K12 biofilms. Both glass wool in shake flasks and mild steel 1010 plates in continuous reactors were used to create the biofilms. For the biofilms grown on glass wool, 22 genes were induced significantly (p≤0.05) compared to suspension cells, including several genes for the stress response (hslS, hslT, hha, and soxS), type I fimbriae (fimG), metabolism (metK), and 11 genes of unknown function (ybaJ, ychM, yefM, ygfA, b1060, b1112, b2377, b3022, b1373, b1601, and b0836). The DNA microarray results were corroborated with RNA dot blotting. For the biofilm grown on mild steel plates, the DNA microarray data showed that, at a specific growth rate of 0.05/h, the mature biofilm after 5 days in the continuous reactors did not exhibit differential gene expression compared to suspension cells although genes were …",
+      "venue": "Applied microbiology and biotechnology",
+      "citations": 494,
+      "authors": [
+        "D Ren",
+        "LA Bedzyk",
+        "SM Thomas",
+        "RW Ye",
+        "Thomas Keith Wood"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Inhibition of biofilm formation and swarming of Escherichia coli by (5Z)‐4‐bromo‐5‐(bromomethylene)‐3‐butyl‐2(5H)‐furanone",
+      "year": 2001,
+      "abstract": "The quorum‐sensing disrupter (5Z)‐4‐bromo‐5‐(bromomethylene)‐3‐butyl‐2(5H)‐furanone (furanone) of the alga Delisea pulchra was found to inhibit the swarming motility of Escherichia coli completely at 13 µg cm−2 (also at 20 µg ml−1) but did not inhibit its growth rate at 13–52 µg cm−2 or from 20 to 100 µg ml−1. Swimming was not inhibited by the furanone at 20–40 µg ml−1. In addition, confocal scanning laser microscopy revealed that this furanone at 60 µg ml−1 inhibited the biofilm formation of E. coli, as it decreased its thickness by 55%, reduced the number of water channels and decreased the percentage of live cells by 87%. This suggests that natural furanone may be used as a new method to control bacterial biofilms that does not involve toxicity. Furanone at 10 µg ml−1 also inhibited by 3300‐fold the quorum sensing of Vibrio harveyi via autoinducer 1 (AI‐1) and inhibited by 5500‐fold …",
+      "venue": "Environmental Microbiology",
+      "citations": 451,
+      "authors": [
+        "Dacheng Ren",
+        "James J Sims",
+        "Thomas K Wood"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Effects of material properties on bacterial adhesion and biofilm formation",
+      "year": 2015,
+      "abstract": "Adhesion of microbes, such as bacteria and fungi, to surfaces and the subsequent formation of biofilms cause multidrug-tolerant infections in humans and fouling of medical devices. To address these challenges, it is important to understand how material properties affect microbe-surface interactions and engineer better nonfouling materials. Here we review the recent progresses in this field and discuss the main challenges and opportunities. In particular, we focus on bacterial biofilms and review the effects of surface energy, charge, topography, and stiffness of substratum material on bacterial adhesion. We summarize how these surface properties influence oral biofilm formation, and we discuss the important findings from nondental systems that have potential applications in dental medicine.",
+      "venue": "",
+      "citations": 634,
+      "authors": [
+        "Fangchao Song",
+        "Hyun Koo",
+        "Dacheng Ren"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Microtopographic patterns affect Escherichia coli biofilm formation on poly (dimethylsiloxane) surfaces",
+      "year": 2011,
+      "abstract": "Biofilms are involved in 80% of human bacterial infections and are up to 1000 times more tolerant to antibiotics than their planktonic counterparts. To better understand the mechanism of bacteria−surface interactions, polydimethylsiloxane (PDMS) surfaces with microtopographic patterns were tested to study the effects of surface topography on bacterial adhesion and biofilm formation. The patterned PDMS surfaces were prepared by transferring complementary surface topography from a silicon wafer etched via photolithography to introduce 10 μm tall square-shape features. The dimension of protruding square features and the distance between adjacent features were systematically varied. Escherichia coli RP437/pRSH103 (with constitutive expression of red fluorescent protein) was found to preferentially attach and form biofilms in valleys between protruding features even when the dimension of plateaus (top of the …",
+      "venue": "Langmuir",
+      "citations": 175,
+      "authors": [
+        "Shuyu Hou",
+        "Huan Gu",
+        "Cassandra Smith",
+        "Dacheng Ren"
+      ],
+      "url": ""
+    },
+    {
+      "title": "How microbes read the map: Effects of implant topography on bacterial adhesion and biofilm formation",
+      "year": 2021,
+      "abstract": "Microbes have remarkable capabilities to attach to the surface of implanted medical devices and form biofilms that adversely impact device function and increase the risk of multidrug-resistant infections. The physicochemical properties of biomaterials have long been known to play an important role in biofilm formation. More recently, a series of discoveries in the natural world have stimulated great interest in the use of 3D surface topography to engineer antifouling materials that resist bacterial colonization. There is also increasing evidence that some medical device surface topographies, such as those designed for tissue integration, may unintentionally promote microbial attachment. Despite a number of reviews on surface topography and biofilm control, there is a missing link between how bacteria sense and respond to 3D surface topographies and the rational design of antifouling materials. Motivated by this gap …",
+      "venue": "",
+      "citations": 157,
+      "authors": [
+        "Sang Won Lee",
+        "K Scott Phillips",
+        "Huan Gu",
+        "Mehdi Kazemzadeh-Narbat",
+        "Dacheng Ren"
+      ],
+      "url": ""
+    }
+  ]
+}

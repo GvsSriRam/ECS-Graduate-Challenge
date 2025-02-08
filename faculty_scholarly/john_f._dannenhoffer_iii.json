@@ -1,7 +1,12 @@
 {
   "name": "John F. DANNENHOFFER, III",
   "affiliation": "",
-  "interests": [],
+  "interests": [
+    "computational geometry (cg)",
+    "multi-disciplinary analysis and optimization (mdao)",
+    "computational fluid dynamics (cfd)",
+    "aerospace vehicle analysis and design"
+  ],
   "citedby": 0,
   "h_index": 0,
   "i10_index": 0,

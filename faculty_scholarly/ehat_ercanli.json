@@ -1,7 +1,13 @@
 {
   "name": "E. Ercanli",
   "affiliation": "",
-  "interests": [],
+  "interests": [
+    "computer architecture",
+    "design automation",
+    "system verification and testing",
+    "database systems",
+    "embedded system design"
+  ],
   "citedby": 74,
   "h_index": 4,
   "i10_index": 0,

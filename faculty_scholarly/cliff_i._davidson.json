@@ -1,7 +1,13 @@
 {
   "name": "C. Davidson",
   "affiliation": "",
-  "interests": [],
+  "interests": [
+    "protection of cities from extreme weather events due to climate change",
+    "human perceptions of energy use from day-to-day activities",
+    "measurement and modeling of atmospheric dry and wet deposition of pollutants",
+    "assessment of performance of green infrastructure for stormwater management",
+    "environmental transport and fate of air pollutants, especially lead and other toxic metals as well as sulfate and other inorganic acids"
+  ],
   "citedby": 8552,
   "h_index": 54,
   "i10_index": 0,

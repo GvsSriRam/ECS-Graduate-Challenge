@@ -2,9 +2,13 @@
   "name": "J. Cole Smith",
   "affiliation": "Syracuse University",
   "interests": [
-    "Operations Research",
-    "Mathematical Programming",
-    "Integer Programming"
+    "integer programming and combinatorial optimization",
+    "integer programming",
+    "mathematical programming",
+    "operations research",
+    "network flows and facility location",
+    "computational optimization methods",
+    "large-scale optimization due to uncertainty or robustness considerations"
   ],
   "citedby": 4775,
   "h_index": 36,

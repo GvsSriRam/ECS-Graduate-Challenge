@@ -1,7 +1,15 @@
 {
   "name": "Theodore Walker",
   "affiliation": "Syracuse University",
-  "interests": [],
+  "interests": [
+    "advanced liquid- and solid-state nmr spectroscopy",
+    "reaction kinetics and microkinetic analysis",
+    "biomass conversion to renewable energy and chemicals",
+    "solvent effects in liquid-phase catalytic processes",
+    "experimental determination of reaction mechanisms",
+    "complex plastic waste recycling",
+    "heterogeneous catalysis"
+  ],
   "citedby": 1458,
   "h_index": 12,
   "i10_index": 12,

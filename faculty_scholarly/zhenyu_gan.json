@@ -2,7 +2,11 @@
   "name": "Zhenyu Gan",
   "affiliation": "Aerospace and Mechanical Engineering Department, Syracuse University",
   "interests": [
-    "Legged Locomotion"
+    "gait analysis",
+    "trajectory optimization",
+    "legged locomotion",
+    "multibody dynamics",
+    "robotics"
   ],
   "citedby": 373,
   "h_index": 11,

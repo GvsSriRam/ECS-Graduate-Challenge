@@ -1,7 +1,13 @@
 {
   "name": "Svetoslava Todorova",
   "affiliation": "Syracuse University",
-  "interests": [],
+  "interests": [
+    "smart sensing for monitoring water and air quality",
+    "transport, cycling, and bioaccumulation of metals in aquatic environments",
+    "science for policy formation and effective implementation",
+    "sustainable engineering practices in built and natural environments",
+    "urban stormwater management"
+  ],
   "citedby": 553,
   "h_index": 9,
   "i10_index": 9,

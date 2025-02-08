@@ -2,10 +2,11 @@
   "name": "Victor Duenas",
   "affiliation": "Syracuse University",
   "interests": [
-    "Control Theory",
-    "Adaptive Control",
-    "Rehabilitation Robotics",
-    "Functional Electrical Stimulation"
+    "adaptive control",
+    "rehabilitation robotics",
+    "nonlinear and adaptive control",
+    "control theory",
+    "functional electrical stimulation"
   ],
   "citedby": 485,
   "h_index": 14,

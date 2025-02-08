@@ -2,11 +2,14 @@
   "name": "Fernando Zigunov",
   "affiliation": "Assistant Professor, Syracuse University",
   "interests": [
-    "Experimental fluid dynamics",
-    "Machine learning in fluids",
-    "PIV",
-    "PSP",
-    "Supersonic noise control"
+    "piv",
+    "flow visualization and tomography",
+    "machine learning flow control",
+    "psp",
+    "supersonic noise control",
+    "experimental fluid dynamics",
+    "machine learning in fluids",
+    "aerodynamics"
   ],
   "citedby": 265,
   "h_index": 11,

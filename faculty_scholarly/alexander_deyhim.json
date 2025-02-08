@@ -1,7 +1,11 @@
 {
   "name": "Alexander Deyhim",
   "affiliation": "Syracuse University",
-  "interests": [],
+  "interests": [
+    "engineering design/project management",
+    "fundamentals of engineering",
+    "entrepreneurship"
+  ],
   "citedby": 249,
   "h_index": 8,
   "i10_index": 7,

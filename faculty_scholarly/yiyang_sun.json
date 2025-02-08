@@ -2,10 +2,11 @@
   "name": "Yiyang Sun",
   "affiliation": "Department of Mechanical and Aerospace Engineering, Syracuse University",
   "interests": [
-    "unsteady aerodynamics",
-    "flow control",
+    "computational fluid dynamics",
+    "and reduced-order modeling",
     "modal analysis",
-    "and reduced-order modeling"
+    "flow control",
+    "unsteady aerodynamics"
   ],
   "citedby": 952,
   "h_index": 11,

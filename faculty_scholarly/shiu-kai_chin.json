@@ -1,7 +1,11 @@
 {
   "name": "Shiu-Kai Chin",
   "affiliation": "",
-  "interests": [],
+  "interests": [
+    "computer security",
+    "systems assurance",
+    "formal verification"
+  ],
   "citedby": 13,
   "h_index": 1,
   "i10_index": 0,

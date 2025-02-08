@@ -2,9 +2,12 @@
   "name": "Kristopher Micinski",
   "affiliation": "Syracuse University",
   "interests": [
-    "Programming Languages",
-    "Automated Reasoning",
-    "Reverse Engineering"
+    "reverse engineering",
+    "automated reasoning",
+    "foundations of computer security and privacy",
+    "programming languages",
+    "static analysis",
+    "formal methods"
   ],
   "citedby": 1364,
   "h_index": 13,

@@ -1,0 +1,103 @@
+{
+  "name": "Alexander J. Dunbar",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 589,
+  "h_index": 8,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Development of experimental method for in situ distortion and temperature measurements during the laser powder bed fusion additive manufacturing process",
+      "year": 2016,
+      "abstract": null,
+      "venue": "",
+      "citations": 152,
+      "authors": [
+        "Alexander J. Dunbar",
+        "E. R. Denlinger",
+        "J. Heigel",
+        "P. Michaleris",
+        "P. Guerrier",
+        "R. Martukanitz",
+        "T. Simpson"
+      ],
+      "url": "https://www.semanticscholar.org/paper/cea5751be90db3ac9b0339cc387ebadad2dc43c8"
+    },
+    {
+      "title": "Experimental validation of finite element modeling for laser powder bed fusion deformation",
+      "year": 2016,
+      "abstract": null,
+      "venue": "",
+      "citations": 113,
+      "authors": [
+        "Alexander J. Dunbar",
+        "E. R. Denlinger",
+        "M. Gouge",
+        "P. Michaleris"
+      ],
+      "url": "https://www.semanticscholar.org/paper/17684ac7559dd9b0b4c04967cb037ee44f5cceb9"
+    },
+    {
+      "title": "Development and validation of a tightly coupled CFD/6-DOF solver for simulating floating offshore wind turbine platforms",
+      "year": 2015,
+      "abstract": null,
+      "venue": "",
+      "citations": 60,
+      "authors": [
+        "Alexander J. Dunbar",
+        "B. Craven",
+        "E. Paterson"
+      ],
+      "url": "https://www.semanticscholar.org/paper/12783cbee1390c7372fc13c24813a8b1667773ac"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "In-process monitoring of porosity in additive manufacturing using optical emission spectroscopy",
+      "year": 2019,
+      "abstract": "Abstract A key challenge in metal additive manufacturing is the prevalence of defects, such as discontinuities within the part (e.g., porosity). The objective of this work is to monitor porosity in Laser Powder Bed Fusion (L-PBF) additive manufacturing of nickel alloy 718 (popularly called Inconel 718) test parts using in-process optical emission spectroscopy. To realize this objective, cylinder-shaped test parts are built under different processing conditions on a commercial L-PBF machine instrumented with an in-situ multispectral photodetector sensor. Optical emission signatures are captured continuously during the build by the multispectral sensor. Following processing, the porosity-level within each layer of a test part is quantified using X-ray Computed Tomography (CT). The graph Fourier transform coefficients are derived layer-by-layer from signatures acquired from the multispectral photodetector sensor. These graph Fourier transform coefficients are subsequently invoked as input features within various machine learning models to predict the percentage porosity-level in each layer with CT data taken as ground truth. This approach is found to predict the porosity on a layer-by-layer basis with an accuracy of ∼90% (F-score) in a computation time less than 0.5 seconds. In comparison, statistical moments, such as mean, variation, etc., are less accurate (F-score ≈ 80%) and require a computation time exceeding 5 seconds.",
+      "venue": "IISE Transactions",
+      "citations": 73,
+      "authors": [
+        "M. Montazeri",
+        "A. Nassar",
+        "Alexander J. Dunbar",
+        "Prahalada K. Rao"
+      ],
+      "url": "https://www.semanticscholar.org/paper/ffc730cecdf95d569417dff0d1137bd1c0bab8ca"
+    },
+    {
+      "title": "Characterization of the strength of support structures used in powder bed fusion additive manufacturing of Ti-6Al-4V",
+      "year": 2017,
+      "abstract": null,
+      "venue": "",
+      "citations": 61,
+      "authors": [
+        "Lourdes D. Bobbio",
+        "S. Qin",
+        "Alexander J. Dunbar",
+        "P. Michaleris",
+        "A. Beese"
+      ],
+      "url": "https://www.semanticscholar.org/paper/5f70e4622f61c969e3d582f578d629c716535710"
+    },
+    {
+      "title": "Selection and installation of high resolution imaging to monitor the PBFam process, and synchronization to post-build 3D computed tomography",
+      "year": 2020,
+      "abstract": "Industrial applications of PBFAM continue to expand, and there is a growing interest in the use of sensors to monitor the build process. Sensor data collected during the build process provides insight into process physics and may also lead to a reduction in overall fabrication time and cost by offering an alternative to extensive post-build nondestructive inspection for quality control. Ultimately, sensor data may serve as feedback for real-time control systems that automatically repair flaws before they are buried by subsequent layers. In this work, high resolution images are explored as a means of monitoring the PBFAM build process inside a 3D Systems ProX320. Key design considerations for camera selection and integration are discussed. Methods and algorithms are developed to calibrate and map layer-wise imagery to laser scan vectors. Images are stacked and exported to standardized 3D data formats to enable easy inspection and comparison to post-build 3D computed tomography (CT) volumes.",
+      "venue": "",
+      "citations": 5,
+      "authors": [
+        "Jacob P. Morgan",
+        "John P. Morgan",
+        "D. Natale",
+        "Robert W. Smith",
+        "Wesley F. Mitchell",
+        "Alexander J. Dunbar",
+        "E. Reutzel"
+      ],
+      "url": "https://www.semanticscholar.org/paper/dfed76578903a66289248339d070ccd685bdca4f"
+    }
+  ],
+  "source": "semanticscholar"
+}

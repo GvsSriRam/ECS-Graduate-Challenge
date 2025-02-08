@@ -1,0 +1,96 @@
+{
+  "name": "J. Sheedy",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 3649,
+  "h_index": 35,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Is all Asthenopia the Same?",
+      "year": 2003,
+      "abstract": "Purpose. Any of several conditions can cause asthenopia. The purpose of this study was to determine whether the particular sensations or their location vary dependent on the symptom-inducing condition. Methods. Twenty subjects with good vision performed eight reading tasks in random order during different conditions. Each condition used different stimuli to induce asthenopia. The eight conditions were mixed astigmatism, close viewing distance, upward gaze, dry eyes, lens flipper, small font, glare, and flickering light. Subjects were asked to read until attaining a level of discomfort self-defined as “barely tolerable.” After each task, subjects rated the magnitude of several symptom descriptors (burning, ache, strain, irritation, tearing, blurred vision, double vision, dryness, and headache) and their location. Results. Analysis of variance with repeated measures was used to determine that all of the individual symptom sensation measures (except blur) were significantly related (p values ranged from 0.003 to <0.0001) to the inducing condition. Principal factor analysis with orthogonal varimax rotation was used to test symptom by condition relationships and determined two latent factors, designated external and internal symptom factors (ESF and ISF), that related symptoms to inducing condition. The ESF pattern comprises burning, irritation, tearing, and dryness located in the front and bottom of the eye. ESF is caused by holding the eyelid open, glare, up gaze, small font, and flickering. ESF seems highly related to dry-eye symptoms. The ISF pattern comprises ache, strain, and headache located behind the eyes. ISF is caused by the close viewing distance, lens flipper, and mixed astigmatism conditions and is likely related to accommodative and vergence stress. Conclusions. Symptom descriptors and locations were able to distinguish discomfort on the basis of causative condition. Results support two different symptom constellations and, hence, at least two different afferent pathways for symptoms of asthenopia.",
+      "venue": "Optometry and Vision Science",
+      "citations": 300,
+      "authors": [
+        "J. Sheedy",
+        "John R. Hayes",
+        "A. Engle"
+      ],
+      "url": "https://www.semanticscholar.org/paper/21f851069c9830db2bd38a65881edb44345484b5"
+    },
+    {
+      "title": "Association of Symptoms with Measures of Oculomotor Deficiencies",
+      "year": 1978,
+      "abstract": "&NA; Phoria, vergence, and fixation‐disparity were measured at near working distances for a nonclinical sample of 3rd‐yr Optometry students. A questionnaire divided the sample into 33 symptomatic and 44 asymptomatic subjects. Discriminant analysis was used to determine which clinical measures best predicted the group to which each subject belonged. Sheard's criterion was a good discriminator for exo deviations, and a variant of Percival's criterion was good for eso deviations. Fixation‐disparity variables proved to be valuable diagnostically. The best fixation‐disparity measures were the curve slope, curve type, and amount of fixation disparity.",
+      "venue": "American Journal of Optometry and Physiological Optics",
+      "citations": 129,
+      "authors": [
+        "J. Sheedy",
+        "J. J. Saladin"
+      ],
+      "url": "https://www.semanticscholar.org/paper/acb0c7dd1827f22c3f69a4bebba87b9b19897c7a"
+    },
+    {
+      "title": "Text Legibility and the Letter Superiority Effect",
+      "year": 2005,
+      "abstract": "Effects of font design and electronic display parameters upon text legibility were determined using a threshold size method. Participants' visual acuity (inverse of the minimum detection size, representing the threshold legibility for each condition) was measured using upper- and lowercase letters and lowercase words in combinations of 6 fonts, 3 font-smoothing modes, 4 font sizes, 10 pixel heights, and 4 stroke widths. Individual lowercase letters were 10% to 20% more legible than lowercase words (i.e., lowercase words must be 10%-20% larger to have the same threshold legibility). This letter superiority effect suggests that individual letters play a large role and word shape plays a smaller role, if any, in word identification at threshold. Pixel height, font, stroke width, and font smoothing had significant main effects on threshold legibility. Optimal legibility was attained at 9 pixels (10 points). Verdana and Arial were the most legible fonts; Times New Roman and Franklin were least legible. Subpixel rendering (ClearTypeTM) improved threshold legibility for some fonts and, in combination with Verdana, was the most legible condition. Increased stroke width (bold) improved threshold legibility but only at the thinnest width tested. Potential applications of this research include optimization of font design for legibility and readability.",
+      "venue": "Hum. Factors",
+      "citations": 118,
+      "authors": [
+        "J. Sheedy",
+        "M. V. Subbaram",
+        "Aaron B. Zimmerman",
+        "John R. Hayes"
+      ],
+      "url": "https://www.semanticscholar.org/paper/78a8550fea2255fe98d50cb3b92a186fa1b0d3f1"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Computer Use, Symptoms, and Quality of Life",
+      "year": 2007,
+      "abstract": "Purpose. To model the effects of computer use on reported visual and physical symptoms and to measure the effects upon quality of life measures. Methods. A survey of 1000 university employees (70.5% adjusted response rate) assessed visual and physical symptoms, job, physical and mental demands, ability to control/influence work, amount of work at a computer, computer work environment, relations with others at work, life and job satisfaction, and quality of life. Data were analyzed to determine whether self-reported eye symptoms are associated with perceived quality of life. The study also explored the factors that are associated with eye symptoms. Structural equation modeling and multiple regression analyses were used to assess the hypotheses. Results. Seventy percent of the employees used some form of vision correction during computer use, 2.9% used glasses specifically prescribed for computer use, and 8% had had refractive surgery. Employees spent an average of 6 h per day at the computer. In a multiple regression framework, the latent variable eye symptoms was significantly associated with a composite quality of life variable (p = 0.02) after adjusting for job quality, job satisfaction, supervisor relations, co-worker relations, mental and physical load of the job, and job demand. Age and gender were not significantly associated with symptoms. After adjusting for age, gender, ergonomics, hours at the computer, and exercise, eye symptoms were significantly associated with physical symptoms (p < 0.001) accounting for 48% of the variance. Conclusions. Environmental variability at work was associated with eye symptoms and eye symptoms demonstrated a significant impact on quality of life and physical symptoms.",
+      "venue": "Optometry and Vision Science",
+      "citations": 207,
+      "authors": [
+        "John R. Hayes",
+        "J. Sheedy",
+        "J. Stelmack",
+        "C. Heaney"
+      ],
+      "url": "https://www.semanticscholar.org/paper/6b86b03aa4297b87bc9389b1a206b63aef48a7f3"
+    },
+    {
+      "title": "Myofascial trigger point development from visual and postural stressors during computer work.",
+      "year": 2006,
+      "abstract": null,
+      "venue": "Journal of Electromyography & Kinesiology",
+      "citations": 130,
+      "authors": [
+        "D. Treaster",
+        "W. Marras",
+        "D. Burr",
+        "J. Sheedy",
+        "D. Hart"
+      ],
+      "url": "https://www.semanticscholar.org/paper/760c17dae4d0fc7b9affca4341cd186f40cc28f2"
+    },
+    {
+      "title": "The Effects of Visual Display Distance on Eye Accommodation, Head Posture, and Vision and Neck Symptoms",
+      "year": 2007,
+      "abstract": "Objective: Determine the effects of display viewing distance on both the visual and musculoskeletal systems while the text height is held constant across viewing distances. Background: The distance from the eyes to a computer display may affect visual and neck comfort. If the angular size of the characters remains the same, it is recommended that the display be placed at a farther viewing distance (e.g., 70—100 cm). However, in common usage, the character sizes are not adjusted based on viewing distance. Method: Participants under the age of 35 years (N = 24) performed visually demanding tasks using a computer display for 2 hr each at three viewing distances (mean: 52.4, 73.0, and 85.3 cm) while torso and head posture were tracked. At the end of each task, eye accommodation was measured and symptoms were recorded. Results: The near distance was associated with significantly less blurred vision, less dry or irritated eyes, less headache, and improved convergence recovery when compared with the middle and far distances. Participants moved their torsos and heads closer to the monitor at the far distance. Conclusion: If the computer screen character sizes are close to the limits of visual acuity, it is recommended that the computer monitor be positioned between the near (52 cm) and middle (73 cm) distance from the eyes. Application: The location of a computer display should take into account the size of the characters on the screen and the visual acuity of the user.",
+      "venue": "Hum. Factors",
+      "citations": 104,
+      "authors": [
+        "D. Rempel",
+        "K. Willms",
+        "J. Anshel",
+        "W. Jaschinski",
+        "J. Sheedy"
+      ],
+      "url": "https://www.semanticscholar.org/paper/1f61b5fe38eff6a3c1ec1207b06157641608ea6c"
+    }
+  ],
+  "source": "semanticscholar"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Jackie L. Anderson",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 0,
+  "h_index": 0,
+  "i10_index": 0,
+  "top_primary_author_publications": [],
+  "top_secondary_author_publications": [
+    {
+      "title": "01, \"Texts of Time: The Portland State Library Book of Hours and the Medieval Manuscript Tradition\" Exhibit Catalog",
+      "year": 2015,
+      "abstract": null,
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "A. McClanan",
+        "Shirleanne Ackerman Gahan",
+        "Melissa Medefesser",
+        "K. Miller",
+        "Matthias Bladou",
+        "Thomas Goodwin",
+        "D. Courtright",
+        "Bethany Kraft",
+        "Jackie L. Anderson",
+        "Charolette Stoehr",
+        "Caitlyn Au"
+      ],
+      "url": "https://www.semanticscholar.org/paper/0fd4b202b22f67fd8e2e454f88cc93cdfbca9002"
+    },
+    {
+      "title": "An Attempt to Establish and Maintain Standards in a Large Course",
+      "year": 1975,
+      "abstract": "This paper describes an experiment in establishing and maintaining standards for a large course and assigning grades based on those standards The continuing experiment began in the spring of 1971 and has included some thirty instructors and more than 4000 students in an introductory computer science course. Some of the experience, both positive and negative, is reported for those interested in trying such a scheme.",
+      "venue": "IEEE Transactions on Education",
+      "citations": 0,
+      "authors": [
+        "L. Druffel",
+        "Jackie L. Anderson",
+        "Donald L. Jordan"
+      ],
+      "url": "https://www.semanticscholar.org/paper/4dcc0f7fe3687b5de4adf2f731106582723d69e0"
+    }
+  ],
+  "source": "semanticscholar"
+}

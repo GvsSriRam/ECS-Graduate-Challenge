@@ -1,0 +1,107 @@
+{
+  "name": "Alexander Deyhim",
+  "affiliation": "Syracuse University",
+  "interests": [],
+  "citedby": 249,
+  "h_index": 8,
+  "i10_index": 7,
+  "top_primary_author_publications": [
+    {
+      "title": "Low-cost, high precision goniometric stage for x-ray diffractography",
+      "year": 2005,
+      "abstract": "A low-cost, high precision goniometric stage, for use in x-ray diffractography or in optical systems, with a spherical sector supported on at least one bearing, a top surface of the spherical sector that is used for mounting an object, a center of rotation located within the object, a rod or other member that is disposed below the spherical bearing surface, preferably orthogonal to the rotational axes, stepper motors or other actuators to move the device and a mechanical linkage between the rod and the motors.",
+      "venue": "",
+      "citations": 22,
+      "authors": [
+        "Basil Eric Blank",
+        "Alexander Khosro Deyhim"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Embedded sensors for life-time monitoring of concrete",
+      "year": 2009,
+      "abstract": "Concrete strength depends on a number of factors. The initial strength and the service life of concrete used in structures (especially highway-related structures) are significantly affected by the temperature development and moisture content from the time that it is placed onwards.A sensor that could detect moisture and temperature of the concrete, pH, and the concentration of chloride, sodium and potassium ions in concrete pore solution would provide critical data for evaluating concrete performance starting with the initial quality control period of freshly mixed or freshly cast concrete, through its useful service life, to the period of deterioration and repair. Such a multi-functional sensor can be so pervasively useful because moisture and temperature are the primary drivers for the hydration of Portland cement, and are essential factors in the most prevalent deteriorative processes such as damage due to freezing and thawing, alkaliaggregate reaction, sulfate attack or delayed Ettringite formation. Furthermore, one of the most devastating yet most common forms of concrete degradation is corrosion of embedded reinforcing steel, which is driven by moisture, temperature, and chloride concentration.",
+      "venue": "Proc. 4th Int. Conf. Struct. Health Monitor. Intell. Infrastruct.(SHMII)",
+      "citations": 14,
+      "authors": [
+        "Eric Van Every",
+        "Alex Deyhim",
+        "F Faridazar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Characterization of the fatigue properties of bonding wires",
+      "year": 1996,
+      "abstract": "Bonding wire fatigue reliability is one of the key issues in PPGA (and other cavity type packages) wire bonding process development. This paper describes a unique technique to measure the fatigue properties of bonding wires for IC interconnections. This system allows for long lengths of wire to be strained in bending by wrapping the wire around two mandrels in sequence; the diameter of the mandrels determines the strain at the surface of the wire. Long lengths of wire are managed by winding the wire on 3-inch take up reels of Teflon. Testing at elevated temperatures is accomplished by heating the entire machine. The results of this work clearly show differences in fatigue properties between three types of bonding wire.",
+      "venue": "1996 Proceedings 46th Electronic Components and Technology Conference",
+      "citations": 10,
+      "authors": [
+        "Alex Deyhim",
+        "Boris Yost",
+        "Mirng-Ji Lii",
+        "Che-Yu Li"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Development trends for insertion devices of future synchrotron light sources",
+      "year": 2011,
+      "abstract": "The in-vacuum undulator with a permanent magnet at room temperature is a mature technology and is widely used; with a short period length in a medium-energy facility, it can enhance photon brilliance in the hard x-ray region. A cryogenic permanent magnet has been investigated as an in-vacuum undulator; this undulator will become the best prospective device to satisfy the requirements of a photon source with great brilliance in the hard x-ray region. For the further hard x-ray region, a superconducting wiggler can provide great flux with a continuous spectrum, whereas a superconducting undulator will provide great brilliance with a discrete spectrum. High-temperature superconducting wires are highly promising for use in the development of superconducting undulators; unique algorithms for their development with an extremely short period in a small-magnet gap have been devised. Some out-of-vacuum planar …",
+      "venue": "",
+      "citations": 43,
+      "authors": [
+        "CS Hwang",
+        "JC Jan",
+        "CS Chang",
+        "SD Chen",
+        "CH Chang",
+        "TM Uen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Installation and testing of a focusing mirror at beamline X28C for high flux x-ray radiolysis of biological macromolecules",
+      "year": 2008,
+      "abstract": "The NSLS X28C white-light beamline has been upgraded with a focusing mirror in order to provide increased x-ray density and a wide selection of beam shapes at the sample position. The cylindrical single crystal silicon mirror uses an Indalloy 51 liquid support bath as both a mechanism for heat transfer and a buoyant support to counter the effects of gravity and correct for minor parabolic slope errors. Calorimetric measurements were performed to verify that the calculated more than 200-fold increase in flux density is delivered by the mirror at the smallest beam spot. The properties of the focused beam relevant to radiolytic footprinting, namely, the physical dimensions of the beam, the effective hydroxyl radical dose delivered to the sample, and sample heating upon irradiation, have been studied at several mirror angles.",
+      "venue": "Review of Scientific Instruments",
+      "citations": 38,
+      "authors": [
+        "Michael R Sullivan",
+        "Sandeep Rekhi",
+        "Jen Bohon",
+        "Sayan Gupta",
+        "Donald Abel",
+        "John Toomey",
+        "Mark R Chance"
+      ],
+      "url": ""
+    },
+    {
+      "title": "X‐25 Cryo‐ready In‐vacuum Undulator at the NSLS",
+      "year": 2007,
+      "abstract": "The existing 15‐year‐old hybrid wiggler at the NSLS has been replaced by a state‐of‐the‐art, cryo‐ready in‐vacuum undulator optimized for a dedicated macromolecular crystallography program. The device is a 1m long, 18mm period, hybrid PM‐type with a minimum operating gap of 5.6mm, and has provision for cryo‐cooling to 150K. Unlike the original SPring‐8 cryo‐PM undulator proposal, we use a new high‐remanence, high‐temperature grade of NdFeB (NEOMAX 42AH with Br=1.3T and Hcj=24 kOe) that can be baked to 100°C to be UHV‐ready in case of cooling system failure. A novel optical gap measurement system using a LED‐based product ensures gap accuracy of ±2 micro meter. A friction stir welding technique is used for the first time in an accelerator UHV device to minimize stress and deformation of the magnet arrays due to temperature gradients. This paper describes design issues of the device …",
+      "venue": "AIP Conference Proceedings",
+      "citations": 28,
+      "authors": [
+        "Toshiya Tanabe",
+        "James Ablett",
+        "Lonny Berman",
+        "David A Harder",
+        "Steve Hulbert",
+        "Mike Lehecka",
+        "George Rakowsky",
+        "John Skaritka",
+        "Alex Deyhim",
+        "Eric Johnson",
+        "Joe Kulesza",
+        "Dave Waterman"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

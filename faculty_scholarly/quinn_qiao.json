@@ -1,0 +1,123 @@
+{
+  "name": "Quinn Qiao",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Lithium batteries",
+    "photovoltaics",
+    "sensors & sensor networks",
+    "precision agricultur"
+  ],
+  "citedby": 16317,
+  "h_index": 69,
+  "i10_index": 224,
+  "top_primary_author_publications": [
+    {
+      "title": "Conjugated polymer–inorganic semiconductor hybrid solar cells",
+      "year": 2011,
+      "abstract": "Polymer–inorganic semiconductor hybrid solar cells have attracted extensive research and attention as a promising approach to achieve cost effective solar energy. Power conversion efficiencies exceeding 3% have been achieved for polymer–inorganic hybrid solar cells. However, these efficiencies are still lower than those of polymer-fullerene solar cells, which have recently reached up to 8.13%. In this article, we review the recent developments including device operation mechanism, cell structures, polymer and inorganic materials, and various approaches to improve cell performance. In addition, the dependence of power conversion efficiency on the polymer bandgap and the lowest unoccupied molecular orbital (LUMO) using several typical inorganic acceptors including TiO2, ZnO and CdSe are presented and may provide guidance for the engineering of donor polymers.",
+      "venue": "",
+      "citations": 354,
+      "authors": [
+        "Tingting Xu",
+        "Qiquan Qiao"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Solar charging batteries: advances, challenges, and opportunities",
+      "year": 2018,
+      "abstract": "Energy for a sustainable future motivates today's R&D, enabling technologies such as smart consumer electronics, electric vehicles, and smart grids. These technologies demand the use of batteries. Sunlight, an abundant clean source of energy, can alleviate the energy limits of batteries, while batteries can address photovoltaic intermittency. This perspective paper focuses on advancing concepts in PV-battery system design while providing critical discussion, review, and prospect. Reports on discrete and integrated PV-battery designs are discussed. Three key technical challenges, namely energy density, efficiency, and stability, toward further advancement of integrated PV-battery systems are discussed. We present a perspective on opportunities and future directions, highlighting key strategies on developing such PV-battery systems. Key focus should be on the development of innovative designs that incorporates …",
+      "venue": "",
+      "citations": 315,
+      "authors": [
+        "Ashim Gurung",
+        "Qiquan Qiao"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Hyperbranched conjugated polyelectrolyte bilayers for solar-cell applications",
+      "year": 2007,
+      "abstract": "Cationically and anionically charged hyperbranched conjugated polyelectrolytes (HB-CPEs) PNMe3+ and PSO3- have been synthesized via the Heck coupling method using A3 + B2 type approach. Both HB-CPEs are highly fluorescent and soluble in polar organic solvents allowing processing to electrostatic adsorption. TiO2 hybrid solar cells have been fabricated with the HB-CPEs as sensitizers. The self-assembled bilayer HB-CPE films show higher overall efficiencies when compared to their respective monolayers ",
+      "venue": "Journal of the American Chemical Society",
+      "citations": 171,
+      "authors": [
+        "Prasad Taranekar",
+        "Qiquan Qiao",
+        "Hui Jiang",
+        "Ion Ghiviriga",
+        "Kirk S Schanze",
+        "John R Reynolds"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Review on dye-sensitized solar cells (DSSCs): Advanced techniques and research trends",
+      "year": 2017,
+      "abstract": "Dye-sensitized solar cell (DSSC) offers an efficient and easily implemented technology for future energy supply. Compared to conventional silicon solar cells, it provides comparable power conversion efficiency (PCE) at low material and manufacturing costs. DSSC materials such as titanium oxide (TiO2) are inexpensive, abundant and innocuous to the environment. Since DSSC materials are less prone to contamination and processable at ambient temperature, a roll-to-roll process could be utilized to print DSSCs on the mass production line. DSSCs perform better under lower light intensities, which makes them an excellent choice for indoor applications. Due to the advancement of molecular engineering, colored and transparent thin films have been introduced to enhance the aesthetic values. Up to now, such benefits have attracted considerable research interests and commercialization effort. Here, this review …",
+      "venue": "",
+      "citations": 1267,
+      "authors": [
+        "Jiawei Gong",
+        "K Sumathy",
+        "Qiquan Qiao",
+        "Zhengping Zhou"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Efficient tandem solar cells with solution-processed perovskite on textured crystalline silicon",
+      "year": 2020,
+      "abstract": "Stacking solar cells with decreasing band gaps to form tandems presents the possibility of overcoming the single-junction Shockley-Queisser limit in photovoltaics. The rapid development of solution-processed perovskites has brought perovskite single-junction efficiencies >20%. However, this process has yet to enable monolithic integration with industry-relevant textured crystalline silicon solar cells. We report tandems that combine solution-processed micrometer-thick perovskite top cells with fully textured silicon heterojunction bottom cells. To overcome the charge-collection challenges in micrometer-thick perovskites, we enhanced threefold the depletion width at the bases of silicon pyramids. Moreover, by anchoring a self-limiting passivant (1-butanethiol) on the perovskite surfaces, we enhanced the diffusion length and further suppressed phase segregation. These combined enhancements enabled an …",
+      "venue": "Science",
+      "citations": 661,
+      "authors": [
+        "Yi Hou",
+        "Erkan Aydin",
+        "Michele De Bastiani",
+        "Chuanxiao Xiao",
+        "Furkan H Isikgor",
+        "Ding-Jiang Xue",
+        "Bin Chen",
+        "Hao Chen",
+        "Behzad Bahrami",
+        "Ashraful H Chowdhury",
+        "Andrew Johnston",
+        "Se-Woong Baek",
+        "Ziru Huang",
+        "Mingyang Wei",
+        "Yitong Dong",
+        "Joel Troughton",
+        "Rawan Jalmood",
+        "Alessandro J Mirabelli",
+        "Thomas G Allen",
+        "Emmanuel Van Kerschaver",
+        "Makhsud I Saidaminov",
+        "Derya Baran",
+        "Qiquan Qiao",
+        "Kai Zhu",
+        "Stefaan De Wolf",
+        "Edward H Sargent"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Strategic review of secondary phases, defects and defect-complexes in kesterite CZTS–Se solar cells",
+      "year": 2015,
+      "abstract": "Earth abundant kesterite copper-zinc-tin-sulfide–selenide (CZTS–Se) is considered as cost-effective material for next generation solar cells. However, current CZTS–Se solar cells have much lower efficiency than CIGS solar cells. Rapid progress in achieving the target efficiency in CZTS–Se solar cells is hindered by the narrow phase stability of the quaternary phase, Cu2ZnSn(SxSe1−x)4, and the existence of other competitive and complex secondary phases and defects. This resulted in structural inhomogeneity, local fluctuation of open circuit voltage and high carrier recombination that finally lead to poor device performance and repeatability issues. The higher performance of off-stoichiometric CZTS materials, copper-poor and zinc-rich, and their inherent association with secondary phases and defects force the scientific community to investigate them together. This work aims to provide a comprehensive review for …",
+      "venue": "",
+      "citations": 616,
+      "authors": [
+        "Mukesh Kumar",
+        "Ashish Dubey",
+        "Nirmal Adhikari",
+        "Swaminathan Venkatesan",
+        "Qiquan Qiao"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

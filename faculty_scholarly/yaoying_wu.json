@@ -1,0 +1,121 @@
+{
+  "name": "Yaoying Wu",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "biomaterials",
+    "immunoengineering",
+    "Immunotherapy",
+    "biomedical engineering"
+  ],
+  "citedby": 1302,
+  "h_index": 17,
+  "i10_index": 20,
+  "top_primary_author_publications": [
+    {
+      "title": "Long-term evaluation of AAV-CRISPR genome editing for Duchenne muscular dystrophy",
+      "year": 2019,
+      "abstract": "Duchenne muscular dystrophy (DMD) is a monogenic disorder and a candidate for therapeutic genome editing. There have been several recent reports of genome editing in preclinical models of Duchenne muscular dystrophy, , , , –, however, the long-term persistence and safety of these genome editing approaches have not been addressed. Here we show that genome editing and dystrophin protein restoration is sustained in the mdx mouse model of Duchenne muscular dystrophy for 1 year after a single intravenous administration of an adeno-associated virus that encodes CRISPR (AAV-CRISPR). We also show that AAV-CRISPR is immunogenic when administered to adult mice; however, humoral and cellular immune responses can be avoided by treating neonatal mice. Additionally, we describe unintended genome and transcript alterations induced by AAV-CRISPR that should be considered for the …",
+      "venue": "Nature medicine",
+      "citations": 431,
+      "authors": [
+        "Christopher E Nelson",
+        "Yaoying Wu",
+        "Matthew P Gemberling",
+        "Matthew L Oliver",
+        "Matthew A Waller",
+        "Joel D Bohning",
+        "Jacqueline N Robinson-Hamm",
+        "Karen Bulaklak",
+        "Ruth M Castellanos Rivera",
+        "Joel H Collier",
+        "Aravind Asokan",
+        "Charles A Gersbach"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A supramolecular vaccine platform based on α-helical peptide nanofibers",
+      "year": 2017,
+      "abstract": "A supramolecular peptide vaccine system was designed in which epitope-bearing peptides self-assemble into elongated nanofibers composed almost entirely of α-helical structure. The nanofibers were readily internalized by antigen presenting cells and produced robust antibody, CD4+ T-cell, and CD8+ T-cell responses without supplemental adjuvants in mice. Epitopes studied included a cancer B-cell epitope from the epidermal growth factor receptor class III variant (EGFRvIII), the universal CD4+ T-cell epitope PADRE, and the model CD8+ T-cell epitope SIINFEKL, each of which could be incorporated into supramolecular multiepitope nanofibers in a modular fashion.",
+      "venue": "ACS biomaterials science & engineering",
+      "citations": 98,
+      "authors": [
+        "Yaoying Wu",
+        "Pamela K Norberg",
+        "Elizabeth A Reap",
+        "Kendra L Congdon",
+        "Chelsea N Fries",
+        "Sean H Kelly",
+        "John H Sampson",
+        "Vincent P Conticello",
+        "Joel H Collier"
+      ],
+      "url": ""
+    },
+    {
+      "title": "α-Helical coiled-coil peptide materials for biomedical applications",
+      "year": 2016,
+      "abstract": "Self‐assembling coiled coils, which occur commonly in native proteins, have received significant interest for the design of new biomaterials‐based medical therapies. Considerable effort over recent years has led to a detailed understanding of the self‐assembly process of coiled coils, and a diverse collection of strategies have been developed for designing functional materials using this motif. The ability to engineer the interface between coiled coils allows one to achieve variously connected components, leading to precisely defined structures such as nanofibers, nanotubes, nanoparticles, networks, gels, and combinations of these. Currently these materials are being developed for a range of biotechnological and medical applications, including drug delivery systems for controlled release, targeted nanomaterials, ‘drug‐free’ therapeutics, vaccine delivery systems, and others. WIREs Nanomed Nanobiotechnol 2017 …",
+      "venue": "Wiley interdisciplinary reviews. Nanomedicine and nanobiotechnology",
+      "citations": 98,
+      "authors": [
+        "Yaoying Wu",
+        "Joel H Collier"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Poly (trehalose): sugar-coated nanocomplexes promote stabilization and effective polyplex-mediated siRNA delivery",
+      "year": 2013,
+      "abstract": "When nanoparticles interact with their environment, the nature of that interaction is governed largely by the properties of its outermost surface layer. Here, we exploit the exceptional properties of a common disaccharide, trehalose, which is well-known for its unique biological stabilization effects. To this end, we have developed a synthetic procedure that readily affords a polymer of this disaccharide, poly(methacrylamidotrehalose) or “poly(trehalose)” and diblock copolycations containing this polymer with 51 repeat units chain extended with aminoethylmethacrylamide (AEMA) at three degrees of polymerization (n = 34, 65, and 84). Two series of experiments were conducted to study these diblock copolymers in detail and to compare their properties to two control polymers [PEG-P(AEMA) and P(AEMA)]. First, we demonstrate that the poly(trehalose) coating ensures colloidal stability of polyplexes containing siRNA in …",
+      "venue": "Journal of the American Chemical Society",
+      "citations": 119,
+      "authors": [
+        "Antons Sizovs",
+        "Lian Xue",
+        "Zachary P Tolstyka",
+        "Nilesh P Ingle",
+        "Yaoying Wu",
+        "Mallory Cortez",
+        "Theresa M Reineke"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Self‐assembling peptide gels for 3D prostate cancer spheroid culture",
+      "year": 2019,
+      "abstract": "Progress in prostate cancer research is presently limited by a shortage of reliable in vitro model systems. The authors describe a novel self‐assembling peptide, bQ13, which forms nanofibers and gels useful for the 3D culture of prostate cancer spheroids, with improved cytocompatibility compared to related fibrillizing peptides. The mechanical properties of bQ13 gels can be controlled by adjusting peptide concentration, with storage moduli ranging between 1 and 10 kPa. bQ13's ability to remain soluble at mildly basic pH considerably improved the viability of encapsulated cells compared to other self‐assembling nanofiber‐forming peptides. LNCaP cells formed spheroids in bQ13 gels with similar morphologies and sizes to those formed in Matrigel or RADA16‐I. Moreover, prostate‐specific antigen (PSA) is produced by LNCaP cells in all matrices, and PSA production is more responsive to enzalutamide treatment …",
+      "venue": "Macromolecular bioscience",
+      "citations": 62,
+      "authors": [
+        "Kelly M Hainline",
+        "Fangqi Gu",
+        "Jacqueline F Handley",
+        "Ye F Tian",
+        "Yaoying Wu",
+        "Larischa de Wet",
+        "Donald J Vander Griend",
+        "Joel H Collier"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Poly(2-deoxy-2-methacrylamido glucopyranose)-b-Poly(methacrylate amine)s: Optimization of Diblock Glycopolycations for Nucleic Acid Delivery",
+      "year": 2013,
+      "abstract": "A series of nine poly(2-deoxy-2-methacrylamido glucopyranose)-b-poly(methacrylate amine) diblock copolycations has been synthesized as new colloidally stable polynucleotide vehicles. The cationic block was varied in length and in the degree of methyl group substitution (secondary, tertiary, quaternary) on the pendant amine in an effort to optimize the structure and activity for plasmid DNA (pDNA) delivery. Upon a thorough kinetic study of polymerization for each polymer, the glycopolymers were prepared with well-controlled Mn and Đ. The binding and colloidal stability of the polymer–pDNA nanocomplexes at different N/P ratios and in biological media have been investigated using gel electrophoresis and light scattering techniques. The toxicity and transfection efficiency of the polyplexes have been evaluated with Hep G2 (human liver hepatocellular carcinoma) cells; several polymers displayed excellent …",
+      "venue": "ACS macro letters",
+      "citations": 58,
+      "authors": [
+        "Haibo Li",
+        "Mallory A Cortez",
+        "Haley R Phillips",
+        "Yaoying Wu",
+        "Theresa M Reineke"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

@@ -1,0 +1,116 @@
+{
+  "name": "Michael Blatchley",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "4D Biomaterials",
+    "Organoids",
+    "Vascular Biology",
+    "Tissue Engineering"
+  ],
+  "citedby": 1343,
+  "h_index": 17,
+  "i10_index": 19,
+  "top_primary_author_publications": [
+    {
+      "title": "Acellular and cellular approaches to improve diabetic wound healing",
+      "year": 2019,
+      "abstract": "Chronic diabetic wounds represent a huge socioeconomic burden for both affected individuals and the entire healthcare system. Although the number of available treatment options as well as our understanding of wound healing mechanisms associated with diabetes has vastly improved over the past decades, there still remains a great need for additional therapeutic options. Tissue engineering and regenerative medicine approaches provide great advantages over conventional treatment options, which are mainly aimed at wound closure rather than addressing the underlying pathophysiology of diabetic wounds. Recent advances in biomaterials and stem cell research presented in this review provide novel ways to tackle different molecular and cellular culprits responsible for chronic and nonhealing wounds by delivering therapeutic agents in direct or indirect ways. Careful integration of different approaches …",
+      "venue": "",
+      "citations": 221,
+      "authors": [
+        "Hongkwan Cho",
+        "Michael R Blatchley",
+        "Elia J Duh",
+        "Sharon Gerecht"
+      ],
+      "url": ""
+    },
+    {
+      "title": "O2-controllable hydrogels for studying cellular responses to hypoxic gradients in three dimensions in vitro and in vivo",
+      "year": 2017,
+      "abstract": "Oxygen (O2) acts as a potent upstream regulator of cell function. In both physiological and pathophysiological microenvironments, the O2 concentration is not uniformly distributed but instead follows a gradient that depends on distance from oxygen-carrying blood vessels. Such gradients have a particularly important role in development, tissue regeneration, and tumor growth. In this protocol, we describe how to use our previously reported gelatin-based O2-controllable hydrogels that can provide hypoxic microenvironments in vitro. The hydrogel polymeric network is formed via a laccase-mediated cross-linking reaction. In this reaction, laccase catalyzes diferulic acid (diFA) formation to form hydrogels with an O2-consuming reaction. Cells, such as cancer or endothelial cells, as well as tumor/tissue grafts, can be encapsulated in the hydrogels during hydrogel formation and then analyzed for cellular responses to 3D …",
+      "venue": "Nature protocols",
+      "citations": 64,
+      "authors": [
+        "Daniel M Lewis",
+        "Michael R Blatchley",
+        "Kyung Min Park",
+        "Sharon Gerecht"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Hypoxia and matrix viscoelasticity sequentially regulate endothelial progenitor cluster-based vasculogenesis",
+      "year": 2019,
+      "abstract": "Vascular morphogenesis is the formation of endothelial lumenized networks. Cluster-based vasculogenesis of endothelial progenitor cells (EPCs) has been observed in animal models, but the underlying mechanism is unknown. Here, using O2-controllabe hydrogels, we unveil the mechanism by which hypoxia, co-jointly with matrix viscoelasticity, induces EPC vasculogenesis. When EPCs are subjected to a 3D hypoxic gradient ranging from <2 to 5%, they rapidly produce reactive oxygen species that up-regulate proteases, most notably MMP-1, which degrade the surrounding extracellular matrix. EPC clusters form and expand as the matrix degrades. Cell-cell interactions, including those mediated by VE-cadherin, integrin-β2, and ICAM-1, stabilize the clusters. Subsequently, EPC sprouting into the stiffer, intact matrix leads to vascular network formation. In vivo examination further corroborated hypoxia-driven …",
+      "venue": "Science advances",
+      "citations": 61,
+      "authors": [
+        "Michael R Blatchley",
+        "Franklyn Hall",
+        "Songnan Wang",
+        "Hawley C Pruitt",
+        "Sharon Gerecht"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Volatile disinfection by-product analysis from chlorinated indoor swimming pools",
+      "year": 2009,
+      "abstract": "Chlorination of indoor swimming pools is practiced for disinfection and oxidation of reduced compounds that are introduced to water by swimmers. However, there is growing concern associated with formation for chlorinated disinfection by-products (DBPs) in these settings. Volatile DBPs are of particular concern because they may promote respiratory ailments and other adverse health effects among swimmers and patrons of indoor pool facilities. To examine the scope of this issue, water samples were collected from 11 pools over a 6month period and analyzed for free chlorine and their volatile DBP content. Eleven volatile DBPs were identified: monochloramine (NH2Cl), dichloramine (NHCl2), trichloramine (NCl3), chloroform (CHCl3), bromoform (CHBr3), dichlorobromomethane (CHBrCl2), dibromochloromethane (CHBr2Cl), cyanogen chloride (CNCl), cyanogen bromide (CNBr), dichloroacetonitrile (CNCHCl2 …",
+      "venue": "Water research",
+      "citations": 220,
+      "authors": [
+        "William A Weaver",
+        "Jing Li",
+        "Yuli Wen",
+        "Jessica Johnston",
+        "Michael R Blatchley",
+        "Ernest R Blatchley III"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Tissue matrix arrays for high-throughput screening and systems analysis of cell function",
+      "year": 2015,
+      "abstract": "Cell and protein arrays have demonstrated remarkable utility in the high-throughput evaluation of biological responses; however, they lack the complexity of native tissue and organs. Here we spotted tissue extracellular matrix (ECM) particles as two-dimensional (2D) arrays or incorporated them with cells to generate three-dimensional (3D) cell-matrix microtissue arrays. We then investigated the responses of human stem, cancer and immune cells to tissue ECM arrays originating from 11 different tissues. We validated the 2D and 3D arrays as representative of the in vivo microenvironment by means of quantitative analysis of tissue-specific cellular responses, including matrix production, adhesion and proliferation, and morphological changes after culture. The biological outputs correlated with tissue proteomics, and network analysis identified several proteins linked to cell function. Our methodology enables broad …",
+      "venue": "Nature methods",
+      "citations": 185,
+      "authors": [
+        "Vince Z Beachley",
+        "Matthew T Wolf",
+        "Kaitlyn Sadtler",
+        "Srikanth S Manda",
+        "Heather Jacobs",
+        "Michael R Blatchley",
+        "Joel S Bader",
+        "Akhilesh Pandey",
+        "Drew Pardoll",
+        "Jennifer H Elisseeff"
+      ],
+      "url": ""
+    },
+    {
+      "title": "REF4 and RFR1, subunits of the transcriptional coregulatory complex mediator, are required for phenylpropanoid homeostasis in Arabidopsis",
+      "year": 2012,
+      "abstract": "The plant phenylpropanoid pathway produces an array of metabolites that impact human health and the utility of feed and fiber crops. We previously characterized several Arabidopsis thaliana mutants with dominant mutations in REDUCED EPIDERMAL FLUORESCENCE 4 (REF4) that cause dwarfing and decreased accumulation of phenylpropanoids. In contrast, ref4 null plants are of normal stature and have no apparent defect in phenylpropanoid biosynthesis. Here we show that disruption of both REF4 and its paralog, REF4-RELATED 1 (RFR1), results in enhanced expression of multiple phenylpropanoid biosynthetic genes, as well as increased accumulation of numerous downstream products. We also show that the dominant ref4-3 mutant protein interferes with the ability of the PAP1/MYB75 transcription factor to induce the expression of PAL1 and drive anthocyanin accumulation. Consistent with our …",
+      "venue": "Journal of Biological Chemistry",
+      "citations": 128,
+      "authors": [
+        "Nicholas D Bonawitz",
+        "Whitney L Soltau",
+        "Michael R Blatchley",
+        "Brendan L Powers",
+        "Anna K Hurlock",
+        "Leslie A Seals",
+        "Jing-Ke Weng",
+        "Jake Stout",
+        "Clint Chapple"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

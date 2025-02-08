@@ -1,0 +1,87 @@
+{
+  "name": "Susan Older",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 140,
+  "h_index": 7,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Formal Methods for Assuring Security of Protocols",
+      "year": 2002,
+      "abstract": "Establishing the security of a system is an intricate problem with subtle nuances: it requires a careful examination of the underlying assumptions, abstractions, and possible actions. Consequently, assuring that a system behaves securely is virtually impossible without the use of rigorous analytical techniques. In this article, we focus on a single cryptographic protocol (Needham–Schroeder) and show how several different formal methods can be used to identify its various vulnerabilities. These vulnerabilities include susceptibility to freshness attacks and impersonations.",
+      "venue": "Computer/law journal",
+      "citations": 22,
+      "authors": [
+        "Susan Older",
+        "Shiu-Kai Chin"
+      ],
+      "url": "https://www.semanticscholar.org/paper/0dc6d6dc47002e66f8bab3cddfeec64e8a8cce28"
+    },
+    {
+      "title": "A denotational framework for fair communicating processes",
+      "year": 1996,
+      "abstract": "The behavior of a parallel system depends not only on the properties of the individual components running in parallel, but also on the interactions among those components. These interactions in turn depend on external factors (such as the relative speed of processors or the particular scheduler implementation) whose details can be complex or even unknown. By introducing appropriate fairness assumptions--which, roughly speaking, states that every sufficiently enabled component eventually proceeds--we can abstract away from these details without ignoring them completely. However, modeling fairness for communicating processes is especially difficult: synchronization requires the cooperation and active participation of multiple processes, and hence the enabledness of a process depends on the ability of other processes to synchronize with it. \nThis dissertation introduces a general framework for modeling fairness for communicating processes, based on the notion of fair traces. Intuitively, a fair trace is an abstract representation of a fair computation, providing enough structure to capture the important essence of the computation (e.g., the sequences of states encountered or the communications made along it) as well as any contextual information necessary for compositionality. Within this framework, the meaning of a command is simply the set of fair traces that correspond to its possible fair computations. For each construct of the language, we define a corresponding operation on trace sets that reflects its operational behavior. \nThe use of traces provides a strong connection between the language's operational semantics and its denotational semantics, allowing operational intuition to guide formal, syntax-directed reasoning. Moreover, this trace framework is remarkably robust. By varying the structure of the traces, we can construct several different semantics that reflect different types of fairness assumptions for the same language of communicating processes.",
+      "venue": "",
+      "citations": 9,
+      "authors": [
+        "Susan Older",
+        "S. Brookes"
+      ],
+      "url": "https://www.semanticscholar.org/paper/76f689d4aa6dd6b07be7a95cb65cfb8177eeac3b"
+    },
+    {
+      "title": "Strong Fairness and Full Abstraction for Communicating Processes",
+      "year": 2000,
+      "abstract": "We construct several denotational semantics for communicating processes that incorporate assumptions of strong (process) fairness. Strong fairness is the guarantee that every process enabled infinitely often will make progress infinitely often. Modeling fairness compositionally requires care: generally speaking, the fair computations of a command cannot be defined only in terms of the fair computations of its component commands. For this reason, we introduce the notion of parameterized fairness, which generalizes fairness sufficiently to admit a compositional characterization. In each of these semantics, a command's meaning is simply the set of fair traces representing its fair computations; each fair trace records the steps made along a computation as well as additional information made explicit by the definition of parameterized fairness. Each semantics obtains full abstraction with respect to a natural notion of strongly fair program behavior: two terms are given identical meanings precisely when they exhibit the same behaviors in all program contexts.",
+      "venue": "Information and Computation",
+      "citations": 7,
+      "authors": [
+        "Susan Older"
+      ],
+      "url": "https://www.semanticscholar.org/paper/c6c86b658e6b1cf3b1e1caa917570634d0828b80"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Access Control, Security, and Trust - A Logical Approach",
+      "year": 2010,
+      "abstract": "and trust are among the greatest risks—compliance and otherwise—facing corporations today. Controlling access to protected objects is central to any security program, and the foundation of Access Control, Security, and Trust: A Logical Approach is straightforward: Reference monitors are the means to protect objects of value in systems. Access Control, Security, and Trust: A Logical Approach is intended to serve the needs of computer engineers and computer scientists who are responsible for specifying, designing, implementing, building, and verifying or certifying secure computer and information systems. However, beginners to the study of access security will be enlightened by the education presented, as the authors remain cognizant throughout the book of the reader’s need to understand the basic concepts of authentication and authorization. The book provides answers to the following dilemmas: • Who or what are access-protected resources? • How can one protect the access control confidentiality, integrity and availability (CIA) triangle? • Who or what is trusted or believed? • How one can conclude that a system is worthy of trust? The publication aims to fill a gap left by many books on computer and network security. The book lays out algorithm logic, but does not require a highly mathematical intellect to understand its contents. The publication’s methodical focus on access control and reference monitors introduces a language for describing access-control scenarios, inference rules and resulting formulas. The authors explain the concepts in elementary, easy-to-understand language and leave in-depth understanding of the mathematical concepts optional for later reading. Access Control, Security, and Trust: A Logical Approach is divided into four parts: Preliminaries, Distributed Access Control, Isolation and Sharing, and Access Policies. Part I explains the language and basics of access control, reasoning and reference rules. Building on these concepts of security mechanisms, this part also differentiates among and describes security policy types. Part II explores distributed access control in network environments, digital authentication, and delegation concepts and protocols. Part III ties the logical lessons of the first two sections into the core of cybersecurity: hardware security. Part IV expands on the security policies discussed in part I and introduces a richer notion of confidentiality and integrity levels, models and policies based on principles, objects and roles. The unique strength of the 326-page book is its plethora of tables and exercises, converting its mathematical logic into real-world, nonmathematical language and visuals. Chapter summaries recap the line-by-line mathematical formulas in unambiguous statements.",
+      "venue": "Chapman & Hall/CRC Cryptography and Network Security Series",
+      "citations": 21,
+      "authors": [
+        "Shiu-Kai Chin",
+        "Susan Older"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a3b2ade79cb94b3fad4e9c04425b536208f8eac7"
+    },
+    {
+      "title": "Formal development of secure email",
+      "year": 1999,
+      "abstract": "Developing systems that are assured to be secure requires precise and accurate descriptions of specifications, designs, implementations, and security properties. Formal specification and verification have long been recognized as giving the highest degree of assurance. In this paper, we describe a software development process that integrates formal verification and synthesis. We demonstrate this process by developing assured sender and receiver C++ code for a secure electronic mail system, Privacy Enhanced Mail. We use higher-order logic for system-requirements specification, design specifications and design verification. We use a combination of higher-order logic and category theory and tools supporting these formalism to refine specifications and synthesize code. Much of our work is applicable to other secure email protocols, as our development is parameter used, component-based, and reusable.",
+      "venue": "Proceedings of the 32nd Annual Hawaii International Conference on Systems Sciences. 1999. HICSS-32. Abstracts and CD-ROM of Full Papers",
+      "citations": 14,
+      "authors": [
+        "Dan Zhou",
+        "Joncheng C. Kuo",
+        "Susan Older",
+        "Shiu-Kai Chin"
+      ],
+      "url": "https://www.semanticscholar.org/paper/20fcb6ca7e3501b484aad444ca48dfb50b9b55b3"
+    },
+    {
+      "title": "A Modal Logic for Role-Based Access Control",
+      "year": 2005,
+      "abstract": null,
+      "venue": "Mathematical Methods, Models, and Architectures for Network Security Systems",
+      "citations": 12,
+      "authors": [
+        "Thumrongsak Kosiyatrakul",
+        "Susan Older",
+        "Shiu-Kai Chin"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a5843f49d41a1fa16bc5620143bf51c1bc740e23"
+    }
+  ],
+  "source": "semanticscholar"
+}

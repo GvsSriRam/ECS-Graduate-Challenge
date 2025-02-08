@@ -1,0 +1,92 @@
+{
+  "name": "E. S. Yu",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 350,
+  "h_index": 10,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Traffic prediction using neural networks",
+      "year": 1993,
+      "abstract": "Broadband ISDN has made possible a variety of new multimedia services, but also created new problems for congestion control, due to the bursty nature of traffic sources. Lazar and Pacifici (1991) showed that traffic prediction is able to alleviate this problem. The traffic prediction model in their framework is a special case of the Box-Jenkins ARIMA model. In this paper, we propose a neural network approach for traffic prediction. A (1,5,1) backpropagation feedforward neural network is trained to capture the linear and nonlinear regularities in several time series. A comparison between the results from the neural network approach and the Box-Jenkins approach is also provided. The nonlinearity used in this paper is chaotic. We have designed a set of experiments to show that a neural network's prediction performance is only slightly affected by the intensity of the stochastic component (noise) in a time series. We have also demonstrated that a neural network's performance should be measured against the variance of the noise, in order to gain more insight into its behavior and prediction performance. Based on experimental results, we then conclude that the neural network approach is an attractive alternative to traditional regression techniques as a tool for traffic prediction.<<ETX>>",
+      "venue": "Proceedings of GLOBECOM '93. IEEE Global Telecommunications Conference",
+      "citations": 72,
+      "authors": [
+        "E. S. Yu",
+        "C.Y.R. Chen"
+      ],
+      "url": "https://www.semanticscholar.org/paper/b0115dc14c2fc3d4a9052c864bf5ec4a9ca328e1"
+    },
+    {
+      "title": "Intelligent Agents: A Primer.",
+      "year": 1999,
+      "abstract": null,
+      "venue": "",
+      "citations": 27,
+      "authors": [
+        "E. S. Yu",
+        "S. Feldman"
+      ],
+      "url": "https://www.semanticscholar.org/paper/6d4316789b9d11ec8c00228ceca82a5a0742bc24"
+    },
+    {
+      "title": "Evolving intelligent text-based agents",
+      "year": 2000,
+      "abstract": "In this paper we describe our neuro-genetic approach to developing a multi-agent system (MAS) which forages as well as meta-searches for multi-media information in online information sources on the ever-changing World Wide Web. We present EVA, an intelligent agent system that supports 1) multiple Web agents working together concurrently and collaboratively to achieve their common goal, 2) the evolution of these Web agents and the user profiles to achieve a better filtering, classification, and categorization performance, and 3) longer-term adaptation by using our unique neuro-genetic algorithm. Individual Web agents use neural networks for local searching and learning. Genetic algorithms are used to facilitate the evolution of agents on a global scale. NLP technology allows users to write sophisticated queries, and allows the system to extract important information from the user queries and the retrieved documents. The new text categorization technology used by EVA, which is also based on the neuro-genetic algorithm, can learn to automatically categorize and classify Web pages with high accuracy, using as few terms as possible. Additionally, we have developed a technique for integrating meta-searching and Web-crawling to produce intelligent agents that can retrieve documents more efficiently, and a self-feedback or automatic relevance feedback mechanism to automatically train the Web agents, without human intervention. This algorithm, together with the neuro-genetic algorithm, has greatly enhanced the autonomy of the Web agents.",
+      "venue": "International Conference on Autonomous Agents",
+      "citations": 16,
+      "authors": [
+        "E. S. Yu",
+        "Ping C. Koo",
+        "E. Liddy"
+      ],
+      "url": "https://www.semanticscholar.org/paper/db95fae0d07359e0f1e47f090a685ef4bec517ee"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Categorization and Standardizing Proper Nouns for Efficient Information Retrieval",
+      "year": 1996,
+      "abstract": "In this paper, we describe the most recent implementation and evaluation of the proper noun categorization and standardization module of the DRLINK document detection system being developed at Syracuse University, under the auspices of ARPA's TIPSTER program. We also discuss the expansion of group common nouns and group proper nouns to enhance retrieval recall. Successful proper noun boundary identification within the part of speech tagger is essential for successful categorization. The proper noun classification module is designed to assign a category code to each proper noun entity, using 30 ca tegor ies genera ted f rom corpus analysis . Standardization of variant proper nouns occurs at three levels of processing. Expansion of group proper nouns and group common nouns is performed on queries. Standardization and categorization is performed on queries and documents. DR-LINK's overall precision for proper noun categorization was 93%, based on 589 proper nouns occurring in the evaluation set.",
+      "venue": "",
+      "citations": 58,
+      "authors": [
+        "Woojin Paik",
+        "E. Liddy",
+        "E. S. Yu",
+        "M. McKenna"
+      ],
+      "url": "https://www.semanticscholar.org/paper/8692d1ff9d90095c59ee8d85067ba8cec0dcd6d1"
+    },
+    {
+      "title": "Text categorization for multiple users based on semantic features from a machine-readable dictionary",
+      "year": 1994,
+      "abstract": "The text categorization module described here provides a front-end filtering function for the larger DR-LINK text retrieval system [Liddy and Myaeing 1993]. The model evaluates a large incoming stream of documents to determine which documents are sufficiently similar to a profile at the broad subject level to warrant more refined representation and matching. To accomplish this task, each substantive word in a text is first categorized using a feature set based on the semantic Subject Field Codes (SFCs) assigned to individual word senses in a machine-readable dictionary. When tested on 50 user profiles and 550 megabytes of documents, results indicate that the feature set that is the basis of the text categorization module and the algorithm that establishes the boundary of categories of potentially relevant documents accomplish their tasks with a high level of performance.\nThis means that the category of potentially relevant documents for most profiles would contain at least 80% of all documents later determined to be relevant to the profile. The number of documents in this set would be uniquely determined by the system's category-boundary predictor, and this set is likely to contain less than 5% of the incoming stream of documents.",
+      "venue": "TOIS",
+      "citations": 55,
+      "authors": [
+        "E. Liddy",
+        "Woojin Paik",
+        "E. S. Yu"
+      ],
+      "url": "https://www.semanticscholar.org/paper/353a7ccc1d55afc516dc527e2e69d2607022b73a"
+    },
+    {
+      "title": "Development, Implementation and Testing of a Discourse Model for Newspaper Texts",
+      "year": 1993,
+      "abstract": "Texts of a particular type evidence a discernible, predictable schema. These schemata can be delineated, and as such provide models of their respective text-types which are of use in automatically structuring texts. We have developed a Text Structurer module which recognizes text-level structure for use within a larger information retrieval system to delineate the discourse-level organization of each document's contents. This allows those document components which are more likely to contain the type of information suggested by the user's query to be selected for higher weighting. We chose newspaper text as the first text type to implement. Several iterations of manually coding a randomly chosen sample of newspaper articles enabled us to develop a newspaper text model. This process suggested that our intellectual decomposing of texts relied on six types of linguistic information, which were incorporated into the Text Structurer module. Evaluation of the results of the module led to a revision of the underlying text model and of the Text Structurer itself.",
+      "venue": "Human Language Technology - The Baltic Perspectiv",
+      "citations": 30,
+      "authors": [
+        "E. Liddy",
+        "Kenneth A. McVearry",
+        "Woojin Paik",
+        "E. S. Yu",
+        "M. McKenna"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a4b79eb543a37756e2bc708eaf3d1f55d7fad8c2"
+    }
+  ],
+  "source": "semanticscholar"
+}

@@ -1,0 +1,57 @@
+{
+  "name": "T. Breen",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 26,
+  "h_index": 2,
+  "i10_index": 0,
+  "top_primary_author_publications": [],
+  "top_secondary_author_publications": [
+    {
+      "title": "Analysis of professional competencies for the clinical research data management profession: implications for training and professional certification",
+      "year": 2017,
+      "abstract": "Objective\nTo assess and refine competencies for the clinical research data management profession.\n\n\nMaterials and Methods\nBased on prior work developing and maintaining a practice standard and professional certification exam, a survey was administered to a captive group of clinical research data managers to assess professional competencies, types of data managed, types of studies supported, and necessary foundational knowledge.\n\n\nResults\nRespondents confirmed a set of 91 professional competencies. As expected, differences were seen in job tasks between early- to mid-career and mid- to late-career practitioners. Respondents indicated growing variability in types of studies for which they managed data and types of data managed.\n\n\nDiscussion\nRespondents adapted favorably to the separate articulation of professional competencies vs foundational knowledge. The increases in the types of data managed and variety of research settings in which data are managed indicate a need for formal education in principles and methods that can be applied to different research contexts (ie, formal degree programs supporting the profession), and stronger links with the informatics scientific discipline, clinical research informatics in particular.\n\n\nConclusion\nThe results document the scope of the profession and will serve as a foundation for the next revision of the Certified Clinical Data Manager TM exam. A clear articulation of professional competencies and necessary foundational knowledge could inform the content of graduate degree programs or tracks in areas such as clinical research informatics that will develop the current and future clinical research data management workforce.",
+      "venue": "J. Am. Medical Informatics Assoc.",
+      "citations": 22,
+      "authors": [
+        "M. Zozus",
+        "A. Lazarov",
+        "L. R. Smith",
+        "T. Breen",
+        "Susan L. Krikorian",
+        "P. S. Zbyszewski",
+        "Shelly K. Knoll",
+        "Debra A. Jendrasek",
+        "Derek C. Perrin",
+        "D. Zambas",
+        "T. Williams",
+        "C. Pieper"
+      ],
+      "url": "https://www.semanticscholar.org/paper/9bc40d47029dd2606ec244752526739ae1f23483"
+    },
+    {
+      "title": "Lessons learned from the first 50 COVID-19 critical care transfer missions conducted by a civilian UK Helicopter Emergency Medical Service team",
+      "year": 2022,
+      "abstract": null,
+      "venue": "Scandinavian Journal of Trauma, Resuscitation and Emergency Medicine",
+      "citations": 4,
+      "authors": [
+        "J. Jeyanathan",
+        "D. Bootland",
+        "A. Al-Rais",
+        "J. Leung",
+        "J. Wijesuriya",
+        "L. Banks",
+        "T. Breen",
+        "R. DeCoverly",
+        "L. Curtis",
+        "A. McHenry",
+        "D. Wright",
+        "J. Griggs",
+        "R. Lyon"
+      ],
+      "url": "https://www.semanticscholar.org/paper/45afd297b210a3ffc60146aa09069e5844473d7e"
+    }
+  ],
+  "source": "semanticscholar"
+}

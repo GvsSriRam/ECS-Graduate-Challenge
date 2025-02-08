@@ -1,0 +1,154 @@
+{
+  "name": "Joao Paulo Oliveira Marum",
+  "affiliation": "Assistant Teaching Professor, Syracuse University",
+  "interests": [
+    "Software Engineering",
+    "Virtual Reality",
+    "Reactive Programming",
+    "Graphics",
+    "User Interfaces"
+  ],
+  "citedby": 15,
+  "h_index": 2,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Dependency graph-based reactivity for virtual environments",
+      "year": 2020,
+      "abstract": "In Virtual Environments (VEs), the system must quickly respond to user actions and accurately display the result. Current solutions on the Unity3D game engine often respond too slowly and display temporarily inaccurate or misleading states, resulting in low user satisfaction. To alleviate this problem, we develop a reactive programming approach that encodes the complex relationships among Unity3D game components in a dependency graph and then uses the graph to order the updates of the components without violating the dependency constraints. This enables more timely updates and more accurate visualizations, potentially providing users with a more satisfying experience. We evaluate our approach by comparing its performance with native Unity3D and with UniRx, the Reactive Extensions library for the Unity3D platform.",
+      "venue": "2020 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)",
+      "citations": 4,
+      "authors": [
+        "Joao Paulo Oliveira Marum",
+        "J Adam Jones",
+        "H Conrad Cunningham"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Towards a reactive game engine",
+      "year": 2019,
+      "abstract": "Developing new ways to improve game engines and enabling the creation of more accurate experiences is an important issue, especially for real-time applications such as Virtual Reality. As this technology has evolved, the gap between rendered frames has become smaller and environments have become more complex. As a result, mistakes can arise with regard to order-dependent events. Often these mistakes result in a temporarily unstable state in the environment, and may not be visible because of the time lapse between rendered frames. These errors are compounded by events which are not directly driven by the game engine, such as user movement and input. There is a continuous interaction between the user and the environment and the precise actions that user may take often cannot be predicted a priori. Reactive programming is a still evolving paradigm that has been employed in many different …",
+      "venue": "2019 SoutheastCon",
+      "citations": 4,
+      "authors": [
+        "Joao Paulo O Marum",
+        "J Adam Jones",
+        "H Conrad Cunningham"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Unified library for dependency graph reactivity on web and desktop user interfaces: Addendum",
+      "year": 2020,
+      "abstract": "This note is an addendum to the paper “Unified Library for Dependency-graph Reactivity on Web and Desktop User Interfaces” we presented at ACM SouthEast 2020. In addition to the comparisons reported in the full paper, we have also compared our approach to a pure .NET system and to a system built on the reactive library Rx .NET.",
+      "venue": "",
+      "citations": 2,
+      "authors": [
+        "Joao Paulo Oliveira Marum",
+        "H Conrad Cunningham",
+        "J Adam Jones"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "IEEE ISMAR 2022 Science & Technology Program Committee Members for Conference Papers",
+      "year": "",
+      "abstract": "ISMAR 2022 Science and Technology Program Committee for Conference Papers Toggle \nnavigation IEEE Computer Society Digital Library Jobs Tech News Resource Center Press \nRoom Advertising About Us IEEE IEEE Computer Society IEEE Computer Society Digital Library \nMy Subscriptions Magazines Journals Conference Proceedings Institutional Subscriptions IEEE \nIEEE Computer Society More Jobs Tech News Resource Center Press Room Advertising About \nUs Cart All Advanced Search Conference Cover Image Download 1.Home 2.Proceedings \n3.ismar 2022 ISMAR 2022 Science and Technology Program Committee for Conference \nPapers 2022, pp. 14-14, DOI Bookmark: 10.1109/ISMAR55827.2022.00008 Keywords Authors \nAbstract Lists the conference organizers, sponsors, patrons, speakers, and/or committee \nmembers. IEEE ISMAR 2022 Science & Technology Program Committee Members for …",
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "Muadh Al Kalbani",
+        "Jorge Luis Bacca-Acosta",
+        "Mayra Barrera Machuca",
+        "Lonni Besançon",
+        "Wolfgang Broll",
+        "Gerd Bruder",
+        "Praneeth Chakravarthula",
+        "Manuela Chessa",
+        "Klen Copic Pucihar",
+        "Jean-Yves Didier",
+        "James Eubanks",
+        "Maite Frutos-Pascual",
+        "BoYu Gao",
+        "Carlo Harvey",
+        "Christian Holz",
+        "Denis Kalkofen",
+        "Katelynn Kapalo",
+        "Kangsoo Kim",
+        "Wallace Lages",
+        "Gun Lee",
+        "Fotis Liarokapis",
+        "Shiguang Liu",
+        "Yue Liu",
+        "Xiaoyang Mao",
+        "Ann McNamara",
+        "Huyen Nguyen",
+        "João Paulo Oliveira Marum",
+        "Francisco Ortega",
+        "Alain Pagani",
+        "Etienne Peillard",
+        "Nate Phillips",
+        "Alexander Plopski",
+        "Arnaud Prouzeau",
+        "Xueying Qin",
+        "John Quarles",
+        "Andrew Robb",
+        "Daniel Roth",
+        "Hideo Saito",
+        "Nobuchika Sakata",
+        "Bin Sheng",
+        "João Paulo Silva do Monte",
+        "Adalberto Simeone",
+        "Marc Stamminger",
+        "Qi Sun",
+        "Ryo Suzuki",
+        "Jerald Thomas",
+        "Huawei Tu",
+        "Radu-Daniel Vatavu",
+        "José Vázquez",
+        "Miao Wang",
+        "Richard Wetzel",
+        "Benjamin Weyers",
+        "Julia Woodward",
+        "Zhongke Wu",
+        "Guofeng Zhang",
+        "Song-Hai Zhang",
+        "Gang Zhao"
+      ],
+      "url": ""
+    },
+    {
+      "title": "VRW 2020",
+      "year": "",
+      "abstract": "Table of Contents Page 1 2020 IEEE Conference on Virtual Reality and 3D User Interfaces \nAbstracts and Workshops (VRW) VRW 2020 Table of Contents VR 2020 Workshop Descriptions \nxxxvii Tutorials xli Panels xlii NIDIT: Workshop on Novel Input Devices and Interaction \nTechniques Making it Simple: Expanding Access and Lowering Barriers to Novel Interaction \nDevices for Virtual and Augmented Reality 1 Brook Bowers (University of Georgia, United States \nof America), Andrew Rukangu (University of Georgia, United States of America), and Kyle \nJohnsen (University of Georgia, United States of America) A Customized Input Device for \nSimulating the Detection of Hazardous Materials 7 Scott Gainer (NextGen Interactions), Suraj \nEadara (NextGen Interactions), Jason Haskins (NextGen Interactions), Will Huse (NextGen \nInteractions), Bolin Zhu (NextGen Interactions), Blake Boyd (NextGen Interactions), Charles Laird (…",
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "Brook Bowers",
+        "Andrew Rukangu",
+        "Kyle Johnsen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "IEEE SoutheastCon 2019 Final Program",
+      "year": "",
+      "abstract": "SoutheastCon 2019 Final Program Page 1 IEEE SoutheastCon 2019 Final Program Advanced \nComputing and Technologies 1 Pedagogical Innovative Research Endeavor: Visualization of \nStreamed Big Data through Augmented Reality - 33 Sarah North, Kennesaw State University \n(United States); Monisha Verma, Kennesaw State University (United States); Matthew Alyward, \nKennesaw State University (United States); Sean Saffan, Kennesaw State University (United \nStates); Victor Orellana, Kennesaw State University (United States); Ronald Brooks, Kennesaw \nState University (United States) Biceps Tissue Electrical Resistance and Circumference \nChanges Following an Eccentric Exercise Protocol - 34 Gabriella Regard, The University of \nAlabama (United States); Todd Freeborn, The University of Alabama (United States) \nFeature-Set for Sentiment analysis - 47 Rajvardhan Patil, Arkansas Tech University (United …",
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "Sarah North",
+        "Gabriella Regard",
+        "Rajvardhan Patil",
+        "Yen-Hung Frank Hu",
+        "Lavi Zamstein",
+        "Bo Fu"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

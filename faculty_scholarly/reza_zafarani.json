@@ -1,0 +1,99 @@
+{
+  "name": "Reza Zafarani",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Data Mining",
+    "Machine Learning",
+    "Social Media",
+    "Networks",
+    "Online Behavior"
+  ],
+  "citedby": 8813,
+  "h_index": 37,
+  "i10_index": 53,
+  "top_primary_author_publications": [
+    {
+      "title": "A survey of fake news: Fundamental theories, detection methods, and opportunities",
+      "year": 2020,
+      "abstract": "The explosive growth in fake news and its erosion to democracy, justice, and public trust has increased the demand for fake news detection and intervention. This survey reviews and evaluates methods that can detect fake news from four perspectives: the false knowledge it carries, its writing style, its propagation patterns, and the credibility of its source. The survey also highlights some potential research tasks based on the review. In particular, we identify and detail related fundamental theories across various disciplines to encourage interdisciplinary research on fake news. It is our hope that this survey can facilitate collaborative efforts among experts in computer and information sciences, social sciences, political science, and journalism to research fake news, where such efforts can lead to fake news detection that is not only efficient but, more importantly, explainable.",
+      "venue": "",
+      "citations": 1304,
+      "authors": [
+        "Xinyi Zhou",
+        "Reza Zafarani"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Social media mining: an introduction",
+      "year": 2014,
+      "abstract": "The growth of social media over the last decade has revolutionized the way individuals interact and industries conduct business. Individuals produce data at an unprecedented rate by interacting, sharing, and consuming content through social media. Understanding and processing this new type of data to glean actionable patterns presents challenges and opportunities for interdisciplinary research, novel algorithms, and tool development. Social Media Mining integrates social media, social network analysis, and data mining to provide a convenient and coherent platform for students, practitioners, researchers, and project managers to understand the basics and potentials of social media mining. It introduces the unique problems arising from social media data and presents fundamental concepts, emerging issues, and effective algorithms for network analysis and data mining. Suitable …",
+      "venue": "",
+      "citations": 1144,
+      "authors": [
+        "Reza Zafarani",
+        "Mohammad Ali Abbasi",
+        "Huan Liu"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Sarcasm detection on twitter: A behavioral modeling approach",
+      "year": 2015,
+      "abstract": "Sarcasm is a nuanced form of language in which individuals state the opposite of what is implied. With this intentional ambiguity, sarcasm detection has always been a challenging task, even for humans. Current approaches to automatic sarcasm detection rely primarily on lexical and linguistic cues. This paper aims to address the difficult task of sarcasm detection on Twitter by leveraging behavioral traits intrinsic to users expressing sarcasm. We identify such traits using the user's past tweets. We employ theories from behavioral and psychological studies to construct a behavioral modeling framework tuned for detecting sarcasm. We evaluate our framework and demonstrate its efficiency in identifying sarcastic tweets.",
+      "venue": "Proceedings of the Eighth ACM International Conference on Web Search and Data Mining",
+      "citations": 509,
+      "authors": [
+        "Ashwin Rajadesingan",
+        "Reza Zafarani",
+        "Huan Liu"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "SAFE : Similarity-Aware Multi-modal Fake News Detection",
+      "year": 2020,
+      "abstract": "",
+      "venue": "",
+      "citations": 403,
+      "authors": [
+        "Xinyi Zhou",
+        "Jindi Wu",
+        "Reza Zafarani"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Fake news early detection: A theory-driven model",
+      "year": 2020,
+      "abstract": "Massive dissemination of fake news and its potential to erode democracy has increased the demand for accurate fake news detection. Recent advancements in this area have proposed novel techniques that aim to detect fake news by exploring how it propagates on social networks. Nevertheless, to detect fake news at an early stage, i.e., when it is published on a news outlet but not yet spread on social media, one cannot rely on news propagation information as it does not exist. Hence, there is a strong need to develop approaches that can detect fake news by focusing on news content. In this article, a theory-driven model is proposed for fake news detection. The method investigates news content at various levels: lexicon-level, syntax-level, semantic-level, and discourse-level. We represent news at each level, relying on well-established theories in social and forensic psychology. Fake news detection is then …",
+      "venue": "Digital Threats: Research and Practice",
+      "citations": 366,
+      "authors": [
+        "Xinyi Zhou",
+        "Atishay Jain",
+        "Vir V Phoha",
+        "Reza Zafarani"
+      ],
+      "url": ""
+    },
+    {
+      "title": "User identity linkage across online social networks: A review",
+      "year": 2017,
+      "abstract": "The increasing popularity and diversity of social media sites has encouraged more and more people to participate on multiple online social networks to enjoy their services. Each user may create a user identity, which can includes profile, content, or network information, to represent his or her unique public figure in every social network. Thus, a fundamental question arises -- can we link user identities across online social networks? User identity linkage across online social networks is an emerging task in social media and has attracted increasing attention in recent years. Advancements in user identity linkage could potentially impact various domains such as recommendation and link prediction. Due to the unique characteristics of social network data, this problem faces tremendous challenges. To tackle these challenges, recent approaches generally consist of (1) extracting features and (2) constructing predictive …",
+      "venue": "",
+      "citations": 325,
+      "authors": [
+        "Kai Shu",
+        "Suhang Wang",
+        "Jiliang Tang",
+        "Reza Zafarani",
+        "Huan Liu"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

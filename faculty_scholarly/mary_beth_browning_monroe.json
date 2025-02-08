@@ -1,0 +1,56 @@
+{
+  "name": "M. Monroe",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 15,
+  "h_index": 1,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "POLYMÈRES À MÉMOIRE DE FORME ANTIMICROBIENS",
+      "year": 2018,
+      "abstract": null,
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "M. Monroe",
+        "Duncan J. Maitland",
+        "Andrew C. Weems",
+        "Brandis Keller",
+        "Grace K. Fletcher"
+      ],
+      "url": "https://www.semanticscholar.org/paper/d7ea811e77c61da917bba638041d7666280d2d40"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "État des lieux et perspectives",
+      "year": 2008,
+      "abstract": null,
+      "venue": "",
+      "citations": 15,
+      "authors": [
+        "Michel Hamon",
+        "Ernest Hemingway",
+        "Romain Gary",
+        "Abraham Lincoln",
+        "M. Monroe",
+        "Vincent van Gogh",
+        "Bipolaire",
+        "schizophrène",
+        "Niki de Saint Phalle",
+        "Virginia Woolf",
+        "G. D. Nerval",
+        "Agatha Christie",
+        "Camille Claudel",
+        "W. Churchill",
+        "J. Nash",
+        "H. Laborit",
+        "P. Deniker",
+        "Jean-Baptiste Delay"
+      ],
+      "url": "https://www.semanticscholar.org/paper/df635aefa315a6448489eaa6b55cabf311861bd5"
+    }
+  ],
+  "source": "semanticscholar"
+}

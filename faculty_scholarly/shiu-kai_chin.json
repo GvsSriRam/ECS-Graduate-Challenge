@@ -1,0 +1,25 @@
+{
+  "name": "Shiu-Kai Chin",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 13,
+  "h_index": 1,
+  "i10_index": 0,
+  "top_primary_author_publications": [],
+  "top_secondary_author_publications": [
+    {
+      "title": "Formal specification and verification of communication protocols using automated tools",
+      "year": 1995,
+      "abstract": "The paper compares and contrasts various methods presently available for specification, validation and verification, with emphasis on verification. We describe an application of formal methods to protocol specification, validation, and verification, using an actual protocol as an example. We use a process algebra to build models of an OSI protocol and test these models using a model checker. Model checking allows us to verify large and complex models and use formal methods as practical solutions. We also show an example with an automated theorem prover.",
+      "venue": "Proceedings of First IEEE International Conference on Engineering of Complex Computer Systems. ICECCS'95",
+      "citations": 13,
+      "authors": [
+        "M. Barjaktarovic",
+        "Shiu-Kai Chin",
+        "Kamal Jabbour"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a55ea08365efb9c48552a4bb96e8321d03a08389"
+    }
+  ],
+  "source": "semanticscholar"
+}

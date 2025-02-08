@@ -1,0 +1,111 @@
+{
+  "name": "Yiyang Sun",
+  "affiliation": "Department of Mechanical and Aerospace Engineering, Syracuse University",
+  "interests": [
+    "unsteady aerodynamics",
+    "flow control",
+    "modal analysis",
+    "and reduced-order modeling"
+  ],
+  "citedby": 952,
+  "h_index": 11,
+  "i10_index": 11,
+  "top_primary_author_publications": [
+    {
+      "title": "Biglobal instabilities of compressible open-cavity flows",
+      "year": 2017,
+      "abstract": "The stability characteristics of compressible spanwise-periodic open-cavity flows are investigated with direct numerical simulation (DNS) and biglobal stability analysis for rectangular cavities with aspect ratios of , the 3-D eigenmodes cannot be clearly observed in the 3-D DNS due to the strong nonlinearity that develops over the length of the cavity. In addition, it is noted that three-dimensionality in the flow helps alleviate violent oscillations for the long cavity. The analysis performed in this paper can provide valuable insights for designing effective flow control strategies to suppress undesirable aerodynamic and pressure fluctuations in compressible open-cavity flows.",
+      "venue": "Journal of Fluid Mechanics",
+      "citations": 70,
+      "authors": [
+        "Y. Sun",
+        "K. Taira",
+        "L. Cattafesta",
+        "L. Ukeiley"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Suppression of Cavity Flow Oscillations via Three-Dimensional Steady Blowing",
+      "year": 2019,
+      "abstract": "This paper presents an investigation of the flow physics and control of cavity flow oscillations using a three-dimensional (3-D) array of steady jets located near the cavity leading edge. The array injects 3-D, steady flow normal to the freestream to suppress the fluctuating surface pressure in a rectangular cavity with a length-to-depth ratio  of 6 for Mach 0.3 to 0.7. Sixteen configurations are assessed for their suppression as a function of the aggregate momentum coefficient , spatial duty cycle , and dimensionless wavelength . Significant reductions of fluctuating surface pressure are observed. Schlieren and particle image velocimetry are performed to investigate the baseline and controlled flows. Companion large-eddy simulations with spanwise periodic boundary conditions at Mach 0.6 generally agree with the experiments, despite a significant difference in the Reynolds numbers. The simulations show that …",
+      "venue": "AIAA Journal",
+      "citations": 53,
+      "authors": [
+        "Yang Zhang",
+        "Yiyang Sun",
+        "Nishul Arora",
+        "Louis N Cattafesta III",
+        "Kunihiko Taira",
+        "Lawrence S Ukeiley"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Unsteady control of supersonic turbulent cavity flow based on resolvent analysis",
+      "year": 2021,
+      "abstract": "We use resolvent analysis to develop a physics-based, open-loop, unsteady control strategy to attenuate pressure fluctuations in turbulent flow over a rectangular cavity with a length-to-depth ratio of along cavity walls relative to the baseline and is approximately twice that achievable by comparable steady blowing. Dynamic mode decomposition on the controlled flows confirms that the optimal actuation input indeed suppresses the formation of the large-scale Rossiter modes. It is expected that the present flow control guideline derived from resolvent analysis will also be applicable at higher Reynolds numbers with the aid of physical insights and further validation.",
+      "venue": "Journal of Fluid Mechanics",
+      "citations": 49,
+      "authors": [
+        "Qiong Liu",
+        "Yiyang Sun",
+        "Chi-An Yeh",
+        "Lawrence S Ukeiley",
+        "Louis N Cattafesta III",
+        "Kunihiko Taira"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Modal analysis of fluid flows: Applications and outlook",
+      "year": 2020,
+      "abstract": "THE field of fluid mechanics involves a range of rich and vibrant problems with complex dynamics stemming from instabilities, nonlinearities, and turbulence. The analysis of these flows benefits from having access to high-resolution spatiotemporal data that capture the intricate physics. With the rapid advancement in computational hardware and experimental measurement techniques over the past few decades, studies of ever more complex fluid flows have become possible. Although these analyses provide great details of complex unsteady fluid flows, we are now faced with the challenge of analyzing vast and growing data and high-dimensional nonlinear dynamics representing increasingly complex flows. Although the analysis of these complex flows may appear daunting, the fact that common flow features emerge across a wide spectrum of fluid flows or over a large range of nondimensional flow parameters …",
+      "venue": "AIAA journal",
+      "citations": 554,
+      "authors": [
+        "Kunihiko Taira",
+        "Maziar S Hemati",
+        "Steven L Brunton",
+        "Yiyang Sun",
+        "Karthik Duraisamy",
+        "Shervin Bagheri",
+        "Scott TM Dawson",
+        "Chi-An Yeh"
+      ],
+      "url": ""
+    },
+    {
+      "title": "High-speed microactuation in a supersonic dual-stream jet flow",
+      "year": 2024,
+      "abstract": "Supersonic shear layers experience instabilities that generate significant adverse effects; in complex configurations, these instabilities have global impacts as they foster compounding complications with other independent flow features. We consider the flow near the exit of a dual-stream rectangular nozzle. The supersonic core and sonic bypass streams mix downstream of a splitter plate trailing edge (SPTE) just above an adjacent deck. We perform two-dimensional direct numerical simulations with laminar inflow conditions to parametrically explore the influence of active flow control, considering various actuation angles and locations. The goal is to alleviate the prominent tone associated with vortices shed at the SPTE; these vortices initiate an unsteady shock system that affects the entire flow field through a shock-induced separation and the downstream evolution of plume shear layers. Resolvent analysis is …",
+      "venue": "Journal of Fluid Mechanics",
+      "citations": 2,
+      "authors": [
+        "Melissa Yeung",
+        "Datta V Gaitonde",
+        "Yiyang Sun"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Evolution of Flow Control Techniques on Supersonic Multi-Stream Jet Flow",
+      "year": 2023,
+      "abstract": "Flow control is performed on a Multi-Aperture Rectangular Single Expansion Ramp Nozzle (MARS) using an array of microjets perpendicular to the flow. This campaign focuses on how the microjet’s configuration, location, and characteristics influence the highly complex flow problem presented by a multi-stream rectangular jet nozzle. The jet nozzle mixes two main flows: a core flow at Mach 1.6, and a bypass flow at Mach 1. This effectively simulates a modern multi-stream jet nozzle. The campaign is the culmination of two prior campaigns, passive control built into the splitter plate separating the two main flows of the nozzle, and active control via a microjet array just downstream from the splitter plate. The goal of this campaign being to replicate, with active control, the passive control’s successes as effective mixing and noise mitigation. The experimental rig is housed within an anechoic chamber allowing for clear …",
+      "venue": "Bulletin of the American Physical Society",
+      "citations": 1,
+      "authors": [
+        "Matthew Qualters",
+        "Seth Kelly",
+        "Yiyang Sun",
+        "Datta Gaitonde",
+        "Fernando Zigunov",
+        "Mark Glauser"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

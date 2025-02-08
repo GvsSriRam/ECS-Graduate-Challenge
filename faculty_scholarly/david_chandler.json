@@ -1,0 +1,101 @@
+{
+  "name": "David Chandler",
+  "affiliation": "Associate Professor of Civil and Environmental Engineering, Syracuse University",
+  "interests": [
+    "Hydrology",
+    "Soil Science",
+    "Sustainability"
+  ],
+  "citedby": 4260,
+  "h_index": 33,
+  "i10_index": 54,
+  "top_primary_author_publications": [
+    {
+      "title": "The road to military humanitarianism: How the human rights NGOs shaped a new humanitarian agenda",
+      "year": 2001,
+      "abstract": "The transformation of humanitarianism from the margins to the center of the international policy agenda has been achieved through the redefinition of humanitarian policy and practice and its integration within the fast-growing agenda of human rights. The new international discourse of human rights activism no longer separates the spheres of strategic state and international aid from humanitarianism, but attempts to integrate the two under the rubric of “ethical” or “moral” foreign policy. As the humanitarian NGOs have been integrated into policymaking forums, the policymakers have increasingly claimed to be guided by humanitarian principles. The human rights NGOs, in conjunction with governments and international institutions, have established a rights-based “new humanitarian” consensus, which has succeeded in redefining humanitarian policy. The universal principles, which defined the early humanitarian …",
+      "venue": "Human rights quarterly",
+      "citations": 495,
+      "authors": [
+        "David G Chandler"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Soil moisture states, lateral flow, and streamflow generation in a semi‐arid, snowmelt‐driven catchment",
+      "year": 2005,
+      "abstract": "Hydraulic connectivity on hillslopes and the existence of preferred soil moisture states in a catchment have important controls on runoff generation. In this study we investigate the relationships between soil moisture patterns, lateral hillslope flow, and streamflow generation in a semi‐arid, snowmelt‐driven catchment. We identify five soil moisture conditions that occur during a year and present a conceptual model based on field studies and computer simulations of how streamflow is generated with respect to the soil moisture conditions. The five soil moisture conditions are (1) a summer dry period, (2) a transitional fall wetting period, (3) a winter wet, low‐flux period, (4) a spring wet, high‐flux period, and (5) a transitional late‐spring drying period. Transitions between the periods are driven by changes in the water balance between rain, snow, snowmelt and evapotranspiration. Low rates of water input to the soil …",
+      "venue": "Hydrological Processes: An International Journal",
+      "citations": 369,
+      "authors": [
+        "James P McNamara",
+        "David Chandler",
+        "Mark Seyfried",
+        "Shiva Achet"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Wind erosion and fugitive dust fluxes on agricultural lands in the Pacific Northwest",
+      "year": 2000,
+      "abstract": "With recent emphasis of agricultural wind erosion and associated dust emissions impacting downwind airquality, there is an increased need for a prediction method to estimate dust emissions and ambient particle concentrationson a wind event basis. Most current wind erosion methods predict average annual or seasonal erosion amounts, and onlyvery approximate estimates of suspended dust emissions are available. A project in the Columbia Plateau of easternWashington State was initiated to develop an empirical method to estimate dust emissions for this region. Fieldmeasurements, wind tunnel tests, and laboratory analyses were combined to provide an empirical wind erosion equationand a related vertical flux dust emission model. While based on measured data, the model has not been independentlyverified. When combined with a transport-dispersion model and calibrated, estimates of downwind …",
+      "venue": "Transactions of the ASAE",
+      "citations": 157,
+      "authors": [
+        "Keith Saxton",
+        "David Chandler",
+        "Larry Stetler",
+        "B Lamb",
+        "C Claiborn",
+        "B-H Lee"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Modeling soil depth from topographic and land cover attributes",
+      "year": 2009,
+      "abstract": "Soil depth is an important input parameter in hydrological and ecological modeling. Presently, the soil depth data available in national soil databases (STATSGO and SSURGO) from the Natural Resources Conservation Service are provided as averages within generalized land units (map units). Spatial uncertainty within these units limits their applicability for distributed modeling in complex terrain. This work reports statistical models for prediction of soil depth in a semiarid mountainous watershed that are based upon the relationship between soil depth and topographic and land cover attributes. Soil depth was surveyed by driving a rod into the ground until refusal at locations selected to represent the topographic and land cover variation in the Dry Creek Experimental Watershed near Boise, Idaho. The soil depth survey consisted of a model calibration set, measured at 819 locations over 8 subwatersheds …",
+      "venue": "Water Resources Research",
+      "citations": 244,
+      "authors": [
+        "Teklu K Tesfa",
+        "David G Tarboton",
+        "David G Chandler",
+        "James P McNamara"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Controls on the temporal and spatial variability of soil moisture in a mountainous landscape: the signature of snow and complex terrain",
+      "year": 2009,
+      "abstract": "The controls on the spatial distribution of soil moisture include static and dynamic variables. The superposition of static and dynamic controls can lead to different soil moisture patterns for a given catchment during wetting, draining, and drying periods. These relationships can be further complicated in snow-dominated mountain regions where soil water input by precipitation is largely dictated by the spatial variability of snow accumulation and melt. In this study, we assess controls on spatial and temporal soil moisture variability in a small (0.02 km2), snow-dominated, semi-arid catchment by evaluating spatial correlations between soil moisture and site characteristics through different hydrologic seasons. We assess the relative importance of snow with respect to other catchment properties on the spatial variability of soil moisture and track the temporal persistence of those controls. Spatial distribution of snow, distance from divide, soil texture, and soil depth exerted significant control on the spatial variability of moisture content throughout most of the hydrologic year. These relationships were strongest during the wettest period and degraded during the dry period. As the catchment cycled through wet and dry periods, the relative spatial variability of soil moisture tended to remain unchanged. We suggest that the static properties in complex terrain (slope, aspect, soils) impose first order controls on the spatial variability of snow and resulting soil moisture patterns, and that the interaction of dynamic (timing of water input) and static influences propagate that relative constant spatial variability through most of the hydrologic year. The results demonstrate …",
+      "venue": "Hydrology and Earth System Sciences",
+      "citations": 244,
+      "authors": [
+        "CJ Williams",
+        "JP McNamara",
+        "DG Chandler"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Aspect influences on soil water retention and storage",
+      "year": 2011,
+      "abstract": "Many catchment hydrologic and ecologic processes are impacted by the storage capacity of soil water, which is dictated by the profile thickness and water retention properties of soil. Soil water retention properties are primarily controlled by soil texture, which in turn varies spatially in response to microclimate‐induced differences in insolation, wetness and temperature. All of these variables can be strongly differentiated by slope aspect. In this study, we compare quantitative measures of soil water retention capacity for two opposing slopes in a semi‐arid catchment in southwest Idaho, USA. Undisturbed soil cores from north and south aspects were subjected to a progressive drainage experiment to estimate the soil water retention curve for each sample location. The relatively large sample size (35) supported statistical analysis of slope scale differences in soil water retention between opposing aspects. Soils on the …",
+      "venue": "Hydrological Processes",
+      "citations": 237,
+      "authors": [
+        "IJ Geroy",
+        "MM Gribb",
+        "Hans-Peter Marshall",
+        "DG Chandler",
+        "Shawn G Benner",
+        "James P McNamara"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

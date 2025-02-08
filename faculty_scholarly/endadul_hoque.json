@@ -1,0 +1,104 @@
+{
+  "name": "Endadul Hoque",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Security of Networked Systems"
+  ],
+  "citedby": 842,
+  "h_index": 16,
+  "i10_index": 22,
+  "top_primary_author_publications": [
+    {
+      "title": "Enhancing privacy and security of RFID system with serverless authentication and search protocols in pervasive environments",
+      "year": 2010,
+      "abstract": "One of the recent realms that gathered attention of researchers is the security issues of Radio Frequency Identification (RFID) systems that have tradeoff between controlled costs and improved efficiency. Evolvement and benefits of RFID technology signifies that it can be low-cost, efficient and secured solution to many pervasive applications. But RFID technology will not intermingle into human lives until prevailing and flexible privacy mechanisms are conceived. However, ensuring strong privacy has been an enormous challenge due to extremely inadequate computational storage of typical RFID tags. So in order to relieve tags from responsibility, privacy protection and security assurance was guaranteed by central server. In this paper, we suggest serverless, forward secure and untraceable authentication protocol for RFID tags. This authentication protocol safeguards both tag and reader against almost all …",
+      "venue": "Wireless personal communications",
+      "citations": 76,
+      "authors": [
+        "Md Endadul Hoque",
+        "Farzana Rahman",
+        "Sheikh I Ahamed",
+        "Jong Hyuk Park"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Automated Attack Discovery in TCP Congestion Control Using a Model-guided Approach.",
+      "year": 2018,
+      "abstract": "One of the most important goals of TCP is to ensure fairness and prevent congestion collapse by implementing congestion control. Various attacks against TCP congestion control have been reported over the years, most of which have been discovered through manual analysis. In this paper, we propose an automated method that combines the generality of implementation-agnostic fuzzing with the precision of runtime analysis to find attacks against implementations of TCP congestion control. It uses a model-guided approach to generate abstract attack strategies, by leveraging a state machine model of TCP congestion control to find vulnerable state machine paths that an attacker could exploit to increase or decrease the throughput of a connection to his advantage. These abstract strategies are then mapped to concrete attack strategies, which consist of sequences of actions such as injection or modification of acknowledgements and a logical time for injection. We design and implement a virtualized platform, TCPWN, that consists of aa proxy-based attack injector and a TCP congestion control state tracker that uses only network traffic to create and inject these concrete attack strategies. We evaluated 5 TCP implementations from 4 Linux distributions and Windows 8.1. Overall, we found 11 classes of attacks, of which 8 are new.",
+      "venue": "NDSS",
+      "citations": 63,
+      "authors": [
+        "Samuel Jero",
+        "Md Endadul Hoque",
+        "David R Choffnes",
+        "Alan Mislove",
+        "Cristina Nita-Rotaru"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Analyzing operational behavior of stateful protocol implementations for detecting semantic bugs",
+      "year": 2017,
+      "abstract": "Network protocol implementations must comply with their specifications that include properties describing the correct operational behavior of the protocol in response to different temporal orderings of network events. Due to inconsistent interpretations of the specification, developers can unknowingly introduce semantic bugs, which cause the implementations to violate the respective properties. Detecting such bugs in stateful protocols becomes significantly difficult as their operations depend on their internal state machines and the complex interactions between the protocol logic. In this paper, we present an automated tool to help developers analyze their protocol implementations and detect semantic bugs violating the temporal properties of the protocols. Given an implementation, our tool (1) extracts the implemented finite state machine (FSM) of the protocol from the source code by symbolically exploring the code …",
+      "venue": "2017 47th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)",
+      "citations": 34,
+      "authors": [
+        "Endadul Hoque",
+        "Omar Chowdhury",
+        "Sze Yiu Chau",
+        "Cristina Nita-Rotaru",
+        "Ninghui Li"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Symcerts: Practical symbolic execution for exposing noncompliance in X. 509 certificate validation implementations",
+      "year": 2017,
+      "abstract": "The X.509 Public-Key Infrastructure has long been used in the SSL/TLS protocol to achieve authentication. A recent trend of Internet-of-Things (IoT) systems employing small footprint SSL/TLS libraries for secure communication has further propelled its prominence. The security guarantees provided by X.509 hinge on the assumption that the underlying implementation rigorously scrutinizes X.509 certificate chains, and accepts only the valid ones. Noncompliant implementations of X.509 can potentially lead to attacks and/or interoperability issues. In the literature, black-box fuzzing has been used to find flaws in X.509 validation implementations, fuzzing, however, cannot guarantee coverage and thus severe flaws may remain undetected. To thoroughly analyze X.509 implementations in small footprint SSL/TLS libraries, this paper takes the complementary approach of using symbolic execution. We observe that …",
+      "venue": "2017 IEEE symposium on security and privacy (SP)",
+      "citations": 83,
+      "authors": [
+        "Sze Yiu Chau",
+        "Omar Chowdhury",
+        "Endadul Hoque",
+        "Huangyi Ge",
+        "Aniket Kate",
+        "Cristina Nita-Rotaru",
+        "Ninghui Li"
+      ],
+      "url": ""
+    },
+    {
+      "title": "ERAP: ECC based RFID authentication protocol",
+      "year": 2008,
+      "abstract": "RFID tags are a new generation of small devices used for identification in many applications today. RFID authentication plays an important role in applications where security and privacy is a major concern. As an example, RFID has gained appreciation as an emerging technology to thwart counterfeiting problems. Public key cryptography (PKC) provides an impeccable solution to the counterfeiting problem. One recent family of public key cryptosystem is elliptic curve cryptography (ECC) which is a better choice than RSA cryptographic system because of its shorter key length. In this paper, we propose a secure, mutual offline authentication protocol which is based on ECC. Finally, we present security analysis of our proposed authentication protocol.",
+      "venue": "2008 12th IEEE International Workshop on Future Trends of Distributed Computing Systems",
+      "citations": 69,
+      "authors": [
+        "Sheikh Iqbal Ahamed",
+        "Farzana Rahman",
+        "Endadul Hoque"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Design, analysis, and deployment of omnipresent formal trust model (FTM) with trust bootstrapping for pervasive environments",
+      "year": 2010,
+      "abstract": "The rapid decrease in the size of mobile devices, coupled with an increase in capability, has enabled a swift proliferation of small and very capable devices into our daily lives. With such a prevalence of pervasive computing, the interaction among portable devices needs to be continuous and invisible to device users. As these devices become better connected, collaboration among them will play a vital role in sharing resources in an ad-hoc manner. The sharing of resources works as a facilitator for pervasive devices. However, this ad hoc interaction among devices provides the potential for security breaches. Trust can fight against such security violations by restricting malicious nodes from participating in interactions. Therefore, we need a unified trust relationship model between entities, which captures both the needs of the traditional computing world and the world of pervasive computing where the continuum of …",
+      "venue": "Journal of Systems and Software",
+      "citations": 64,
+      "authors": [
+        "Sheikh I Ahamed",
+        "Munirul M Haque",
+        "Md Endadul Hoque",
+        "Farzana Rahman",
+        "Nilothpal Talukder"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

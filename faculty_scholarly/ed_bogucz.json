@@ -1,0 +1,110 @@
+{
+  "name": "Edward Bogucz",
+  "affiliation": "Associate Professor, Syracuse University",
+  "interests": [
+    "Fluid dynamics",
+    "heat transfer",
+    "green buildings"
+  ],
+  "citedby": 738,
+  "h_index": 5,
+  "i10_index": 3,
+  "top_primary_author_publications": [
+    {
+      "title": "The turbulent near wake at a sharp trailing edge",
+      "year": 1988,
+      "abstract": "The problem of a turbulent boundary layer that evolves into a wake flow at the sharp trailing edge of a thin flat plate is considered; the formal structure of the near-wake flow is investigated using matched expansions in the limit of infinite Reynolds number. The symmetric turbulent near wake is shown to develop a two-layer structure which is independent of turbulence model. The general asymptotic analysis shows that a thin layer at the wake centreline grows linearly with distance from the trailing edge while the centreline velocity varies logarithmically in a manner that is supported strongly by experimental measurements. The relatively thick outer layer of the near-wake flow is undisturbed by the evolution of the inner layer to leading order. An additional region near the trailing edge is required to resolve a non-uniformity in transverse velocity. The general asymptotic results are used to guide the development of a zonal …",
+      "venue": "Journal of Fluid Mechanics",
+      "citations": 26,
+      "authors": [
+        "EA Bogucz",
+        "JDA Walker"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Fourth-order finite-difference methods for two-point boundary-value problems",
+      "year": 1984,
+      "abstract": "A number of new fourth-order accurate finite-difference methods are developed for second-order ordinary differential equations of the boundary-value type. Schemes are obtained for both linear and non-linear equations. In all cases, the solution of the difference equations may be accomplished using a direct elimination technique for linear tridiagonal matrix problems. The accuracy of the new methods is compared with existing finite-difference methods on a theoretical basis as well as by considering a number of example problems. It is concluded that the new methods offer significant advantages for specific types of equations in terms of accuracy and/or computational efficiency.",
+      "venue": "IMA journal of numerical analysis",
+      "citations": 12,
+      "authors": [
+        "EA Bogucz",
+        "JDA Walker"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Computational fluid dynamics algorithms in high-performance fortran",
+      "year": 1995,
+      "abstract": "",
+      "venue": "Proc. AIAA 25th Computational Fluid Dynamics Conf",
+      "citations": 7,
+      "authors": [
+        "KA Hawick",
+        "EA Bogucz",
+        "AT Degani",
+        "GC Fox",
+        "G Robinson"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Open web services-based indoor climate control system",
+      "year": 2011,
+      "abstract": "The present invention relates generally to a building automation system, and, more particularly, to an Internet-centric, open, extensible software and hardware framework supporting all aspects of control and monitoring of a smart building ecosphere. The present invention further relates to an “intelligent,” real-time control system capable of both autonomous process control and interaction with system users and system administrators, which is configured to accommodate functional extensions and a broad array of sensors and control devices. The system allows individuals to communicate, monitor and adjust their personal environmental preferences (temperature, light, humidity, white noise, etc.) much like they would in an automobile, via the Internet. The system is equipped with an occupancy sensor that recognizes the presence and identity of the individual. A built-in expert system can make decisions based on …",
+      "venue": "",
+      "citations": 667,
+      "authors": [
+        "Marek Podgorny",
+        "Luke Beca",
+        "Roman Markowski",
+        "Edward A Bogucz",
+        "Suresh Santanam",
+        "Edward Lipson",
+        "Paul Roman",
+        "Greg Michalak",
+        "Gregg Lewandowski",
+        "Paul D Gelling"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Implementation of a 3D mixing layer code on parallel computers",
+      "year": 1995,
+      "abstract": "This paper summarizes our progress and experience in the development of a Computational-Fluid-Dynamics code on parallel computers to simulate threedimensional spatially-developing mixing layers. In this initial study, the three-dimensional time-dependent Eu-ler equations are solved using a finite-volume explicit time-marching algorithm. The code was first programmed in Fortran 77 for sequential computers. Thc code was then converted for use on parallel computers using the conventional message-passing technique as well as the newly developcd High-Performance Fortran (HPF) language. We obtained good speedup of the code using the message-passing technique, while we have not been able to compile the code with the present vcrsion of IIPF compilers.",
+      "venue": "",
+      "citations": 2,
+      "authors": [
+        "Kevin Roe",
+        "Rajeev Thakur",
+        "Thong Dang",
+        "Edward Bogucz"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Digital Convergence and Building Automation Systems",
+      "year": 2007,
+      "abstract": "In this paper we present our (possibly controversial) view, as Internet devotees, on the state of Building Automation Systems (BAS’s). With one exception, the authors were not BAS practitioners until very recently, when we became engaged in an experiment of building an Internet Protocol (IP) based and open-source based BAS. This work is described in our other paper in these proceedings [1]. Being new to the field we started by studying the BAS stateof-the-art and by familiarizing ourselves with the technological, legal (mostly in the context of intellectual property protection), socio-technical, and business aspects of the BAS industry [2-7].This paper summarizes our “lessons learned” in two parts. First, we discuss our view of the BAS industry from the point of view of outsiders who are expert in broad aspects of the Internet: IP networks and protocols, Internet-application implementation frameworks, and Internet-related business models, including open source. Second, we take a more critical view in our own work of implementing a BAS based entirely on an Internet technology stack. As a whole, our two papers lie within the genre of systems research.",
+      "venue": "REHVA World Congress/Clima 2007/WellBeing Indoors",
+      "citations": 1,
+      "authors": [
+        "Marek Podgorny",
+        "Luke Beca",
+        "Suresh Santanam",
+        "Gregg Lewandowski",
+        "Roman Markowski",
+        "Greg Michalak",
+        "Paul Roman",
+        "Paul Gelling",
+        "Edward Lipson",
+        "Edward Bogucz"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

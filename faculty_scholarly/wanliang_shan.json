@@ -1,0 +1,109 @@
+{
+  "name": "Wanliang Shan (单万亮)",
+  "affiliation": "Associate Professor of Mechanical and Aerospace Engineering, Syracuse University",
+  "interests": [
+    "Soft Robotics",
+    "Solid Mechanics",
+    "Materials Engineering",
+    "Machine Learning",
+    "Thermophysics"
+  ],
+  "citedby": 1447,
+  "h_index": 15,
+  "i10_index": 20,
+  "top_primary_author_publications": [
+    {
+      "title": "Soft-matter composites with electrically tunable elastic rigidity",
+      "year": 2013,
+      "abstract": "We use a phase-changing metal alloy to reversibly tune the elastic rigidity of an elastomer composite. The elastomer is embedded with a sheet of low-melting-point Field's metal and an electric Joule heater composed of a serpentine channel of liquid-phase gallium–indium–tin (Galinstan®) alloy. At room temperature, the embedded Field's metal is solid and the composite remains elastically rigid. Joule heating causes the Field's metal to melt and allows the surrounding elastomer to freely stretch and bend. Using a tensile testing machine, we measure that the effective elastic modulus of the composite reversibly changes by four orders of magnitude when powered on and off. This dramatic change in rigidity is accurately predicted with a model for an elastic composite. Reversible rigidity control is also accomplished by replacing the Field's metal with shape memory polymer. In addition to demonstrating electrically …",
+      "venue": "Smart Materials and Structures",
+      "citations": 259,
+      "authors": [
+        "Wanliang Shan",
+        "Tong Lu",
+        "Carmel Majidi"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Rigidity-tuning conductive elastomer",
+      "year": 2015,
+      "abstract": "We introduce a conductive propylene-based elastomer (cPBE) that rapidly and reversibly changes its mechanical rigidity when powered with electrical current. The elastomer is rigid in its natural state, with an elastic (Young's) modulus of 175.5 MPa, and softens when electrically activated. By embedding the cPBE in an electrically insulating sheet of polydimethylsiloxane (PDMS), we create a cPBE–PDMS composite that can reversibly change its tensile modulus between 37 and 1.5 MPa. The rigidity change takes∼ 6 s and is initiated when a 100 V voltage drop is applied across the two ends of the cPBE film. This magnitude of change in elastic rigidity is similar to that observed in natural skeletal muscle and catch connective tissue. We characterize the tunable load-bearing capability of the cPBE–PDMS composite with a motorized tensile test and deadweight experiment. Lastly, we demonstrate the ability to control …",
+      "venue": "Smart Materials and Structures",
+      "citations": 142,
+      "authors": [
+        "Wanliang Shan",
+        "Stuart Diller",
+        "Abbas Tutcuoglu",
+        "Carmel Majidi"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Thermal conductivity of AlN–ethanol nanofluids",
+      "year": 2008,
+      "abstract": "Aluminum nitride (AlN) particles of 20 nm diameter were dispersed into ethanol by a two-step process, first magnetic striation and then ultrasonic agitation. Castor oil was added as a dispersant to improve the stability of the AlN suspension. The thermal conductivities of AlN–ethanol nanofluids were measured by a hot-disk method from 0.5 vol% to 4.0 vol% at temperatures of 273.15 K and 297.15 K. Results show about 20% increase in the thermal conductivity of ethanol with the addition of 4.0 vol% at 273.15 K, and a strong temperature dependence of the thermal conductivity.",
+      "venue": "International Journal of Thermophysics",
+      "citations": 76,
+      "authors": [
+        "Peng Hu",
+        "Wan-Liang Shan",
+        "Fei Yu",
+        "Ze-Shao Chen"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Chasing biomimetic locomotion speeds: Creating untethered soft robots with shape memory alloy actuators",
+      "year": 2018,
+      "abstract": "By using compliant lightweight actuators with shape memory alloy, we created untethered soft robots that are capable of dynamic locomotion at biologically relevant speeds.",
+      "venue": "",
+      "citations": 187,
+      "authors": [
+        "Xiaonan Huang",
+        "Kitty Kumar",
+        "Mohammad K Jawed",
+        "Amir M Nasab",
+        "Zisheng Ye",
+        "Wanliang Shan",
+        "Carmel Majidi"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Highly dynamic shape memory alloy actuator for fast moving soft robots",
+      "year": 2019,
+      "abstract": "Shape memory alloys (SMAs) are popular as actuators for soft bioinspired robots because they are naturally compliant, have high work density, and can be operated using miniaturized on‐board electronics for power and control. However, SMA actuators typically exhibit limited bandwidth due to the long duration of time required for the alloy to cool down and return to its natural shape and compliance following electrical actuation. This challenge is addressed by constructing SMA‐based actuators out of thermally conductive elastomers and examining the influence of electrical current and actuation frequency on blocking force, bending amplitude, and operating temperature. The actuator is composed of a U‐shape SMA wire that is sandwiched between layers of stretched and unstretched thermal elastomer. Based on the studies, the ability is demonstrated to create a highly dynamic soft actuator that weighs 3.7 g …",
+      "venue": "Advanced Materials Technologies",
+      "citations": 185,
+      "authors": [
+        "Xiaonan Huang",
+        "Kitty Kumar",
+        "Mohammad K Jawed",
+        "Amir Mohammadi Nasab",
+        "Zisheng Ye",
+        "Wanliang Shan",
+        "Carmel Majidi"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Soft-Matter Capacitive Sensor for Measuring Shear and Pressure Deformation",
+      "year": 2013,
+      "abstract": "We introduce a soft-matter sensor that measures elastic pressure and shear deformation. The sensor is composed of a sheet of elastomer that is embedded with fluidic parallel-plate capacitors. When the elastomer is pressed or sheared, the electrodes of the embedded capacitors come closer together or slide past each other, respectively, leading to a change in capacitance. The magnitude and direction of the shear deformation is established by comparing the change in capacitance of multiple embedded capacitors. We characterize the soft sensor theoretically and experimentally. Experiments indicate that 2D shear and pressure deformation can be discriminated with approximately 500 μm and 5 kPa sensitivity, respectively. The theoretical predictions and experimental results are in reasonable agreement. We also propose improvements to the fabrication method in order to facilitate integration of soft-matter …",
+      "venue": "Robotics and Automation (ICRA), 2013 IEEE International Conference on",
+      "citations": 119,
+      "authors": [
+        "Peter Roberts",
+        "Dana D Damian",
+        "Wanliang Shan",
+        "Tong Lu",
+        "Carmel Majidi"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

@@ -1,0 +1,112 @@
+{
+  "name": "Pranav Soman",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Additive Bio-manufacturing"
+  ],
+  "citedby": 4223,
+  "h_index": 29,
+  "i10_index": 44,
+  "top_primary_author_publications": [
+    {
+      "title": "Light-assisted direct-write of 3D functional biomaterials",
+      "year": 2014,
+      "abstract": "Light-assisted 3D direct-printing of biomaterials and cellular-scaffolds has the potential to develop novel lab-on-a-chip devices (LOCs) for a variety of biomedical applications, from drug discovery and diagnostic testing to in vitro tissue engineering and regeneration. Direct-writing describes a broad family of fabrication methods that typically employ computer-controlled translational stages to manufacture structures at multi-length scales. This review focuses on light-assisted direct-write fabrication for generating 3D functional scaffolds with precise micro- and nano-architecture, using both synthetic as well as naturally derived biomaterials. Two bioprinting approaches are discussed in detail – projection printing and laser-based systems – where each method is capable of modulating multiple scaffold parameters, such as 3D architecture, mechanical properties (e.g. stiffness), Poisson's ratio, chemical gradients …",
+      "venue": "",
+      "citations": 311,
+      "authors": [
+        "Kolin C Hribar",
+        "Pranav Soman",
+        "John Warner",
+        "Peter Chung",
+        "Shaochen Chen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Digital microfabrication of user‐defined 3D microstructures in cell‐laden hydrogels",
+      "year": 2013,
+      "abstract": "Complex 3D interfacial arrangements of cells are found in several in vivo biosystems such as blood vasculature, renal glomeruli, and intestinal villi. Current tissue engineering techniques fail to develop suitable 3D microenvironments to evaluate the concurrent effects of complex topography and cell encapsulation. There is a need to develop new fabrication approaches that control cell density and distribution within complex 3D features. In this work, we present a dynamic projection printing process that allows rapid construction of complex 3D structures using custom‐defined computer‐aided‐design (CAD) files. Gelatin‐methacrylate (GelMA) constructs featuring user‐defined spiral, pyramid, flower, and dome micro‐geometries were fabricated with and without encapsulated cells. Encapsulated cells demonstrate good cell viability across all geometries both on the scaffold surface and internal to the structures. Cells …",
+      "venue": "Biotechnology and bioengineering",
+      "citations": 220,
+      "authors": [
+        "Pranav Soman",
+        "Peter H Chung",
+        "A Ping Zhang",
+        "Shaochen Chen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Three‐dimensional polymer constructs exhibiting a tunable negative Poisson's ratio",
+      "year": 2011,
+      "abstract": "Young's modulus and Poisson's ratio of a porous polymeric construct (scaffold) quantitatively describe how it supports and transmits external stresses to its surroundings. While Young's modulus is always non‐negative and highly tunable in magnitude, Poisson's ratio can, indeed, take on negative values despite the fact that it is non‐negative for virtually every naturally occurring and artificial material. In some applications, a construct having a tunable negative Poisson's ratio (an auxetic construct) may be more suitable for supporting the external forces imposed upon it by its environment. Here, three‐dimensional polyethylene glycol scaffolds with tunable negative Poisson's ratios are fabricated. Digital micromirror device projection printing (DMD‐PP) is used to print single‐layer constructs composed of cellular structures (pores) with special geometries, arrangements, and deformation mechanisms. The presence of …",
+      "venue": "Advanced functional materials",
+      "citations": 184,
+      "authors": [
+        "David Y Fozdar",
+        "Pranav Soman",
+        "Jin Woo Lee",
+        "Li‐Hsin Han",
+        "Shaochen Chen"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Microfabrication of complex porous tissue engineering scaffolds using 3D projection stereolithography",
+      "year": 2012,
+      "abstract": "The success of tissue engineering will rely on the ability to generate complex, cell seeded three-dimensional (3D) structures. Therefore, methods that can be used to precisely engineer the architecture and topography of scaffolding materials will represent a critical aspect of functional tissue engineering. Previous approaches for 3D scaffold fabrication based on top-down and process driven methods are often not adequate to produce complex structures due to the lack of control on scaffold architecture, porosity, and cellular interactions. The proposed projection stereolithography (PSL) platform can be used to design intricate 3D tissue scaffolds that can be engineered to mimic the microarchitecture of tissues, based on computer aided design (CAD). The PSL system was developed, programmed and optimized to fabricate 3D scaffolds using gelatin methacrylate (GelMA). Variation of the structure and prepolymer …",
+      "venue": "Biomaterials",
+      "citations": 773,
+      "authors": [
+        "Robert Gauvin",
+        "Ying-Chieh Chen",
+        "Jin Woo Lee",
+        "Pranav Soman",
+        "Pinar Zorlutuna",
+        "Jason W Nichol",
+        "Hojae Bae",
+        "Shaochen Chen",
+        "Ali Khademhosseini"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Rapid fabrication of complex 3D extracellular microenvironments by dynamic optical projection stereolithography",
+      "year": 2012,
+      "abstract": "Cells can sense surface topography of the surround extracellular matrix (ECM) and can respond to these physical cues by altering their alignment and migration.[1, 2] Furthermore, these topographic features can manipulate cell proliferation and differentiation. The fundamental mechanisms of these cell-surface interactions are still not fully understood. Over the last two decades, due to the growing interests in tissue engineering, significant advances have emerged in microfabrication techniques for generating well-defined surface topographies that influence cellular responses at the micro-and nanoscale.[3] For instance, endothelial cells showed restricted orientation and alignment corresponding to microgroove features.[4] Additionally, it has been demonstrated that microstructures displaying stripes, squares, and spiral geometries influence endothelial cells orientation and fibrillin.[5] In another study, fibroblasts …",
+      "venue": "Advanced materials (Deerfield Beach, Fla.)",
+      "citations": 422,
+      "authors": [
+        "A Ping Zhang",
+        "Xin Qu",
+        "Pranav Soman",
+        "Kolin C Hribar",
+        "Jin W Lee",
+        "Shaochen Chen",
+        "Sailing He"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Digital micromirror device projection printing system for meniscus tissue engineering",
+      "year": 2013,
+      "abstract": "Meniscus degeneration due to age or injury can lead to osteoarthritis. Although promising, current cell-based approaches show limited success. Here we present three-dimensional methacrylated gelatin (GelMA) scaffolds patterned via projection stereolithography to emulate the circumferential alignment of cells in native meniscus tissue. Cultured human avascular zone meniscus cells from normal meniscus were seeded on the scaffolds. Cell viability was monitored, and new tissue formation was assessed by gene expression analysis and histology after 2weeks in serum-free culture with transforming growth factor β1 (10ngml−1). Light, confocal and scanning electron microscopy were used to observe cell–GelMA interactions. Tensile mechanical testing was performed on unseeded, fresh scaffolds and 2-week-old cell-seeded and unseeded scaffolds. 2-week-old cell–GelMA constructs were implanted into surgically …",
+      "venue": "Acta biomaterialia",
+      "citations": 197,
+      "authors": [
+        "Shawn P Grogan",
+        "Peter H Chung",
+        "Pranav Soman",
+        "Peter Chen",
+        "Martin K Lotz",
+        "Shaochen Chen",
+        "Darryl D D’Lima"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

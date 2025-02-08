@@ -1,0 +1,121 @@
+{
+  "name": "Theodore Walker",
+  "affiliation": "Syracuse University",
+  "interests": [],
+  "citedby": 1458,
+  "h_index": 12,
+  "i10_index": 12,
+  "top_primary_author_publications": [
+    {
+      "title": "Recycling of multilayer plastic packaging materials by solvent-targeted recovery and precipitation",
+      "year": 2020,
+      "abstract": "Many plastic packaging materials manufactured today are composites made of distinct polymer layers (i.e., multilayer films). Billions of pounds of these multilayer films are produced annually, but manufacturing inefficiencies result in large, corresponding postindustrial waste streams. Although relatively clean (as opposed to municipal wastes) and of near-constant composition, no commercially practiced technologies exist to fully deconstruct postindustrial multilayer film wastes into pure, recyclable polymers. Here, we demonstrate a unique strategy we call solvent-targeted recovery and precipitation (STRAP) to deconstruct multilayer films into their constituent resins using a series of solvent washes that are guided by thermodynamic calculations of polymer solubility. We show that the STRAP process is able to separate three representative polymers (polyethylene, ethylene vinyl alcohol, and polyethylene terephthalate …",
+      "venue": "Science advances",
+      "citations": 285,
+      "authors": [
+        "Theodore W Walker",
+        "Nathan Frelka",
+        "Zhizhang Shen",
+        "Alex K Chew",
+        "Jesse Banick",
+        "Steven Grey",
+        "Min Soo Kim",
+        "James A Dumesic",
+        "Reid C Van Lehn",
+        "George W Huber"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Universal kinetic solvent effects in acid-catalyzed reactions of biomass-derived oxygenates",
+      "year": 2018,
+      "abstract": "The rates of Brønsted-acid-catalyzed reactions of ethyl tert-butyl ether, tert-butanol, levoglucosan, 1,2-propanediol, fructose, cellobiose, and xylitol were measured in solvent mixtures of water with three polar aprotic cosolvents: γ-valerolactone; 1,4-dioxane; and tetrahydrofuran. As the water content of the solvent environment decreases, reactants with more hydroxyl groups have higher catalytic turnover rates for both hydrolysis and dehydration reactions. We present classical molecular dynamics simulations to explain these solvent effects in terms of three simulation-derived observables: (1) the extent of water enrichment in the local solvent domain of the reactant; (2) the average hydrogen bonding lifetime between water molecules and the reactant; and (3) the fraction of the reactant accessible surface area occupied by hydroxyl groups, all as a function of solvent composition. We develop a model, constituted by …",
+      "venue": "Energy & Environmental Science",
+      "citations": 158,
+      "authors": [
+        "Theodore W Walker",
+        "Alex K Chew",
+        "Huixiang Li",
+        "Benginur Demir",
+        "Z Conrad Zhang",
+        "George W Huber",
+        "Reid C Van Lehn",
+        "James A Dumesic"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Fundamental catalytic challenges to design improved biomass conversion technologies",
+      "year": 2019,
+      "abstract": "During the past ten years, there has been significant interest and investment in the study of catalytic conversion of biomass-derived feedstocks into renewable fuels and chemicals. In the United States, an estimated $25 billion has been spent by venture capitalists, industry, and government agencies during this period of time to commercialize “renewable technologies” including solar energy, wind power, batteries, and biofuels (eg, cellulosic ethanol).[1] Four societal factors are driving these investments including:(1) the increased price of crude oil;(2) concerns about global warming;(3) the desire to improve rural economies where biomass is produced, and;(4) national goals to become energy self-sufficient. Furthermore, underlying these efforts is the realization that lignocellulosic biomass is the only realistic, near-term and non-food-competitive source of renewable organic carbon.[2-5] To this end, legislative efforts, such as the US Renewable Fuel Standards, have been implemented to create subsidies, tax credits, mandates, and loan guarantees to help bring renewable fuel technologies to market.[6] However, the representative body of industrial efforts to this end has faced significant challenges, with several startup companies having commercialized biomass conversion technologies but having struggled to reach commercial scale; in fact, many of these companies have filed for bankruptcy.[1, 7] This situation is likely due to the challenges associated with scaling up unproven pioneer processes, as well as neophyte investors not understanding the decade-long time frames and the sheer amount of funding that is often required to bring chemical …",
+      "venue": "Journal of Catalysis",
+      "citations": 93,
+      "authors": [
+        "Theodore W Walker",
+        "Ali Hussain Motagamwala",
+        "James A Dumesic",
+        "George W Huber"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Electrocatalytic Oxidation of Glycerol to Formic Acid by CuCo2O4 Spinel Oxide Nanostructure Catalysts",
+      "year": 2020,
+      "abstract": "The electrochemical oxidation of abundantly available glycerol for the production of value-added chemicals, such as formic acid, could be a promising approach to utilize glycerol more effectively and to meet the future demand for formic acid as a fuel for direct or indirect formic acid fuel cells. Here we report a comparative study of a series of earth-abundant cobalt-based spinel oxide (MCo2O4, M = Mn, Fe, Co, Ni, Cu, and Zn) nanostructures as robust electrocatalysts for the glycerol oxidation to selectively produce formic acid. Their intrinsic catalytic activities in alkaline solution follow the sequence of CuCo2O4 > NiCo2O4 > CoCo2O4 > FeCo2O4 > ZnCo2O4 > MnCo2O4. Using the best-performing CuCo2O4 catalyst directly integrated onto carbon fiber paper electrodes for the bulk electrolysis reaction of glycerol oxidation (pH = 13) at the constant potential of 1.30 V vs reversible hydrogen electrode (RHE), a high …",
+      "venue": "ACS Catalysis",
+      "citations": 304,
+      "authors": [
+        "Xiaotong Han",
+        "Hongyuan Sheng",
+        "Chang Yu",
+        "Theodore W Walker",
+        "George W Huber",
+        "Jieshan Qiu",
+        "Song Jin"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Production of levoglucosenone and 5-hydroxymethylfurfural from cellulose in polar aprotic solvent–water mixtures",
+      "year": 2017,
+      "abstract": "We demonstrate a process to produce levoglucosenone (LGO) and 5-hydroxymethylfurfural (HMF) from cellulose in up to 65% carbon yield using sulfuric acid as catalyst and a solvent consisting of a mixture of tetrahydrofuran (THF) with water. In pure THF, LGO is the major product of cellulose dehydration, passing through levoglucosan as an intermediate. Increasing the water content (up to 5 wt%) results in HMF as the major product. HMF is formed both by glucose dehydration and direct dehydration of LGA. The maximum combined yield of LGO and HMF (∼65 carbon%) is achieved in the presence of 1–2.5 wt% H2O, such that comparable amounts of these two co-products are formed. THF gave the highest total yields of LGO and HMF among the solvents investigated in this study (i.e., THF, diglyme, tetraglyme, gamma-valerolactone (GVL), cyclopentyl methyl ether (CPME), 1,4-dioxane, and dimethyl sulfoxide …",
+      "venue": "Green Chemistry",
+      "citations": 161,
+      "authors": [
+        "Jiayue He",
+        "Mingjie Liu",
+        "Kefeng Huang",
+        "Theodore W Walker",
+        "Christos T Maravelias",
+        "James A Dumesic",
+        "George W Huber"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Effects of chloride ions in acid-catalyzed biomass dehydration reactions in polar aprotic solvents",
+      "year": 2019,
+      "abstract": "The use of polar aprotic solvents in acid-catalyzed biomass conversion reactions can lead to improved reaction rates and selectivities. We show that further increases in catalyst performance in polar aprotic solvents can be achieved through the addition of inorganic salts, specifically chlorides. Reaction kinetics studies of the Brønsted acid-catalyzed dehydration of fructose to hydroxymethylfurfural (HMF) show that the use of catalytic concentrations of chloride salts leads to a 10-fold increase in reactivity. Furthermore, increased HMF yields can be achieved using polar aprotic solvents mixed with chlorides. Ab initio molecular dynamics simulations (AIMD) show that highly localized negative charge on Cl− allows the chloride anion to more readily approach and stabilize the oxocarbenium ion that forms and the deprotonation transition state. High concentrations of polar aprotic solvents form local hydrophilic …",
+      "venue": "Nature communications",
+      "citations": 154,
+      "authors": [
+        "Max A Mellmer",
+        "Chotitath Sanpitakseree",
+        "Benginur Demir",
+        "Kaiwen Ma",
+        "William A Elliott",
+        "Peng Bai",
+        "Robert L Johnson",
+        "Theodore W Walker",
+        "Brent H Shanks",
+        "Robert M Rioux",
+        "Matthew Neurock",
+        "James A Dumesic"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

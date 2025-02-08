@@ -1,0 +1,71 @@
+{
+  "name": "M. M. Koppers",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 85,
+  "h_index": 3,
+  "i10_index": 0,
+  "top_primary_author_publications": [],
+  "top_secondary_author_publications": [
+    {
+      "title": "In situ decomposition of northern hardwood tree boles: decay rates and nutrient dynamics in wood and bark",
+      "year": 2014,
+      "abstract": "The decomposition of coarse woody debris contributes to forest nutrient sustainability and carbon (C) balances, yet few field studies have been undertaken to investigate these relationships in northern hardwood forests. We used a paired-sample approach to study the decomposition of sugar maple (Acer saccharum Marsh.), American beech (Fagus grandifolia Erhr.), and yellow birch (Betula alleghaniensis Britt.) boles at the Hubbard Brook Experimental Forest in New Hampshire. Mass loss over 16 years followed a first-order exponential decay pattern with half-lives ranging from 4.9 to 9.4 years in bark and from 7.3 to 10.9 years in wood. Nitrogen (N) and phosphorus (P) concentrations increased significantly during decomposition, resulting in sharp decreases in C:N and C:P ratios. We did not, however, observe significant net increases in the amount of N or P stored in decomposing boles, as reported in some other studies. Calcium (Ca) concentration decreased by up to 50% in bark but more than doubled in wood of all species. The retention of Ca in decomposing wood helps maintain Ca pools in this base-poor ecosystem. Together, the exponential model for mass loss and a combined power-exponential model for changes in nutrient concentrations were able to simulate nutrient dynamics in decomposing boles after clear-cutting in an adjacent watershed.",
+      "venue": "",
+      "citations": 40,
+      "authors": [
+        "C. Johnson",
+        "T. Siccama",
+        "E. Denny",
+        "M. M. Koppers",
+        "D. Vogt"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a6a4fd3c8f1b04b332a4edcf24662df14f099948"
+    },
+    {
+      "title": "Silica uptake and release in live and decaying biomass in a northern hardwood forest.",
+      "year": 2016,
+      "abstract": "In terrestrial ecosystems, a large portion (20-80%) of the dissolved Si (DSi) in soil solution has passed through vegetation. While the importance of this \"terrestrial Si filter\" is generally accepted, few data exist on the pools and fluxes of Si in forest vegetation and the rate of release of Si from decomposing plant tissues. We quantified the pools and fluxes of Si through vegetation and coarse woody debris (CWD) in a northern hardwood forest ecosystem (Watershed 6, W6) at the Hubbard Brook Experimental Forest (HBEF) in New Hampshire, USA. Previous work suggested that the decomposition of CWD may have significantly contributed to an excess of DSi reported in stream-waters following experimental deforestation of Watershed 2 (W2) at the HBEF. We found that woody biomass (wood + bark) and foliage account for approximately 65% and 31%, respectively, of the total Si in biomass at the HBEF. During the decay of American beech (Fagus grandifolia) boles, Si loss tracked the whole-bole mass loss, while yellow birch (Betula alleghaniensis) and sugar maple (Acer saccharum) decomposition resulted in a preferential Si retention of up to 30% after 16 yr. A power-law model for the changes in wood and bark Si concentrations during decomposition, in combination with an exponential model for whole-bole mass loss, successfully reproduced Si dynamics in decaying boles. Our data suggest that a minimum of 50% of the DSi annually produced in the soil of a biogeochemical reference watershed (W6) derives from biogenic Si (BSi) dissolution. The major source is fresh litter, whereas only ~2% comes from the decay of CWD. Decay of tree boles could only account for 9% of the excess DSi release observed following the experimental deforestation of W2. Therefore, elevated DSi concentrations after forest disturbance are largely derived from other sources (e.g., dissolution of BSi from forest floor soils and/or mineral weathering).",
+      "venue": "Ecology",
+      "citations": 26,
+      "authors": [
+        "W. Clymans",
+        "D. Conley",
+        "J. Battles",
+        "P. Frings",
+        "M. M. Koppers",
+        "G. Likens",
+        "C. Johnson"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a49f9d18b6f449c4ae70c196db7d469739109381"
+    },
+    {
+      "title": "Methods of Soil Resampling to Monitor Changes in the Chemical Concentrations of Forest Soils",
+      "year": 2016,
+      "abstract": "Recent soils research has shown that important chemical soil characteristics can change in less than a decade, often the result of broad environmental changes. Repeated sampling to monitor these changes in forest soils is a relatively new practice that is not well documented in the literature and has only recently been broadly embraced by the scientific community. The objective of this protocol is therefore to synthesize the latest information on methods of soil resampling in a format that can be used to design and implement a soil monitoring program. Successful monitoring of forest soils requires that a study unit be defined within an area of forested land that can be characterized with replicate sampling locations. A resampling interval of 5 years is recommended, but if monitoring is done to evaluate a specific environmental driver, the rate of change expected in that driver should be taken into consideration. Here, we show that the sampling of the profile can be done by horizon where boundaries can be clearly identified and horizons are sufficiently thick to remove soil without contamination from horizons above or below. Otherwise, sampling can be done by depth interval. Archiving of sample for future reanalysis is a key step in avoiding analytical bias and providing the opportunity for additional analyses as new questions arise.",
+      "venue": "Journal of Visualized Experiments",
+      "citations": 19,
+      "authors": [
+        "G. Lawrence",
+        "I. Fernandez",
+        "P. Hazlett",
+        "S. Bailey",
+        "D. Ross",
+        "T. Villars",
+        "Angelica Quintana",
+        "R. Ouimet",
+        "M. McHale",
+        "C. Johnson",
+        "R. Briggs",
+        "R. A. Colter",
+        "J. Siemion",
+        "O. Bartlett",
+        "Olga Vargas",
+        "Michael R. Antidormi",
+        "M. M. Koppers"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a08770873409aa94808f576892d72a909bbd8924"
+    }
+  ],
+  "source": "semanticscholar"
+}

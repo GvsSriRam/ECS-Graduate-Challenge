@@ -1,0 +1,83 @@
+{
+  "name": "Kara Hughes",
+  "affiliation": "",
+  "interests": [],
+  "citedby": 153,
+  "h_index": 3,
+  "i10_index": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Electrochemical oxidation of the increasingly‐used disinfectant benzalkonium chloride",
+      "year": 2023,
+      "abstract": "Benzalkonium chloride (BAC) is a key ingredient in many cleaning and disinfectant products due to it being an effective antiviral and biocidal agent. Because of its prolific use, especially following the recent global COVID pandemic, increased levels of BAC have been found in the environment, in particular, in wastewater, where it has negative impacts due to its toxicity. This necessitates an effective treatment for BAC in wastewater to reduce its toxicity. In this work, electrochemical oxidation of BAC on a boron-doped diamond anode was studied to successfully remove BAC. The electrochemical measurements performed at different current densities confirmed that BAC was completely oxidized within 20 min of treatment at 50 mA/cm2. However, chemical oxygen demand (COD) measurements showed that around 50% of the initial BAC was completely mineralized after 1 h of degradation at 50 mA/cm2, while the remaining electrooxidation of BAC resulted in the production of transformation products. © 2023 Canadian Society for Chemical Engineering.",
+      "venue": "Canadian Journal of Chemical Engineering",
+      "citations": 1,
+      "authors": [
+        "Kara Hughes",
+        "Weiqi Han",
+        "V. Yargeau",
+        "S. Omanovic"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a5d6b7c8139c831d35ed5a618f526ab97916d5be"
+    },
+    {
+      "title": "Nickel based electro-catalyst: toward the electrochemical valorization of glycerol in alkaline medium",
+      "year": 2017,
+      "abstract": "• Eluri, R.; Paul, B. J. Nanoparticle Research 2012, 14(4), 1-14. • Gao, J.; Guan, F.; Zhao, Y.; Yang, W.; Ma, Y.; Lu, X.; Hou, J.; Kang, J. Mater. Chem. Phys. 2001, 71(1), 215-219. • Liu, D.; Lin, L.; Ren, S.; Fu, S.. J. Mater. Sci. 2016, 51(6), 3111-3117. • Tientong, J.; Garcia, S.; Thurber, C.; Golden, T. J. Nanotechnology 2014, 2014, 1-6. • Wu, S.Chen, D.. J. Colloid and Interface Sci. 2003, 259, 282-286. • Baranova, E. A., Cally, A., Allagui, A., Ntais, S., & Wüthrich, R. (2013). Comptes Rendus Chimie, 16(1), 28-33. • Machado, S. A. S., & Avaca, L. A. (1994). Electrochimica Acta, 39(10), 1385-1391. • Oliveira, V. L., Morais, C., Servat, K., Napporn, T. W., Tremiliosi-Filho, G., & Kokoh, K. B. (2014). Electrochimica Acta, 117, 255-262. I would like to thank Mohamed Houache for his guidance in conducting the experiments and preparing the poster, Abdulgadir Ahmed for conducting the electrochemical experiments, Prof. Elena Baranova for facilitating the project and the Office of Undergraduate Research for giving me the opportunity to conduct research as a part of UROP. Acknowledgments  ECSA from peak between [-0.7V to -0.5 V]",
+      "venue": "",
+      "citations": 0,
+      "authors": [
+        "Kara Hughes"
+      ],
+      "url": "https://www.semanticscholar.org/paper/89acf0eb32a60a50068c8046c762355707a0811f"
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Study on catalyst selection for electrochemical valorization of glycerol",
+      "year": 2019,
+      "abstract": "Navigating glycerol electrochemical oxidation roadmap and catalyst selection.",
+      "venue": "Sustainable Energy & Fuels",
+      "citations": 64,
+      "authors": [
+        "M. Houache",
+        "Kara Hughes",
+        "E. Baranova"
+      ],
+      "url": "https://www.semanticscholar.org/paper/a4cfc38b633115dc7109ff3ac9d80c13ac938b3b"
+    },
+    {
+      "title": "Modification of Nickel Surfaces by Bismuth: Effect on Electrochemical Activity and Selectivity Towards Glycerol.",
+      "year": 2020,
+      "abstract": "Herein we study the effect of adding Bismuth to Ni-nanostructured catalysts (NixBi1-x, x = 100 - 90 at. %) for glycerol electrooxidation in alkaline solution by combining physiochemical, electrochemical and in-situ infrared spectroscopy techniques, as well as continuous electrolysis with HPLC product analysis. The addition of small quantities of Bi (< 20 at. %) to Ni nanoparticles led to significant activity enhancement at lower overpotentials, with Ni90Bi10 displaying the over 2-fold increase compared to Ni. Small quantities of bismuth actively affected the reaction selectivity of Ni by suppressing the pathways with C-C bond cleavage, hindering the production of carbonate and formate and improving the formation of tartronate, oxalate and glycerate. Furthermore, the effect of aging on NixBi1-x catalysts was investigated, resulting in a structural modification from the Ni-Bi double-shell/core structure to Bi decorated on folded Ni sheet, thus enhancing their activity twice after two weeks aging. NiBi catalysts are promising candidates for glycerol valorization to high-value added products.",
+      "venue": "ACS Applied Materials and Interfaces",
+      "citations": 50,
+      "authors": [
+        "M. Houache",
+        "Kara Hughes",
+        "Reza Safari",
+        "G. Botton",
+        "E. Baranova"
+      ],
+      "url": "https://www.semanticscholar.org/paper/0bc67ef818b18f891ef13ee137e09356ba6d43de"
+    },
+    {
+      "title": "Electrochemical Valorization of Glycerol on Ni-Rich Bimetallic NiPd Nanoparticles: Insight into Product Selectivity Using in Situ Polarization Modulation Infrared-Reflection Absorption Spectroscopy",
+      "year": 2019,
+      "abstract": "Glycerol partial electrooxidation was studied on NixPd1–x (x = 100, 95, 90, and 80 atom %) nanoparticles synthesized using a polyol method. The shape-controlled urchin-like monometallic Ni and sphe...",
+      "venue": "ACS Sustainable Chemistry and Engineering",
+      "citations": 40,
+      "authors": [
+        "M. Houache",
+        "Kara Hughes",
+        "A. Ahmed",
+        "R. Safari",
+        "Hanshuo Liu",
+        "G. Botton",
+        "E. Baranova"
+      ],
+      "url": "https://www.semanticscholar.org/paper/e3338a9a5791ae26ac6b232505992ad0c439ac73"
+    }
+  ],
+  "source": "semanticscholar"
+}

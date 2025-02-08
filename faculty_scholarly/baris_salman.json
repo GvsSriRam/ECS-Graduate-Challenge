@@ -1,0 +1,98 @@
+{
+  "name": "Baris Salman",
+  "affiliation": "Assistant Professor, Syracuse University",
+  "interests": [
+    "Asset Management",
+    "Infrastructure Management",
+    "Risk Assessment and Management",
+    "Building Information Modeling",
+    "Construction Eng."
+  ],
+  "citedby": 655,
+  "h_index": 11,
+  "i10_index": 14,
+  "top_primary_author_publications": [
+    {
+      "title": "Modeling failure of wastewater collection lines using various section-level regression models",
+      "year": 2012,
+      "abstract": "Wastewater utilities are aiming to implement asset management strategies to minimize costly emergency repairs, to justify expenditures, and to optimize future renewal actions. Consequently, development of deterioration models that explain the behavior of wastewater lines and provide predictions regarding potential future condition levels is gaining importance. In this paper, deterioration models are generated to estimate the probability of failure values for sewer sections. A set of variables was obtained by examining the inventory and inspection databases of a sewer network. Three statistical methods (ordinal regression, multinomial logistic regression, and binary logistic regression) were employed in successive steps. Proportionality of odds assumption was tested for ordinal regression models, and suitability of this particular method was discussed. Estimated condition ratings were compared with observed data …",
+      "venue": "Journal of Infrastructure Systems",
+      "citations": 100,
+      "authors": [
+        "Baris Salman",
+        "Ossama Salem"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Infrastructure management and deterioration risk assessment of wastewater collection systems",
+      "year": 2010,
+      "abstract": "Proper collection and transmission of wastewater within pipe systems is of utmost importance to minimize public health problems and environmental contamination resulting from discharge of untreated sewage. However, due to reactive management strategies, overall condition status of wastewater systems has reached a sub-standard level. Moreover, budget restrictions due to competing needs are preventing sewer agencies from addressing inspection and repair/renewal of every deficient pipe. Therefore, sewer agencies are in dire need of establishing risk assessment tools in order to optimize use of limited resources by prioritizing inspection and/or renewal needs of sewer pipes. The objective of this dissertation is to develop such a risk assessment tool at an individual pipe level by combining the probability of failure values determined by statistical deterioration modeling of sewer pipes and consequences of …",
+      "venue": "",
+      "citations": 98,
+      "authors": [
+        "Baris Salman"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Risk assessment of wastewater collection lines using failure models and criticality ratings",
+      "year": 2012,
+      "abstract": "Because of deteriorating condition levels of wastewater networks and financial constraints, sewer agencies are seeking methods to prioritize inspection of sewer pipes on the basis of risk of failure. Risk assessment of sewer pipes requires integration of the probability and consequences-of-failure values in a way that reflects the decision maker’s perception of risk. This paper presents the use of a weighted scoring method to determine criticality of sewer pipelines. The procedure involves identifying important factors, determining the relative importance of the selected factors, and summarizing the overall performance of sewer pipes in terms of these factors. Determination of risk of failure by combining the resultant consequence-of-failure values with the probability-of-failure values using simple multiplication, risk matrices, and fuzzy inference systems is presented. Application of these methods is illustrated by using the …",
+      "venue": "Journal of pipeline systems engineering and practice",
+      "citations": 80,
+      "authors": [
+        "Baris Salman",
+        "Ossama Salem"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "An asset management approach for drainage infrastructure and culverts",
+      "year": 2008,
+      "abstract": "Drainage infrastructure systems (culvert, storm sewer, outfall and related drainage elements) are mostly buried underground and are in need of special attention in terms of proactive/preventive asset management strategy. Drainage infrastructure systems represent an integral portion of roadway assets that routinely require inspection, maintenance, repair and renewal. Further challenges are the wide geospatial distribution of these infrastructure assets and environmental exposure. There has been considerable research conducted on culverts, but mostly looked at the problem from a traditional structural/geotechnical perspective. Asset management procedures for culverts and drainage infrastructure systems are complex issues, and can benefit a great deal from an optimal asset management program that draws from programs pertaining to buried pipes. The first and most important step in an asset management initiative is the establishment of mechanism for asset inventory and asset conditions in a format compatible with the routine procedures of field operators and inspectors. The first objective of this research project was to develop field protocols and operational business rules for inventory data collection and management and inspection of drainage infrastructures in terms of types of data to be collected, frequency of inspection, and analysis and reporting mechanisms. After review of these protocols by the project oversight committee, a pilot study was conducted to verify efficiency of their implementation. The condition assessment protocol introduced is useful in evaluating the overall condition of culverts and can be used for decision making …",
+      "venue": "",
+      "citations": 49,
+      "authors": [
+        "Mohammad Najafi",
+        "Sam Salem",
+        "Deepak Bhattachar",
+        "Baris Salman",
+        "Rahul Patil",
+        "Diego Calderon"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Decision support framework for project-level pavement maintenance and rehabilitation through integrating life cycle cost analysis and life cycle assessment",
+      "year": 2021,
+      "abstract": "Over the last decade, transportation asset management practices have been increasingly enhanced through incorporation of sustainability considerations. Organizational- and network-level guidelines have been developed to assist transportation agencies in sustainability-driven highway network prioritization, but quantifying life cycle economic, social, and environmental impacts of highway treatment activities and projects using consistent, reliable data for informed project-level decision-making remains a challenge. This paper proposes a decision support framework to identify major life cycle economic, social, and environmental impacts of highway treatment activities and projects through integrating life cycle assessment (LCA) and life cycle cost analysis, allowing practitioners to determine the most appropriate project alternatives. Databases (e.g., RSMeans) and simulation models (e.g., Athena Pavement LCA and …",
+      "venue": "Journal of Transportation Engineering, Part B: Pavements",
+      "citations": 25,
+      "authors": [
+        "Song He",
+        "Ossama Salem",
+        "Baris Salman"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Utilizing graphite powder to improve concrete conductivity, compressive strength, and workability",
+      "year": 2020,
+      "abstract": "Electrically conductive concrete (ECC) has been suggested to be used in cold areas for deicing snow on highway roads and city streets. The following study investigates the impact of graphite as supplementary cementitious material on concrete conductivity to aid future research developing ECC. In addition, the study investigates the impact of graphite on compressive strength and workability. Accordingly, three concrete mixes that include three different percentages of graphite and a control mix have been prepared in the lab to achieve the study objectives. American Society of Testing Materials’ (ASTM) compressive and slump tests were performed. In addition, two-point conductivity measurements were made at days 1, 2, 7, and 28 of the concrete curing. Concrete workability was greatly affected, negatively, with all levels of graphite. Compressive test results indicate that an optimum level of graphite is realized to …",
+      "venue": "",
+      "citations": 10,
+      "authors": [
+        "Ahmed Jalil Al-Bayati",
+        "Kamal H Butrouna",
+        "Robert E Steffen",
+        "Baris Salman",
+        "Mohammad Al-Qaralleh"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

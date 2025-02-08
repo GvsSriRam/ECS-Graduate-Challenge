@@ -1,0 +1,146 @@
+{
+  "name": "Yi Zheng",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Microfluidics",
+    "Stem Cell",
+    "Development",
+    "Organoid",
+    "Single-Cell RNA-Seq"
+  ],
+  "citedby": 3001,
+  "h_index": 25,
+  "i10_index": 32,
+  "top_primary_author_publications": [
+    {
+      "title": "Controlled modelling of human epiblast and amnion development using stem cells",
+      "year": 2019,
+      "abstract": "Early human embryonic development involves extensive lineage diversification, cell-fate specification and tissue patterning. Despite its basic and clinical importance, early human embryonic development remains relatively unexplained owing to interspecies divergence, and limited accessibility to human embryo samples. Here we report that human pluripotent stem cells (hPSCs) in a microfluidic device recapitulate, in a highly controllable and scalable fashion, landmarks of the development of the epiblast and amniotic ectoderm parts of the conceptus, including lumenogenesis of the epiblast and the resultant pro-amniotic cavity, formation of a bipolar embryonic sac, and specification of primordial germ cells and primitive streak cells. We further show that amniotic ectoderm-like cells function as a signalling centre to trigger the onset of gastrulation-like events in hPSCs. Given its controllability and scalability, the …",
+      "venue": "Nature",
+      "citations": 436,
+      "authors": [
+        "Yi Zheng",
+        "Xufeng Xue",
+        "Yue Shao",
+        "Sicong Wang",
+        "Sajedeh Nasr Esfahani",
+        "Zida Li",
+        "Jonathon M Muncie",
+        "Johnathon N Lakins",
+        "Valerie M Weaver",
+        "Deborah L Gumucio",
+        "Jianping Fu"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Recent advances in microfluidic techniques for single-cell biophysical characterization",
+      "year": 2013,
+      "abstract": "Biophysical (mechanical and electrical) properties of living cells have been proven to play important roles in the regulation of various biological activities at the molecular and cellular level, and can serve as promising label-free markers of cells' physiological states. In the past two decades, a number of research tools have been developed for understanding the association between the biophysical property changes of biological cells and human diseases; however, technical challenges of realizing high-throughput, robust and easy-to-perform measurements on single-cell biophysical properties have yet to be solved. In this paper, we review emerging tools enabled by microfluidic technologies for single-cell biophysical characterization. Different techniques are compared. The technical details, advantages, and limitations of various microfluidic devices are discussed.",
+      "venue": "",
+      "citations": 307,
+      "authors": [
+        "Yi Zheng",
+        "John Nguyen",
+        "Yuan Wei",
+        "Yu Sun"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Classification of cell types using a microfluidic device for mechanical and electrical measurement on single cells (*co-first author)",
+      "year": 2011,
+      "abstract": "This paper presents a microfluidic system for cell type classification using mechanical and electrical measurements on single cells. Cells are aspirated continuously through a constriction channel with cell elongations and impedance profiles measured simultaneously. The cell transit time through the constriction channel and the impedance amplitude ratio are quantified as cell's mechanical and electrical property indicators. The microfluidic device and measurement system were used to characterize osteoblasts (n = 206) and osteocytes (n = 217), revealing that osteoblasts, compared with osteocytes, have a larger cell elongation length (64.51 ± 14.98 μm vs. 39.78 ± 7.16 μm), a longer transit time (1.84 ± 1.48 s vs. 0.94 ± 1.07 s), and a higher impedance amplitude ratio (1.198 ± 0.071 vs. 1.099 ± 0.038). Pattern recognition using the neural network was applied to cell type classification, resulting in classification …",
+      "venue": "Lab on a chip",
+      "citations": 249,
+      "authors": [
+        "Jian Chen*",
+        "Yi Zheng*",
+        "Qingyuan Tan",
+        "Ehsan Shojaei-Baghini",
+        "Yan Liang Zhang",
+        "Jason Li",
+        "Preethy Prasad",
+        "Lidan You",
+        "Xiao Yu Wu",
+        "Yu Sun"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Mechanics-guided embryonic patterning of neuroectoderm tissue from human pluripotent stem cells",
+      "year": 2018,
+      "abstract": "Classic embryological studies have successfully applied genetics and cell biology principles to understand embryonic development. However, it remains unresolved how mechanics, as an integral driver of development, is involved in controlling tissue-scale cell fate patterning. Here we report a micropatterned human pluripotent stem (hPS)-cell-based neuroectoderm developmental model, in which pre-patterned geometrical confinement induces emergent patterning of neuroepithelial and neural plate border cells, mimicking neuroectoderm regionalization during early neurulation in vivo. In this hPS-cell-based neuroectoderm patterning model, two tissue-scale morphogenetic signals—cell shape and cytoskeletal contractile force—instruct neuroepithelial/neural plate border patterning via BMP-SMAD signalling. We further show that ectopic mechanical activation and exogenous BMP signalling modulation are …",
+      "venue": "Nature materials",
+      "citations": 220,
+      "authors": [
+        "Xufeng Xue",
+        "Yubing Sun",
+        "Agnes M Resto-Irizarry",
+        "Ye Yuan",
+        "Koh Meng Aw Yong",
+        "Yi Zheng",
+        "Shinuo Weng",
+        "Yue Shao",
+        "Yimin Chai",
+        "Lorenz Studer",
+        "Jianping Fu"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Human primordial germ cells are specified from lineage-primed progenitors",
+      "year": 2019,
+      "abstract": "In vitro gametogenesis is the process of making germline cells from human pluripotent stem cells. The foundation of this model is the quality of the first progenitors called primordial germ cells (PGCs), which in vivo are specified during the peri-implantation window of human development. Here, we show that human PGC (hPGC) specification begins at day 12 post-fertilization. Using single-cell RNA sequencing of hPGC-like cells (hPGCLCs) differentiated from pluripotent stem cells, we discovered that hPGCLC specification involves resetting pluripotency toward a transitional state with shared characteristics between naive and primed pluripotency, followed by differentiation into lineage-primed TFAP2A+ progenitors. Applying the germline trajectory to TFAP2C mutants reveals that TFAP2C functions in the TFAP2A+ progenitors upstream of PRDM1 to regulate the expression of SOX17. This serves to protect hPGCLCs …",
+      "venue": "Cell reports",
+      "citations": 159,
+      "authors": [
+        "Di Chen",
+        "Na Sun",
+        "Lei Hou",
+        "Rachel Kim",
+        "Jared Faith",
+        "Marianna Aslanyan",
+        "Yu Tao",
+        "Yi Zheng",
+        "Jianping Fu",
+        "Wanlu Liu",
+        "Manolis Kellis",
+        "Amander Clark"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Amnion signals are essential for mesoderm formation in primates",
+      "year": 2021,
+      "abstract": "Embryonic development is largely conserved among mammals. However, certain genes show divergent functions. By generating a transcriptional atlas containing >30,000 cells from post-implantation non-human primate embryos, we uncover that ISL1, a gene with a well-established role in cardiogenesis, controls a gene regulatory network in primate amnion. CRISPR/Cas9-targeting of ISL1 results in non-human primate embryos which do not yield viable offspring, demonstrating that ISL1 is critically required in primate embryogenesis. On a cellular level, mutant ISL1 embryos display a failure in mesoderm formation due to reduced BMP4 signaling from the amnion. Via loss of function and rescue studies in human embryonic stem cells we confirm a similar role of ISL1 in human in vitro derived amnion. This study highlights the importance of the amnion as a signaling center during primate mesoderm formation and …",
+      "venue": "Nature communications",
+      "citations": 86,
+      "authors": [
+        "Ran Yang",
+        "Alexander Goedel",
+        "Yu Kang",
+        "Chenyang Si",
+        "Chu Chu",
+        "Yi Zheng",
+        "Zhenzhen Chen",
+        "Peter J Gruber",
+        "Yao Xiao",
+        "Chikai Zhou",
+        "Nevin Witman",
+        "Elif Eroglu",
+        "Chuen-Yan Leung",
+        "Yongchang Chen",
+        "Jianping Fu",
+        "Weizhi Ji",
+        "Fredrik Lanner",
+        "Yuyu Niu",
+        "Kenneth R Chien"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

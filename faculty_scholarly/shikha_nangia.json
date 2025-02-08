@@ -1,0 +1,99 @@
+{
+  "name": "Shikha Nangia",
+  "affiliation": "Professor of biomedical and chemical engineering, Syracuse University",
+  "interests": [
+    "computational biology multiscale modeling nanocarriers"
+  ],
+  "citedby": 2706,
+  "h_index": 25,
+  "i10_index": 43,
+  "top_primary_author_publications": [
+    {
+      "title": "Coherent switching with decay of mixing: an improved treatment of electronic coherence for non-Born–Oppenheimer trajectories",
+      "year": 2004,
+      "abstract": "The development of semiclassical methods for non-Born–Oppenheimer trajectories ie, classical or quasiclassical molecular dynamics that involves coupled electronic states requires a delicate blending of quantum mechanics for the electronic motions with classical or quasiclassical trajectories for the nuclear motions. 1 The treatment of Born–Oppenheimer breakdown, therefore, requires an artful approach, 2 and several methods have been developed. We distinguish four general classes of methods, which differ in their treatment of electronic decoherence. Decoherence is defined in this paper as the tendency of the time-evolved density matrix to assume a form corresponding to a statistical ensemble of states rather than a coherent combination of state wave vectors. This is sometimes called dephasing or disentanglement.The first general approach to non-Born–Oppenheimer trajectories is the trajectory surface …",
+      "venue": "The Journal of chemical physics",
+      "citations": 386,
+      "authors": [
+        "Chaoyuan Zhu",
+        "Shikha Nangia",
+        "Ahren W Jasper",
+        "Donald G Truhlar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Non-born− oppenheimer molecular dynamics",
+      "year": 2006,
+      "abstract": "Electronically nonadiabatic or non-Born−Oppenheimer (non-BO) chemical processes (photodissociation, charge-transfer, etc.) involve a nonradiative change in the electronic state of the system. Molecular dynamics simulations typically treat nuclei as moving classically on a single adiabatic potential energy surface, and these techniques are not immediately generalizable to non-BO systems due to the inherently quantum mechanical nature of electronic transitions. Here we generalize the concept of a single-surface molecular dynamics trajectory to that of a coupled-surface non-BO trajectory that evolves “semiclassically” under the influence of two or more electronic states and their couplings. Five non-BO trajectory methods are discussed. Next, we summarize the results of a series of systematic studies using a database of accurate quantum mechanical reaction probabilities and internal energy distributions for …",
+      "venue": "",
+      "citations": 250,
+      "authors": [
+        "Ahren W Jasper",
+        "Shikha Nangia",
+        "Chaoyuan Zhu",
+        "Donald G Truhlar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Effects of nanoparticle charge and shape anisotropy on translocation through cell membranes",
+      "year": 2012,
+      "abstract": "Nanotoxicity is becoming a major concern as the use of nanoparticles in imaging, therapeutics, diagnostics, catalysis, sensing, and energy harvesting continues to grow dramatically. The tunable functionalities of the nanoparticles offer unique chemical interactions in the translocation process through cell membranes. The overall translocation rate of the nanoparticle can vary immensely on the basis of the charge of the surface functionalization along with shape and size. Using advanced molecular dynamics simulation techniques, we compute translocation rate constants of functionalized cone-, cube-, rod-, rice-, pyramid-, and sphere-shaped nanoparticles through lipid membranes. The computed results indicate that depending on the nanoparticle shape and surface functionalization charge, the translocation rates can span 60 orders of magnitude. Unlike isotropic nanoparticles, positively charged, faceted, rice …",
+      "venue": "Langmuir",
+      "citations": 248,
+      "authors": [
+        "Shikha Nangia",
+        "Radhakrishna Sureshkumar"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Introductory lecture: Nonadiabatic effects in chemical dynamics",
+      "year": 2004,
+      "abstract": "Recent progress in the theoretical treatment of electronically nonadiabatic processes is discussed. First we discuss the generalized Born–Oppenheimer approximation, which identifies a subset of strongly coupled states, and the relative advantages and disadvantages of adiabatic and diabatic representations of the coupled surfaces and their interactions are considered. Ab initio diabatic representations that do not require tracking geometric phases or calculating singular nonadiabatic nuclear momentum coupling will be presented as one promising approach for characterizing the coupled electronic states of polyatomic photochemical systems. Such representations can be accomplished by methods based on functionals of the adiabatic electronic density matrix and the identification of reference orbitals for use in an overlap criterion. Next, four approaches to calculating or modeling electronically nonadiabatic …",
+      "venue": "Faraday Discussions",
+      "citations": 239,
+      "authors": [
+        "Ahren W Jasper",
+        "Chaoyuan Zhu",
+        "Shikha Nangia",
+        "Donald G Truhlar"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Mechanism of antibacterial activity of choline-based ionic liquids (CAGE)",
+      "year": 2018,
+      "abstract": "The continued emergence of antibiotic-resistant organisms has severely depleted our arsenal of effective antimicrobials. Ionic liquids (ILs) show great promise as antibacterial agents but understanding the mechanism of attack on bacterial cells is key to ensuring that design of IL-based biocides impart maximum efficacy with minimal toxicity, while also avoiding the potential for the target organisms to become resistant. Here we report the antibacterial attributes of a set of choline and geranate (CAGE)-based ILs and identify the mechanism by which they interact with the Gram-negative cell wall of Escherichia coli. CAGE is envisaged as an antimicrobial agent to treat topical infections in skin. Our earlier work has shown that CAGE is highly effective across a breadth of bacterial, fungal, and viral species and is benign to human cells. This combination makes CAGE an ideal antimicrobial for human use. Four CAGE …",
+      "venue": "ACS Biomaterials Science & Engineering",
+      "citations": 138,
+      "authors": [
+        "Kelly N Ibsen",
+        "Huilin Ma",
+        "Amrita Banerjee",
+        "Eden EL Tanner",
+        "Shikha Nangia",
+        "Samir Mitragotri"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Simulating Gram-negative bacterial outer membrane: a coarse grain model",
+      "year": 2015,
+      "abstract": "The cell envelope of Gram-negative bacteria contains a lipopolysaccharide (LPS) rich outer membrane that acts as the first line of defense for bacterial cells in adverse physical and chemical environments. The LPS macromolecule has a negatively charged oligosaccharide domain that acts as an ionic brush, limiting the permeability of charged chemical agents through the membrane. Besides the LPS, the outer membrane has radially extending O-antigen polysaccharide chains and β-barrel membrane proteins that make the bacterial membrane physiologically unique compared to phospholipid cell membranes. Elucidating the interplay of these contributing macromolecular components and their role in the integrity of the bacterial outer membrane remains a challenge. To bridge the gap in our current understanding of the Gram-negative bacterial membrane, we have developed a coarse grained force field for outer …",
+      "venue": "The Journal of Physical Chemistry B",
+      "citations": 95,
+      "authors": [
+        "Huilin Ma",
+        "Flaviyan Jerome Irudayanathan",
+        "Wenjuan Jiang",
+        "Shikha Nangia"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

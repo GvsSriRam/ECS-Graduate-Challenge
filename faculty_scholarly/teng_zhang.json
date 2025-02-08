@@ -1,0 +1,137 @@
+{
+  "name": "Teng Zhang",
+  "affiliation": "Faculty, Syracuse University",
+  "interests": [
+    "Solid mechanics",
+    "Interfaces",
+    "Instabilities",
+    "Morphing structures"
+  ],
+  "citedby": 6787,
+  "h_index": 26,
+  "i10_index": 45,
+  "top_primary_author_publications": [
+    {
+      "title": "Tough bonding of hydrogels to diverse non-porous surfaces",
+      "year": 2016,
+      "abstract": "In many animals, the bonding of tendon and cartilage to bone is extremely tough (for example, interfacial toughness ∼800 J m−2; refs ,), yet such tough interfaces have not been achieved between synthetic hydrogels and non-porous surfaces of engineered solids,,,,,,. Here, we report a strategy to design tough transparent and conductive bonding of synthetic hydrogels containing 90% water to non-porous surfaces of diverse solids, including glass, silicon, ceramics, titanium and aluminium. The design strategy is to anchor the long-chain polymer networks of tough hydrogels covalently to non-porous solid surfaces, which can be achieved by the silanation of such surfaces. Compared with physical interactions, the chemical anchorage results in a higher intrinsic work of adhesion and in significant energy dissipation of bulk hydrogel during detachment, which lead to interfacial toughness values over 1,000 J m−2 …",
+      "venue": "Nature materials",
+      "citations": 1040,
+      "authors": [
+        "Hyunwoo Yuk",
+        "Teng Zhang",
+        "Shaoting Lin",
+        "German Alberto Parada",
+        "Xuanhe Zhao"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Skin-inspired hydrogel–elastomer hybrids with robust interfaces and functional microstructures",
+      "year": 2016,
+      "abstract": "Inspired by mammalian skins, soft hybrids integrating the merits of elastomers and hydrogels have potential applications in diverse areas including stretchable and bio-integrated electronics, microfluidics, tissue engineering, soft robotics and biomedical devices. However, existing hydrogel–elastomer hybrids have limitations such as weak interfacial bonding, low robustness and difficulties in patterning microstructures. Here, we report a simple yet versatile method to assemble hydrogels and elastomers into hybrids with extremely robust interfaces (interfacial toughness over 1,000 Jm−2) and functional microstructures such as microfluidic channels and electrical circuits. The proposed method is generally applicable to various types of tough hydrogels and diverse commonly used elastomers including polydimethylsiloxane Sylgard 184, polyurethane, latex, VHB and Ecoflex. We further demonstrate applications …",
+      "venue": "Nature communications",
+      "citations": 922,
+      "authors": [
+        "Hyunwoo Yuk",
+        "Teng Zhang",
+        "German Alberto Parada",
+        "Xinyue Liu",
+        "Xuanhe Zhao"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Flaw insensitive fracture in nanocrystalline graphene",
+      "year": 2012,
+      "abstract": "We show from a series of molecular dynamics simulations that the tensile fracture behavior of a nanocrystalline graphene (nc-graphene) nanostrip can become insensitive to a pre-existing flaw (e.g., a hole or a notch) below a critical length scale in the sense that there exists no stress concentration near the flaw, the ultimate failure does not necessarily initiate at the flaw, and the normalized strength of the strip is independent of the size of the flaw. This study is a first direct atomistic simulation of flaw insensitive fracture in high-strength nanoscale materials and provides significant insights into the deformation and failure mechanisms of nc-graphene.",
+      "venue": "Nano letters",
+      "citations": 258,
+      "authors": [
+        "Teng Zhang",
+        "Xiaoyan Li",
+        "Sara Kadkhodaei",
+        "Huajian Gao"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A review on mechanics and mechanical properties of 2D materials—Graphene and beyond",
+      "year": 2017,
+      "abstract": "Since the first successful synthesis of graphene just over a decade ago, a variety of two-dimensional (2D) materials (e.g., transition metal-dichalcogenides, hexagonal boron-nitride, etc.) have been discovered. Among the many unique and attractive properties of 2D materials, mechanical properties play important roles in manufacturing, integration and performance for their potential applications. Mechanics is indispensable in the study of mechanical properties, both experimentally and theoretically. The coupling between the mechanical and other physical properties (thermal, electronic, optical) is also of great interest in exploring novel applications, where mechanics has to be combined with condensed matter physics to establish a scalable theoretical framework. Moreover, mechanical interactions between 2D materials and various substrate materials are essential for integrated device applications of 2D materials …",
+      "venue": "",
+      "citations": 1325,
+      "authors": [
+        "Deji Akinwande",
+        "Christopher J Brennan",
+        "J Scott Bunch",
+        "Philip Egberts",
+        "Jonathan R Felts",
+        "Huajian Gao",
+        "Rui Huang",
+        "Joon-Seok Kim",
+        "Teng Li",
+        "Yao Li",
+        "Kenneth M Liechti",
+        "Nanshu Lu",
+        "Harold S Park",
+        "Evan J Reed",
+        "Peng Wang",
+        "Boris I Yakobson",
+        "Teng Zhang",
+        "Yong-Wei Zhang",
+        "Yao Zhou",
+        "Yong Zhu"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Stretchable hydrogel electronics and devices",
+      "year": 2015,
+      "abstract": "Animal bodies are mainly composed of hydrogels — polymer networks infiltrated with water. Most biological hydrogels are mechanically flexible yet robust, and they accommodate transportations (e.g., convection and diffusion) and reactions of various essential substances for life – endowing living bodies with exquisite functions such as sensing and responding, self-healing, self-reinforcing and self-regulating et al. To harness hydrogels’ unique properties and functions, intensive efforts have been devoted to developing various biomimetic structures and devices based on hydrogels. Examples include hydrogel valves for flow control in microfluidics[1], adaptive micro lenses activated by stimuli-responsive hydrogels[2], color-tunable colloidal crystals from hydrogel particles[3, 4], complex micro patterns switched by hydrogel-actuated nanostructures[5], responsive buckled hydrogel surfaces[6], and griping and self …",
+      "venue": "Advanced Materials (Deerfield Beach, Fla.)",
+      "citations": 693,
+      "authors": [
+        "Shaoting Lin",
+        "Hyunwoo Yuk",
+        "Teng Zhang",
+        "German Alberto Parada",
+        "Hyunwoo Koo",
+        "Cunjiang Yu",
+        "Xuanhe Zhao"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Harnessing the hygroscopic and biofluorescent behaviors of genetically tractable microbial cells to design biohybrid wearables",
+      "year": 2017,
+      "abstract": "Cells’ biomechanical responses to external stimuli have been intensively studied but rarely implemented into devices that interact with the human body. We demonstrate that the hygroscopic and biofluorescent behaviors of living cells can be engineered to design biohybrid wearables, which give multifunctional responsiveness to human sweat. By depositing genetically tractable microbes on a humidity-inert material to form a heterogeneous multilayered structure, we obtained biohybrid films that can reversibly change shape and biofluorescence intensity within a few seconds in response to environmental humidity gradients. Experimental characterization and mechanical modeling of the film were performed to guide the design of a wearable running suit and a fluorescent shoe prototype with bio-flaps that dynamically modulates ventilation in synergy with the body’s need for cooling.",
+      "venue": "Science advances",
+      "citations": 221,
+      "authors": [
+        "Wen Wang",
+        "Lining Yao",
+        "Chin-Yi Cheng",
+        "Teng Zhang",
+        "Hiroshi Atsumi",
+        "Luda Wang",
+        "Guanyun Wang",
+        "Oksana Anilionyte",
+        "Helene Steiner",
+        "Jifei Ou",
+        "Kang Zhou",
+        "Chris Wawrousek",
+        "Katherine Petrecca",
+        "Angela M Belcher",
+        "Rohit Karnik",
+        "Xuanhe Zhao",
+        "Daniel IC Wang",
+        "Hiroshi Ishii"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

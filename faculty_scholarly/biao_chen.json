@@ -1,0 +1,92 @@
+{
+  "name": "Biao Chen",
+  "affiliation": "Syracuse University",
+  "interests": [],
+  "citedby": 6570,
+  "h_index": 39,
+  "i10_index": 88,
+  "top_primary_author_publications": [
+    {
+      "title": "Channel aware decision fusion in wireless sensor networks",
+      "year": 2004,
+      "abstract": "Information fusion by utilizing multiple distributed sensors is studied in this work. Extending the classical parallel fusion structure by incorporating the fading channel layer that is omnipresent in wireless sensor networks, we derive the likelihood ratio based fusion rule given fixed local decision devices. This optimum fusion rule, however, requires perfect knowledge of the local decision performance indices as well as the fading channel. To address this issue, two alternative fusion schemes, namely, the maximum ratio combining statistic and a two-stage approach using the Chair-Varshney fusion rule, are proposed that alleviate these requirements and are shown to be the low and high signal-to-noise ratio (SNR) equivalents of the likelihood-based fusion rule. To further robustify the fusion rule and motivated by the maximum ratio combining statistics, we also propose a statistic analogous to an equal gain combiner …",
+      "venue": "IEEE Transactions on Signal Processing",
+      "citations": 482,
+      "authors": [
+        "Biao Chen",
+        "Ruixiang Jiang",
+        "Teerasit Kasetkasem",
+        "Pramod K Varshney"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Fusion of decisions transmitted over Rayleigh fading channels in wireless sensor networks",
+      "year": 2006,
+      "abstract": "In this paper, we revisit the problem of fusing decisions transmitted over fading channels in a wireless sensor network. Previous development relies on instantaneous channel state information (CSI). However, acquiring channel information may be too costly for resource constrained sensor networks. In this paper, we propose a new likelihood ratio (LR)-based fusion rule which requires only the knowledge of channel statistics instead of instantaneous CSI. Based on the assumption that all the sensors have the same detection performance and the same channel signal-to-noise ratio (SNR), we show that when the channel SNR is low, this fusion rule reduces to a statistic in the form of an equal gain combiner (EGC), which explains why EGC is a very good choice with low or medium SNR; at high-channel SNR, it is equivalent to the Chair-Varshney fusion rule. Performance evaluation shows that the new fusion rule …",
+      "venue": "IEEE Transactions on signal processing",
+      "citations": 383,
+      "authors": [
+        "Ruixin Niu",
+        "Biao Chen",
+        "Pramod K Varshney"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Channel-aware distributed detection in wireless sensor networks",
+      "year": 2006,
+      "abstract": "This paper reviews the classical decentralized decision theory in the light of new constraints and requirements. The central theme that transcends various aspects of signal processing design is that an integrated channel-aware approach needs to be taken for optimal detection performance given the available resources.",
+      "venue": "",
+      "citations": 341,
+      "authors": [
+        "Biao Chen",
+        "Lang Tong",
+        "Pramod K Varshney"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Deriving private information from randomized data",
+      "year": 2005,
+      "abstract": "Randomization has emerged as a useful technique for data disguising in privacy-preserving data mining. Its privacy properties have been studied in a number of papers. Kargupta et al. challenged the randomization schemes, and they pointed out that randomization might not be able to preserve privacy. However, it is still unclear what factors cause such a security breach, how they affect the privacy preserving property of the randomization, and what kinds of data have higher risk of disclosing their private contents even though they are randomized.We believe that the key factor is the correlations among attributes. We propose two data reconstruction methods that are based on data correlations. One method uses the Principal Component Analysis (PCA) technique, and the other method uses the Bayes Estimate (BE) technique. We have conducted theoretical and experimental analysis on the relationship between …",
+      "venue": "",
+      "citations": 600,
+      "authors": [
+        "Zhengli Huang",
+        "Wenliang Du",
+        "Biao Chen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "A new outer bound and the noisy-interference sum–rate capacity for Gaussian interference channels",
+      "year": 2009,
+      "abstract": "A new outer bound on the capacity region of Gaussian interference channels is developed. The bound combines and improves existing genie-aided methods and is shown to give the sum-rate capacity for noisy interference as defined in this paper. Specifically, it is shown that if the channel crosstalk coefficient magnitudes lie below thresholds defined by the power constraints then single-user detection at each receiver is sum-rate optimal, i.e., treating the interference as noise incurs no loss in performance. This is the first capacity result for the Gaussian interference channel with weak to moderate interference. Furthermore, for certain mixed (weak and strong) interference scenarios, the new outer bounds give a corner point of the capacity region.",
+      "venue": "IEEE Transactions on Information theory",
+      "citations": 514,
+      "authors": [
+        "Xiaohu Shang",
+        "Gerhard Kramer",
+        "Biao Chen"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Capacity bounds for broadcast channels with confidential messages",
+      "year": 2009,
+      "abstract": "This paper studies capacity bounds for discrete memoryless broadcast channels with confidential messages. Two private messages as well as a common message are transmitted; the common message is to be decoded by both receivers, while each private message is only for its intended receiver. In addition, each private message is to be kept secret from the unintended receiver where secrecy is measured by equivocation. Both inner and outer bounds are proposed to the rate equivocation region for broadcast channels with confidential messages. The proposed inner bound generalizes Csiszar and Korner's rate equivocation region for broadcast channels with a single confidential message, Liu 's achievable rate region for broadcast channels with perfect secrecy, Marton's and Gel'fand-Pinsker's achievable rate region for general broadcast channels. The proposed outer bounds, together with the inner bound …",
+      "venue": "IEEE Transactions on Information Theory",
+      "citations": 94,
+      "authors": [
+        "Jin Xu",
+        "Yi Cao",
+        "Biao Chen"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

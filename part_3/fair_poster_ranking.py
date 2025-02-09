@@ -5,8 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import IsolationForest
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
-import json
-from datetime import datetime
+import os
 
 @dataclass
 class FairnessMetrics:
@@ -38,13 +37,6 @@ class CompleteFairRankingSystem:
     ):
         """
         Initialize complete fair ranking system.
-        
-        Args:
-            scores_df: DataFrame with poster scores (rows=posters, cols=judges)
-            protected_attributes: DataFrame with sensitive/protected attributes
-            min_reviews: Minimum reviews needed for full confidence
-            selection_threshold: Fraction of top posters considered "selected"
-            fairness_threshold: Maximum allowed fairness disparity
         """
         self.scores_df = scores_df
         self.protected_attributes = protected_attributes
@@ -84,14 +76,12 @@ class CompleteFairRankingSystem:
         """
         scoring_bias = {}
         for judge in self.scores_df.columns:
-            scores = self.scores_df[judge].dropna()
-            if len(scores) >=8:
-                # Test for normality
+            scores = self.scores_df[judge][self.scores_df[judge] > 0]
+            if len(scores) >= 8:
                 _, normality_pval = stats.normaltest(scores)
-                # Calculate skewness
                 skew = stats.skew(scores)
                 scoring_bias[judge] = 1 - normality_pval + abs(skew) / 3
-            elif(len(scores) >0):
+            elif(len(scores) > 0):
                 scoring_bias[judge] = 0.5
             else:
                 scoring_bias[judge] = np.nan
@@ -152,12 +142,10 @@ class CompleteFairRankingSystem:
                 qualified = scores[group_members] >= score_threshold
                 selected = rankings[group_members] <= rank_threshold
                 
-                # False positive rate
                 if (~qualified).sum() > 0:
                     fpr = (selected & ~qualified).sum() / (~qualified).sum()
                     false_positives[f"{attribute}_{group}"] = fpr
                     
-                # False negative rate
                 if qualified.sum() > 0:
                     fnr = (~selected & qualified).sum() / qualified.sum()
                     false_negatives[f"{attribute}_{group}"] = fnr
@@ -210,11 +198,9 @@ class CompleteFairRankingSystem:
         max_iterations = 100
         
         while iterations < max_iterations:
-            # Calculate current metrics
             selection_rates = self.calculate_selection_rates(adjusted_rankings)
             fps, fns = self.calculate_error_rates(adjusted_rankings, scores)
             
-            # Check if constraints are satisfied
             dp_violations = []
             error_violations = []
             
@@ -235,15 +221,12 @@ class CompleteFairRankingSystem:
             if not dp_violations and not error_violations:
                 break
                 
-            # Apply corrections
             if dp_violations:
-                # Fix worst demographic parity violation
                 attribute, _ = max(dp_violations, key=lambda x: x[1])
                 rates = selection_rates[attribute]
                 max_group = max(rates.items(), key=lambda x: x[1])[0]
                 min_group = min(rates.items(), key=lambda x: x[1])[0]
                 
-                # Swap one ranking between groups
                 max_group_members = self.protected_attributes[
                     self.protected_attributes[attribute] == max_group
                 ].index
@@ -251,13 +234,11 @@ class CompleteFairRankingSystem:
                     self.protected_attributes[attribute] == min_group
                 ].index
                 
-                # Find candidates for swap
                 threshold_rank = int(len(rankings) * self.selection_threshold)
                 max_selected = adjusted_rankings[max_group_members] <= threshold_rank
                 min_not_selected = adjusted_rankings[min_group_members] > threshold_rank
                 
                 if max_selected.any() and min_not_selected.any():
-                    # Swap rankings
                     max_idx = adjusted_rankings[max_group_members][max_selected].idxmax()
                     min_idx = adjusted_rankings[min_group_members][min_not_selected].idxmin()
                     
@@ -271,217 +252,53 @@ class CompleteFairRankingSystem:
             
         return adjusted_rankings
     
-    def compute_rankings(self) -> Tuple[pd.DataFrame, Dict]:
+    def compute_rankings(self) -> pd.DataFrame:
         """
         Compute fair rankings with comprehensive metrics.
         """
-        # 1. Bias mitigation
+        # Calculate mitigated scores
         mitigated_scores = self.mitigate_bias(self.scores_df)
         
-        # 2. Calculate base rankings
+        # Calculate base rankings
         mean_scores = mitigated_scores.mean(axis=1)
         initial_rankings = mean_scores.rank(ascending=False, method='min')
         
-        # 3. Apply fairness constraints
+        # Apply fairness constraints
         final_rankings = self.apply_fairness_constraints(initial_rankings, mean_scores)
         
-        # 4. Calculate final metrics
-        selection_rates = self.calculate_selection_rates(final_rankings)
-        fps, fns = self.calculate_error_rates(final_rankings, mean_scores)
-        
-        # Calculate comprehensive metrics
-        dp_differences = []
-        dp_ratios = []
-        
-        for rates in selection_rates.values():
-            max_rate = max(rates.values())
-            min_rate = min(rates.values())
-            dp_differences.append(max_rate - min_rate)
-            dp_ratios.append(min_rate / max_rate if max_rate > 0 else 1.0)
-        
-        self.fairness_metrics = FairnessMetrics(
-            demographic_parity_difference=np.mean(dp_differences),
-            demographic_parity_ratio=np.mean(dp_ratios),
-            equalized_odds_difference=selection_rates,
-            false_positive_rate=fps,
-            false_negative_rate=fns,
-            bias_score=np.mean([
-                np.mean(list(self.detect_systematic_bias().values())),
-                self.calculate_coverage_bias(),
-                np.mean(list(self.detect_scoring_bias().values()))
-            ]),
-            selection_rate=selection_rates
-        )
-        
-        # Create results DataFrame
+        # Create simple output DataFrame
         results = pd.DataFrame({
-            'rank': final_rankings,
-            'original_score': self.scores_df.mean(axis=1),
-            'mitigated_score': mitigated_scores.mean(axis=1),
-            'n_reviews': (self.scores_df > 0).sum(axis=1)
+            'Poster-ID': final_rankings.index,
+            'Rank': final_rankings.values.astype(int)
         })
         
-        # Add protected attributes if available
-        if self.protected_attributes is not None:
-            for col in self.protected_attributes.columns:
-                results[f'protected_{col}'] = self.protected_attributes[col]
-        
-        return results.sort_values('rank'), self.fairness_metrics.__dict__
+        return results.sort_values('Rank')
 
-def load_and_rank_posters(
-    scores_filepath: str,
-    protected_filepath: Optional[str] = None,
-    min_reviews: int = 2,
-    selection_threshold: float = 0.25,
-    fairness_threshold: float = 0.1
-) -> Tuple[pd.DataFrame, Dict]:
-    """
-    Load data and compute fair rankings.
-    
-    Args:
-        scores_filepath: Path to Excel file with judge scores
-        protected_filepath: Optional path to protected attributes file
-        min_reviews: Minimum reviews needed
-        selection_threshold: Fraction of top posters considered "selected"
-        fairness_threshold: Maximum allowed fairness disparity
-        
-    Returns:
-        Tuple of (rankings DataFrame, fairness metrics dict)
-    """
-    # Load scores
-    scores_df = pd.read_excel(scores_filepath)
-    if not scores_df.index.name:
+def main():
+    try:
+        # Check for input file
+        if not os.path.exists('scores_file.xlsx'):
+            print("Error: poster_scores.xlsx not found in current directory")
+            return
+            
+        # Load scores
+        print("Loading scores...")
+        scores_df = pd.read_excel('scores_file.xlsx')
         scores_df.set_index(scores_df.columns[0], inplace=True)
-    
-    # Load protected attributes if provided
-    protected_df = None
-    if protected_filepath:
-        protected_df = pd.read_excel(protected_filepath)
-        if not protected_df.index.name:
-            protected_df.set_index(protected_df.columns[0], inplace=True)
-    
-    # Initialize ranking system
-    ranker = CompleteFairRankingSystem(
-        scores_df,
-        protected_df,
-        min_reviews,
-        selection_threshold,
-        fairness_threshold
-    )
-    
-    # Compute rankings
-    rankings, metrics = ranker.compute_rankings()
-    
-    return rankings, metrics
+        
+        # Initialize ranking system
+        ranker = CompleteFairRankingSystem(scores_df)
+        
+        # Compute rankings
+        print("Computing rankings...")
+        rankings = ranker.compute_rankings()
+        
+        # Save results
+        rankings.to_excel('rankings.xlsx', index=False)
+        print("\nRankings saved to rankings.xlsx")
+        
+    except Exception as e:
+        print(f"Error: {str(e)}")
 
 if __name__ == "__main__":
-    import sys
-    import argparse
-    
-    parser = argparse.ArgumentParser(description='Fair Poster Ranking System')
-    parser.add_argument('scores_file', help='Excel file with judge scores')
-    parser.add_argument('--protected', help='Excel file with protected attributes')
-    parser.add_argument('--min-reviews', type=int, default=2,
-                      help='Minimum reviews needed (default: 2)')
-    parser.add_argument('--selection-threshold', type=float, default=0.25,
-                      help='Selection threshold (default: 0.25)')
-    parser.add_argument('--fairness-threshold', type=float, default=0.1,
-                      help='Maximum allowed fairness disparity (default: 0.1)')
-    parser.add_argument('--output-dir', default='.',
-                      help='Directory to save output files (default: current directory)')
-    
-    args = parser.parse_args()
-    
-    try:
-        # Compute rankings
-        print("Computing fair rankings...")
-        rankings, metrics = load_and_rank_posters(
-            args.scores_file,
-            args.protected,
-            args.min_reviews,
-            args.selection_threshold,
-            args.fairness_threshold
-        )
-        
-        # Create timestamp for output files
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        # Save rankings
-        rankings_path = f'{args.output_dir}/fair_rankings_{timestamp}.xlsx'
-        rankings.to_excel(rankings_path)
-        
-        # Save metrics
-        metrics_path = f'{args.output_dir}/fairness_metrics_{timestamp}.json'
-        with open(metrics_path, 'w') as f:
-            json.dump(metrics, f, indent=2)
-            
-        print(f"\nResults successfully saved:")
-        print(f"- Rankings: {rankings_path}")
-        print(f"- Metrics: {metrics_path}")
-        
-        # Print summary statistics
-        print("\nFairness Metrics Summary:")
-        print(f"- Demographic Parity Difference: {metrics['demographic_parity_difference']:.3f}")
-        print(f"- Demographic Parity Ratio: {metrics['demographic_parity_ratio']:.3f}")
-        print(f"- Overall Bias Score: {metrics['bias_score']:.3f}")
-        
-        if metrics['selection_rate']:
-            print("\nSelection Rates by Group:")
-            for attribute, rates in metrics['selection_rate'].items():
-                print(f"\n{attribute}:")
-                for group, rate in rates.items():
-                    print(f"  - {group}: {rate:.3f}")
-        
-        # Print top rankings
-        print("\nTop 5 Ranked Posters:")
-        top5 = rankings.head()
-        print(top5[['rank', 'original_score', 'mitigated_score', 'n_reviews']])
-        
-    except FileNotFoundError as e:
-        print(f"\nError: Could not find input file - {str(e)}")
-        sys.exit(1)
-    except pd.errors.EmptyDataError:
-        print(f"\nError: The input file is empty or has no valid data")
-        sys.exit(1)
-    except Exception as e:
-        print(f"\nError: An unexpected error occurred - {str(e)}")
-        sys.exit(1).add_argument('--fairness-threshold', type=float, default=0.1,
-                      help='Fairness threshold (default: 0.1)')
-    
-    args = parser.parse_args()
-    
-    # Compute rankings
-    rankings, metrics = load_and_rank_posters(
-        args.scores_file,
-        args.protected,
-        args.min_reviews,
-        args.selection_threshold,
-        args.fairness_threshold
-    )
-    
-    # Save results with timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
-    # Save rankings
-    rankings_path = f'fair_rankings_{timestamp}.xlsx'
-    rankings.to_excel(rankings_path)
-    
-    # Save metrics
-    metrics_path = f'fairness_metrics_{timestamp}.json'
-    with open(metrics_path, 'w') as f:
-        json.dump(metrics, f, indent=2)
-        
-    print(f"\nResults saved:")
-    print(f"- Rankings: {rankings_path}")
-    print(f"- Metrics: {metrics_path}")
-    
-    # Print summary
-    print("\nFairness Metrics Summary:")
-    print(f"- Demographic Parity Difference: {metrics['demographic_parity_difference']:.3f}")
-    print(f"- Demographic Parity Ratio: {metrics['demographic_parity_ratio']:.3f}")
-    print(f"- Bias Score: {metrics['bias_score']:.3f}")
-    
-    # Print top 5 rankings
-    print("\nTop 5 Posters:")
-    top5 = rankings.head()
-    print(top5[['rank', 'original_score', 'mitigated_score', 'n_reviews']])
+    main()

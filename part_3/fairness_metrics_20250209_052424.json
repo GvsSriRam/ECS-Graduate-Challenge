@@ -1,9 +1,0 @@
-{
-  "demographic_parity_difference": NaN,
-  "demographic_parity_ratio": NaN,
-  "equalized_odds_difference": {},
-  "false_positive_rate": {},
-  "false_negative_rate": {},
-  "bias_score": NaN,
-  "selection_rate": {}
-}

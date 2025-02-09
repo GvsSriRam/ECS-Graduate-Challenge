@@ -1,0 +1,82 @@
+[
+  {
+    "Poster #": 1,
+    "Title": "Flexible Tactile Sensors for Intelligent Systems",
+    "Abstract": "actile sensors are an important medium for artificial intelligence systems to perceive their external environment. With the rapid development of smart robots, wearable devices, and human-computer interaction interfaces, flexible tactile sensing has attracted extensive attention. An overview of the recent development in high-performance tactile sensors used for smart systems is introduced. The main transduction mechanisms of flexible tactile sensors including piezoresistive, capacitive, piezoelectric, and triboelectric sensors are discussed in detail. The development status of flexible tactile sensors with high resolution, high sensitive, self-powered, and visual capabilities are focused on. Then, for intelligent systems, the wide application prospects of flexible tactile sensors in the fields of wearable electronics, intelligent robots, human-computer interaction interfaces, and implantable electronics are systematically discussed. Finally, the future prospects of flexible tactile sensors for intelligent systems are proposed.",
+    "Advisor FirstName": "Garrett",
+    "Advisor LastName": "Katz",
+    "Program": "Computer/Information Science",
+    "judge-1": 6,
+    "judge-2": 24
+  },
+  {
+    "Poster #": 2,
+    "Title": "Parallel Sensing in Metaverses: Virtual-Real Interactive Smart Systems for \u201c6S\u201d Sensing",
+    "Abstract": "In the construction of Metaverses, sensors that are referred to as the \u201cbridge of information transmission\u201d, play a key role. The functionality and efficiency of today's sensors, which operate in a manner similar to physical sensing, are frequently constrained by their hardware and software. In this research, we proposed the Parallel Sensing framework, which includes background, concept, basic methods and typical application of parallel sensing. In our formulation, sensors are redefined as the integration of real physical sensors and virtual software-defined sensors based on parallel intelligence, in order to boost the performance of the sensors. Each sensor will have a parallel counterpart in the virtual world within the framework of parallel sensing. Digital sensors serve as the brain of sensors and maintain the same properties as physical sensors. Parallel sensing allows physical sensors to operate in discrete time periods to conserve energy, while cloud-based descriptive, predictive, and prescriptive sensors operate continuously to offer compensation data and serve as guardians. To better illustrate parallel sensing concept, we show some example applications of parallel sensing such as parallel vision, parallel point cloud and parallel light fields, both of which are designed by construct virtual sensors to extend small real data to virtual big data and then boost the performance of perception models. Experimental results demonstrate the effective of parallel sensing framework. The interaction between the real and virtual worlds enables sensors to operate actively, allowing them to intelligently adapt to various scenarios and ultimately attain the goal of \u201cCognitive, Parallel, Crypto, Federated, Social and Ecologic\u201d 6S sensing.",
+    "Advisor FirstName": "Pramod ",
+    "Advisor LastName": "Varshney",
+    "Program": "Electrical/Computer Engineering",
+    "judge-1": 17,
+    "judge-2": 22
+  },
+  {
+    "Poster #": 3,
+    "Title": "An overview of security and privacy in smart cities' IoT communications",
+    "Abstract": "Smart cities have brought significant improvements in quality of life and services to citizens and urban environments. They are fully enabled to control the physical objects in real time and provide intelligent information to citizens in terms of transport, healthcare, smart buildings, public safety, smart parking, and traffic system and smart agriculture, and so on. The applications of smart cities are able to collect sensitive information. However, various security and privacy issues may arise at different levels of the architecture. Therefore, it is important to be aware of these security and privacy issues while designing and implementing the applications. This paper highlights main applications of smart cities and addresses the major privacy and security issues in the architecture of the smart cities' applications. It also reviews some of the current solutions regarding the security and privacy of information-centric smart cities' applications and presents future research challenges that still need to be considered for performance improvement.",
+    "Advisor FirstName": "Baris",
+    "Advisor LastName": "Salman",
+    "Program": "Civil Engineering",
+    "judge-1": 1,
+    "judge-2": 38
+  },
+  {
+    "Poster #": 4,
+    "Title": "Limits and security of free-space quantum communications",
+    "Abstract": "The study of free-space quantum communications requires tools from quantum information theory, optics, and turbulence theory. Here we combine these tools to bound the ultimate rates for key and entanglement distribution through a free-space link, where the propagation of quantum systems is generally affected by diffraction, atmospheric extinction, turbulence, pointing errors, and background noise. Besides establishing ultimate limits, we also show that the composable secret-key rate achievable by a suitable (pilot-guided and postselected) coherent-state protocol is sufficiently close to these limits, therefore showing the suitability of free-space channels for high-rate quantum key distribution. Our paper provides analytical tools for assessing the composable finite-size security of coherent-state protocols in general conditions from the standard assumption of a stable communication channel (as is typical in fiber-based connections) to the more challenging scenario of a fading channel (as is typical in free-space links).",
+    "Advisor FirstName": "Biao",
+    "Advisor LastName": "Chen",
+    "Program": "Electrical/Computer Engineering",
+    "judge-1": 1,
+    "judge-2": 6
+  },
+  {
+    "Poster #": 5,
+    "Title": "Smart materials for drug delivery and cancer therapy",
+    "Abstract": "Until now, enormous smart materials have been engineered with endogenous stimulators such as pH, reactive oxygen species, glutathione, hypoxia and enzyme, or exogenous stimulators such as temperature, light, ultrasound, radiation, and magnetic field in drug delivery. As footstone of stimuli-responsive nanocarriers, endogenous/exogenous responsive smart materials possess many properties, such as responding ability to specific triggers, controlled drug release, long blood circulation, increased tumor accumulation, \u201cON-OFF\u201d switch activities, enhanced diagnostic accuracy, and therapeutic efficacy. Smart materials have attracted considerable attention because they provide likelihood strategy for individualized and comprehensive therapy. In this review, significant research achievements of smart materials responsive to different triggers including their synthesis and formulation mechanism, responsive mechanism, applications, multiple functions are summarized and discussed separately. We primarily focus on the studies in the past few years (2017-2020). The current situation and remaining challenges of stimuli-sensitive materials-based nanocarriers for clinical translation are discussed rationally at the end. It is hope that this timely and overall review would provide some helpful information for researchers in this field.",
+    "Advisor FirstName": "Mary Beth",
+    "Advisor LastName": "Monroe",
+    "Program": "Bioengineering",
+    "judge-1": 1,
+    "judge-2": 16
+  },
+  {
+    "Poster #": 6,
+    "Title": "Smart fibers for energy conversion and storage",
+    "Abstract": "Fibers have played a critical role in the long history of human development. They are the basic building blocks of textiles. Synthetic fibers not only make clothes stronger and more durable, but are also customizable and cheaper. The growth of miniature and wearable electronics has promoted the development of smart and multifunctional fibers. Particularly, the incorporation of functional semiconductors and electroactive materials in fibers has opened up the field of fiber electronics. The energy supply system is the key branch for fiber electronics. Herein, after a brief introduction on the history of smart and functional fibers, we review the current state of advanced functional fibers for their application in energy conversion and storage, focusing on nanogenerators, solar cells, supercapacitors and batteries. Subsequently, the importance of the integration of fiber-shaped energy conversion and storage devices via smart structure design is discussed. Finally, the challenges and future direction in this field are highlighted. Through this review, we hope to inspire scientists with different research backgrounds to enter this multi-disciplinary field to promote its prosperity and development and usher in a truly new era of smart fibers.",
+    "Advisor FirstName": "Quinn",
+    "Advisor LastName": "Qiao",
+    "Program": "Mechanical and Aerospace Engineering",
+    "judge-1": 1,
+    "judge-2": 4
+  },
+  {
+    "Poster #": 7,
+    "Title": "Composition engineering of lead-free double perovskites towards efficient warm white light emission for health and well-being",
+    "Abstract": "Lead-free halide double perovskites (DPs) [A2B(I)B(III)X6] (A: monovalent cation, B(I): monovalent cation, B (II): trivalent cation, X: halide anion) has drawn tremendous attention because of their environmental- friendliness and high stability compared to traditional lead-based perovskites ABX3 (A: monovalent cation; B: Pb2+; X: halide anion). The optoelectronic properties of DPs are, however, compromised. This work provides a methodology for improving the photophysical properties of DPs and achieving high-efficiency warm white light emission. First principles density functional theory (DFT) was used in material design and the ligand-free synthesis of halide DP Cs2Ag1\u2212xKxIn0.875Bi0.125Cl6 (x \u2264 0.60) via a facile recrystallization process was demonstrated. The compositional tuning of K+ to Ag+ resulted in an improvement in photo- physical properties. Independent of K+ content, all the samples exhibit strong absorption at a wavelength of \u03bbmax \u223c 375 nm with a direct bandgap which is consistent with our DFT calculation results. Broadband photoluminescence (PL) emission profiles covering the spectra from blue to deep red (405\u2013820 nm at \u03bbmax \u223c 629 nm) were observed. Besides, with an optimized K+ alloying content of 0.20, the optical performance of these halide DPs was impressively regulated, demonstrating improved photoluminescence quantum yield (PLQY) of host Cs2AgInCl6 crystals from \u223c 2.70 % (x = 0) to \u223c15.96 % (x = 0.20), due to increased radiative recombination of self-trapped excitons. the highest report for such structures. It also shows high stability over 180 days. Furthermore, the use of blue-emitting CsPbBr3 and DP Cs2Ag0.80K0.20In0.875Bi0.125Cl6 as color conversion layers in white light-emitting diodes (LEDs) demonstrates that high-quality white light emission with the CIE color coordinate of (0.387, 0.385) and a correlated color temperature (CCT) of 3878 K, color rendering index (CRI) of 85, and luminous efficacy of radiation (LER) of 214 lm/W. Hence, the research work provides insight into realizing environmentally friendly and high-efficiency white light emission with high color quality by using earth-abundant elements and the low-cost synthesis method.",
+    "Advisor FirstName": "Zhao",
+    "Advisor LastName": "Qin",
+    "Program": "Civil Engineering",
+    "judge-1": 1,
+    "judge-2": 32
+  },
+  {
+    "Poster #": 8,
+    "Title": "Semiconductor Manufacturing Process Improvement Using Data-Driven Methodologies",
+    "Abstract": "The paper investigates into the intricacies of semiconductor manufacturing, a highly complex process entailing a wide array of subprocesses and diverse equipment. Semiconductors are miniaturized integrated circuits comprising numerous components. The semiconductor manufacturing process begins with the thin disc-shaped silicon wafers. On each wafer, up to thousands of identical chips can be prepared depending upon the diameter of the wafer to build up the circuits layer by layer in a wafer fab. The size of the semiconductors requires a high number of units to be produced, thus necessitating a large amount of data to control for improving the semiconductor manufacturing process. Therefore, the collection and analysis of the equipment data, process data, and machine history data throughout the manufacturing process are required to diagnose faults, monitor the process, and manage the manufacturing process effectively. This research is focused on improving the semiconductor manufacturing process through a rigorous analysis of collected manufacturing process data, employing statistical process control (SPC), data mining techniques, and data-driven decision models. ",
+    "Advisor FirstName": "Prasanta",
+    "Advisor LastName": "Ghosh",
+    "Program": "Chemical Engineering",
+    "judge-1": 1,
+    "judge-2": 26
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "total_posters": 8,
+    "total_judges": 40,
+    "assignments_per_poster": 2,
+    "max_posters_per_judge": 6,
+    "actual_assignments": 16,
+    "average_similarity_score": 2.1967284272846386
+  }
+]

@@ -184,3 +184,10 @@ For each faculty member, we extract comprehensive research information from mult
   - Publication venues alignment
 - Normalizes scores for fair comparison
 - Employs integer programming for optimal assignment while respecting all constraints
+
+
+### Testing the Embeddings
+
+- Providing a complete pipeline for analyzing author embeddings, including dimensionality reduction, clustering, and performance evaluation
+- The silhouette score analysis helps determine the optimal number of clusters, and the resulting clustering can be used to gain insights into the data’s structure.
+- The visualizations and results offer a clearer understanding of how the author embeddings can be grouped and interpreted based on the clustering algorithm

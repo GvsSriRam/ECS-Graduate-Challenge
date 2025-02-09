@@ -96,8 +96,62 @@ python similarity_computation/similarity_score.py
 - No advisor-advisee assignments
 - Research area compatibility maximized
 
-## Technical Details
+## Technical Implementation Details
 
-- Uses sentence transformers for research area matching
-- Implements cosine similarity for compatibility scoring
-- Employs integer programming for optimal assignment
+### Embedding Models Evaluated
+We evaluate several state-of-the-art models for generating research area embeddings:
+
+1. Native Sentence-Transformer Models:
+- `sentence-transformers/all-MiniLM-L6-v2`: Lightweight, fast, good balance of performance
+- `sentence-transformers/all-mpnet-base-v2`: Higher accuracy, larger model
+- `sentence-transformers/multi-qa-mpnet-base-dot-v1`: Optimized for similarity matching
+- `malteos/SciNCL`: Specifically trained on scientific text
+- `pritamdeka/S-PubMedBert-MS-MARCO`: Specialized for scientific/medical content
+
+2. Custom Transformer Models:
+- `allenai/specter`: Trained on scientific papers citations
+- `allenai/specter-2`: Improved version with better scientific understanding
+- `allenai/scibert_scivocab_uncased`: Scientific text specialized BERT
+- `gsarti/scibert-nli`: Scientific BERT with natural language inference
+
+### Faculty Profile Extraction
+For each faculty member, we extract comprehensive research information from multiple sources. Sample extracted data structure:
+
+```json
+{
+  "name": "Faculty Name",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "research area 1",
+    "research area 2",
+    ...
+  ],
+  "citedby": <citation_count>,
+  "h_index": <h_index>,
+  "i10_index": <i10_index>,
+  "top_primary_author_publications": [
+    {
+      "title": "Publication Title",
+      "year": "Publication Year",
+      "abstract": "Publication Abstract",
+      "venue": "Publication Venue",
+      "citations": <citation_count>,
+      "authors": ["Author 1", "Author 2", ...],
+      "url": "Publication URL"
+    },
+    ...
+  ],
+  "top_secondary_author_publications": [
+    // Similar structure as primary publications
+  ]
+}
+```
+
+### Similarity Computation
+- Implements cosine similarity for research area matching
+- Uses weighted combination of:
+  - Research interests similarity
+  - Publication abstracts similarity
+  - Publication venues alignment
+- Normalizes scores for fair comparison
+- Employs integer programming for optimal assignment while respecting all constraints

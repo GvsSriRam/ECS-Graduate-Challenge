@@ -1,4 +1,3 @@
-# System to assign judges to research posters based on research area matching and constraints
 import numpy as np
 import pandas as pd
 from pulp import *
@@ -35,9 +34,16 @@ class PosterAssignmentSystem:
         self.similarity_matrix = full_similarity_matrix.iloc[:num_posters, :num_judges]
         print(f"Using similarity matrix of shape: {self.similarity_matrix.shape}")
         
-        # Print column information
+        # Print debugging information
         print("\nPoster DataFrame columns:", self.posters_df.columns.tolist())
         print("Judge DataFrame columns:", self.judges_df.columns.tolist())
+        
+        # Print judge availability information
+        print("\nJudge Hours:")
+        for j in range(len(self.judges_df)):
+            hour = self.judges_df.iloc[j].get('Hour available', 
+                                            self.judges_df.iloc[j].get('Hour'))
+            print(f"Judge {j+1}: {hour} (type: {type(hour)})")
     
     def create_optimization_model(self):
         """Create and solve the optimization model"""
@@ -74,31 +80,36 @@ class PosterAssignmentSystem:
             
         # Constraints 3 & 4: Time slot constraints
         for j in range(num_judges):
-            judge_hour = self.judges_df.iloc[j].get('Hour available', 
-                                                  self.judges_df.iloc[j].get('Hour'))
+            judge_hour = str(self.judges_df.iloc[j].get('Hour available', 
+                                                   self.judges_df.iloc[j].get('Hour'))).strip().lower()
             
             if pd.notna(judge_hour):
                 for i in range(num_posters):
                     poster_number = i + 1
                     is_odd = poster_number % 2 == 1
                     
-                    # Hour 1: Only odd-numbered posters
-                    if judge_hour == 1:
-                        if not is_odd:  # if poster is even
-                            prob += x[i,j] == 0
-                            print(f"Judge {j+1} (Hour 1 only) cannot judge poster {poster_number} (even - Hour 2)")
-                    
-                    # Hour 2: Only even-numbered posters
-                    elif judge_hour == 2:
-                        if is_odd:  # if poster is odd
-                            prob += x[i,j] == 0
-                            print(f"Judge {j+1} (Hour 2 only) cannot judge poster {poster_number} (odd - Hour 1)")
-                    
-                    # Both hours available: No additional constraints needed
-                    elif judge_hour == "both":
+                    # Skip constraint if judge is available for both hours
+                    if judge_hour == "both":
                         continue
-                    else:
-                        print(f"Warning: Unknown hour value {judge_hour} for judge {j+1}")
+                        
+                    try:
+                        # Convert hour to integer for numeric values
+                        hour_num = int(judge_hour)
+                        
+                        # Hour 1: Only odd-numbered posters
+                        if hour_num == 1:
+                            if not is_odd:  # if poster is even
+                                prob += x[i,j] == 0
+                                print(f"Judge {j+1} (Hour 1 only) cannot judge poster {poster_number} (even - Hour 2)")
+                        
+                        # Hour 2: Only even-numbered posters
+                        elif hour_num == 2:
+                            if is_odd:  # if poster is odd
+                                prob += x[i,j] == 0
+                                print(f"Judge {j+1} (Hour 2 only) cannot judge poster {poster_number} (odd - Hour 1)")
+                                
+                    except ValueError:
+                        print(f"Warning: Invalid hour value '{judge_hour}' for judge {j+1}")
         
         # Constraint 5: Advisor-advisee constraint
         for i in range(num_posters):
@@ -322,7 +333,7 @@ def main():
         
         # Save assignments in all formats
         system.save_assignments(prob, x, 'assignments')
-            
+        
     except Exception as e:
         print(f"\nError occurred: {str(e)}")
         import traceback

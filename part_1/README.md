@@ -29,7 +29,7 @@ This module implements the automated judge assignment system for the ECS Graduat
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r part_1/requirements.txt
 ```
 
 ## Usage
@@ -38,8 +38,8 @@ pip install -r requirements.txt
 
 - Extract the info from ECS faculty directory
 ```bash
-python data_extraction/extract-prof-and-profile-data.py
-python data_extraction/extract-prof.py
+python part_1/data_extraction/extract-prof-and-profile-data.py
+python part_1/data_extraction/extract-prof.py
 ```
 - Scrape info from web resources
 ```
@@ -47,27 +47,27 @@ Run jupyter notebooks - faculty_data_extraction.ipynb
 ```
 - Combine the information from all sources
 ```bash
-python data_extraction/faculty_data_combination.py
+python part_1/data_extraction/faculty_data_combination.py
 ```
 
 2. Generate embeddings:
 - Judge embeddings
 ```bash
-python embeddings/embed_vectors_scholarly.py
+python part_1/embeddings/embed_vectors_scholarly.py
 ```
 - Poster embeddings
 ```bash
-python embeddings/poster_abstracts_embed_vector.py
+python part_1/embeddings/poster_abstracts_embed_vector.py
 ```
 
 3. Compute similarity scores:
 ```bash
-python similarity_computation/similarity_score.py
+python part_1/similarity_computation/similarity_score.py
 ```
 4. Run Poster Assignment:
 ```bash
 # After generating embeddings and similarity scores
-python poster_assignment/poster_assignment.py
+python part_1/poster_assignment/poster_assignment.py
 ```
 
 ## Input Requirements

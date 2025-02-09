@@ -6,6 +6,8 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer
 import re
 
+MODEL_NAME = 'all_MiniLM'
+
 def normalize_name_for_json(name: str) -> str:
     """
     Converts a professor's name to a format that matches the JSON filename in the dataset.
@@ -28,9 +30,10 @@ def build_text_from_publications(interests, publications):
 
 def main():
     model = SentenceTransformer("all-MiniLM-L6-v2")
-    csv_file = "ecs_faculty_staff.csv"  # Ensure this matches the actual CSV filename
+    csv_file = "part-1/data_extraction/profiles_csv/ecs_faculty_staff.csv"  # Ensure this matches the actual CSV filename
     primary_embeddings = []
     secondary_embeddings = []
+    prof_names = []
 
     # Set the directory where JSON files are stored
     base_directory = os.path.join(os.getcwd(), 'faculty_scholarly')
@@ -39,6 +42,7 @@ def main():
         reader = csv.DictReader(file)
         for row in reader:
             prof_name = row["name"].strip()
+            prof_names.append(prof_name)
             json_filename = normalize_name_for_json(prof_name)
             json_path = os.path.join(base_directory, json_filename)  
 
@@ -66,13 +70,31 @@ def main():
 
     primary_embeddings = np.array(primary_embeddings)
     secondary_embeddings = np.array(secondary_embeddings)
-    np.save("primary_author_embeddings.npy", primary_embeddings)
-    np.save("secondary_author_embeddings.npy", secondary_embeddings)
+
+    output_file_path_npy_primary = f'part-1/embeddings/embeddings_npy/{MODEL_NAME}/primary_author_embeddings.npy'
+    output_file_path_npy_secondary = f'part-1/embeddings/embeddings_npy/{MODEL_NAME}/secondary_author_embeddings.npy'
+    # Create the output directory if it does not exist
+    output_dir = os.path.dirname(output_file_path_npy_primary)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    np.save(output_file_path_npy_primary, primary_embeddings)
+    np.save(output_file_path_npy_secondary, secondary_embeddings)
+
+    output_file_path_csv_primary = f'part-1/embeddings/embeddings_csv/{MODEL_NAME}/primary_author_embeddings.csv'
+    output_file_path_csv_secondary = f'part-1/embeddings/embeddings_csv/{MODEL_NAME}/secondary_author_embeddings.csv'
+    # Create the output directory if it does not exist
+    output_dir = os.path.dirname(output_file_path_csv_primary)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     # Save embeddings to CSV for easier access or use in other applications
-    pd.DataFrame(primary_embeddings).to_csv("primary_author_embeddings.csv", index=False)
-    pd.DataFrame(secondary_embeddings).to_csv("secondary_author_embeddings.csv", index=False)
+    pd.DataFrame(primary_embeddings).to_csv(output_file_path_csv_primary, index=False)
+    pd.DataFrame(secondary_embeddings).to_csv(output_file_path_csv_secondary, index=False)
     print("Embeddings saved as .npy and .csv files.")
+
+    output_file_path_names = 'part-1/embeddings/judge_names.npy'
+    np.save(output_file_path_names, np.array(prof_names))
 
 if __name__ == "__main__":
     main()

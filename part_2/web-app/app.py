@@ -31,17 +31,60 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+# def init_db():
+#     """Initialize the database with judges, scores, and score_changes tables."""
+#     with app.app_context():
+#         db = get_db()
+#         db.execute('''
+#             CREATE TABLE IF NOT EXISTS judges (
+#                 email TEXT PRIMARY KEY,
+#                 name TEXT NOT NULL,
+#                 pin TEXT,
+#                 assigned_posters TEXT,  -- Stored as JSON list of poster IDs
+#                 assigned_poster_titles TEXT  -- Stored as JSON object mapping poster IDs to poster titles
+#             )
+#         ''')
+#         db.execute('''
+#             CREATE TABLE IF NOT EXISTS scores (
+#                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+#                 judge_email TEXT,
+#                 poster_id TEXT,
+#                 score INTEGER,
+#                 UNIQUE(judge_email, poster_id)
+#             )
+#         ''')
+#         db.execute('''
+#             CREATE TABLE IF NOT EXISTS score_changes (
+#                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+#                 judge_email TEXT,
+#                 poster_id TEXT,
+#                 old_score INTEGER,
+#                 new_score INTEGER,
+#                 change_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+#             )
+#         ''')
+#         db.commit()
+
 def init_db():
-    """Initialize the database with judges, scores, and score_changes tables."""
+    """Initialize the database with judges, judge_info, scores, and score_changes tables."""
     with app.app_context():
         db = get_db()
+        # Judges table stores poster assignments
         db.execute('''
             CREATE TABLE IF NOT EXISTS judges (
                 email TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
                 pin TEXT,
-                assigned_posters TEXT,  -- Stored as JSON list of poster IDs
-                assigned_poster_titles TEXT  -- Stored as JSON object mapping poster IDs to poster titles
+                assigned_posters TEXT,  -- Stored as JSON list of poster IDs; can be empty "[]"
+                assigned_poster_titles TEXT  -- Stored as JSON mapping poster IDs to titles
+            )
+        ''')
+        # judge_info table: judge_id is provided (from the import file)
+        db.execute('''
+            CREATE TABLE IF NOT EXISTS judge_info (
+                judge_id INTEGER PRIMARY KEY,
+                name TEXT NOT NULL,
+                email TEXT UNIQUE NOT NULL
             )
         ''')
         db.execute('''
@@ -64,6 +107,7 @@ def init_db():
             )
         ''')
         db.commit()
+
 
 
 # Initialize DB on first run
@@ -126,8 +170,8 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     """
-    Dark-themed login screen similar in style to the dashboard.
-    Instead of a phone number, we keep the email-based login logic.
+    Dark-themed login screen for judges.
+    A judge is allowed to login only if they have at least one poster assignment.
     """
     if request.method == 'POST':
         email = request.form.get('email')
@@ -135,7 +179,12 @@ def login():
         cur = db.execute("SELECT * FROM judges WHERE email = ?", (email,))
         judge = cur.fetchone()
         if judge:
-            # Generate a 6-digit OTP and store it
+            # Check if the judge has any assigned posters
+            assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
+            if not assigned_posters:
+                flash("You do not have any poster assignments and cannot log in.")
+                return redirect(url_for('login'))
+            # Otherwise, generate a 6-digit OTP and send it
             otp = str(random.randint(100000, 999999))
             otp_store[email] = otp
             send_otp(email, otp)
@@ -158,85 +207,26 @@ def login():
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"/>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'IBM Plex Sans', sans-serif;
-    }
-    body {
-      background-color: #121212;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .card {
-      background-color: #1f1f1f;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 400px;
-      padding: 2rem;
-    }
-    .title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .input-group {
-      margin-bottom: 1rem;
-    }
-    label {
-      display: block;
-      font-size: 0.9rem;
-      margin-bottom: 0.4rem;
-      color: #ccc;
-    }
-    input[type="email"] {
-      width: 100%;
-      padding: 0.8rem;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      background-color: #2a2a2a;
-      color: #fff;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      background-color: #4285F4;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      text-align: center;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 10px;
-      margin-top: 1rem;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #357ae8;
-    }
-    .info {
-      font-size: 0.85rem;
-      color: #aaa;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
+    /* Your existing CSS styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'IBM Plex Sans', sans-serif; }
+    body { background-color: #121212; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
+    .card { background-color: #1f1f1f; border-radius: 20px; width: 90%; max-width: 400px; padding: 2rem; }
+    .title { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; text-align: center; }
+    .input-group { margin-bottom: 1rem; }
+    label { display: block; font-size: 0.9rem; margin-bottom: 0.4rem; color: #ccc; }
+    input[type="email"] { width: 100%; padding: 0.8rem; border-radius: 10px; border: none; outline: none; font-size: 1rem; background-color: #2a2a2a; color: #fff; }
+    .btn { display: block; width: 100%; background-color: #4285F4; color: #fff; font-size: 1rem; font-weight: 600; text-align: center; padding: 0.8rem; border: none; border-radius: 10px; margin-top: 1rem; cursor: pointer; }
+    .btn:hover { background-color: #357ae8; }
+    .info { font-size: 0.85rem; color: #aaa; margin-top: 0.5rem; text-align: center; }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="title">Hi! Welcome</div>
+    <div class="title">ECS Research Day Portal</div>
     <form method="post">
       <div class="input-group">
         <label for="email">Enter your email</label>
-        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+        <input type="email" id="email" name="email" placeholder="your.email@syr.edu" required />
       </div>
       <button type="submit" class="btn">Send OTP</button>
       <div class="info">Build for Syracuse University 🍊</div>
@@ -245,6 +235,7 @@ def login():
 </body>
 </html>
     ''')
+
 
 @app.route('/verify', methods=['GET', 'POST'])
 def verify():
@@ -897,6 +888,221 @@ def remove_judges():
     ''')
 
 
+# def is_valid_poster(cell_value):
+#     """Return True if the cell value represents a valid poster number."""
+#     try:
+#         return cell_value is not None and (isinstance(cell_value, (int, float)) or str(cell_value).strip() != "")
+#     except Exception:
+#         return False
+
+# @app.route('/admin/import_judges', methods=['GET', 'POST'])
+# def import_judges():
+#     """
+#     Admin-only endpoint (accessible only if ?key=adminsecret is provided)
+#     that accepts an XLSX file upload containing judge and poster assignments.
+    
+#     The XLSX file is expected to have a header row with columns like:
+#       - Email, Judge FirstName, Judge LastName, poster-1, poster-1-title, ... poster-6, poster-6-title
+      
+#     Judges with no valid poster assignments are skipped.
+#     """
+#     if request.args.get('key') != 'adminsecret':
+#         return "Unauthorized", 401
+
+#     if request.method == 'GET':
+#         return render_template_string('''
+#         <!DOCTYPE html>
+#         <html>
+#         <head>
+#             <meta charset="UTF-8">
+#             <title>Import Judges</title>
+#             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#             <link rel="stylesheet"
+#                   href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+#             <style>
+#                 body {
+#                   background-color: #121212;
+#                   color: #fff;
+#                   font-family: 'IBM Plex Sans', sans-serif;
+#                   margin: 0;
+#                   padding: 2rem;
+#                 }
+#                 .container {
+#                   max-width: 500px;
+#                   margin: auto;
+#                   background: #1f1f1f;
+#                   padding: 2rem;
+#                   border-radius: 12px;
+#                   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+#                   text-align: center;
+#                 }
+#                 input[type="file"] {
+#                   display: block;
+#                   margin: 1rem auto;
+#                   background: #2a2a2a;
+#                   color: #fff;
+#                   border: none;
+#                   padding: 0.5rem;
+#                   border-radius: 8px;
+#                 }
+#                 button {
+#                   padding: 0.5rem 1rem;
+#                   background: #4285F4;
+#                   color: #fff;
+#                   border: none;
+#                   border-radius: 8px;
+#                   cursor: pointer;
+#                   font-size: 1rem;
+#                 }
+#                 button:hover {
+#                   background: #357ae8;
+#                 }
+#             </style>
+#         </head>
+#         <body>
+#             <div class="container">
+#                 <h2>Import Judges from XLSX</h2>
+#                 <form method="POST" enctype="multipart/form-data">
+#                     <input type="file" name="file" accept=".xlsx" required>
+#                     <button type="submit">Upload</button>
+#                 </form>
+#             </div>
+#         </body>
+#         </html>
+#         ''')
+    
+#     # POST: Process the uploaded file
+#     uploaded_file = request.files.get('file')
+#     if not uploaded_file:
+#         return "No file uploaded", 400
+
+#     try:
+#         wb = openpyxl.load_workbook(uploaded_file)
+#         sheet = wb.active
+
+#         # Read header row (assume first row is header)
+#         headers = [cell.value for cell in next(sheet.iter_rows(min_row=1, max_row=1))]
+#         poster_cols = {}
+#         poster_title_cols = {}
+#         for i in range(1, 7):
+#             try:
+#                 poster_cols[i] = headers.index(f"poster-{i}")
+#             except ValueError:
+#                 poster_cols[i] = None
+#             try:
+#                 poster_title_cols[i] = headers.index(f"poster-{i}-title")
+#             except ValueError:
+#                 poster_title_cols[i] = None
+
+#         try:
+#             email_index = headers.index("Email")
+#             fname_index = headers.index("Judge FirstName")
+#             lname_index = headers.index("Judge LastName")
+#         except ValueError as e:
+#             return f"Missing required column in header: {str(e)}", 400
+
+#         imported_count = 0
+#         db = sqlite3.connect(DATABASE)
+#         db.row_factory = sqlite3.Row
+#         for row in sheet.iter_rows(min_row=2):
+#             email = row[email_index].value
+#             if not email:
+#                 continue
+#             first_name = row[fname_index].value or ""
+#             last_name = row[lname_index].value or ""
+#             full_name = f"{first_name.strip()} {last_name.strip()}".strip()
+
+#             assigned_posters = []
+#             poster_titles = {}
+#             for i in range(1, 7):
+#                 p_col = poster_cols.get(i)
+#                 if p_col is not None:
+#                     cell_value = row[p_col].value
+#                     if is_valid_poster(cell_value):
+#                         try:
+#                             poster_num = int(float(cell_value))
+#                         except Exception:
+#                             continue
+#                         poster_id = f"poster{poster_num}"
+#                         if poster_id not in assigned_posters:
+#                             assigned_posters.append(poster_id)
+#                             t_col = poster_title_cols.get(i)
+#                             title = row[t_col].value if t_col is not None else None
+#                             if title:
+#                                 poster_titles[poster_id] = title.strip()
+
+#             if not assigned_posters:
+#                 continue
+
+#             db.execute("""
+#                 INSERT INTO judges (email, name, assigned_posters, assigned_poster_titles)
+#                 VALUES (?, ?, ?, ?)
+#                 ON CONFLICT(email) DO UPDATE SET
+#                     name = excluded.name,
+#                     assigned_posters = excluded.assigned_posters,
+#                     assigned_poster_titles = excluded.assigned_poster_titles
+#             """, (email.strip(), full_name, json.dumps(assigned_posters), json.dumps(poster_titles)))
+#             imported_count += 1
+
+#         db.commit()
+#         db.close()
+
+#         # Return a dark-themed success page instead of plain text.
+#         return render_template_string('''
+#         <!DOCTYPE html>
+#         <html lang="en">
+#         <head>
+#            <meta charset="UTF-8">
+#            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#            <title>Import Successful</title>
+#            <link rel="stylesheet"
+#                  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+#            <style>
+#               body {
+#                  background-color: #121212;
+#                  color: #fff;
+#                  font-family: 'IBM Plex Sans', sans-serif;
+#                  padding: 2rem;
+#                  text-align: center;
+#               }
+#               .container {
+#                  max-width: 500px;
+#                  margin: auto;
+#                  background: #1f1f1f;
+#                  padding: 2rem;
+#                  border-radius: 12px;
+#                  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+#               }
+#               a.btn {
+#                  display: inline-block;
+#                  margin-top: 1rem;
+#                  padding: 0.5rem 1rem;
+#                  background: #4285F4;
+#                  color: #fff;
+#                  border-radius: 8px;
+#                  text-decoration: none;
+#                  font-size: 1rem;
+#               }
+#               a.btn:hover {
+#                  background: #357ae8;
+#               }
+#            </style>
+#         </head>
+#         <body>
+#            <div class="container">
+#               <h2>Import Successful</h2>
+#               <p>{{ imported_count }} judges imported successfully.</p>
+#               <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Back to Admin Dashboard</a>
+#            </div>
+#         </body>
+#         </html>
+#         ''', imported_count=imported_count), 200
+
+#     except Exception as e:
+#         return f"Error processing file: {str(e)}", 500
+
+import openpyxl  # pip install openpyxl
+
 def is_valid_poster(cell_value):
     """Return True if the cell value represents a valid poster number."""
     try:
@@ -910,10 +1116,12 @@ def import_judges():
     Admin-only endpoint (accessible only if ?key=adminsecret is provided)
     that accepts an XLSX file upload containing judge and poster assignments.
     
-    The XLSX file is expected to have a header row with columns like:
-      - Email, Judge FirstName, Judge LastName, poster-1, poster-1-title, ... poster-6, poster-6-title
+    Expected header columns include:
+      - Judge, Judge FirstName, Judge LastName, Email,
+        poster-1, poster-1-title, poster-2, poster-2-title, ... poster-6, poster-6-title
       
-    Judges with no valid poster assignments are skipped.
+    All judges are saved in the judges table.  
+    Judges with no poster assignment will have an empty list in assigned_posters.
     """
     if request.args.get('key') != 'adminsecret':
         return "Unauthorized", 401
@@ -980,7 +1188,7 @@ def import_judges():
         </html>
         ''')
     
-    # POST: Process the uploaded file
+    # POST: Process the file
     uploaded_file = request.files.get('file')
     if not uploaded_file:
         return "No file uploaded", 400
@@ -989,8 +1197,19 @@ def import_judges():
         wb = openpyxl.load_workbook(uploaded_file)
         sheet = wb.active
 
-        # Read header row (assume first row is header)
+        # Read header row
         headers = [cell.value for cell in next(sheet.iter_rows(min_row=1, max_row=1))]
+        
+        # Required columns: Judge, Judge FirstName, Judge LastName, Email
+        try:
+            judge_id_index = headers.index("Judge")
+            fname_index = headers.index("Judge FirstName")
+            lname_index = headers.index("Judge LastName")
+            email_index = headers.index("Email")
+        except ValueError as e:
+            return f"Missing required column in header: {str(e)}", 400
+
+        # Determine indexes for poster and poster-title columns (poster-1 .. poster-6)
         poster_cols = {}
         poster_title_cols = {}
         for i in range(1, 7):
@@ -1003,23 +1222,19 @@ def import_judges():
             except ValueError:
                 poster_title_cols[i] = None
 
-        try:
-            email_index = headers.index("Email")
-            fname_index = headers.index("Judge FirstName")
-            lname_index = headers.index("Judge LastName")
-        except ValueError as e:
-            return f"Missing required column in header: {str(e)}", 400
-
         imported_count = 0
         db = sqlite3.connect(DATABASE)
         db.row_factory = sqlite3.Row
         for row in sheet.iter_rows(min_row=2):
-            email = row[email_index].value
-            if not email:
+            judge_id = row[judge_id_index].value
+            if judge_id is None:
                 continue
             first_name = row[fname_index].value or ""
             last_name = row[lname_index].value or ""
             full_name = f"{first_name.strip()} {last_name.strip()}".strip()
+            email = row[email_index].value
+            if not email:
+                continue
 
             assigned_posters = []
             poster_titles = {}
@@ -1040,9 +1255,7 @@ def import_judges():
                             if title:
                                 poster_titles[poster_id] = title.strip()
 
-            if not assigned_posters:
-                continue
-
+            # Save judge in the judges table even if no posters are assigned.
             db.execute("""
                 INSERT INTO judges (email, name, assigned_posters, assigned_poster_titles)
                 VALUES (?, ?, ?, ?)
@@ -1051,12 +1264,16 @@ def import_judges():
                     assigned_posters = excluded.assigned_posters,
                     assigned_poster_titles = excluded.assigned_poster_titles
             """, (email.strip(), full_name, json.dumps(assigned_posters), json.dumps(poster_titles)))
+            # Save judge info with provided judge_id
+            db.execute("""
+                INSERT OR REPLACE INTO judge_info (judge_id, name, email)
+                VALUES (?, ?, ?)
+            """, (judge_id, full_name, email.strip()))
             imported_count += 1
 
         db.commit()
         db.close()
 
-        # Return a dark-themed success page instead of plain text.
         return render_template_string('''
         <!DOCTYPE html>
         <html lang="en">
@@ -1109,6 +1326,106 @@ def import_judges():
 
     except Exception as e:
         return f"Error processing file: {str(e)}", 500
+
+@app.route('/admin/export_score_matrix')
+def export_score_matrix():
+    """
+    Admin-only endpoint to export a score matrix in XLSX format.
+    The matrix rows represent posters (e.g. "Poster-1", "Poster-2", …)
+    and the columns represent judges (e.g. "Judge-1", "Judge-2", …).
+    Each cell shows the score given by that judge to that poster (or 0 if not scored).
+    Access is protected by a simple query parameter key (e.g., ?key=adminsecret).
+    """
+    # Check admin access via the key
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    db = get_db()
+
+    # 1. Get the list of judges (using the judge_info table) sorted by judge_id.
+    judges = db.execute("SELECT judge_id, email FROM judge_info ORDER BY judge_id").fetchall()
+    judge_list = [{'id': judge['judge_id'], 'email': judge['email']} for judge in judges]
+
+    # 2. Build a set of all poster IDs.
+    #    We include poster ids from the scores table and from the judges' assigned_posters.
+    poster_set = set()
+
+    # From the scores table:
+    score_rows = db.execute("SELECT DISTINCT poster_id FROM scores").fetchall()
+    for row in score_rows:
+        if row['poster_id']:
+            poster_set.add(row['poster_id'])
+
+    # From each judge's assigned_posters (stored as JSON):
+    judges_all = db.execute("SELECT assigned_posters FROM judges").fetchall()
+    for row in judges_all:
+        assigned = row['assigned_posters']
+        if assigned:
+            try:
+                posters = json.loads(assigned)
+                for p in posters:
+                    poster_set.add(p)
+            except Exception:
+                pass
+
+    # Sort the poster list by the numeric portion.
+    def poster_sort_key(p):
+        try:
+            return int(p.replace("poster", ""))
+        except Exception:
+            return 0
+    poster_list = sorted(list(poster_set), key=poster_sort_key)
+
+    # 3. Build a dictionary of scores keyed by (poster_id, judge_email).
+    #    If a judge has not scored a poster, the default will be 0.
+    score_rows = db.execute("SELECT judge_email, poster_id, score FROM scores").fetchall()
+    score_dict = {}
+    for row in score_rows:
+        score_dict[(row['poster_id'], row['judge_email'])] = row['score']
+
+    # 4. Create a new XLSX workbook and worksheet using openpyxl.
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Score Matrix"
+
+    # Write header row.
+    # The first cell in the header row is left blank; then one column per judge.
+    ws.cell(row=1, column=1, value="")  # Top-left cell is blank.
+    col_index = 2
+    for judge in judge_list:
+        header = f"Judge-{judge['id']}"
+        ws.cell(row=1, column=col_index, value=header)
+        col_index += 1
+
+    # 5. Write each poster row.
+    # The first column contains the poster label (e.g., "Poster-1"),
+    # and the subsequent columns contain the score for each judge (or 0 if no score exists).
+    row_index = 2
+    for poster in poster_list:
+        try:
+            poster_num = int(poster.replace("poster", ""))
+        except Exception:
+            poster_num = poster
+        ws.cell(row=row_index, column=1, value=f"Poster-{poster_num}")
+        col_index = 2
+        for judge in judge_list:
+            # Get the score if it exists; otherwise use 0.
+            score_value = score_dict.get((poster, judge['email']), 0)
+            ws.cell(row=row_index, column=col_index, value=score_value)
+            col_index += 1
+        row_index += 1
+
+    # 6. Save the workbook to a BytesIO stream.
+    output = BytesIO()
+    wb.save(output)
+    output.seek(0)
+
+    # 7. Return the XLSX file as an attachment.
+    return send_file(output,
+                     mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                     as_attachment=True,
+                     download_name="score_matrix.xlsx")
+
 
 @app.route('/qr/<poster_id>')
 def qr_redirect(poster_id):
@@ -1443,6 +1760,130 @@ def admin_generate_all_qr():
     ''', unique_posters=unique_posters)
 
 
+# @app.route('/admin/dashboard')
+# def admin_dashboard():
+#     if request.args.get('key') != 'adminsecret':
+#         return "Unauthorized", 401
+
+#     return render_template_string('''
+#     <!DOCTYPE html>
+#     <html lang="en">
+#     <head>
+#       <meta charset="UTF-8">
+#       <title>Admin Dashboard</title>
+#       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#       <link rel="stylesheet"
+#             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+#       <style>
+#         body {
+#           background-color: #121212;
+#           color: #fff;
+#           font-family: 'IBM Plex Sans', sans-serif;
+#           margin: 0;
+#           padding: 0;
+#         }
+#         .header {
+#           background-color: #1f1f1f;
+#           padding: 2rem 1.5rem;
+#           text-align: center;
+#           border-bottom-left-radius: 24px;
+#           border-bottom-right-radius: 24px;
+#         }
+#         .header h1 {
+#           font-size: 2rem;
+#           margin-bottom: 0.5rem;
+#         }
+#         .container {
+#           padding: 2rem;
+#           max-width: 800px;
+#           margin: 2rem auto;
+#         }
+#         .dashboard-menu {
+#           display: flex;
+#           flex-wrap: wrap;
+#           gap: 1rem;
+#           justify-content: center;
+#         }
+#         .menu-item {
+#           background-color: #1f1f1f;
+#           border-radius: 12px;
+#           padding: 1rem;
+#           width: 250px;
+#           text-align: center;
+#           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+#           transition: background-color 0.2s ease;
+#         }
+#         .menu-item:hover {
+#           background-color: #2a2a2a;
+#         }
+#         .menu-item h2 {
+#           font-size: 1.5rem;
+#           margin-bottom: 0.5rem;
+#         }
+#         .menu-item p {
+#           font-size: 1rem;
+#           margin-bottom: 1rem;
+#         }
+#         .menu-item a {
+#           display: inline-block;
+#           margin-top: 0.5rem;
+#           color: #4285F4;
+#           text-decoration: none;
+#           font-weight: 600;
+#           padding: 0.5rem 1rem;
+#           border: 2px solid #4285F4;
+#           border-radius: 8px;
+#           transition: background-color 0.2s ease;
+#         }
+#         .menu-item a:hover {
+#           background-color: #4285F4;
+#           color: #fff;
+#         }
+#       </style>
+#     </head>
+#     <body>
+#       <div class="header">
+#         <h1>Admin Dashboard</h1>
+#         <p>Manage all admin operations from here</p>
+#       </div>
+#       <div class="container">
+#         <div class="dashboard-menu">
+#           <div class="menu-item">
+#             <h2>Import Judges</h2>
+#             <p>Upload an XLSX file to import judges and poster assignments.</p>
+#             <a href="{{ url_for('import_judges') }}?key=adminsecret">Go to Import</a>
+#           </div>
+#           <div class="menu-item">
+#             <h2>Remove Judges</h2>
+#             <p>Remove all current judges from the system.</p>
+#             <a href="{{ url_for('remove_judges') }}?key=adminsecret">Remove Judges</a>
+#           </div>
+#           <div class="menu-item">
+#             <h2>Export Scores</h2>
+#             <p>Download all scores as a CSV file.</p>
+#             <a href="{{ url_for('export') }}?key=adminsecret">Export CSV</a>
+#           </div>
+#           <div class="menu-item">
+#             <h2>View/Edit Scores</h2>
+#             <p>Review and update scores submitted by judges.</p>
+#             <a href="{{ url_for('admin_view_scores') }}?key=adminsecret">View/Edit Scores</a>
+#           </div>
+#           <div class="menu-item">
+#             <h2>Reset Scores</h2>
+#             <p>Clear all score data and logs for a new round.</p>
+#             <a href="{{ url_for('reset_scores') }}?key=adminsecret">Reset Scores</a>
+#           </div>
+#           <div class="menu-item">
+#             <h2>Generate All QR Codes</h2>
+#             <p>Generate QR codes for all unique poster assignments.</p>
+#             <a href="{{ url_for('admin_generate_all_qr') }}?key=adminsecret">Generate All QR Codes</a>
+#           </div>
+#         </div>
+#       </div>
+#     </body>
+#     </html>
+#     ''')
+
 @app.route('/admin/dashboard')
 def admin_dashboard():
     if request.args.get('key') != 'adminsecret':
@@ -1561,11 +2002,17 @@ def admin_dashboard():
             <p>Generate QR codes for all unique poster assignments.</p>
             <a href="{{ url_for('admin_generate_all_qr') }}?key=adminsecret">Generate All QR Codes</a>
           </div>
+          <div class="menu-item">
+            <h2>Export Score Matrix</h2>
+            <p>Download the score matrix as an XLSX file.</p>
+            <a href="{{ url_for('export_score_matrix') }}?key=adminsecret">Export Matrix</a>
+          </div>
         </div>
       </div>
     </body>
     </html>
     ''')
+
 
 
 

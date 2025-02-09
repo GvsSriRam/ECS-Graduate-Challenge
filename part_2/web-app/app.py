@@ -133,9 +133,9 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
-    MAIL_USERNAME='rajmohan8081@gmail.com',        # Replace with your email address
-    MAIL_PASSWORD='ygxc olrd xjhm gawf',             # Replace with your app-specific password
-    MAIL_DEFAULT_SENDER='rajmohan8081@gmail.com'
+    MAIL_USERNAME='ecsresearchdayportal@gmail.com',        # Replace with your email address
+    MAIL_PASSWORD='jfca enpw emcq huyv',             # Replace with your app-specific password
+    MAIL_DEFAULT_SENDER='ecsresearchdayportal@gmail.com'
 )
 
 mail = Mail(app)

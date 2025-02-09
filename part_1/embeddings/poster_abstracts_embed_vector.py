@@ -38,7 +38,7 @@ def process_data(file_path):
     embeddings = np.vstack(embeddings)
 
     # Save the data with embeddings
-    output_file_path_npy = f'part-1/embeddings/embeddings_npy/{MODEL_NAME}/poster_abstract_embeddings.npy'
+    output_file_path_npy = f'part_1/embeddings/embeddings_npy/{MODEL_NAME}/poster_abstract_embeddings.npy'
     # Create the output directory if it does not exist
     output_dir = os.path.dirname(output_file_path_npy)
     if not os.path.exists(output_dir):
@@ -47,7 +47,7 @@ def process_data(file_path):
     np.save(output_file_path_npy, embeddings)
 
     # Save the data with embeddings
-    output_file_path_csv = f'part-1/embeddings/embeddings_csv/{MODEL_NAME}/poster_abstract_embeddings.csv'
+    output_file_path_csv = f'part_1/embeddings/embeddings_csv/{MODEL_NAME}/poster_abstract_embeddings.csv'
     # Create the output directory if it does not exist
     output_dir = os.path.dirname(output_file_path_csv)
     if not os.path.exists(output_dir):

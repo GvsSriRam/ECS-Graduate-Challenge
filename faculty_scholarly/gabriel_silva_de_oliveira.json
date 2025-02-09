@@ -1,8 +1,11 @@
 {
   "name": "Gabriel Silva de Oliveira",
   "affiliation": "Syracuse University",
-  "interests": ["Artificial Intelligence",
-      "Machine Learning"],
+  "interests": [
+    "artificial intelligence",
+    "machine learning",
+    "introductory programming instruction"
+  ],
   "citedby": 0,
   "top_primary_author_publications": [
     {

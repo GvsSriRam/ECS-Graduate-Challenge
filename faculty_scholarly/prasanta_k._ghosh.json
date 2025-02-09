@@ -2,7 +2,7 @@
   "name": "Prasanta Kumar Ghosh",
   "affiliation": "Indian Institute of Science (IISc), Bangalore",
   "interests": [
-    "Human-centered signal and information processing"
+    "human-centered signal and information processing"
   ],
   "citedby": 3862,
   "top_primary_author_publications": [
@@ -12,7 +12,10 @@
       "abstract": "Glottal inverse filtering is a noninvasive method for getting the glottal flow estimate from the speech. In this paper, we propose a method for glottal inverse filtering based on probabilistic weighted linear prediction (PWLP) in which the speech is assumed to be the output of an all-pole filter with glottal flow as an excitation. First, we introduce a probabilistic interpretation of the WLP, and we propose a probabilistic temporal weighting as convolution of a binary vector and a fixed window. We construct the posterior distribution based on the PWLP likelihood and a Gaussian prior on the filter coefficients. The parameters are estimated using the Gibbs sampling. The experiments are performed using the Lijencrants-Fant (LF) model based synthetic data, a physical model based synthetic data of different vowels and real speech data. Results demonstrate that the proposed method outperforms the best of the existing state-of-the-art methods in terms of the normalized amplitude quotient by 0.035 and 0.12 for the LF model and physical model based synthetic data, respectively. The results based on real speech data show that the glottal flow estimated by the proposed method in the closed phase is flatter and has less formant ripple compared to existing state-of-the-art methods. We also show two key features of the proposed method: first, the proposed method does not need prior detection of glottal closure or opening instants. The temporal weights are learnt in a data-driven manner, which is often found to be high near the closed phase of the glottal cycle, second, the Gaussian prior helps in estimating the filter coefficients when the closed phase duration is small.",
       "venue": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
       "citations": 8,
-      "authors": ["A Rao", "PK Ghosh"],
+      "authors": [
+        "A Rao",
+        "PK Ghosh"
+      ],
       "url": ""
     },
     {
@@ -21,7 +24,9 @@
       "abstract": "A transformation function (TF) that reconstructs neutral speech articulatory trajectories (NATs) from whispered speech articulatory trajectories (WATs) is investigated, such that the dynamic time warped (DTW) distance between the transformed whispered and the original neutral articulatory movements is minimized. Three candidate TFs are considered: an affine function with a diagonal matrix () which reconstructs one NAT from the corresponding WAT, an affine function with a full matrix, ) and a deep neural network (DNN) based nonlinear function which reconstruct each NAT from all WATs. Experiments reveal that the transformation could be approximated well by since it generalizes better across subjects and achieves the least DTW distance of 5.20 (±1.27) mm (on average), with an improvement of 7.47%, 4.76%, and 7.64% (relative) compared to that with⁠, DNN, and the best baseline scheme, respectively. Further analysis to understand the differences in neutral and whispered articulation reveals that the whispered articulators exhibit exaggerated movements in order to reconstruct the lip movements during neutral speech. It is also observed that among the articulators considered in the study, the tongue exhibits a higher precision and stability while whispering, implying that subjects control their tongue movements carefully in order to render an intelligible whispered speech.",
       "venue": "The Journal of the Acoustical Society of America",
       "citations": 8,
-      "authors": ["PK Ghosh"],
+      "authors": [
+        "PK Ghosh"
+      ],
       "url": ""
     },
     {
@@ -30,7 +35,10 @@
       "abstract": "Accurate estimation of glottal closure instant (GCI) enables several pitch synchronous speech analysis, such as prosody modifications, glottal inverse filtering, and study of pathological speech. We propose a probabilistic source-filter model (PSFM) for voiced speech, where the source is modeled using the Bernoulli Gaussian distribution, which models the GCI locations and the all-pole filter coefficients are modeled using Gaussian distribution. The probability of GCIs at each speech sample is estimated using the Gibbs sampling. We propose a cost to estimate the exact GCI locations using the N-best dynamic programming. A key feature of the proposed PSFM is that it allows us to include the second-order statistics of the noise for estimating the GCI locations, thereby resulting in a noise robust GCI detection technique, although it has high computational complexity. Evaluation on archivable priority list actual-word database (APLAWD) database shows the proposed algorithm performs at par with the state-of-the-art GCI detection method on clean speech. However, when evaluated in noisy conditions using five types of noises at six different signal-to-noise ratio (SNR) levels, we observe that the proposed method performs better than the best of the existing GCI detection scheme, particularly at low SNR condition indicating the noise robustness of the proposed method.",
       "venue": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
       "citations": 8,
-      "authors": ["A Rao", "PK Ghosh"],
+      "authors": [
+        "A Rao",
+        "PK Ghosh"
+      ],
       "url": ""
     }
   ],
@@ -41,7 +49,14 @@
       "abstract": "The COVID-19 pandemic presents global challenges transcending boundaries of country, race, religion, and economy. The current gold standard method for COVID-19 detection is the reverse transcription polymerase chain reaction (RT-PCR) testing. However, this method is expensive, time-consuming, and violates social distancing. Also, as the pandemic is expected to stay for a while, there is a need for an alternate diagnosis tool which overcomes these limitations, and is deployable at a large scale. The prominent symptoms of COVID-19 include cough and breathing difficulties. We foresee that respiratory sounds, when analyzed using machine learning techniques, can provide useful insights, enabling the design of a diagnostic tool. Towards this, the paper presents an early effort in creating (and analyzing) a database, called Coswara, of respiratory sounds, namely, cough, breath, and voice. The sound samples are collected via worldwide crowdsourcing using a website application. The curated dataset is released as open access. As the pandemic is evolving, the data collection and analysis is a work in progress. We believe that insights from analysis of Coswara can be effective in enabling sound based technology solutions for point-of-care diagnosis of respiratory infection, and in the near future this can help to diagnose COVID-19.",
       "venue": "arXiv preprint",
       "citations": 362,
-      "authors": ["N Sharma", "P Krishnan", "R Kumar", "S Ramoji", "SR Chetupalli", "PK Ghosh"],
+      "authors": [
+        "N Sharma",
+        "P Krishnan",
+        "R Kumar",
+        "S Ramoji",
+        "SR Chetupalli",
+        "PK Ghosh"
+      ],
       "url": ""
     },
     {
@@ -50,7 +65,15 @@
       "abstract": "The DiCOVA challenge aims at accelerating research in diagnosing COVID-19 using acoustics (DiCOVA), a topic at the intersection of speech and audio processing, respiratory health diagnosis, and machine learning. This challenge is an open call for researchers to analyze a dataset of sound recordings collected from COVID-19 infected and non-COVID-19 individuals for a two-class classification. These recordings were collected via crowdsourcing from multiple countries, through a website application. The challenge features two tracks, one focusing on cough sounds, and the other on using a collection of breath, sustained vowel phonation, and number counting speech recordings. In this paper, we introduce the challenge and provide a detailed description of the task, and present a baseline system for the task.",
       "venue": "arXiv preprint",
       "citations": 115,
-      "authors": ["A Muguli", "L Pinto", "N Sharma", "P Krishnan", "PK Ghosh", "R Kumar", "S Bhat"],
+      "authors": [
+        "A Muguli",
+        "L Pinto",
+        "N Sharma",
+        "P Krishnan",
+        "PK Ghosh",
+        "R Kumar",
+        "S Bhat"
+      ],
       "url": ""
     },
     {
@@ -59,7 +82,15 @@
       "abstract": "Recently, there is increasing interest in multilingual automatic speech recognition (ASR) where a speech recognition system caters to multiple low resource languages by taking advantage of low amounts of labeled corpora in multiple languages. With multilingualism becoming common in today's world, there has been increasing interest in code-switching ASR as well. In code-switching, multiple languages are freely interchanged within a single sentence or between sentences. The success of low-resource multilingual and code-switching ASR often depends on the variety of languages in terms of their acoustics, linguistic characteristics as well as the amount of data available and how these are carefully considered in building the ASR system. In this challenge, we would like to focus on building multilingual and code-switching ASR systems through two different subtasks related to a total of seven Indian languages, namely Hindi, Marathi, Odia, Tamil, Telugu, Gujarati and Bengali. For this purpose, we provide a total of ~600 hours of transcribed speech data, comprising train and test sets, in these languages including two code-switched language pairs, Hindi-English and Bengali-English. We also provide a baseline recipe for both the tasks with a WER of 30.73% and 32.45% on the test sets of multilingual and code-switching subtasks, respectively.",
       "venue": "arXiv preprint",
       "citations": 92,
-      "authors": ["A Diwan", "R Vaideeswaran", "S Shah", "A Singh", "S Raghavan", "S Khare", "PK Ghosh"],
+      "authors": [
+        "A Diwan",
+        "R Vaideeswaran",
+        "S Shah",
+        "A Singh",
+        "S Raghavan",
+        "S Khare",
+        "PK Ghosh"
+      ],
       "url": ""
     }
   ],

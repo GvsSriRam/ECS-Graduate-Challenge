@@ -97,7 +97,7 @@ def save_scholarly_data(data: Dict, faculty_name: str, scholarly_dir: str) -> No
 
 def main():
     # Configuration
-    CSV_PATH = 'ecs_faculty_profiles.csv'
+    CSV_PATH = 'part_1/data_extraction/profiles_csv/ecs_faculty_profiles.csv'
     SCHOLARLY_DIR = 'faculty_scholarly'
     
     # Load faculty data

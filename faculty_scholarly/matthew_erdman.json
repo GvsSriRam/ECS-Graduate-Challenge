@@ -1,7 +1,13 @@
 {
   "name": "Matthew M. Erdman",
   "affiliation": "Syracuse University",
-  "interests": [],
+  "interests": [
+    "multiphase flow",
+    "heat and mass transfer",
+    "measurements and instrumentation",
+    "hydropower",
+    "computational fluid dynamics"
+  ],
   "citedby": 0,
   "top_primary_author_publications": [
     {

@@ -2,11 +2,11 @@
   "name": "Moamer (Mo) Hasanovic",
   "affiliation": "Syracuse University",
   "interests": [
-    "Passive RF Component Design",
-    "RF and Photonics Integration",
-    "Quantum Technologies",
-    "Electrical Engineering",
-    "Board-level RF Component Design"
+    "passive rf component design",
+    "rf and photonics integration",
+    "quantum technologies",
+    "electrical engineering",
+    "board-level rf component design"
   ],
   "citedby": 0,
   "top_primary_author_publications": [
@@ -16,7 +16,9 @@
       "abstract": "Quantum technologies are expected to be among the most transformational technologies of the twenty-first century, changing how we sense the world around us, approach security, and process critical information. Transitioning the industry from quantum research labs to the commercial environment requires a sizable workforce skilled in supporting Quantum 2.0. To achieve the goal of the entire quantum ecosystem, society at all levels needs to be aware of this emerging field and then be inspired, attracted, educated, and trained with the new quantum skills and competencies. This poses a challenge as quantum science is a difficult and counterintuitive subject. How is a subject such as quantum mechanics that, as the famous quantum scientist Richard Feynman once said, “nobody fully understands” to be taught? In this presentation, we will share our experiences and results of EdQuantum, an NSF-funded project whose goal is to develop a curriculum to train future quantum technicians. The proposed curriculum intends to provide an essential first step in quantum education at the associate’s level. The curriculum relies heavily on a visual, hands-on approach that is based on commercially available quantum educational hardware. The curriculum strives to bring complex quantum science to a level understandable to individuals without a solid scientific background through algebra-based theory and simple experiments. As such, it may also be used to raise awareness and inspire high school students to seek careers as future quantum scientists.",
       "venue": "SPIE Conference on Education and Training in Optics and Photonics",
       "citations": 0,
-      "authors": ["Mo Hasanovic"],
+      "authors": [
+        "Mo Hasanovic"
+      ],
       "url": "https://doi.org/10.1117/12.2670468"
     },
     {
@@ -25,7 +27,11 @@
       "abstract": "In this paper, we reflect on the new challenges in the Wilkinson power splitter design for present and future applications at frequencies of millimeter waves. The advantages and disadvantages of various surface mounting configurations are discussed, focusing on easy installation and repeatable RF performance. The paper also outlines our efforts toward the miniaturization, compactness, and geometrical efficiency of the Wilkinson power splitters. Combining Wilkinson 2-way splitters of various power ratios into more complex power distribution networks is a tedious task that requires layout customization and careful tuning of basic RF building blocks. These design considerations are described in the example of a 4-way Wilkinson splitter on Alumina substrate for operational frequency band 25 –35 GHz. The design prototypes have been successfully produced and tested with the results presented here.",
       "venue": "IEEE/MTT-S International Microwave Symposium",
       "citations": 0,
-      "authors": ["M. Hasanovic", "J. Ayala", "M. Kettner"],
+      "authors": [
+        "M. Hasanovic",
+        "J. Ayala",
+        "M. Kettner"
+      ],
       "url": ""
     },
     {
@@ -34,7 +40,12 @@
       "abstract": "A method of moments (MoM) solution is presented for the problem of electromagnetic scattering by a three-dimensional (3D) inhomogeneous chiral scatterer illuminated by an arbitrary incident field. The volume equivalence principle was used to obtain coupled integral equations for equivalent volume currents. These integral equations were then solved numerically using MoM. The volume of the scatterer was modeled by tetrahedral cells, and face-based expansion functions were used to approximate the equivalent currents. Computed results are in very good agreement with exact data or other published data.",
       "venue": "AP-55",
       "citations": 0,
-      "authors": ["Moamer Hasanovic", "Chong Mei", "Joseph R. Mautz", "Ercument Arvas"],
+      "authors": [
+        "Moamer Hasanovic",
+        "Chong Mei",
+        "Joseph R. Mautz",
+        "Ercument Arvas"
+      ],
       "url": ""
     }
   ],
@@ -45,7 +56,12 @@
       "abstract": "This paper presents a method of moments (MoM) solution for the problems of electromagnetic scattering by inhomogeneous threedimensional bianisotropic scatterers of any shape. The electromagnetic response of bianisotropy has been described by the constitutive relations of the most general form composed of four 3 x 3 matrices or tensors. The volume equivalence principle is used to obtain a set of mixed potential formulations for a proper description of the original scattering problem. Here, the total fields are separated into the incident fields and the scattered fields. The scattered fields are related to the electric and magnetic potentials which are excited by electric and magnetic bound charges and polarization currents. The body of the scatterer is meshed through the use of tetrahedral cells with face-based functions used to expand unknown quantities. At last, the Galerkin test method is applied to create a method of moments (MoM) matrix from which the numerical solution is obtained. Implemented in a MATLAB program, the numerical formulation is evaluated and verified for various types of scatterers. The results are compared with those of previous work, and a good agreement is observed. Finally, a scattering from a two-layered dispersive chiroferrite sphere is presented as the most general example.",
       "venue": "Progress In Electromagnetics Research B",
       "citations": 0,
-      "authors": ["Chong Mei", "Moamer Hasanovic", "Jay K. Lee", "Ercument Arvas"],
+      "authors": [
+        "Chong Mei",
+        "Moamer Hasanovic",
+        "Jay K. Lee",
+        "Ercument Arvas"
+      ],
       "url": ""
     },
     {
@@ -54,7 +70,13 @@
       "abstract": "Quantum-based technologies have been instrumental in the development of a whole range of devices that are used these days (such as lasers, transistors, LiDAR, GPS, MRI, and many more). These technologies that emanated from the Quantum 1.0 Revolution have become ubiquitous in modern civilization over the past 50 years. The product commercialization and mass production were enabled by scientists, researchers, engineers, and most importantly, by the skilled technological workforce. This workforce played a critical support role in transforming inventions into high-volume, marketable products. We are currently at the heart of the Second Quantum Revolution, which is fueled by the research in quantum computing, quantum communication, quantum cryptography, and quantum sensing. The scientific progress that is currently taking place in these areas is going to fundamentally change the way we sense the world around us, approach our security, and process critical information. Governments and private entities across the world have recognized the strategic importance of quantum research-enabled technologies and have invested a significant amount of money to support graduate programs and research institutions where scientists, engineers, and other professionals are earning advanced degrees and immediately being engaged in active Quantum 2.0 research. To the best of our knowledge, and despite considerable investment in quantum research, no active efforts or programs exist that would train a quantum technological workforce at the technician level to support Quantum 2.0. The quantum industry, on the other side, has clearly identified the need for highly skilled quantum technicians that are able to support the commercialization of the new products and inventions. The lack of a trained quantum technician workforce is a major shortcoming that may have a profound negative impact on the long-term prospects and sustainability of the emerging quantum industry. The EdQuantum project, funded through the National Science Foundation (NSF) Advanced Technological Education (ATE) program, is an effort to close this shortcoming and propose a well-defined curriculum through which the incumbent photonic and laser technicians in the United States will be upskilled with the new skills and competencies from quantum research-enabled technologies. This paper presents the results of the first phase of the EdQuantum project—the quantum industry survey. Over the last few months, we sought input from the quantum industry as to what skills and competencies should a future quantum technician possess to support its emerging needs. The results collected during the survey are presented in this paper along with their impact on the proposed educational curriculum. This paper also elaborates on the alignment of the proposed curriculum with a few ongoing initiatives in the skilled technical workforce education (such as NSB Vision 2030, Convergence Accelerators Initiative, and Skilled Technical Workforce Initiative).",
       "venue": "Optical Engineering",
       "citations": 0,
-      "authors": ["Mo Hasanovic", "Chrys Panayiotou", "Donn Silberman", "Paul Stimers", "Celia Merzbacher"],
+      "authors": [
+        "Mo Hasanovic",
+        "Chrys Panayiotou",
+        "Donn Silberman",
+        "Paul Stimers",
+        "Celia Merzbacher"
+      ],
       "url": "https://doi.org/10.1117/1.OE.61.8.081803"
     }
   ],

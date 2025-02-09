@@ -186,7 +186,7 @@ For each faculty member, we extract comprehensive research information from mult
 - Employs integer programming for optimal assignment while respecting all constraints
 
 
-### Testing the Embeddings
+### Testing the Author Embeddings
 
 - Providing a complete pipeline for analyzing author embeddings, including dimensionality reduction, clustering, and performance evaluation
 - The silhouette score analysis helps determine the optimal number of clusters, and the resulting clustering can be used to gain insights into the data’s structure.

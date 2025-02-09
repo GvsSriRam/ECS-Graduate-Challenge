@@ -1,292 +1,3 @@
-# import os
-# import sqlite3
-# import json
-# import random
-# import smtplib
-# from email.mime.text import MIMEText
-# from io import StringIO, BytesIO
-# import csv
-
-# from flask import Flask, g, request, redirect, url_for, session, flash, send_file, render_template_string
-# from flask_mail import Mail, Message
-
-# # ===============================
-# # Configuration and Initialization
-# # ===============================
-# app = Flask(__name__)
-# app.secret_key = 'your-secret-key-here'  # Replace with a secure random key in production
-# DATABASE = 'app.db'
-
-# def get_db():
-#     db = getattr(g, '_database', None)
-#     if db is None:
-#         db = g._database = sqlite3.connect(DATABASE)
-#         db.row_factory = sqlite3.Row
-#     return db
-
-# @app.teardown_appcontext
-# def close_connection(exception):
-#     db = getattr(g, '_database', None)
-#     if db is not None:
-#         db.close()
-
-# def init_db():
-#     """Initialize the database with judges and scores tables."""
-#     with app.app_context():
-#         db = get_db()
-#         db.execute('''
-#             CREATE TABLE IF NOT EXISTS judges (
-#                 email TEXT PRIMARY KEY,
-#                 name TEXT NOT NULL,
-#                 pin TEXT,
-#                 assigned_posters TEXT  -- Stored as JSON list of poster IDs
-#             )
-#         ''')
-#         db.execute('''
-#             CREATE TABLE IF NOT EXISTS scores (
-#                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-#                 judge_email TEXT,
-#                 poster_id TEXT,
-#                 score INTEGER,
-#                 UNIQUE(judge_email, poster_id)
-#             )
-#         ''')
-#         db.commit()
-
-# # Initialize DB on first run
-# if not os.path.exists(DATABASE):
-#     init_db()
-#     # Insert sample judge data for demo purposes
-#     db = sqlite3.connect(DATABASE)
-#     sample_judges = [
-#         ("judge1@example.com", "Judge One", json.dumps(["poster1", "poster2", "poster3"])),
-#         ("judge2@example.com", "Judge Two", json.dumps(["poster2", "poster4"]))
-#     ]
-#     db.executemany("INSERT OR IGNORE INTO judges (email, name, assigned_posters) VALUES (?, ?, ?)", sample_judges)
-#     db.commit()
-#     db.close()
-
-# # In-memory OTP store: mapping email -> OTP (for a 24-hour hackathon prototype, this is acceptable)
-# otp_store = {}
-
-# # ===============================
-# # Flask-Mail Configuration
-# # ===============================
-# app.config.update(
-#     MAIL_SERVER='smtp.gmail.com',
-#     MAIL_PORT=587,
-#     MAIL_USE_TLS=True,
-#     MAIL_USERNAME='your_email@gmail.com',        # Replace with your email address
-#     MAIL_PASSWORD='your_app_password',             # Replace with your app-specific password
-#     MAIL_DEFAULT_SENDER='your_email@gmail.com'
-# )
-
-# mail = Mail(app)
-
-# def send_otp(email, otp):
-#     """
-#     Sends an OTP email using Flask-Mail.
-#     """
-#     msg = Message("Your Login OTP", recipients=[email])
-#     msg.body = f"Your OTP for login is: {otp}"
-#     try:
-#         mail.send(msg)
-#         print(f"Sent OTP to {email}")
-#     except Exception as e:
-#         print(f"Error sending email: {e}")
-
-# # ===============================
-# # Root Route for Easy Navigation
-# # ===============================
-# @app.route('/')
-# def index():
-#     """Redirect to dashboard if logged in, else to login page."""
-#     if 'user' in session:
-#         return redirect(url_for('dashboard'))
-#     else:
-#         return redirect(url_for('login'))
-
-# # ===============================
-# # Routes for Authentication
-# # ===============================
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     """Judge enters their email to receive an OTP."""
-#     if request.method == 'POST':
-#         email = request.form.get('email')
-#         db = get_db()
-#         cur = db.execute("SELECT * FROM judges WHERE email = ?", (email,))
-#         judge = cur.fetchone()
-#         if judge:
-#             # Generate a 6-digit OTP and store it
-#             otp = str(random.randint(100000, 999999))
-#             otp_store[email] = otp
-#             send_otp(email, otp)
-#             session['pending_email'] = email
-#             flash("An OTP has been sent to your email. Please enter it below.")
-#             return redirect(url_for('verify'))
-#         else:
-#             flash("Email not authorized.")
-#             return redirect(url_for('login'))
-#     # Simple HTML for login
-#     return render_template_string('''
-#         <h2>Judge Login</h2>
-#         <form method="post">
-#             Email: <input type="email" name="email" required>
-#             <input type="submit" value="Send OTP">
-#         </form>
-#     ''')
-
-# @app.route('/verify', methods=['GET', 'POST'])
-# def verify():
-#     """Judge enters the OTP received via email."""
-#     pending_email = session.get('pending_email')
-#     if not pending_email:
-#         return redirect(url_for('login'))
-#     if request.method == 'POST':
-#         otp_input = request.form.get('otp')
-#         if otp_store.get(pending_email) == otp_input:
-#             # OTP is correct; log the judge in
-#             session['user'] = pending_email
-#             otp_store.pop(pending_email, None)
-#             flash("Logged in successfully.")
-#             return redirect(url_for('dashboard'))
-#         else:
-#             flash("Invalid OTP. Please try again.")
-#             return redirect(url_for('verify'))
-#     return render_template_string('''
-#         <h2>Enter OTP</h2>
-#         <form method="post">
-#             OTP: <input type="text" name="otp" required>
-#             <input type="submit" value="Verify">
-#         </form>
-#     ''')
-
-# @app.route('/logout')
-# def logout():
-#     session.clear()
-#     flash("Logged out.")
-#     return redirect(url_for('login'))
-
-# # ===============================
-# # Judge Dashboard and Scoring
-# # ===============================
-# @app.route('/dashboard')
-# def dashboard():
-#     """Display assigned posters and current scores for the logged-in judge."""
-#     if 'user' not in session:
-#         return redirect(url_for('login'))
-#     email = session['user']
-#     db = get_db()
-#     cur = db.execute("SELECT * FROM judges WHERE email = ?", (email,))
-#     judge = cur.fetchone()
-#     if not judge:
-#         flash("Judge not found.")
-#         return redirect(url_for('login'))
-#     # Load assigned posters (stored as a JSON list)
-#     assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
-#     # Retrieve existing scores for these posters
-#     scores = {}
-#     for poster in assigned_posters:
-#         cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?", (email, poster))
-#         row = cur.fetchone()
-#         scores[poster] = row['score'] if row else None
-#     # Render a simple dashboard (each judge sees only their own scores)
-#     dashboard_html = f"<h2>Welcome, {judge['name']}!</h2>"
-#     dashboard_html += "<h3>Your Assigned Posters:</h3><ul>"
-#     for poster in assigned_posters:
-#         score = scores[poster]
-#         dashboard_html += f"<li>{poster} - Score: {score if score is not None else 'Not Scored'} " \
-#                           f'<a href="{url_for("score", poster_id=poster)}">Enter/Update Score</a></li>'
-#     dashboard_html += "</ul>"
-#     dashboard_html += '<br><a href="/logout">Logout</a>'
-#     return dashboard_html
-
-# @app.route('/score/<poster_id>', methods=['GET', 'POST'])
-# def score(poster_id):
-#     """Allow a judge to enter or update a score for an assigned poster.
-#     If a score exists, pre-fill the input field with the current value."""
-#     if 'user' not in session:
-#         return redirect(url_for('login'))
-#     email = session['user']
-#     db = get_db()
-#     cur = db.execute("SELECT assigned_posters FROM judges WHERE email = ?", (email,))
-#     row = cur.fetchone()
-#     if not row:
-#         flash("Judge not found.")
-#         return redirect(url_for('login'))
-#     assigned_posters = json.loads(row['assigned_posters']) if row['assigned_posters'] else []
-#     if poster_id not in assigned_posters:
-#         flash("You are not assigned to this poster.")
-#         return redirect(url_for('dashboard'))
-    
-#     # Get the current score if it exists
-#     cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?", (email, poster_id))
-#     row = cur.fetchone()
-#     current_score = row['score'] if row else ""
-    
-#     if request.method == 'POST':
-#         score_val = request.form.get('score')
-#         try:
-#             score_int = int(score_val)
-#             if score_int < 0 or score_int > 10:
-#                 flash("Score must be between 0 and 10.")
-#                 return redirect(url_for('score', poster_id=poster_id))
-#         except ValueError:
-#             flash("Invalid score.")
-#             return redirect(url_for('score', poster_id=poster_id))
-#         # Insert or update the score in the database
-#         db.execute('''INSERT INTO scores (judge_email, poster_id, score)
-#                       VALUES (?, ?, ?)
-#                       ON CONFLICT(judge_email, poster_id) DO UPDATE SET score = ?''',
-#                    (email, poster_id, score_int, score_int))
-#         db.commit()
-#         flash("Score updated.")
-#         return redirect(url_for('dashboard'))
-    
-#     return render_template_string('''
-#         <h2>Enter Score for {{ poster_id }}</h2>
-#         <form method="post">
-#             Score (0-10): 
-#             <input type="number" name="score" min="0" max="10" value="{{ current_score }}" required>
-#             <input type="submit" value="Submit">
-#         </form>
-#         <br><a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
-#     ''', poster_id=poster_id, current_score=current_score)
-
-# # ===============================
-# # Admin Export Endpoint
-# # ===============================
-# @app.route('/export')
-# def export():
-#     """
-#     Exports the complete scores as a CSV.
-#     For demo purposes, access is protected by a simple key in the URL (e.g., /export?key=adminsecret).
-#     """
-#     key = request.args.get('key')
-#     if key != 'adminsecret':  # Replace with a secure method in production
-#         return "Unauthorized", 401
-#     db = get_db()
-#     cur = db.execute("SELECT * FROM scores")
-#     rows = cur.fetchall()
-#     output = StringIO()
-#     writer = csv.writer(output)
-#     writer.writerow(["judge_email", "poster_id", "score"])
-#     for row in rows:
-#         writer.writerow([row['judge_email'], row['poster_id'], row['score']])
-#     output.seek(0)
-#     return send_file(BytesIO(output.getvalue().encode()),
-#                      mimetype='text/csv',
-#                      as_attachment=True,
-#                      attachment_filename='scores.csv')
-
-# # ===============================
-# # Run the Application
-# # ===============================
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-
 import os
 import sqlite3
 import json
@@ -295,9 +6,10 @@ import smtplib
 from email.mime.text import MIMEText
 from io import StringIO, BytesIO
 import csv
-
+import openpyxl
 from flask import Flask, g, request, redirect, url_for, session, flash, send_file, render_template_string
 from flask_mail import Mail, Message
+import qrcode
 
 # ===============================
 # Configuration and Initialization
@@ -328,7 +40,8 @@ def init_db():
                 email TEXT PRIMARY KEY,
                 name TEXT NOT NULL,
                 pin TEXT,
-                assigned_posters TEXT  -- Stored as JSON list of poster IDs
+                assigned_posters TEXT,  -- Stored as JSON list of poster IDs
+                assigned_poster_titles TEXT  -- Stored as JSON object mapping poster IDs to poster titles
             )
         ''')
         db.execute('''
@@ -351,6 +64,7 @@ def init_db():
             )
         ''')
         db.commit()
+
 
 # Initialize DB on first run
 if not os.path.exists(DATABASE):
@@ -408,58 +122,6 @@ def index():
 # ===============================
 # Routes for Authentication
 # ===============================
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     """Judge enters their email to receive an OTP."""
-#     if request.method == 'POST':
-#         email = request.form.get('email')
-#         db = get_db()
-#         cur = db.execute("SELECT * FROM judges WHERE email = ?", (email,))
-#         judge = cur.fetchone()
-#         if judge:
-#             # Generate a 6-digit OTP and store it
-#             otp = str(random.randint(100000, 999999))
-#             otp_store[email] = otp
-#             send_otp(email, otp)
-#             session['pending_email'] = email
-#             flash("An OTP has been sent to your email. Please enter it below.")
-#             return redirect(url_for('verify'))
-#         else:
-#             flash("Email not authorized.")
-#             return redirect(url_for('login'))
-#     # Simple HTML for login
-#     return render_template_string('''
-#         <h2>Judge Login</h2>
-#         <form method="post">
-#             Email: <input type="email" name="email" required>
-#             <input type="submit" value="Send OTP">
-#         </form>
-#     ''')
-
-# @app.route('/verify', methods=['GET', 'POST'])
-# def verify():
-#     """Judge enters the OTP received via email."""
-#     pending_email = session.get('pending_email')
-#     if not pending_email:
-#         return redirect(url_for('login'))
-#     if request.method == 'POST':
-#         otp_input = request.form.get('otp')
-#         if otp_store.get(pending_email) == otp_input:
-#             # OTP is correct; log the judge in
-#             session['user'] = pending_email
-#             otp_store.pop(pending_email, None)
-#             flash("Logged in successfully.")
-#             return redirect(url_for('dashboard'))
-#         else:
-#             flash("Invalid OTP. Please try again.")
-#             return redirect(url_for('verify'))
-#     return render_template_string('''
-#         <h2>Enter OTP</h2>
-#         <form method="post">
-#             OTP: <input type="text" name="otp" required>
-#             <input type="submit" value="Verify">
-#         </form>
-#     ''')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -586,17 +248,11 @@ def login():
 
 @app.route('/verify', methods=['GET', 'POST'])
 def verify():
-    """
-    Dark-themed verify screen with 6 separate OTP inputs.
-    Automatically moves cursor from one box to the next, 
-    and opens the number pad on mobile.
-    """
     pending_email = session.get('pending_email')
     if not pending_email:
         return redirect(url_for('login'))
 
     if request.method == 'POST':
-        # Merge the 6 digits into one string
         otp_input = (
             request.form.get('otp1', '') +
             request.form.get('otp2', '') +
@@ -607,11 +263,15 @@ def verify():
         )
         
         if otp_store.get(pending_email) == otp_input:
-            # OTP is correct; log the judge in
             session['user'] = pending_email
             otp_store.pop(pending_email, None)
             flash("Logged in successfully.")
-            return redirect(url_for('dashboard'))
+            # Check if there is a redirect URL saved from a QR scan
+            redirect_url = session.pop('redirect_after_login', None)
+            if redirect_url:
+                return redirect(redirect_url)
+            else:
+                return redirect(url_for('dashboard'))
         else:
             flash("Invalid OTP. Please try again.")
             return redirect(url_for('verify'))
@@ -763,215 +423,12 @@ def logout():
     flash("Logged out.")
     return redirect(url_for('login'))
 
-# ===============================
-# Judge Dashboard and Scoring
-# ===============================
-# @app.route('/dashboard')
-# def dashboard():
-#     """Display assigned posters and current scores for the logged-in judge."""
-#     if 'user' not in session:
-#         return redirect(url_for('login'))
-#     email = session['user']
-#     db = get_db()
-#     cur = db.execute("SELECT * FROM judges WHERE email = ?", (email,))
-#     judge = cur.fetchone()
-#     if not judge:
-#         flash("Judge not found.")
-#         return redirect(url_for('login'))
-#     # Load assigned posters (stored as a JSON list)
-#     assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
-#     # Retrieve existing scores for these posters
-#     scores = {}
-#     for poster in assigned_posters:
-#         cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?", (email, poster))
-#         row = cur.fetchone()
-#         scores[poster] = row['score'] if row else None
-#     # Render a simple dashboard (each judge sees only their own scores)
-#     dashboard_html = f"<h2>Welcome, {judge['name']}!</h2>"
-#     dashboard_html += "<h3>Your Assigned Posters:</h3><ul>"
-#     for poster in assigned_posters:
-#         score = scores[poster]
-#         dashboard_html += f"<li>{poster} - Score: {score if score is not None else 'Not Scored'} " \
-#                           f'<a href="{url_for("score", poster_id=poster)}">Enter/Update Score</a></li>'
-#     dashboard_html += "</ul>"
-#     dashboard_html += '<br><a href="/score_log">View Your Score Change Log</a>'
-#     dashboard_html += '<br><a href="/logout">Logout</a>'
-#     return dashboard_html
-# SECOND TYPE: dashboard
-# @app.route('/dashboard')
-# def dashboard():
-#     """
-#     Display assigned posters in a UI inspired by the referenced design:
-#     - A vertical list where each assigned poster looks like a "room" item.
-#     - Shows poster ID, current score, and links to set/update that score.
-#     """
-#     if 'user' not in session:
-#         return redirect(url_for('login'))
-    
-#     email = session['user']
-#     db = get_db()
-#     cur = db.execute("SELECT * FROM judges WHERE email = ?", (email,))
-#     judge = cur.fetchone()
-#     if not judge:
-#         flash("Judge not found.")
-#         return redirect(url_for('login'))
-    
-#     # Load assigned posters (stored as a JSON list in the DB)
-#     assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
-    
-#     # Retrieve existing scores for these posters
-#     scores = {}
-#     for poster in assigned_posters:
-#         cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?", (email, poster))
-#         row = cur.fetchone()
-#         scores[poster] = row['score'] if row else None
-    
-#     # Render a dashboard UI similar to your reference image
-#     dashboard_html = render_template_string('''
-# <!DOCTYPE html>
-# <html lang="en">
-# <head>
-#   <meta charset="UTF-8" />
-#   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-#   <title>Dashboard</title>
-#   <!-- You can use a simple reset or bootstrap, but here is minimal styling -->
-#   <style>
-#     body {
-#       margin: 0;
-#       padding: 0;
-#       font-family: sans-serif;
-#       background: #f7f7f7; /* or use a gradient if you want */
-#     }
-#     .top-bar {
-#       display: flex;
-#       align-items: center;
-#       justify-content: center;
-#       background: #f7f7f7;
-#       padding: 1rem;
-#       border-bottom: 1px solid #ddd;
-#     }
-#     .top-bar h1 {
-#       margin: 0;
-#       font-size: 1.4rem;
-#     }
-#     .rooms-container {
-#       max-width: 450px;
-#       margin: 1rem auto;
-#       border-radius: 16px;
-#       overflow: hidden;
-#     }
-#     .room-list {
-#       list-style: none;
-#       margin: 0;
-#       padding: 0;
-#     }
-#     .room-item {
-#       display: flex;
-#       align-items: center;
-#       justify-content: space-between;
-#       background: #fff;
-#       padding: 1rem;
-#       border-bottom: 1px solid #eee;
-#       text-decoration: none;
-#       color: #000;
-#     }
-#     .room-item:last-child {
-#       border-bottom: none;
-#     }
-#     .icon-circle {
-#       min-width: 40px;
-#       min-height: 40px;
-#       border-radius: 50%;
-#       background: #eee;
-#       display: flex;
-#       align-items: center;
-#       justify-content: center;
-#       margin-right: 1rem;
-#     }
-#     .room-label {
-#       display: flex;
-#       flex-direction: column;
-#       flex: 1;
-#     }
-#     .room-label span:first-child {
-#       font-weight: 600;
-#       margin-bottom: 4px;
-#     }
-#     .score-link {
-#       font-size: 0.9rem;
-#       color: #4285F4;
-#       text-decoration: underline;
-#     }
-#     .bottom-links {
-#       text-align: center;
-#       margin-top: 1rem;
-#     }
-#     .bottom-links a {
-#       display: inline-block;
-#       padding: 0.6rem 1rem;
-#       margin: 0.2rem;
-#       border: none;
-#       background: #4285F4;
-#       color: #fff;
-#       border-radius: 8px;
-#       text-decoration: none;
-#     }
-#     .bottom-links a:hover {
-#       background: #357ae8;
-#     }
-#   </style>
-# </head>
-# <body>
-#   <div class="top-bar">
-#     <h1>Welcome, {{ judge_name }}!</h1>
-#   </div>
-  
-#   <div class="rooms-container">
-#     <ul class="room-list">
-#       {% for poster in assigned_posters %}
-#       <li class="room-item">
-#         <div class="icon-circle">
-#           <!-- Any icon or emoji you like, e.g. a "poster" icon or a default couch icon -->
-#           🏷️
-#         </div>
-#         <div class="room-label">
-#           <span>{{ poster }}</span>
-#           <span>
-#             Score: 
-#             {% if scores[poster] is not none %}
-#               {{ scores[poster] }}
-#             {% else %}
-#               Not Scored
-#             {% endif %}
-#           </span>
-#         </div>
-#         <a class="score-link" href="{{ url_for('score', poster_id=poster) }}">
-#           Update
-#         </a>
-#       </li>
-#       {% endfor %}
-#     </ul>
-#   </div>
-  
-#   <div class="bottom-links">
-#     <a href="{{ url_for('score_log') }}">Score Log</a>
-#     <a href="{{ url_for('logout') }}">Logout</a>
-#   </div>
-# </body>
-# </html>
-#     ''', 
-#     judge_name=judge['name'],
-#     assigned_posters=assigned_posters,
-#     scores=scores)
-    
-#     return dashboard_html
 
 @app.route('/dashboard')
 def dashboard():
     """
-    Dark-theme dashboard with a rounded top header that greets the user,
-    shows notifications/profile, and lists assigned posters in a card-like format,
-    using IBM Plex Sans for all text.
+    Dark-theme dashboard that greets the judge and shows the assigned posters.
+    Displays each poster in the format "poster_number: Poster_name".
     """
     if 'user' not in session:
         return redirect(url_for('login'))
@@ -984,9 +441,11 @@ def dashboard():
         flash("Judge not found.")
         return redirect(url_for('login'))
     
+    # Load the assigned posters (list of poster ids) and the poster title mapping.
     assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
-    
-    # Retrieve existing scores for these posters
+    poster_titles = json.loads(judge['assigned_poster_titles']) if judge['assigned_poster_titles'] else {}
+
+    # Retrieve existing scores for these posters.
     scores = {}
     for poster in assigned_posters:
         cur = db.execute(
@@ -996,7 +455,7 @@ def dashboard():
         row = cur.fetchone()
         scores[poster] = row['score'] if row else None
 
-    # Render a dark-themed dashboard with IBM Plex Sans
+    # Render the dashboard template.
     dashboard_html = render_template_string('''
 <!DOCTYPE html>
 <html lang="en">
@@ -1008,118 +467,23 @@ def dashboard():
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"/>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'IBM Plex Sans', sans-serif;
-    }
-    body {
-      background-color: #121212;
-      color: #fff;
-    }
-    .header {
-      background-color: #1f1f1f;
-      border-bottom-left-radius: 24px;
-      border-bottom-right-radius: 24px;
-      padding: 2rem 1.5rem;
-    }
-    .header .top-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .header .greeting h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-    .header .greeting span {
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-    .icon-row {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-    .icon-row .icon-circle {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #2a2a2a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .icon-row .profile-pic img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .main-content {
-      margin-top: 1rem;
-      padding: 1.5rem;
-    }
-    .poster-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .poster-card {
-      background-color: #1f1f1f;
-      border-radius: 12px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .poster-info {
-      display: flex;
-      flex-direction: column;
-    }
-    .poster-name {
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-    .poster-score {
-      color: #999;
-      font-size: 0.9rem;
-    }
-    .score-link {
-      color: #fff;
-      background-color: #4285F4;
-      padding: 0.4rem 0.6rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.85rem;
-    }
-    .score-link:hover {
-      background-color: #357ae8;
-    }
-    .bottom-links {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 2rem;
-    }
-    .bottom-links a {
-      text-decoration: none;
-      color: #fff;
-      background: #4285F4;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      transition: background 0.2s ease-in-out;
-    }
-    .bottom-links a:hover {
-      background: #357ae8;
-    }
-    # .top-row {
-    #   display: flex;
-    #   justify-content: space-around;
-    #   margin-top: 2rem;
-    # }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'IBM Plex Sans', sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { background-color: #1f1f1f; border-bottom-left-radius: 24px; border-bottom-right-radius: 24px; padding: 2rem 1.5rem; }
+    .header .top-row { display: flex; align-items: center; justify-content: space-between; }
+    .header .greeting h2 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .header .greeting span { font-size: 0.9rem; color: #ccc; }
+    .main-content { margin-top: 1rem; padding: 1.5rem; }
+    .poster-list { display: flex; flex-direction: column; gap: 1rem; }
+    .poster-card { background-color: #1f1f1f; border-radius: 12px; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
+    .poster-info { display: flex; flex-direction: column; }
+    .poster-name { font-weight: 600; margin-bottom: 0.3rem; }
+    .poster-score { color: #999; font-size: 0.9rem; }
+    .score-link { color: #fff; background-color: #4285F4; padding: 0.4rem 0.6rem; border-radius: 8px; text-decoration: none; font-size: 0.85rem; }
+    .score-link:hover { background-color: #357ae8; }
+    .bottom-links { display: flex; justify-content: space-around; margin-top: 2rem; }
+    .bottom-links a { text-decoration: none; color: #fff; background: #4285F4; padding: 0.6rem 1.2rem; border-radius: 8px; transition: background 0.2s ease-in-out; }
+    .bottom-links a:hover { background: #357ae8; }
     .top-row a {
       text-decoration: none;
       color: #fff;
@@ -1128,9 +492,6 @@ def dashboard():
       border-radius: 8px;
       transition: background 0.2s ease-in-out;
     }
-    # .top-row a:hover {
-    #   background: #444;
-    # }
   </style>
 </head>
 <body>
@@ -1138,13 +499,10 @@ def dashboard():
   <div class="header">
     <div class="top-row">
       <div class="greeting">
-        <h2>Hi &#128075; {{ judge_name }}!</h2>
+        <h2>Hi &#128075; {{ judge.name }}!</h2>
         <span>Welcome back</span>
       </div>
       <div class="top-row">
-        <!-- Notification icon -->
-        
-        <!-- Profile pic circle -->
         <a href="{{ url_for('logout') }}">Logout</a>
       </div>
     </div>
@@ -1156,236 +514,62 @@ def dashboard():
       {% for poster in assigned_posters %}
       <div class="poster-card">
         <div class="poster-info">
-          <span class="poster-name">{{ poster }}</span>
+          <!-- Extract poster number from the poster id and show in the format: poster_number: Poster_name -->
+          <span class="poster-name">
+            Poster-{{ poster[6:] }}: {{ poster_titles.get(poster, 'No Title') }}
+          </span>
           {% if scores[poster] is not none %}
             <span class="poster-score">Score: {{ scores[poster] }}</span>
           {% else %}
             <span class="poster-score">Not Scored</span>
           {% endif %}
         </div>
-        <a class="score-link" href="{{ url_for('score', poster_id=poster) }}">
-          Update
-        </a>
+        <a class="score-link" href="{{ url_for('score', poster_id=poster) }}">Update</a>
       </div>
       {% endfor %}
     </div>
 
     <div class="bottom-links">
       <a href="{{ url_for('score_log') }}">Score Log</a>
-      
     </div>
   </div>
 </body>
 </html>
     ''',
-    judge_name=judge['name'],
+    judge=judge,
     assigned_posters=assigned_posters,
+    poster_titles=poster_titles,
     scores=scores
     )
     
     return dashboard_html
 
-# @app.route('/score/<poster_id>', methods=['GET', 'POST'])
-# def score(poster_id):
-#     """
-#     Dark-themed /score screen inspired by the provided screenshot:
-#      - A centered card with "Enter Score"
-#      - Poster ID
-#      - Input for 0–10
-#      - Large Submit button
-#      - 'Back to Dashboard' link
-#     """
-#     if 'user' not in session:
-#         return redirect(url_for('login'))
-#     email = session['user']
-
-#     db = get_db()
-#     cur = db.execute("SELECT assigned_posters FROM judges WHERE email = ?", (email,))
-#     row = cur.fetchone()
-#     if not row:
-#         flash("Judge not found.")
-#         return redirect(url_for('login'))
-
-#     assigned_posters = json.loads(row['assigned_posters']) if row['assigned_posters'] else []
-#     if poster_id not in assigned_posters:
-#         flash("You are not assigned to this poster.")
-#         return redirect(url_for('dashboard'))
-
-#     # Retrieve current score, if any
-#     cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?",
-#                      (email, poster_id))
-#     existing_row = cur.fetchone()
-#     current_score = existing_row['score'] if existing_row else ""
-
-#     if request.method == 'POST':
-#         score_val = request.form.get('score')
-#         try:
-#             score_int = int(score_val)
-#             if score_int < 0 or score_int > 10:
-#                 flash("Score must be between 0 and 10.")
-#                 return redirect(url_for('score', poster_id=poster_id))
-#         except ValueError:
-#             flash("Invalid score.")
-#             return redirect(url_for('score', poster_id=poster_id))
-
-#         # Insert or update the score
-#         cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?",
-#                          (email, poster_id))
-#         row = cur.fetchone()
-#         old_score = row['score'] if row else None
-
-#         db.execute('''
-#             INSERT INTO scores (judge_email, poster_id, score)
-#             VALUES (?, ?, ?)
-#             ON CONFLICT(judge_email, poster_id) DO UPDATE SET score = ?
-#         ''', (email, poster_id, score_int, score_int))
-#         db.commit()
-
-#         # Log changes (if needed)
-#         if old_score is None or old_score != score_int:
-#             db.execute('''
-#                 INSERT INTO score_changes (judge_email, poster_id, old_score, new_score)
-#                 VALUES (?, ?, ?, ?)
-#             ''', (email, poster_id, old_score, score_int))
-#             db.commit()
-
-#         flash("Score updated.")
-#         return redirect(url_for('dashboard'))
-
-#     # Render the new, dark-themed "Enter Score" card
-#     return render_template_string('''
-# <!DOCTYPE html>
-# <html lang="en">
-# <head>
-#   <meta charset="UTF-8"/>
-#   <title>Enter Score</title>
-#   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-#   <!-- IBM Plex Sans (matching your dashboard) -->
-#   <link rel="stylesheet"
-#         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
-#   <style>
-#     * {
-#       box-sizing: border-box;
-#       margin: 0;
-#       padding: 0;
-#       font-family: 'IBM Plex Sans', sans-serif;
-#     }
-#     body {
-#       background-color: #121212;
-#       color: #fff;
-#       display: flex;
-#       align-items: center;
-#       justify-content: center;
-#       height: 100vh;
-#     }
-#     .card {
-#       background-color: #1f1f1f;
-#       width: 90%;
-#       max-width: 320px;
-#       border-radius: 12px;
-#       padding: 2rem;
-#       text-align: center;
-#       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-#     }
-#     .card h1 {
-#       font-size: 1.4rem;
-#       margin-bottom: 1rem;
-#     }
-#     .poster-id {
-#       font-size: 1rem;
-#       color: #ccc;
-#       margin-bottom: 1.5rem;
-#     }
-#     .score-label {
-#       font-size: 0.9rem;
-#       color: #666;
-#     }
-#     .score-input {
-#       font-size: 2rem;
-#       margin: 0.5rem 0 1rem 0;
-#       border: none;
-#       border-radius: 8px;
-#       width: 6rem;
-#       text-align: center;
-#       background-color: #2a2a2a;
-#       color: #fff;
-#       outline: none;
-#     }
-#     .submit-btn {
-#       background-color: #4285F4;
-#       color: #fff;
-#       font-size: 1rem;
-#       font-weight: 600;
-#       padding: 0.8rem 0;
-#       border: none;
-#       border-radius: 8px;
-#       width: 100%;
-#       max-width: 200px;
-#       margin: 0 auto;
-#       display: block;
-#       cursor: pointer;
-#     }
-#     .submit-btn:hover {
-#       background-color: #357ae8;
-#     }
-#     .back-link {
-#       display: block;
-#       margin-top: 1rem;
-#       font-size: 0.9rem;
-#       color: #4285F4;
-#       text-decoration: underline;
-#     }
-#     .back-link:hover {
-#       text-decoration: none;
-#     }
-#   </style>
-# </head>
-# <body>
-#   <div class="card">
-#     <h1>Enter Score</h1>
-#     <div class="poster-id">{{ poster_id }}</div>
-
-#     <form method="POST">
-#       <label for="score" class="score-label">0 - 10</label>
-#       <br>
-#       <input 
-#         type="number" 
-#         name="score" 
-#         id="score" 
-#         class="score-input" 
-#         min="0" 
-#         max="10" 
-#         value="{{ current_score }}" 
-#         required
-#       />
-#       <button type="submit" class="submit-btn">Submit</button>
-#     </form>
-#     <a class="back-link" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
-#   </div>
-# </body>
-# </html>
-#     ''', poster_id=poster_id, current_score=current_score)
-
-
-
 
 @app.route('/score/<poster_id>', methods=['GET', 'POST'])
 def score(poster_id):
-    """Allow a judge to enter or update a score for an assigned poster.
-    Pre-fills with the current score and uses a mobile-optimized UI."""
+    """
+    Allows a judge to enter or update a score for an assigned poster.
+    Displays the poster in the format "poster_number: Poster_name" at the top.
+    Uses a mobile-optimized UI and follows the dark theme.
+    """
     if 'user' not in session:
         return redirect(url_for('login'))
     email = session['user']
     db = get_db()
-    cur = db.execute("SELECT assigned_posters FROM judges WHERE email = ?", (email,))
+    # Fetch both assigned_posters and assigned_poster_titles
+    cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", (email,))
     row = cur.fetchone()
     if not row:
         flash("Judge not found.")
         return redirect(url_for('login'))
     assigned_posters = json.loads(row['assigned_posters']) if row['assigned_posters'] else []
+    poster_titles = json.loads(row['assigned_poster_titles']) if row['assigned_poster_titles'] else {}
     if poster_id not in assigned_posters:
         flash("You are not assigned to this poster.")
         return redirect(url_for('dashboard'))
+    
+    # Compute display string in the format "poster_number: Poster_name"
+    poster_display = f"{poster_id[6:]}: {poster_titles.get(poster_id, 'No Title')}"
     
     # Get the current score if it exists
     cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?", (email, poster_id))
@@ -1403,7 +587,7 @@ def score(poster_id):
             flash("Invalid score.")
             return redirect(url_for('score', poster_id=poster_id))
         
-        # Determine if there's an existing score
+        # Check if there is an existing score
         cur = db.execute("SELECT score FROM scores WHERE judge_email = ? AND poster_id = ?", (email, poster_id))
         row = cur.fetchone()
         old_score = row['score'] if row else None
@@ -1430,58 +614,24 @@ def score(poster_id):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enter Score for {{ poster_id }}</title>
+  <title>Enter Score for {{ poster_display }}</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #121212;
-      font-family: 'Roboto', sans-serif;
-      color: white;
-    }
-    .card {
-      border-radius: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      background: #1f1f1f;
-    }
-    .score-input {
-      font-size: 2rem;
-      text-align: center;
-      border: none;
-      outline: none;
-      width: 100%;
-      background-color: transparent;
-     color: white;
-    }
-    .submit-btn {
-      background-color: #4285F4;
-      border: none;
-      color: white;
-      font-size: 1.5rem;
-      border-radius: 10px;
-      padding: 10px 0;
-      margin-top: 20px;
-      width: 100%;
-    }
-    .submit-btn:hover {
-      background-color: #357ae8;
-    }
-    .text-color-w{
-       color: white;
-    }
-    .back-btn{
-      padding: .5em;
-      background-color: #4285F4;
-      text-decoration: none;
-      color: white;
-      border-radius: 10px;
-    }
+    body { background-color: #121212; font-family: 'Roboto', sans-serif; color: white; }
+    .card { border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: #1f1f1f; }
+    .score-input { font-size: 2rem; text-align: center; border: none; outline: none; width: 100%; background-color: transparent; color: white; }
+    .submit-btn { background-color: #4285F4; border: none; color: white; font-size: 1.5rem; border-radius: 10px; padding: 10px 0; margin-top: 20px; width: 100%; }
+    .submit-btn:hover { background-color: #357ae8; }
+    .text-color-w { color: white; }
+    .back-btn { padding: .5em; background-color: #4285F4; text-decoration: none; color: white; border-radius: 10px; }
   </style>
 </head>
 <body>
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4" style="width: 90%; max-width: 400px;">
-      <h2 class="text-color-w text-center mb-4 ">Enter Score</h2>
-      <h5 class=" text-center mb-4 text-color-w">{{ poster_id }}</h5>
+      <h2 class="text-color-w text-center mb-4">Enter Score</h2>
+      <!-- Display the poster number and title in the desired format -->
+      <h5 class="text-center mb-4 text-color-w">{{ poster_display }}</h5>
       <form method="post">
         <div class="mb-3">
           <input type="number" name="score" min="0" max="10" value="{{ current_score }}" class="score-input" placeholder="0-10" required>
@@ -1493,32 +643,13 @@ def score(poster_id):
   </div>
 </body>
 </html>
-''', poster_id=poster_id, current_score=current_score)
+''', poster_display=poster_display, current_score=current_score)
+
 
 
 # ===============================
 # Score Change Log for Judges
 # ===============================
-# @app.route('/score_log')
-# def score_log():
-#     """Display the log of score changes for the logged-in judge."""
-#     if 'user' not in session:
-#         return redirect(url_for('login'))
-#     email = session['user']
-#     db = get_db()
-#     cur = db.execute("SELECT * FROM score_changes WHERE judge_email = ? ORDER BY change_time DESC", (email,))
-#     changes = cur.fetchall()
-#     log_html = "<h2>Your Score Change Log</h2>"
-#     if not changes:
-#         log_html += "<p>No score changes logged yet.</p>"
-#     else:
-#         log_html += "<table border='1' cellspacing='0' cellpadding='5'>"
-#         log_html += "<tr><th>Poster ID</th><th>Old Score</th><th>New Score</th><th>Timestamp</th></tr>"
-#         for change in changes:
-#             log_html += f"<tr><td>{change['poster_id']}</td><td>{change['old_score']}</td><td>{change['new_score']}</td><td>{change['change_time']}</td></tr>"
-#         log_html += "</table>"
-#     log_html += '<br><a href="/dashboard">Back to Dashboard</a>'
-#     return log_html
 
 @app.route('/score_log')
 def score_log():
@@ -1678,6 +809,322 @@ def score_log():
 
     return log_html
 
+@app.route('/admin/remove_judges', methods=['GET', 'POST'])
+def remove_judges():
+    """
+    Admin-only endpoint (accessible only if ?key=adminsecret is provided)
+    to remove all current judges from the database.
+    
+    GET: Displays a dark-themed confirmation form.
+    POST: Deletes all rows from the judges table.
+    """
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    if request.method == 'POST':
+        db = get_db()
+        db.execute("DELETE FROM judges")
+        db.commit()
+        return "All judges have been removed.", 200
+
+    return render_template_string('''
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Remove Judges</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+            <style>
+                body {
+                  background-color: #121212;
+                  color: #fff;
+                  font-family: 'IBM Plex Sans', sans-serif;
+                  margin: 0;
+                  padding: 2rem;
+                }
+                .container {
+                  max-width: 500px;
+                  margin: auto;
+                  background: #1f1f1f;
+                  padding: 2rem;
+                  border-radius: 12px;
+                  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+                  text-align: center;
+                }
+                h2 { margin-bottom: 1rem; }
+                p { margin-bottom: 2rem; }
+                button {
+                  padding: 0.5rem 1rem;
+                  background: #d9534f;
+                  color: #fff;
+                  border: none;
+                  border-radius: 8px;
+                  cursor: pointer;
+                  font-size: 1rem;
+                }
+                button:hover {
+                  background: #c9302c;
+                }
+                a.btn {
+                  display: inline-block;
+                  margin-top: 1rem;
+                  padding: 0.5rem 1rem;
+                  background: #4285F4;
+                  color: #fff;
+                  border-radius: 8px;
+                  text-decoration: none;
+                  font-size: 1rem;
+                }
+                a.btn:hover {
+                  background: #357ae8;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h2>Remove All Judges</h2>
+                <p>Are you sure you want to remove all judges from the system?<br>
+                   This action cannot be undone.</p>
+                <form method="POST">
+                    <button type="submit">Remove Judges</button>
+                </form>
+                <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Cancel</a>
+            </div>
+        </body>
+        </html>
+    ''')
+
+
+def is_valid_poster(cell_value):
+    """Return True if the cell value represents a valid poster number."""
+    try:
+        return cell_value is not None and (isinstance(cell_value, (int, float)) or str(cell_value).strip() != "")
+    except Exception:
+        return False
+
+@app.route('/admin/import_judges', methods=['GET', 'POST'])
+def import_judges():
+    """
+    Admin-only endpoint (accessible only if ?key=adminsecret is provided)
+    that accepts an XLSX file upload containing judge and poster assignments.
+    
+    The XLSX file is expected to have a header row with columns like:
+      - Email, Judge FirstName, Judge LastName, poster-1, poster-1-title, ... poster-6, poster-6-title
+      
+    Judges with no valid poster assignments are skipped.
+    """
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    if request.method == 'GET':
+        return render_template_string('''
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Import Judges</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+            <style>
+                body {
+                  background-color: #121212;
+                  color: #fff;
+                  font-family: 'IBM Plex Sans', sans-serif;
+                  margin: 0;
+                  padding: 2rem;
+                }
+                .container {
+                  max-width: 500px;
+                  margin: auto;
+                  background: #1f1f1f;
+                  padding: 2rem;
+                  border-radius: 12px;
+                  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+                  text-align: center;
+                }
+                input[type="file"] {
+                  display: block;
+                  margin: 1rem auto;
+                  background: #2a2a2a;
+                  color: #fff;
+                  border: none;
+                  padding: 0.5rem;
+                  border-radius: 8px;
+                }
+                button {
+                  padding: 0.5rem 1rem;
+                  background: #4285F4;
+                  color: #fff;
+                  border: none;
+                  border-radius: 8px;
+                  cursor: pointer;
+                  font-size: 1rem;
+                }
+                button:hover {
+                  background: #357ae8;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h2>Import Judges from XLSX</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" accept=".xlsx" required>
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </body>
+        </html>
+        ''')
+    
+    # POST: Process the uploaded file
+    uploaded_file = request.files.get('file')
+    if not uploaded_file:
+        return "No file uploaded", 400
+
+    try:
+        wb = openpyxl.load_workbook(uploaded_file)
+        sheet = wb.active
+
+        # Read header row (assume first row is header)
+        headers = [cell.value for cell in next(sheet.iter_rows(min_row=1, max_row=1))]
+        poster_cols = {}
+        poster_title_cols = {}
+        for i in range(1, 7):
+            try:
+                poster_cols[i] = headers.index(f"poster-{i}")
+            except ValueError:
+                poster_cols[i] = None
+            try:
+                poster_title_cols[i] = headers.index(f"poster-{i}-title")
+            except ValueError:
+                poster_title_cols[i] = None
+
+        try:
+            email_index = headers.index("Email")
+            fname_index = headers.index("Judge FirstName")
+            lname_index = headers.index("Judge LastName")
+        except ValueError as e:
+            return f"Missing required column in header: {str(e)}", 400
+
+        imported_count = 0
+        db = sqlite3.connect(DATABASE)
+        db.row_factory = sqlite3.Row
+        for row in sheet.iter_rows(min_row=2):
+            email = row[email_index].value
+            if not email:
+                continue
+            first_name = row[fname_index].value or ""
+            last_name = row[lname_index].value or ""
+            full_name = f"{first_name.strip()} {last_name.strip()}".strip()
+
+            assigned_posters = []
+            poster_titles = {}
+            for i in range(1, 7):
+                p_col = poster_cols.get(i)
+                if p_col is not None:
+                    cell_value = row[p_col].value
+                    if is_valid_poster(cell_value):
+                        try:
+                            poster_num = int(float(cell_value))
+                        except Exception:
+                            continue
+                        poster_id = f"poster{poster_num}"
+                        if poster_id not in assigned_posters:
+                            assigned_posters.append(poster_id)
+                            t_col = poster_title_cols.get(i)
+                            title = row[t_col].value if t_col is not None else None
+                            if title:
+                                poster_titles[poster_id] = title.strip()
+
+            if not assigned_posters:
+                continue
+
+            db.execute("""
+                INSERT INTO judges (email, name, assigned_posters, assigned_poster_titles)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT(email) DO UPDATE SET
+                    name = excluded.name,
+                    assigned_posters = excluded.assigned_posters,
+                    assigned_poster_titles = excluded.assigned_poster_titles
+            """, (email.strip(), full_name, json.dumps(assigned_posters), json.dumps(poster_titles)))
+            imported_count += 1
+
+        db.commit()
+        db.close()
+
+        # Return a dark-themed success page instead of plain text.
+        return render_template_string('''
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Import Successful</title>
+           <link rel="stylesheet"
+                 href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+           <style>
+              body {
+                 background-color: #121212;
+                 color: #fff;
+                 font-family: 'IBM Plex Sans', sans-serif;
+                 padding: 2rem;
+                 text-align: center;
+              }
+              .container {
+                 max-width: 500px;
+                 margin: auto;
+                 background: #1f1f1f;
+                 padding: 2rem;
+                 border-radius: 12px;
+                 box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+              }
+              a.btn {
+                 display: inline-block;
+                 margin-top: 1rem;
+                 padding: 0.5rem 1rem;
+                 background: #4285F4;
+                 color: #fff;
+                 border-radius: 8px;
+                 text-decoration: none;
+                 font-size: 1rem;
+              }
+              a.btn:hover {
+                 background: #357ae8;
+              }
+           </style>
+        </head>
+        <body>
+           <div class="container">
+              <h2>Import Successful</h2>
+              <p>{{ imported_count }} judges imported successfully.</p>
+              <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Back to Admin Dashboard</a>
+           </div>
+        </body>
+        </html>
+        ''', imported_count=imported_count), 200
+
+    except Exception as e:
+        return f"Error processing file: {str(e)}", 500
+
+@app.route('/qr/<poster_id>')
+def qr_redirect(poster_id):
+    """
+    QR endpoint: When a judge scans a QR code pointing to /qr/<poster_id>,
+    if logged in, they are immediately redirected to /score/<poster_id>.
+    Otherwise, the intended URL is saved in the session and the judge is sent to login.
+    """
+    if 'user' in session:
+        return redirect(url_for('score', poster_id=poster_id))
+    else:
+        # Save the intended redirect URL for after login
+        session['redirect_after_login'] = url_for('score', poster_id=poster_id)
+        return redirect(url_for('login'))
+
+
 
 # ===============================
 # Admin Export Endpoint
@@ -1704,6 +1151,451 @@ def export():
                  mimetype='text/csv',
                  as_attachment=True,
                  download_name='scores.csv')
+@app.route('/admin/view_scores', methods=['GET'])
+def admin_view_scores():
+    # Check admin access using query parameter
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    db = get_db()
+    # Retrieve all scores ordered by judge_email and poster_id for clarity
+    cur = db.execute("SELECT id, judge_email, poster_id, score FROM scores ORDER BY judge_email, poster_id")
+    scores = cur.fetchall()
+
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>View/Edit Scores</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 2rem;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 2rem;
+        }
+        th, td {
+          border: 1px solid #2a2a2a;
+          padding: 0.5rem;
+          text-align: left;
+        }
+        th {
+          background-color: #1f1f1f;
+        }
+        tr:nth-child(even) {
+          background-color: #1f1f1f;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .form-inline {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        }
+        input[type="number"] {
+          width: 80px;
+          padding: 0.3rem;
+          border-radius: 4px;
+          border: none;
+          text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>View/Edit Scores</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Judge Email</th>
+            <th>Poster ID</th>
+            <th>Score</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for score in scores %}
+          <tr>
+            <td>{{ score['id'] }}</td>
+            <td>{{ score['judge_email'] }}</td>
+            <td>{{ score['poster_id'] }}</td>
+            <td>{{ score['score'] }}</td>
+            <td>
+              <form class="form-inline" method="POST" action="{{ url_for('admin_edit_score') }}?key=adminsecret">
+                <input type="hidden" name="score_id" value="{{ score['id'] }}">
+                <input type="number" name="new_score" min="0" max="10" placeholder="0-10" required>
+                <button type="submit" class="btn">Update</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Back to Admin Dashboard</a>
+    </body>
+    </html>
+    ''', scores=scores)
+
+@app.route('/admin/edit_score', methods=['POST'])
+def admin_edit_score():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    score_id = request.form.get('score_id')
+    new_score = request.form.get('new_score')
+    try:
+        new_score = int(new_score)
+        if new_score < 0 or new_score > 10:
+            flash("Score must be between 0 and 10.")
+            return redirect(url_for('admin_view_scores') + "?key=adminsecret")
+    except ValueError:
+        flash("Invalid score input.")
+        return redirect(url_for('admin_view_scores') + "?key=adminsecret")
+
+    db = get_db()
+    # Update the score in the scores table
+    db.execute("UPDATE scores SET score = ? WHERE id = ?", (new_score, score_id))
+    db.commit()
+    flash("Score updated.")
+    return redirect(url_for('admin_view_scores') + "?key=adminsecret")
+
+@app.route('/admin/reset_scores', methods=['GET', 'POST'])
+def reset_scores():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    if request.method == 'GET':
+        return render_template_string('''
+         <!DOCTYPE html>
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <title>Reset Scores</title>
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <link rel="stylesheet"
+                   href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+             <style>
+                 body { background-color: #121212; color: #fff; font-family: 'IBM Plex Sans', sans-serif; padding: 2rem; }
+                 .container { max-width: 500px; margin: auto; background: #1f1f1f; padding: 1rem; border-radius: 8px; text-align: center; }
+                 .btn { background-color: #4285F4; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 8px; text-decoration: none; cursor: pointer; }
+                 .btn:hover { background-color: #357ae8; }
+             </style>
+         </head>
+         <body>
+             <div class="container">
+                 <h2>Reset Score Data</h2>
+                 <p>Are you sure you want to reset all score data?<br>
+                    This will remove all entries from the scores and score_changes tables.</p>
+                 <form method="POST">
+                     <button type="submit" class="btn">Reset Scores</button>
+                 </form>
+                 <br>
+                 <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Cancel</a>
+             </div>
+         </body>
+         </html>
+        ''')
+    # POST: Reset the scores and score_changes tables
+    db = get_db()
+    db.execute("DELETE FROM scores")
+    db.execute("DELETE FROM score_changes")
+    db.commit()
+    flash("All score data has been reset.")
+    return redirect(url_for('admin_dashboard') + "?key=adminsecret")
+
+
+@app.route('/admin/generate_all_qr', methods=['GET'])
+def admin_generate_all_qr():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    db = get_db()
+    cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges")
+    unique_posters = {}
+    for row in cur.fetchall():
+        # Decode the assigned posters (JSON list) and poster titles (JSON dict)
+        if row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+            except Exception:
+                posters = []
+        else:
+            posters = []
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+            except Exception:
+                titles = {}
+        else:
+            titles = {}
+        for poster in posters:
+            # Add the poster if not already included.
+            if poster not in unique_posters:
+                unique_posters[poster] = titles.get(poster, "No Title")
+
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>QR Codes for All Posters</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" 
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+         body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'IBM Plex Sans', sans-serif;
+            padding: 2rem;
+         }
+         .container {
+            max-width: 900px;
+            margin: auto;
+            background: #1f1f1f;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+         }
+         .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+         }
+         .poster-card {
+            border: 1px solid #2a2a2a;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #121212;
+         }
+         .poster-card h3 {
+            margin-bottom: 0.5rem;
+         }
+         .poster-card img {
+            margin-top: 0.5rem;
+            width: 150px;
+            height: 150px;
+         }
+         .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #4285F4;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+         }
+         .btn:hover {
+            background: #357ae8;
+         }
+         .print-btn {
+            background: #5cb85c;
+         }
+         .print-btn:hover {
+            background: #4cae4c;
+         }
+      </style>
+      <script>
+         function printPage() {
+           window.print();
+         }
+      </script>
+    </head>
+    <body>
+      <div class="container">
+         <h2>QR Codes for All Posters</h2>
+         <div class="grid">
+         {% for poster_id, title in unique_posters.items() %}
+            <div class="poster-card">
+               <h3>{{ poster_id[6:] }}: {{ title }}</h3>
+               <img src="{{ url_for('generate_qr', poster_id=poster_id, _external=True) }}" alt="QR for {{ poster_id }}">
+            </div>
+         {% endfor %}
+         </div>
+         <button class="btn print-btn" onclick="printPage()">Print QR Codes</button>
+         <br>
+         <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Back to Admin Dashboard</a>
+      </div>
+    </body>
+    </html>
+    ''', unique_posters=unique_posters)
+
+
+@app.route('/admin/dashboard')
+def admin_dashboard():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Admin Dashboard</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        .header {
+          background-color: #1f1f1f;
+          padding: 2rem 1.5rem;
+          text-align: center;
+          border-bottom-left-radius: 24px;
+          border-bottom-right-radius: 24px;
+        }
+        .header h1 {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+        .container {
+          padding: 2rem;
+          max-width: 800px;
+          margin: 2rem auto;
+        }
+        .dashboard-menu {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          justify-content: center;
+        }
+        .menu-item {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1rem;
+          width: 250px;
+          text-align: center;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.2s ease;
+        }
+        .menu-item:hover {
+          background-color: #2a2a2a;
+        }
+        .menu-item h2 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+        .menu-item p {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+        .menu-item a {
+          display: inline-block;
+          margin-top: 0.5rem;
+          color: #4285F4;
+          text-decoration: none;
+          font-weight: 600;
+          padding: 0.5rem 1rem;
+          border: 2px solid #4285F4;
+          border-radius: 8px;
+          transition: background-color 0.2s ease;
+        }
+        .menu-item a:hover {
+          background-color: #4285F4;
+          color: #fff;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <h1>Admin Dashboard</h1>
+        <p>Manage all admin operations from here</p>
+      </div>
+      <div class="container">
+        <div class="dashboard-menu">
+          <div class="menu-item">
+            <h2>Import Judges</h2>
+            <p>Upload an XLSX file to import judges and poster assignments.</p>
+            <a href="{{ url_for('import_judges') }}?key=adminsecret">Go to Import</a>
+          </div>
+          <div class="menu-item">
+            <h2>Remove Judges</h2>
+            <p>Remove all current judges from the system.</p>
+            <a href="{{ url_for('remove_judges') }}?key=adminsecret">Remove Judges</a>
+          </div>
+          <div class="menu-item">
+            <h2>Export Scores</h2>
+            <p>Download all scores as a CSV file.</p>
+            <a href="{{ url_for('export') }}?key=adminsecret">Export CSV</a>
+          </div>
+          <div class="menu-item">
+            <h2>View/Edit Scores</h2>
+            <p>Review and update scores submitted by judges.</p>
+            <a href="{{ url_for('admin_view_scores') }}?key=adminsecret">View/Edit Scores</a>
+          </div>
+          <div class="menu-item">
+            <h2>Reset Scores</h2>
+            <p>Clear all score data and logs for a new round.</p>
+            <a href="{{ url_for('reset_scores') }}?key=adminsecret">Reset Scores</a>
+          </div>
+          <div class="menu-item">
+            <h2>Generate All QR Codes</h2>
+            <p>Generate QR codes for all unique poster assignments.</p>
+            <a href="{{ url_for('admin_generate_all_qr') }}?key=adminsecret">Generate All QR Codes</a>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+    ''')
+
+
+
+@app.route('/generate_qr/<poster_id>')
+def generate_qr(poster_id):
+    """
+    Generates a QR code image for a given poster_id.
+    The QR code encodes the URL for the /qr/<poster_id> endpoint.
+    """
+    # Construct the target URL that judges will be redirected to (i.e., /qr/<poster_id>)
+    target_url = url_for('qr_redirect', poster_id=poster_id, _external=True)
+    
+    # Generate the QR code using the qrcode library
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data(target_url)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    
+    # Save image to a BytesIO object and send it as a PNG image
+    img_io = BytesIO()
+    img.save(img_io, 'PNG')
+    img_io.seek(0)
+    return send_file(img_io, mimetype='image/png')
+
+
 
 
 # ===============================

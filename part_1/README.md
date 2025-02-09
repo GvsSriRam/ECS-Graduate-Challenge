@@ -17,8 +17,11 @@ This module implements the automated judge assignment system for the ECS Graduat
 │   ├── embed_vectors_scholarly.py         # Research profile embeddings
 │   ├── judge_embed_vector.py             # Judge data embeddings
 │   └── poster_abstracts_embed_vector.py   # Poster abstract embeddings
-└── similarity_computation/  
-    └── similarity_score.py                # Judge-poster matching
+├── similarity_computation/  
+│   └── similarity_score.py                # Judge-poster matching
+└── poster_assignment/
+    └── poster_assignment.py               # Optimal assignment algorithm
+
 ```
 
 ## Setup Virtual Environment
@@ -61,6 +64,11 @@ python embeddings/poster_abstracts_embed_vector.py
 ```bash
 python similarity_computation/similarity_score.py
 ```
+4. Run Poster Assignment:
+```bash
+# After generating embeddings and similarity scores
+python poster_assignment/poster_assignment.py
+```
 
 ## Input Requirements
 
@@ -86,6 +94,7 @@ python similarity_computation/similarity_score.py
   - Binary matrix showing all assignments
   - Rows: posters, Columns: judges
   - Entries: 1 (assigned) or 0 (not assigned)
+4. 
 
 ## Constraints Handled
 
@@ -113,6 +122,17 @@ We evaluate several state-of-the-art models for generating research area embeddi
 - `allenai/specter-2`: Improved version with better scientific understanding
 - `allenai/scibert_scivocab_uncased`: Scientific text specialized BERT
 - `gsarti/scibert-nli`: Scientific BERT with natural language inference
+
+3. Poster Assignment Module:
+- The poster assignment system implements:
+   - Optimization Model:
+     - Uses integer linear programming (PuLP)
+     -  Maximizes research area compatibility
+     -  Enforces scheduling and advisor constraints
+- Key Features:
+   - Multi-format output generation (Excel, CSV, JSON)
+   - Comprehensive error handling
+   - Input validation and data integrity checks
 
 ### Faculty Profile Extraction
 For each faculty member, we extract comprehensive research information from multiple sources. Sample extracted data structure:

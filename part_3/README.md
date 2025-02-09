@@ -28,7 +28,7 @@ python fair_ranking.py
 ```
 
 The system will:
-1. Load scores from the input Excel file
+1. Load scores from the input Excel file (output file from part-2)
 2. Apply normalization and bias correction
 3. Generate final rankings
 4. Save results and display top 10 rankings

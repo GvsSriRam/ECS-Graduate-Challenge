@@ -94,6 +94,8 @@ your_project/
    ```
 
    By default, Flask runs at `http://127.0.0.1:5000/`.
+   
+   Note: If the url doesn't open, it might be the issue with the previous session cache. Please try in incognito.
 
 2. **Admin Workflow**:
 
@@ -105,7 +107,7 @@ your_project/
       - **View/Edit Scores**: Manually tweak any judge’s submitted scores.
       - **Reset Scores**: Clears all scores and score history.
       - **Generate All QR Codes**: Create a QR code for each poster.
-      - **Export Score Matrix**: Generates an XLSX matrix of [Poster x Judge] scores.
+      - **Export Score Matrix**: Generates an XLSX matrix of [Poster x Judge] scores. This will be used as input for part-3.
       - **Upload Results**: Upload a final XLSX with `Poster-ID` and `Rank` columns.
 
 3. **Judge Workflow**:

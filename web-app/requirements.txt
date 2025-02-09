@@ -1,4 +1,0 @@
-Flask
-Flask-Session
-sqlite3
-jinja2

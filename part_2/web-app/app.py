@@ -109,7 +109,7 @@ def init_db():
         db.commit()
 
 
-
+ranking_data = []  # Holds your poster/rank data loaded from XLSX.
 # Initialize DB on first run
 if not os.path.exists(DATABASE):
     init_db()
@@ -1760,135 +1760,13 @@ def admin_generate_all_qr():
     ''', unique_posters=unique_posters)
 
 
-# @app.route('/admin/dashboard')
-# def admin_dashboard():
-#     if request.args.get('key') != 'adminsecret':
-#         return "Unauthorized", 401
-
-#     return render_template_string('''
-#     <!DOCTYPE html>
-#     <html lang="en">
-#     <head>
-#       <meta charset="UTF-8">
-#       <title>Admin Dashboard</title>
-#       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-#       <link rel="stylesheet"
-#             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
-#       <style>
-#         body {
-#           background-color: #121212;
-#           color: #fff;
-#           font-family: 'IBM Plex Sans', sans-serif;
-#           margin: 0;
-#           padding: 0;
-#         }
-#         .header {
-#           background-color: #1f1f1f;
-#           padding: 2rem 1.5rem;
-#           text-align: center;
-#           border-bottom-left-radius: 24px;
-#           border-bottom-right-radius: 24px;
-#         }
-#         .header h1 {
-#           font-size: 2rem;
-#           margin-bottom: 0.5rem;
-#         }
-#         .container {
-#           padding: 2rem;
-#           max-width: 800px;
-#           margin: 2rem auto;
-#         }
-#         .dashboard-menu {
-#           display: flex;
-#           flex-wrap: wrap;
-#           gap: 1rem;
-#           justify-content: center;
-#         }
-#         .menu-item {
-#           background-color: #1f1f1f;
-#           border-radius: 12px;
-#           padding: 1rem;
-#           width: 250px;
-#           text-align: center;
-#           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-#           transition: background-color 0.2s ease;
-#         }
-#         .menu-item:hover {
-#           background-color: #2a2a2a;
-#         }
-#         .menu-item h2 {
-#           font-size: 1.5rem;
-#           margin-bottom: 0.5rem;
-#         }
-#         .menu-item p {
-#           font-size: 1rem;
-#           margin-bottom: 1rem;
-#         }
-#         .menu-item a {
-#           display: inline-block;
-#           margin-top: 0.5rem;
-#           color: #4285F4;
-#           text-decoration: none;
-#           font-weight: 600;
-#           padding: 0.5rem 1rem;
-#           border: 2px solid #4285F4;
-#           border-radius: 8px;
-#           transition: background-color 0.2s ease;
-#         }
-#         .menu-item a:hover {
-#           background-color: #4285F4;
-#           color: #fff;
-#         }
-#       </style>
-#     </head>
-#     <body>
-#       <div class="header">
-#         <h1>Admin Dashboard</h1>
-#         <p>Manage all admin operations from here</p>
-#       </div>
-#       <div class="container">
-#         <div class="dashboard-menu">
-#           <div class="menu-item">
-#             <h2>Import Judges</h2>
-#             <p>Upload an XLSX file to import judges and poster assignments.</p>
-#             <a href="{{ url_for('import_judges') }}?key=adminsecret">Go to Import</a>
-#           </div>
-#           <div class="menu-item">
-#             <h2>Remove Judges</h2>
-#             <p>Remove all current judges from the system.</p>
-#             <a href="{{ url_for('remove_judges') }}?key=adminsecret">Remove Judges</a>
-#           </div>
-#           <div class="menu-item">
-#             <h2>Export Scores</h2>
-#             <p>Download all scores as a CSV file.</p>
-#             <a href="{{ url_for('export') }}?key=adminsecret">Export CSV</a>
-#           </div>
-#           <div class="menu-item">
-#             <h2>View/Edit Scores</h2>
-#             <p>Review and update scores submitted by judges.</p>
-#             <a href="{{ url_for('admin_view_scores') }}?key=adminsecret">View/Edit Scores</a>
-#           </div>
-#           <div class="menu-item">
-#             <h2>Reset Scores</h2>
-#             <p>Clear all score data and logs for a new round.</p>
-#             <a href="{{ url_for('reset_scores') }}?key=adminsecret">Reset Scores</a>
-#           </div>
-#           <div class="menu-item">
-#             <h2>Generate All QR Codes</h2>
-#             <p>Generate QR codes for all unique poster assignments.</p>
-#             <a href="{{ url_for('admin_generate_all_qr') }}?key=adminsecret">Generate All QR Codes</a>
-#           </div>
-#         </div>
-#       </div>
-#     </body>
-#     </html>
-#     ''')
-
 @app.route('/admin/dashboard')
 def admin_dashboard():
+    # Check admin key
     if request.args.get('key') != 'adminsecret':
         return "Unauthorized", 401
 
+    # Render the dashboard with a new "View Final Results" tile
     return render_template_string('''
     <!DOCTYPE html>
     <html lang="en">
@@ -1972,6 +1850,7 @@ def admin_dashboard():
       </div>
       <div class="container">
         <div class="dashboard-menu">
+          <!-- Existing Admin Tiles -->
           <div class="menu-item">
             <h2>Import Judges</h2>
             <p>Upload an XLSX file to import judges and poster assignments.</p>
@@ -2000,18 +1879,26 @@ def admin_dashboard():
           <div class="menu-item">
             <h2>Generate All QR Codes</h2>
             <p>Generate QR codes for all unique poster assignments.</p>
-            <a href="{{ url_for('admin_generate_all_qr') }}?key=adminsecret">Generate All QR Codes</a>
+            <a href="{{ url_for('admin_generate_all_qr') }}?key=adminsecret">Generate All QR</a>
           </div>
           <div class="menu-item">
             <h2>Export Score Matrix</h2>
             <p>Download the score matrix as an XLSX file.</p>
             <a href="{{ url_for('export_score_matrix') }}?key=adminsecret">Export Matrix</a>
           </div>
+
+          <!-- NEW TILE: View Final Results -->
+          <div class="menu-item">
+            <h2>Upload Results</h2>
+            <p>Upload XLSX file with final poster rankings (Poster-ID, Rank).</p>
+            <a href="{{ url_for('upload_results') }}?key=adminsecret">Upload Results</a>
+          </div>
         </div>
       </div>
     </body>
     </html>
     ''')
+
 
 
 
@@ -2041,6 +1928,825 @@ def generate_qr(poster_id):
     img.save(img_io, 'PNG')
     img_io.seek(0)
     return send_file(img_io, mimetype='image/png')
+
+@app.route('/admin/upload_results', methods=['GET', 'POST'])
+def upload_results():
+    """Admin-only route to upload an XLSX file with final poster rankings."""
+    # 1. Simple admin check (replace with your own secure method)
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+
+    if request.method == 'GET':
+        # Show a dark-themed file upload form
+        return render_template_string('''
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>Upload Poster Results</title>
+          <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+          <style>
+            body {
+              background-color: #121212;
+              color: #fff;
+              font-family: 'IBM Plex Sans', sans-serif;
+              padding: 2rem;
+              text-align: center;
+            }
+            .container {
+              max-width: 500px;
+              margin: auto;
+              background: #1f1f1f;
+              padding: 2rem;
+              border-radius: 12px;
+              box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            }
+            input[type="file"] {
+              display: block;
+              margin: 1rem auto;
+              background: #2a2a2a;
+              color: #fff;
+              border: none;
+              padding: 0.5rem;
+              border-radius: 8px;
+            }
+            button {
+              padding: 0.5rem 1rem;
+              background: #4285F4;
+              color: #fff;
+              border: none;
+              border-radius: 8px;
+              cursor: pointer;
+              font-size: 1rem;
+            }
+            button:hover {
+              background: #357ae8;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <h2>Upload Poster Results (XLSX)</h2>
+            <form method="POST" enctype="multipart/form-data">
+              <input type="file" name="file" accept=".xlsx" required>
+              <button type="submit">Upload</button>
+            </form>
+          </div>
+        </body>
+        </html>
+        ''')
+
+    # POST: Process the uploaded XLSX file
+    uploaded_file = request.files.get('file')
+    if not uploaded_file:
+        flash("No file uploaded.")
+        return redirect(url_for('upload_results') + "?key=adminsecret")
+
+    try:
+        # Parse the XLSX
+        wb = openpyxl.load_workbook(uploaded_file)
+        sheet = wb.active
+
+        # We expect headers in the first row: Poster-ID, Rank
+        # Build a simple dictionary for column indexes
+        header_row = [cell.value for cell in next(sheet.iter_rows(min_row=1, max_row=1))]
+        try:
+            poster_col_idx = header_row.index("Poster-ID")
+            rank_col_idx = header_row.index("Rank")
+        except ValueError as e:
+            return f"Missing required column in header: {str(e)}", 400
+
+        # Clear the old data; parse the new data
+        global ranking_data
+        ranking_data = []
+
+        for row in sheet.iter_rows(min_row=2):
+            poster_id = row[poster_col_idx].value
+            rank_val = row[rank_col_idx].value
+            if poster_id and rank_val:
+                ranking_data.append({
+                    "poster_id": str(poster_id).strip(),
+                    "rank": int(rank_val)
+                })
+
+        # Sort by ascending rank
+        ranking_data.sort(key=lambda x: x["rank"])
+
+        # Show a success message with a link to the public results page
+        return render_template_string('''
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>Results Uploaded</title>
+          <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+          <style>
+            body {
+              background-color: #121212;
+              color: #fff;
+              font-family: 'IBM Plex Sans', sans-serif;
+              text-align: center;
+              padding: 2rem;
+            }
+            .container {
+              max-width: 500px;
+              margin: auto;
+              background: #1f1f1f;
+              padding: 2rem;
+              border-radius: 12px;
+            }
+            a.btn {
+              display: inline-block;
+              margin-top: 1rem;
+              padding: 0.5rem 1rem;
+              background: #4285F4;
+              color: #fff;
+              border-radius: 8px;
+              text-decoration: none;
+            }
+            a.btn:hover {
+              background: #357ae8;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <h2>Results Uploaded Successfully</h2>
+            <p>Your ranking data is now available publicly.</p>
+            <a class="btn" href="{{ url_for('view_results', _external=True) }}">View Public Results</a>
+          </div>
+        </body>
+        </html>
+        ''')
+    except Exception as e:
+        return f"Error processing file: {str(e)}", 500
+
+# @app.route('/results')
+# def view_results():
+#     """
+#     Publicly viewable route that displays final poster rankings
+#     plus poster titles from the DB.
+#     """
+#     global ranking_data
+
+#     # If there's no ranking data, show a simple message
+#     if not ranking_data:
+#         return render_template_string('''
+#         <html>
+#           <body style="background:#121212;color:white;font-family:sans-serif;text-align:center;padding:2rem;">
+#             <h2>No rankings available yet.</h2>
+#           </body>
+#         </html>
+#         ''')
+
+#     # STEP A: Build a dictionary of {poster_id_in_db -> title} from the judges table.
+#     db = get_db()
+#     cur = db.execute("SELECT assigned_poster_titles FROM judges")
+#     rows = cur.fetchall()
+
+#     all_poster_titles = {}  # e.g. {"poster2": "Title for Poster 2", "poster7": "Another Title"}
+#     for row in rows:
+#         if row['assigned_poster_titles']:
+#             try:
+#                 titles_dict = json.loads(row['assigned_poster_titles'])
+#                 # Merge each judge's titles into the global dictionary
+#                 for pid, title_str in titles_dict.items():
+#                     all_poster_titles[pid] = title_str
+#             except Exception:
+#                 pass  # Ignore JSON parsing errors if any
+
+#     # STEP B: Convert each entry in ranking_data => add "title" and "points"
+#     # ranking_data is something like:
+#     # [{"poster_id": "Poster-2", "rank": 1}, {"poster_id": "Poster-6", "rank": 2}, ...]
+#     # We'll create a new list with more fields.
+#     rank_to_points = {
+#         1: 1500,
+#         2: 1000,
+#         3: 850,
+#         4: 650,
+#         5: 520,
+#         6: 409,
+#         7: 300,
+#         8: 150
+#     }
+#     results_with_extra = []
+#     for entry in ranking_data:
+#         rank = entry["rank"]
+#         poster_id = entry["poster_id"]  # e.g. "Poster-2"
+#         points = rank_to_points.get(rank, 100)  # default 100 for rank>8
+
+#         # If your DB keys are "poster2" but the XLSX says "Poster-2",
+#         # you can transform "Poster-2" -> "poster2" here:
+#         db_poster_key = poster_id.replace("Poster-", "poster").lower()
+
+#         title_str = all_poster_titles.get(db_poster_key, "No Title Found")
+
+#         results_with_extra.append({
+#             "poster_id": poster_id,
+#             "title": title_str,
+#             "rank": rank,
+#             "points": points
+#         })
+
+#     # Sort by rank ascending
+#     results_with_extra.sort(key=lambda x: x["rank"])
+
+#     # Top 3 vs. the rest
+#     top3 = results_with_extra[:3]
+#     all_others = results_with_extra[3:]
+
+#     # STEP C: Render the scoreboard with Jinja. We'll use Jinja's loop variables
+#     # instead of enumerate to avoid the UndefinedError.
+#     return render_template_string('''
+# <!DOCTYPE html>
+# <html lang="en">
+# <head>
+#   <meta charset="UTF-8">
+#   <title>Poster Rankings</title>
+#   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#   <link rel="stylesheet"
+#         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+#   <style>
+#     * {
+#       box-sizing: border-box;
+#       margin: 0; 
+#       padding: 0;
+#       font-family: 'IBM Plex Sans', sans-serif;
+#     }
+#     body {
+#       background: #fafafa;
+#       color: #333;
+#       padding: 1rem;
+#     }
+#     .container {
+#       max-width: 600px;
+#       margin: 2rem auto;
+#       background: #fff;
+#       border-radius: 12px;
+#       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+#       padding: 1.5rem;
+#     }
+#     .header-title {
+#       font-size: 1.3rem;
+#       font-weight: 600;
+#       margin-bottom: 1rem;
+#       text-align: center;
+#     }
+#     .tabs {
+#       display: flex;
+#       justify-content: center;
+#       gap: 1rem;
+#       margin-bottom: 1rem;
+#     }
+#     .tabs .tab {
+#       color: #4285F4;
+#       cursor: pointer;
+#       font-weight: 600;
+#     }
+#     .tabs .tab.active {
+#       border-bottom: 2px solid #4285F4;
+#       padding-bottom: 0.25rem;
+#     }
+#     .section-title {
+#       font-size: 1.1rem;
+#       font-weight: 600;
+#       margin: 1rem 0 0.5rem 0;
+#       color: #444;
+#     }
+#     .ranking-list {
+#       display: flex;
+#       flex-direction: column;
+#       gap: 0.75rem;
+#     }
+#     .ranking-item {
+#       display: flex;
+#       justify-content: space-between;
+#       align-items: center;
+#       background: #f9f9f9;
+#       padding: 0.5rem 1rem;
+#       border-radius: 8px;
+#       border: 1px solid #eee;
+#     }
+#     .ranking-left {
+#       display: flex;
+#       flex-direction: column;
+#     }
+#     .poster-id {
+#       font-weight: 600;
+#       color: #333;
+#     }
+#     .poster-title {
+#       font-size: 0.85rem;
+#       color: #777;
+#     }
+#     .ranking-icon {
+#       font-size: 1.2rem;
+#       margin-right: 0.5rem;
+#     }
+#     .ranking-right {
+#       font-weight: 600;
+#       color: #4285F4;
+#     }
+#     .gold { color: #d4af37; }
+#     .silver { color: #C0C0C0; }
+#     .bronze { color: #cd7f32; }
+#   </style>
+# </head>
+# <body>
+#   <div class="container">
+#     <div class="header-title">Design Mentor</div>
+#     <div class="tabs">
+#       <div class="tab active">Week</div>
+#       <div class="tab">Month</div>
+#       <div class="tab">Year</div>
+#       <div class="tab">All Time</div>
+#     </div>
+#     <h2 class="section-title">Top Mentors</h2>
+    
+#     <!-- Top 3 Mentors Section -->
+#     <div style="margin-bottom:0.5rem;font-weight:bold;">Top 3 Mentors</div>
+#     <div class="ranking-list">
+#       {% for item in top3 %}
+#       <div class="ranking-item">
+#         <div class="ranking-left">
+#           <!-- We can use loop.index0 to see if it's the first, second, or third. -->
+#           {% if loop.index0 == 0 %}
+#             <div>
+#               <span class="ranking-icon gold">&#x1F3C6;</span>
+#               <span class="poster-id">{{ item.poster_id }}</span>
+#             </div>
+#           {% elif loop.index0 == 1 %}
+#             <div>
+#               <span class="ranking-icon silver">2</span>
+#               <span class="poster-id">{{ item.poster_id }}</span>
+#             </div>
+#           {% elif loop.index0 == 2 %}
+#             <div>
+#               <span class="ranking-icon bronze">3</span>
+#               <span class="poster-id">{{ item.poster_id }}</span>
+#             </div>
+#           {% endif %}
+#           <div class="poster-title">{{ item.title }}</div>
+#         </div>
+#         <div class="ranking-right">{{ item.points }}</div>
+#       </div>
+#       {% endfor %}
+#     </div>
+
+#     <!-- All Others Section -->
+#     <div style="margin-top:1.5rem;font-weight:bold;">All Top Mentors</div>
+#     <div class="ranking-list">
+#       {% for item in all_others %}
+#       <div class="ranking-item">
+#         <div class="ranking-left">
+#           <!-- We want to continue the numeric rank, starting at 4 for the first item in all_others. 
+#                loop.index is 1-based, so we do (loop.index + 3). -->
+#           <div>
+#             <span class="ranking-icon">{{ loop.index + 3 }}</span>
+#             <span class="poster-id">{{ item.poster_id }}</span>
+#           </div>
+#           <div class="poster-title">{{ item.title }}</div>
+#         </div>
+#         <div class="ranking-right">{{ item.points }}</div>
+#       </div>
+#       {% endfor %}
+#     </div>
+#   </div>
+# </body>
+# </html>
+#     ''', 
+#     top3=top3, 
+#     all_others=all_others
+#     )
+
+# @app.route('/results')
+# def view_results():
+#     global ranking_data  # We read from the global list.
+    
+#     if not ranking_data:
+#         return render_template_string('''
+#         <html>
+#         <body style="background:#121212;color:white;font-family:sans-serif;text-align:center;padding:2rem;">
+#           <h2>No rankings available yet.</h2>
+#         </body>
+#         </html>
+#         ''')
+
+#     # -- STEP 1: Fetch poster titles from DB (judges table).
+#     db = get_db()
+#     cur = db.execute("SELECT assigned_poster_titles FROM judges")
+#     rows = cur.fetchall()
+
+#     all_poster_titles = {}  # e.g. {"poster2": "Some Poster Title", "poster5": "Another Title", ...}
+#     for row in rows:
+#         if row['assigned_poster_titles']:
+#             try:
+#                 titles_dict = json.loads(row['assigned_poster_titles'])
+#                 for pid, title_str in titles_dict.items():
+#                     all_poster_titles[pid] = title_str
+#             except Exception:
+#                 pass
+
+#     # -- STEP 2: Combine ranking_data with DB titles; remove points completely.
+#     #    ranking_data might look like: [{"poster_id": "Poster-2", "rank": 1}, ...]
+#     results = []
+#     for entry in ranking_data:
+#         poster_id = entry["poster_id"]  # e.g. "Poster-2"
+#         rank = entry["rank"]
+
+#         # If your DB keys are "poster2" while your XLSX says "Poster-2", transform:
+#         db_key = poster_id.replace("Poster-", "poster").lower()
+#         poster_title = all_poster_titles.get(db_key, "No Title")
+
+#         # Add "title" to each record
+#         results.append({
+#             "poster_id": poster_id,
+#             "title": poster_title,
+#             "rank": rank
+#         })
+
+#     # Sort by rank ascending
+#     results.sort(key=lambda x: x["rank"])
+
+#     # Split into Top 3 vs. the rest
+#     top3 = results[:3]
+#     all_others = results[3:]
+
+#     # -- STEP 3: Render a scoreboard-like page, no "points" included.
+#     return render_template_string('''
+# <!DOCTYPE html>
+# <html lang="en">
+# <head>
+#   <meta charset="UTF-8">
+#   <title>Poster Rankings</title>
+#   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#   <link rel="stylesheet"
+#         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+#   <style>
+#     * {
+#       box-sizing: border-box;
+#       margin: 0; 
+#       padding: 0;
+#       font-family: 'IBM Plex Sans', sans-serif;
+#     }
+#     body {
+#       background: #fafafa;
+#       color: #333;
+#       padding: 1rem;
+#     }
+#     .container {
+#       max-width: 600px;
+#       margin: 2rem auto;
+#       background: #fff;
+#       border-radius: 12px;
+#       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+#       padding: 1.5rem;
+#     }
+#     .header-title {
+#       font-size: 1.3rem;
+#       font-weight: 600;
+#       margin-bottom: 1rem;
+#       text-align: center;
+#     }
+#     .section-title {
+#       font-size: 1.1rem;
+#       font-weight: 600;
+#       margin: 1rem 0 0.5rem 0;
+#       color: #444;
+#     }
+#     .ranking-list {
+#       display: flex;
+#       flex-direction: column;
+#       gap: 0.75rem;
+#     }
+#     .ranking-item {
+#       display: flex;
+#       justify-content: space-between;
+#       align-items: center;
+#       background: #f9f9f9;
+#       padding: 0.5rem 1rem;
+#       border-radius: 8px;
+#       border: 1px solid #eee;
+#     }
+#     .ranking-left {
+#       display: flex;
+#       flex-direction: column;
+#     }
+#     .poster-id {
+#       font-weight: 600;
+#       color: #333;
+#     }
+#     .poster-title {
+#       font-size: 0.85rem;
+#       color: #777;
+#     }
+#     .ranking-right {
+#       font-weight: 600;
+#       color: #4285F4;
+#     }
+#     .ranking-icon {
+#       font-size: 1.2rem;
+#       margin-right: 0.5rem;
+#     }
+#     .gold { color: #d4af37; }
+#     .silver { color: #C0C0C0; }
+#     .bronze { color: #cd7f32; }
+#   </style>
+# </head>
+# <body>
+#   <div class="container">
+#     <div class="header-title">Poster Rankings</div>
+
+#     <h2 class="section-title">Top Mentors (Posters)</h2>
+#     <div style="margin-bottom:0.5rem;font-weight:bold;">Top 3</div>
+#     <div class="ranking-list">
+#       {% for item in top3 %}
+#       <div class="ranking-item">
+#         <div class="ranking-left">
+#           <!-- Use loop.index0 to tell which item is 1st, 2nd, 3rd -->
+#           {% if loop.index0 == 0 %}
+#             <div>
+#               <span class="ranking-icon gold">&#x1F3C6;</span>
+#               <span class="poster-id">{{ item.poster_id }}</span>
+#             </div>
+#           {% elif loop.index0 == 1 %}
+#             <div>
+#               <span class="ranking-icon silver">2</span>
+#               <span class="poster-id">{{ item.poster_id }}</span>
+#             </div>
+#           {% elif loop.index0 == 2 %}
+#             <div>
+#               <span class="ranking-icon bronze">3</span>
+#               <span class="poster-id">{{ item.poster_id }}</span>
+#             </div>
+#           {% endif %}
+#           <div class="poster-title">{{ item.title }}</div>
+#         </div>
+#         <!-- ranking-right: just show "Rank: X" -->
+#         <div class="ranking-right">Rank: {{ item.rank }}</div>
+#       </div>
+#       {% endfor %}
+#     </div>
+
+#     <div style="margin-top:1.5rem;font-weight:bold;">All Others</div>
+#     <div class="ranking-list">
+#       {% for item in all_others %}
+#       <div class="ranking-item">
+#         <div class="ranking-left">
+#           <span class="poster-id">{{ item.poster_id }}</span>
+#           <div class="poster-title">{{ item.title }}</div>
+#         </div>
+#         <div class="ranking-right">Rank: {{ item.rank }}</div>
+#       </div>
+#       {% endfor %}
+#     </div>
+#   </div>
+# </body>
+# </html>
+#     ''', top3=top3, all_others=all_others)
+
+
+# Somewhere near the top of your app.py:
+# ranking_data = []  # Holds [{"poster_id": "Poster-2", "rank": 1}, ...]
+
+@app.route('/results')
+def view_results():
+    """
+    Publicly viewable route that displays final poster rankings
+    in a dark-themed /dashboard style.
+    """
+    global ranking_data
+
+    if not ranking_data:
+        # If no ranking data is uploaded yet, show a placeholder message.
+        return render_template_string('''
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>No Results Yet</title>
+        </head>
+        <body style="background:#121212;color:white;font-family:sans-serif;text-align:center;padding:2rem;">
+          <h2>No rankings available yet.</h2>
+        </body>
+        </html>
+        ''')
+
+    # --- STEP 1: Grab poster titles from DB ---
+    db = get_db()
+    cur = db.execute("SELECT assigned_poster_titles FROM judges")
+    rows = cur.fetchall()
+
+    all_poster_titles = {}  # e.g. {"poster2": "Poster Title #2", "poster5": "Title #5"}
+    for row in rows:
+        if row['assigned_poster_titles']:
+            try:
+                titles_dict = json.loads(row['assigned_poster_titles'])
+                for pid, title_str in titles_dict.items():
+                    all_poster_titles[pid] = title_str
+            except Exception:
+                pass
+
+    # --- STEP 2: Merge the DB titles into ranking_data. Remove "points". ---
+    results = []
+    for entry in ranking_data:
+        poster_id = entry["poster_id"]  # e.g. "Poster-2"
+        rank = entry["rank"]
+        # If your DB keys are "poster2" but ranking_data says "Poster-2", unify them:
+        db_key = poster_id.replace("Poster-", "poster").lower()
+        poster_title = all_poster_titles.get(db_key, "No Title")
+        
+        results.append({
+            "poster_id": poster_id,
+            "title": poster_title,
+            "rank": rank
+        })
+
+    # Sort results by rank ascending
+    results.sort(key=lambda x: x["rank"])
+
+    # First 3 are "top3", the rest go below
+    top3 = results[:3]
+    all_others = results[3:]
+
+    # --- STEP 3: Render a dark-themed “/dashboard” style page. ---
+    return render_template_string('''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poster Rankings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Example dashboard-like styling -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <style>
+    * {
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+      font-family: 'IBM Plex Sans', sans-serif;
+    }
+    body {
+      background-color: #121212;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Header / navbar style */
+    .header {
+      background-color: #1f1f1f;
+      padding: 1.5rem;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .header p {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+    /* Main content area */
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .ranking-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .ranking-card {
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .ranking-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .poster-id {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .poster-title {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+    .ranking-right {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #76c893; /* or #4285F4, whichever you like */
+    }
+    /* Special icons/colors for top 3 */
+    .gold {
+      color: #d4af37;
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .silver {
+      color: #c0c0c0;
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .bronze {
+      color: #cd7f32;
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+    /* Footer (optional) */
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      background-color: #1f1f1f;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>ECS Poster Results</h1>
+    <p>Final Rankings</p>
+  </div>
+
+  <div class="main-content">
+    <!-- Top 3 -->
+    <div class="section-title">Top 3 Posters</div>
+    <div class="ranking-list">
+      {% for item in top3 %}
+        <div class="ranking-card">
+          <div class="ranking-left">
+            <!-- Use loop.index0 to determine which item (0 -> gold, 1 -> silver, 2 -> bronze) -->
+            {% if loop.index0 == 0 %}
+              <div>
+                <span class="gold">&#x1F3C6;</span>
+                <span class="poster-id">{{ item.poster_id }}</span>
+              </div>
+            {% elif loop.index0 == 1 %}
+              <div>
+                <span class="silver">2</span>
+                <span class="poster-id">{{ item.poster_id }}</span>
+              </div>
+            {% elif loop.index0 == 2 %}
+              <div>
+                <span class="bronze">3</span>
+                <span class="poster-id">{{ item.poster_id }}</span>
+              </div>
+            {% endif %}
+            <div class="poster-title">{{ item.title }}</div>
+          </div>
+          <div class="ranking-right">
+             {{ item.rank }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- All Others -->
+    {% if all_others %}
+      <div class="section-title" style="margin-top:2rem;">All Other Posters</div>
+      <div class="ranking-list">
+        {% for item in all_others %}
+          <div class="ranking-card">
+            <div class="ranking-left">
+              <span class="poster-id">{{ item.poster_id }}</span>
+              <div class="poster-title">{{ item.title }}</div>
+            </div>
+            <div class="ranking-right">{{ item.rank }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="footer">
+    ECS Research Day 2025 &mdash; Powered by Flask
+  </div>
+</body>
+</html>
+    ''', 
+    top3=top3, 
+    all_others=all_others
+    )
+
 
 
 

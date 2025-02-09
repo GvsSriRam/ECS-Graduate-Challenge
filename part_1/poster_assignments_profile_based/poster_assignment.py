@@ -155,8 +155,8 @@ class PosterAssignmentSystem:
     def save_multiple_formats(self, df, base_filename, sheet_name=None):
         """Save DataFrame in Excel, CSV, and JSON formats"""
         # Create output directory
-        os.makedirs('output', exist_ok=True)
-        base_path = os.path.join('output', base_filename)
+        os.makedirs('part_1/output', exist_ok=True)
+        base_path = os.path.join('part_1/output', base_filename)
         
         # Save as Excel
         if sheet_name:

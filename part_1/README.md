@@ -79,6 +79,15 @@ python poster_assignment/poster_assignment.py
 - `Example_list_judges.xlsx`:
   - Must contain judge availability information
   - Required columns: "Name", "Available_Hour1", "Available_Hour2"
+- For Poster Assignment:
+  - `similarity_scores.csv`:
+    - Contains similarity scores computed between faculty research profiles and poster abstracts
+      - Format: Matrix where rows are posters and columns are judges
+      - Values: Computed similarity scores from research area and abstract matching
+  - Scores are derived from:
+    - Research interests similarity
+    - Publication abstracts similarity
+    - Research area matching
 
 ## Output Files
 

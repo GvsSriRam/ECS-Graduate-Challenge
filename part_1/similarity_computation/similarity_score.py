@@ -11,7 +11,7 @@ def calculate_similarity(embeddings1, embeddings2):
     return cosine_similarity(embeddings1, embeddings2)
 
 # Load the embeddings from .npy files
-embeddings_dir = f'part-1/embeddings/embeddings_npy/{MODEL_NAME}/'
+embeddings_dir = f'part_1/embeddings/embeddings_npy/{MODEL_NAME}/'
 poster_embeddings = np.load(Path(embeddings_dir) / 'poster_abstract_embeddings.npy')
 judge_embeddings = np.load(Path(embeddings_dir) / 'primary_author_embeddings.npy')
 
@@ -27,7 +27,7 @@ print(f"Calculated similarity scores with shape: {similarity_scores.shape}")
 poster_info = pd.read_excel('Sample_input_abstracts.xlsx')  # Or whatever format your poster info is in
 judge_info = pd.read_excel('Example_list_judges.xlsx')      # Or whatever format your judge info is in
 
-judge_names = np.load('part-1/embeddings/judge_names.npy')
+judge_names = np.load('part_1/embeddings/judge_names.npy')
 
 # Create DataFrame with proper labels
 similarity_df = pd.DataFrame(
@@ -37,7 +37,7 @@ similarity_df = pd.DataFrame(
 )
 
 # Save to CSV
-scores_dir = f'part-1/similarity_computation/{MODEL_NAME}'
+scores_dir = f'part_1/similarity_computation/{MODEL_NAME}'
 os.makedirs(scores_dir, exist_ok=True)
 
 similarity_df.to_csv(f'{scores_dir}/similarity_scores.csv')

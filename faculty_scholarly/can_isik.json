@@ -1,0 +1,56 @@
+{
+  "name": "Can Isik",
+  "top_primary_author_publications": [
+    {
+      "title": "Dictionary Attack on IMU-based Gait Authentication",
+      "authors": ["Chilukuri Krishna Mohan","Can Isik", "Rajesh Kumar"],
+      "abstract": "We present a novel adversarial model for authentication systems that use gait patterns recorded by the inertial measurement unit (IMU) built into smartphones. The attack idea is inspired by and named after the concept of a dictionary attack on knowledge (PIN or password) based authentication systems. In particular, this work investigates whether it is possible to build a dictionary of IMUGait patterns and use it to launch an attack or find an imitator who can actively reproduce IMUGait patterns that match the target's IMUGait pattern. Nine physically and demographically diverse individuals walked at various levels of four predefined controllable and adaptable gait factors (speed, step length, step width, and thigh-lift), producing 178 unique IMUGait patterns. Each pattern attacked a wide variety of user authentication models. The deeper analysis of error rates (before and after the attack) challenges the belief that authentication systems based on IMUGait patterns are the most difficult to spoof; further research is needed on adversarial models and associated countermeasures.",
+      "url": "https://www.researchgate.net/publication/374192914_Dictionary_Attack_on_IMU-based_Gait_Authentication"
+    },
+    {
+      "title": "Treadmill Assisted Gait Spoofing (TAGS): An Emerging Threat to Wearable Sensor-based Gait Authentication",
+      "authors": [
+        "Rajesh Kumar", "Can Isik", "Vir V. Phoha"
+      ],
+      "abstract": "In this work, we examine the impact of Treadmill Assisted Gait Spoofing (TAGS) on Wearable Sensor-based Gait Authentication (WSGait). We consider more realistic implementation and deployment scenarios than the previous study, which focused only on the accelerometer sensor and a fixed set of features. Specifically, we consider the situations in which the implementation of WSGait could be using one or more sensors embedded into modern smartphones. Besides, it could be using different sets of features or different classification algorithms, or both. Despite the use of a variety of sensors, feature sets (ranked by mutual information), and six different classification algorithms, TAGS was able to increase the average False Accept Rate (FAR) from 4% to 26%. Such a considerable increase in the average FAR, especially under the stringent implementation and deployment scenarios considered in this study, calls for a further investigation into the design and evaluations of WSGait before its deployment for public use.",
+      "url": "https://www.researchgate.net/publication/347909166_Treadmill_Assisted_Gait_Spoofing_TAGS_An_Emerging_Threat_to_Wearable_Sensor-based_Gait_Authentication"
+    },
+    {
+      "title": "A Data Mining Based Protection and Classification of Transients for Two-Core Symmetric Phase Angle Regulators",
+      "authors": [
+        "Pallav Bera","Can Isik"
+      ],
+      "abstract": "Several conventional and non-conventional transient conditions cause differential relays associated with Phase Angle Regulators to malfunction. For Two-core Symmetric Phase Angle Regulators, this article investigates the suitability of time and time-frequency feature-based estimators to differentiate internal faults from other transient conditions such as overexcitation, external faults with current transformer (CT) saturation, and magnetizing inrush. Subsequently, the faulty core unit (series or exciting) is located, and the transients are identified. Six well-known classifiers are trained on features extracted from one-cycle of post transient 3-phase differential currents filtered by an event detector. Maximum Relevance Minimum Redundancy, Random Forest, and exhaustive search with Decision Trees are used to select the relevant wavelet energy, time-domain, and wavelet coefficient features respectively. The fault detection scheme trained on XGBoost classifier with hyperparameters obtained from Bayesian Optimization gives an accuracy of 99.8%. The reliability of the proposed scheme is verified with varying tap positions, noise levels, and transformer ratings; and under different conditions like CT saturation, fault during magnetizing inrush, series core saturation, low current faults, and integration of wind energy. As a potential application, the methodology can be deployed to supervise microprocessor-based differential relays to improve the security and dependability of the protection system.",
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A hybrid intelligent system for protection of transmission lines connected to PV farms based on linear trends",
+      "authors": [
+        "Pallav Bera",
+        "Samita Rani Pani",
+        "Can Isik",
+        "Ramesh Bansal"
+      ],
+      "abstract": "Conventional relays face challenges for transmission lines connected to inverter-based resources (IBRs). In this article, a single-ended intelligent protection of the transmission line in the zone between the grid and the PV farm is suggested. The method employs a fuzzy logic and random forest (RF)-based hybrid system to detect faults based on combined linear trend attributes of the 3-phase currents. The fault location is determined and the faulty phase is detected. RF feature selection is used to obtain the optimal linear trend feature. The performance of the methodology is examined for abnormal events such as faults, capacitor and load-switching operations simulated in PSCAD/EMTDC on IEEE 9-bus system obtained by varying various fault and switching parameters. Additionally, when validating the suggested strategy, consideration is given to the effects of conditions such as the presence of double circuit lines, PV capacity, sampling rate, data window length, noise, high impedance faults, CT saturation, compensation devices, evolving and cross-country faults, and far-end and near-end faults. The findings indicate that the suggested strategy can be used to deal with a variety of system configurations and situations while still safeguarding such complex power transmission networks.",
+      "url": "https://www.researchgate.net/publication/383526388_A_hybrid_intelligent_system_for_protection_of_transmission_lines_connected_to_PV_farms_based_on_linear_trends"
+    },
+    {
+      "title": "Distance Protection of Transmission Lines Connected to Type-3 Wind Farms",
+      "authors": [
+        "Pallav Bera","Vajendra Kumar","Can Isik"
+      ],
+      "abstract": "Distance relays mal-operate for transmission lines connected to type-3 Wind Farms (WFs). This paper proposes a waveshape property based protection of the intertie zone between wind farm and grid during 3-phase faults. It mitigates the challenges faced by the normally used distance relays and ensures the protection systems' security and dependability. The proposed scheme uses the auto-regressive coefficients of the 3-phase currents obtained from the Current Transformer at one end to distinguish the faults fed by the type-3 WFs and the primary grid and determines the fault zone accurately. PSCAD/EMTDC is used to verify the validity of the technique on three test systems. The results obtained with different wind speeds, crowbar resistance, fault resistance, inception time, and fault locations are encouraging and suggest the possible utilization of feature-based algorithms to improve the power system distance relaying system. In addition, the protection scheme can be utilized for lines compensated with series capacitors and phase shifting transformers.",
+      "url": "https://www.researchgate.net/publication/351905835_Distance_Protection_of_Transmission_Lines_Connected_to_Type-3_Wind_Farms"
+    },
+    {
+      "title": "A New Measure for Individual Thermal Comfort",
+      "authors": [
+        "Seckin Ari","H. Ezzat Khalifa","Peter WİLCOXEN","Can Isik"
+      ],
+      "abstract": "This paper introduces a new measure for individual thermal comfort, inspired by the current standards for population thermal comfort, and a statistical model allowing us to imitate individuals’ thermal comfort preferences. Our approach is based on the observation that an individual has a temperature range around his or her desired temperature point in which he or she is comfortable with the surrounding thermal environment. The crucial parameters of our statistical model, which represents the thermal characteristic of individuals of building occupants, have been assumed to be normally distributed random variables so that the thermal comfort preferences of different individuals can be generated for the further simulation purposes. When aggregated to a population’s general thermal comfort parameters, the variables of these distributions have been adjusted in such a way as to bring very close consistency with the current standards, which define the criteria for acceptable thermal conditions of human occupancy in a built environment.",
+      "url": "https://www.researchgate.net/publication/341053332_A_New_Measure_for_Individual_Thermal_Comfort"
+    }
+  ]
+}

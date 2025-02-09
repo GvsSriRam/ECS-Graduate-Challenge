@@ -1,0 +1,79 @@
+{
+  "name": "Alex K. Jones",
+  "top_primary_author_publications": [
+    {
+      "title": "XDWM: A 2D Domain Wall Memory",
+      "url": "https://www.researchgate.net/publication/359248067_XDWM_A_2D_Domain_Wall_Memory",
+      "authors": ["Arifa Hoque", "Alex K. Jones", "Sanjukta Bhanja"],
+      "abstract": "Domain-Wall Memory (DWM) structures typically bundle nanowires shifted together for parallel access. Ironically, this organization does not allow the natural shifting of DWM to realize logical shifting within data elements. We describe a novel 2-D DWM cross-point (X-Cell) that allows two individual nanowires placed orthogonally to share the X-Cell. Each nanowire can operate independently while sharing the value at the X-Cell. Using X-Cells, we propose an orthogonal nanowire in the Y dimension overlaid on a bundle of X dimension nanowires for a cross-DWM or XDWM. We demonstrate that the bundle shifts correctly in the X-Direction, and that data can be logically shifted in the Y-direction providing novel data movement and supporting processing-in-memory. We conducted studies on the requirements for physical cell dimensions and shift currents for XDWM. Due to the non-standard domain, our micro-magnetic studies demonstrate that XDWM introduces a shift current penalty of 6.25% while shifting happens in one nanowire compared to a standard nanowire. We also demonstrate correct shifting using nanowire bundles in both the X- and Y- dimensions. Using magnetic simulation to derive the values for SPICE simulation we show the maximum leakage current between nanowires when shifting the bundle together is ≤ 3% indicating that sneak paths are not problematic for XDWM."
+    },
+    {
+      "title": "Tuning Memory Fault Tolerance on the Edge",
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3453688.3462231",
+      "authors": [
+        "Alex K. Jones",
+        "Stephen Longofono",
+        "Sebastien Ollivier",
+        "Donald Kline, Jr.",
+        "Jiangwei Zhang",
+        "Rami Melhem"
+      ],
+      "abstract": "Error correction and fault tolerance have become pivotal considerations as conventional memories scale and emerging memories come to market. The common thread in these reliability challenges is that deep scaling reveals outliers in the memory system, which are responsible for the vast majority of faults. These cells, which may be attributed to process variation or undetected fabrication defects, tend to be more vulnerable to various forms of crosstalk, read- and write-disturbance, and even radiation-induced faults. By tracking faults in memory cells, identifying the worst offenders, and mitigating their effects accordingly, we can design dramatically improved fault tolerance techniques that are tuned to the fault characteristics of the memory at hand. A critical piece is the development of scalable and fault tolerance registries to track and retain critical information about these faults. The fault registries must be able to function in the faulty memory they protect, operate efficiently at the cell/bit-level, and handle extreme fault rates. Using the knowledge of faulty locations, our fault tolerance techniques applied to conventional main memories like DRAM and endurance-limited memories like flash and phase-change memory improve reliability, endurance, and lifetime by orders of magnitude while maintaining performance and energy efficiency."
+    },
+    {
+  "title": "Achieving Secure, Reliable, and Sustainable Next Generation Computing Memories",
+  "url": "https://ieeexplore.ieee.org/document/8752128",
+  "authors": [
+    "Donald Kline",
+    "Alex K. Jones"
+  ],
+  "abstract": "The design of next generation memory systems for increasingly large datasets is primarily being pursued through two fronts: (1) The continued progression of process scaling for conventional memories such as DRAM and Flash and (2) the commercialization of emerging non-volatile memory technologies including Phase Change, Resistive, and Spin-Torque Transfer Magnetic memories. Both avenues have illuminated reliability concerns including crosstalk-based disturbance and limited endurance. Crosscutting to these issues are challenges in maintaining or improving performance and operational energy. However, an emerging critical challenge is understanding, quantifying, and optimizing the sustainability of these memories in the face of exponentially increasing embodied costs (including energy and carbon emissions) due to the fabrication approaches of increasingly smaller nodes and processes for new technologies. I have contributed several approaches to different layers of this effort. For example, I designed low-energy network-on-chip (NoC) buffers for many-core systems using domain-wall memories. To support fault tolerance in these memory technologies, I have designed several fault map approaches. Based on knowledge of the types of faults in particular memory technologies and in using these fault maps, I have designed low-overhead encoding schemes to avoid faults and developed methods to increase memory lifetime. I have also developed collaboratively designed approaches that integrate fault tolerance with security. Finally, I have demonstrated the energy and environmental impacts of different memory design choices including technologies and fault tolerance approaches with holistic energy tradeoff analyses. My work provides advances in architectures, fault tolerance, security, and sustainability of these next generation memory systems."
+}
+
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+      "url": "https://www.researchgate.net/publication/385618406_EQ-ViT_Algorithm-Hardware_Co-Design_for_End-to-End_Acceleration_of_Real-Time_Vision_Transformer_Inference_on_Versal_ACAP_Architecture",
+      "authors": [
+        "Peiyan Dong",
+        "Jinming Zhuang",
+        "Zhuoping Yang",
+        "Shixin Ji",
+        "Yanyu Li",
+        "Dongkuan Xu",
+        "Heng Huang",
+        "Jingtong Hu",
+        "Alex K. Jones",
+        "Yiyu Shi",
+        "Yanzhi Wang",
+        "Peipei Zhou"
+      ],
+      "abstract": "While vision transformers (ViTs) have shown consistent progress in computer vision, deploying them for real-time decision-making scenarios (<1 ms) is challenging. Current computing platforms like CPUs, GPUs, or FPGA-based solutions struggle to meet this deterministic low-latency real-time requirement, even with quantized ViT models. Some approaches use pruning or sparsity to reduce the model size and latency, but this often results in accuracy loss. To address the aforementioned constraints, in this work, we propose EQ-ViT, an end-to-end acceleration framework with the novel algorithm and architecture co-design features to enable the real-time ViT acceleration on the AMD Versal adaptive compute acceleration platform (ACAP). The contributions are four-fold. First, we perform in-depth kernel-level performance profiling and analysis and explain the bottlenecks for the existing acceleration solutions on GPU, FPGA, and ACAP. Second, on the hardware level, we introduce a new spatial and heterogeneous accelerator architecture, the EQ-ViT architecture. This architecture leverages the heterogeneous features of ACAP, where both FPGA and artificial intelligence engines (AIEs) coexist on the same system-on-chip (SoC). Third, on the algorithm level, we create a comprehensive quantization-aware training strategy, the EQ-ViT algorithm. This strategy concurrently quantizes both the weights and activations into 8-bit integers, aiming to improve the accuracy rather than compromise it during quantization. Notably, the method also quantizes nonlinear functions for efficient hardware implementation. Fourth, we design the EQ-ViT automation framework to implement the EQ-ViT architecture for four different ViT applications on the AMD Versal ACAP VCK190 board, achieving accuracy improvement with 2.4%, and average speedups of 315.0, 3.39, 3.38, 14.92, 59.5, and 13.1× over computing solutions of Intel Xeon 8375C vCPU, Nvidia A10G, A100, Jetson AGX Orin GPUs, AMD ZCU102, and U250 FPGAs. The energy efficiency gains are 62.2, 15.33, 12.82, 13.31, 13.5, and 21.9×."
+    },
+    {
+      "title": "Amortizing Embodied Carbon Across Generations",
+      "url": "https://www.computer.org/csdl/proceedings-article/igsc/2024/078600a064/22gEp0G3Vq8",
+      "authors": [
+        "Shixin Ji",
+        "Jinming Zhuang",
+        "Zhuoping Yang",
+        "Alex K. Jones",
+        "Peipei Zhou"
+      ],
+      "abstract": "Data centers have been relying on renewable energy integration coupled with energy efficient specialized processing units and accelerators to increase sustainability. Unfortunately, the carbon generated from manufacturing these systems is becoming increasingly relevant due to these energy decarbonization and efficiency improvements. Furthermore, it is less clear how to mitigate this aspect of embodied carbon. As workloads continue to evolve over each hardware generation we explore the tradeoffs of fabricating new application-tuned hardware compared with more general solutions such as Field Programmable Gate Arrays (FPGAs). We also explore how REFRESH FPGAs can amortize embodied carbon investments from previous generations to meet the requirements of future generations workloads."
+    },
+    {
+      "title": "Reducing Smart Phone Environmental Footprints with In-Memory Processing",
+      "url": "https://web.eng.fiu.edu/gaquan/Papers/ESWEEK24Papers/CPS-Proceedings/pdfs/CODES-ISSS/563900a049/563900a049.pdf",
+      "authors": [
+        "Zhuoping Yang",
+        "Wei Zhang",
+        "Shixin Ji",
+        "Peipei Zhou",
+        "Alex K. Jones"
+      ],
+      "abstract": "Smart phones have revolutionized the availability of computing to the consumer. Recently, smart phones have been aggressively integrating artificial intelligence (AI) capabilities into their devices. The custom designed processors for the latest phones integrate incredibly capable and energy efficient graphics processors (GPUs) and tensor processors (TPUs) to accommodate this emerging AI workload and on-device inference. Unfortunately, smart phones are far from sustainable and have a substantial carbon footprint that continues to be dominated by environmental impacts from their manufacture and far less so by the energy required to power their operation. In this paper we explore the possibility of reversing the trend to increase the dedicated silicon dedicated to emerging application workloads in the phone. Instead we consider how in-memory processing using the DRAM already present in the phone could be used in place of dedicated GPU/TPU devices for AI inference. We explore the potential savings in embodied carbon that could be possible with this tradeoff and provide some analysis of the potential of in-memory computing to compete with these accelerators. While it may not be possible to achieve the same throughput, we suggest that the responsiveness to the user may be sufficient using in-memory computing, while both the embodied and operational carbon footprints could be improved. Our approach can save circa 10–15 kg CO2e."
+    }
+  ]
+}

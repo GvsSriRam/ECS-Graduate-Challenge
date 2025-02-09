@@ -95,15 +95,7 @@ your_project/
 
    By default, Flask runs at `http://127.0.0.1:5000/`.
 
-2. **Judge Workflow**:
-
-   1. A judge visits `http://127.0.0.1:5000/login`.
-   2. Enters their **email** (must exist in the `judges` table).
-   3. Receives a 6-digit OTP in their email.
-   4. Enters the OTP at `/verify`.
-   5. Accesses their `/dashboard`, sees assigned posters, and enters scores.
-
-3. **Admin Workflow**:
+2. **Admin Workflow**:
 
    1. Navigate to `http://127.0.0.1:5000/admin/dashboard?key=adminsecret` (replace `adminsecret` if you customized).
    2. Use the tiles to:
@@ -115,6 +107,17 @@ your_project/
       - **Generate All QR Codes**: Create a QR code for each poster.
       - **Export Score Matrix**: Generates an XLSX matrix of [Poster x Judge] scores.
       - **Upload Results**: Upload a final XLSX with `Poster-ID` and `Rank` columns.
+
+3. **Judge Workflow**:
+
+   1. A judge visits `http://127.0.0.1:5000/login`.
+   2. Enters their **email** (must exist in the `judges` table).
+      - Note: A judge cannot login until posters have been assigned to them in part-1.
+   3. Receives a 6-digit OTP in their email.
+   4. Enters the OTP at `/verify`.
+   5. Accesses their `/dashboard`, sees assigned posters, and enters scores.
+
+
 
 4. **Viewing the Final Results**:
    - After uploading results at `/admin/upload_results?key=adminsecret`, visit `/results` to see a dark-themed page displaying the top three posters and then all others, sorted by rank.

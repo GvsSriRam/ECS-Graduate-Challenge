@@ -12,9 +12,12 @@ bibtexparser==1.4.3
 certifi==2025.1.31
 cffi==1.17.1
 charset-normalizer==3.4.1
+click==8.1.8
 comm==0.2.2
+contourpy==1.3.1
 cryptography==44.0.0
 cssselect==1.2.0
+cycler==0.12.1
 debugpy==1.8.12
 decorator==5.1.1
 Deprecated==1.2.18
@@ -25,6 +28,7 @@ executing==2.2.0
 fabric==3.2.2
 fake-useragent==2.0.3
 filelock==3.17.0
+fonttools==4.56.0
 free_proxy==1.1.3
 fsspec==2025.2.0
 greenlet==3.1.1
@@ -44,12 +48,15 @@ jmespath==1.0.1
 joblib==1.4.2
 jupyter_client==8.6.3
 jupyter_core==5.7.2
+kiwisolver==1.4.8
 lxml==5.3.0
 MarkupSafe==3.0.2
+matplotlib==3.10.0
 matplotlib-inline==0.1.7
 mpmath==1.3.0
 nest-asyncio==1.6.0
 networkx==3.4.2
+nltk==3.9.1
 numpy==2.2.2
 openai==1.61.1
 openpyxl==3.1.5
@@ -66,6 +73,7 @@ playwright==1.50.0
 prompt_toolkit==3.0.50
 psutil==6.1.1
 ptyprocess==0.7.0
+PuLP==2.9.0
 pure_eval==0.2.3
 pycparser==2.22
 pydantic==2.10.6
@@ -86,6 +94,7 @@ safetensors==0.5.2
 scholarly==1.7.11
 scikit-learn==1.6.1
 scipy==1.15.1
+seaborn==0.13.2
 selenium==4.28.1
 sentence-transformers==3.4.1
 setuptools==75.8.0
@@ -123,9 +132,6 @@ w3lib==2.3.1
 wcwidth==0.2.13
 websocket-client==1.8.0
 websockets==14.2
+wordcloud==1.9.4
 wrapt==1.17.2
 wsproto==1.2.0
-pulp>=2.7.0
-pandas>=1.5.0
-numpy>=1.23.0
-openpyxl>=3.1.0

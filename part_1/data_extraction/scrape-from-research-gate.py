@@ -1,7 +1,7 @@
 from parsel import Selector
 from playwright.sync_api import sync_playwright
 import json, re 
-
+from pathlib import Path
 
 def scrape_researchgate_profile(profile: str):
     with sync_playwright() as p:
@@ -49,12 +49,27 @@ def scrape_researchgate_profile(profile: str):
             })
             
             
-        print(json.dumps(profile_data, indent=2, ensure_ascii=False))
+        # Create output directory if it doesn't exist
+        output_path = Path("faculty_scholarly")
+        output_path.mkdir(parents=True, exist_ok=True)
+        
+        # Create filename from profile name
+        name = "Venkata S.S. Gandikota"
+        filename = f"{name.strip().lower().replace(' ', '_')}.json"
+        file_path = output_path / filename
+        
+        # Save to JSON file
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(profile_data, f, indent=2, ensure_ascii=False)
+            
+        print(f"Profile data saved to {file_path}")
 
         browser.close()
         
+    return profile_data
+        
     
-scrape_researchgate_profile(profile="Carlos-Caicedo-4")
+scrape_researchgate_profile(profile="Venkata-Gandikota-2")
 
 
 # from parsel import Selector

@@ -1,0 +1,73 @@
+{
+    "name": "Natarajan Gautam",
+    "affiliation": "Texas A&M University",
+    "interests": [
+      "Applied Probability",
+      "Queues",
+      "Logistics",
+      "Energy Conservation",
+      "Stochastic Processes",
+      "Information Freshness",
+      "Performance Evaluation"
+    ],
+    "citedby": 3054,
+    "top_primary_author_publications": [
+      {
+        "title": "Analysis of queues",
+        "year": 2012,
+        "abstract": "Written with students and professors in mind, Analysis of Queues: Methods and Applications combines coverage of classical queueing theory with recent advances in studying stochastic networks. Exploring a broad range of applications, the book contains plenty of solved problems, exercises, case studies, paradoxes, and numerical examples. In addition to the standard single-station and single class discrete queues, the book discusses models for multi-class queues and queueing networks as well as methods based on fluid scaling, stochastic fluid flows, continuous parameter Markov processes, and quasi-birth-and-death processes, to name a few. It describes a variety of applications including computer-communication networks, information systems, production operations, transportation, and service systems such as healthcare, call centers and restaurants.",
+        "venue": "CRC Press, LLC, Boca Raton, Florida",
+        "citations": 178,
+        "authors": ["N Gautam"],
+        "url": ""
+      },
+      {
+        "title": "Performance analysis and optimization of web proxy servers and mirror sites",
+        "year": 2002,
+        "abstract": "In this paper, web proxy servers and mirror sites that cache either partial or complete information of their parent web servers are considered. These proxy servers are usually located strategically, for example near high-user-demand locations. Using proxy servers would significantly reduce latency for the users in retrieving information as well as alleviate congestion in the network. The main problem addressed in this paper is determining the optimal number and locations of proxy servers in a network to minimize costs subject to delay, throughput and demand constraints. For a given set of proxy server locations, it is assumed that client or user requests at a location will always be sent to the nearest server. Thereby each client–server system can be modeled as an independent queueing network for which performance measures such as delay distribution and throughput are obtained. These performance measures are used in an optimization problem that is formulated to determine the optimal number and optimal location of proxy servers. A heuristic called the DEJAVU algorithm is developed to solve the optimization problem. Based on a comparison with a genetic algorithm, it can be concluded that the DEJAVU algorithm produces near-optimal to optimal results in a very short time.",
+        "venue": "European Journal of Operational Research",
+        "citations": 137,
+        "authors": ["N Gautam"],
+        "url": ""
+      },
+      {
+        "title": "On queues with Markov modulated service rates",
+        "year": 2005,
+        "abstract": "In this paper, we consider a queue whose service speed changes according to an external environment that is governed by a Markov process. It is possible that the server changes its service speed many times while serving a customer. We derive first and second moments of the service time of customers in system using first step analysis to obtain an insight on the service process. In fact, we obtain an intriguing result in that the moments of service time actually depend on the arrival process! We also show that the mean service rate is not the reciprocal of the mean service time. Further, since it is not possible to obtain a closed form expression for the queue length distribution, we use matrix geometric methods to compute performance measures such as average queue length and waiting time. We apply the method of large deviations to obtain tail distributions of the workload in the queue using the concept of effective bandwidth. We present two applications in computer systems: 1) Web server with multi-class requests and 2) CPU with multiple processes. We illustrate the analysis and various methods discussed with the help of numerical examples for the above two applications.",
+        "venue": "Queueing Systems",
+        "citations": 70,
+        "authors": ["SR Mahabhashyam", "N Gautam"],
+        "url": ""
+      }
+    ],
+    "top_secondary_author_publications": [
+      {
+        "title": "Managing server energy and operational costs in hosting centers",
+        "year": 2005,
+        "abstract": "The growing cost of tuning and managing computer systems is leading to out-sourcing of commercial services to hosting centers. These centers provision thousands of dense servers within a relatively small real-estate in order to host the applications/services of different customers who may have been assured by a service-level agreement (SLA). Power consumption of these servers is becoming a serious concern in the design and operation of the hosting centers. The effects of high power consumption manifest not only in the costs spent in designing effective cooling systems to ward off the generated heat, but in the cost of electricity consumption itself. It is crucial to deploy power management strategies in these hosting centers to lower these costs towards enhancing profitability. At the same time, techniques for power management that include shutting down these servers and/or modulating their operational speed, can impact the ability of the hosting center to meet SLAs. In addition, repeated on-off cycles can increase the wear-and-tear of server components, incurring costs for their procurement and replacement. This paper presents a formalism to this problem, and proposes three new online solution strategies based on steady state queuing analysis, feedback control theory, and a hybrid mechanism borrowing ideas from these two. Using real web server traces, we show that these solutions are more adaptive to workload behavior when performing server provisioning and speed control than earlier heuristics towards minimizing operational costs while meeting the SLAs.",
+        "venue": "Proceedings of the 2005 ACM SIGMETRICS international conference",
+        "citations": 810,
+        "authors": ["Y Chen", "A Das", "W Qin", "A Sivasubramaniam", "Q Wang", "N Gautam"],
+        "url": ""
+      },
+      {
+        "title": "Probability of breakdown at freeway merges using Markov chains",
+        "year": 2001,
+        "abstract": "The objective of this paper is to review our recent research completed on the determination of the probability distribution of the time of breakdown on a freeway. The methodology applied was unique, in that, it applied Markov chains to develop the probability distribution of the time of breakdown. To develop an improved methodology for the prediction of breakdown, the probability distribution of the time of breakdown was determined based on the zonal merging probabilities with respect to the vehicles traveling on the throughway. Freeway flow, available gaps, and drivers’ actions as they approach the merge area were taken into consideration in developing the model. The analytical model was developed based on the information obtained from the literature and an initial field data sample. After determining the arrival distributions of the merging vehicles and the probability of transitioning from state to state, the probability distribution of the time of breakdown occurring was determined before any time, t, through a model analysis which applied Markov chains and implemented it in MATLAB® code. Finally, field data were reduced and applied in the model validation. With respect to the application of Markov chains, it was expected that higher arrival rates of the vehicles traveling on the throughway would lead to higher probabilities of breakdown. This is logical since one would expect a greater probability of breakdown occurring when there are a large number of vehicles entering the system. The model did produce results which predicted a higher probability of breakdown for higher arrival rates. The significance of the results is a better understanding of the prediction of breakdown and capacity estimation. With an improved concept of breakdown on freeways, better freeway analysis and simulation software may be developed.",
+        "venue": "Transportation Research Part B: Methodological",
+        "citations": 113,
+        "authors": ["JL Evans", "L Elefteriadou", "N Gautam"],
+        "url": ""
+      },
+      {
+        "title": "Optimal day-ahead power procurement with renewable energy and demand response",
+        "year": 2016,
+        "abstract": "This study proposes the demand-side power procurement problem to optimally reduce consumer's energy cost. The motivation stems from pressing issues on an increase of energy cost in an industrial section. From an energy consumer's perspective, there exists an opportunity to reduce energy cost by adjusting purchase and consumption of energy in response to time-varying electricity price while utilizing renewable energy, which is called demand response. In this case, energy storage can be used to mitigate fluctuation of intermittent renewable supply and volatile electricity price. Although it is anticipated to serve a significant amount of energy consumption from renewable energy and to avoid peak electricity price, variability and uncertainty in power demand, renewable supply, and electricity price, make it challenging to determine an optimal power procurement. The main objective of this study is to suggest a decision-making methodology that enables energy consumers to optimally determine power procurement against time-varying and stochastic electricity price and renewable supply. Specifically, this study formulates an optimal day-ahead power procurement as a twostage stochastic mixed integer program and proposes a solution approach based on Benders decomposition. The proposed methodology can be successfully applied to energy-intensive industries, such as data centers.",
+        "venue": "IEEE Transactions on Power Systems",
+        "citations": 92,
+        "authors": ["S Kwon", "L Ntaimo", "N Gautam"],
+        "url": ""
+      }
+    ],
+    "source": "scholar"
+  }

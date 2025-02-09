@@ -1,0 +1,65 @@
+{
+  "name": "Matthew M. Erdman",
+  "affiliation": "Syracuse University",
+  "interests": [],
+  "citedby": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "A survey of methods used for antimicrobial susceptibility testing in veterinary diagnostic laboratories in the United States",
+      "year": 2017,
+      "abstract": "Antimicrobial resistance is a serious threat to animal and human health worldwide, requiring a collaborative, holistic approach. The U.S. Government has developed a national strategy to address antimicrobial resistance, with one component being to monitor antimicrobial resistance in agricultural settings. We developed a survey to collect information about antimicrobial susceptibility testing (AST) from the veterinary diagnostic laboratory community in the United States, assessing current practices and technologies and determining how AST information is shared. Of the 132 surveys administered, 52 (39%) were returned. Overall, responding laboratories conducted susceptibility tests on 98,788 bacterial isolates in 2014, with Escherichia coli being the most common pathogen tested across all animal species. The 2 most common AST methods employed were the disk diffusion method (71%) and the Sensititre platform broth microdilution system (59%). Laboratories primarily used the Clinical Laboratory Standards Institute (CLSI) VET-01 standard (69%) and the automatically calculated interpretations provided by the commercial AST systems (61%) for interpreting their AST data. Only 22% of laboratories published AST data on a periodic basis, usually via annual reports published on the laboratory’s website or through peer-reviewed journals for specific pathogens. Our results confirm that disk diffusion and broth microdilution remain the standard AST methods employed by U.S. veterinary diagnostic laboratories, and that CLSI standards are commonly used for interpreting AST results. This information will help determine the most efficient standardized methodology for future surveillance. Furthermore, the current infrastructure within laboratories, once harmonized, will help provide a mechanism for conducting national surveillance programs.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Multi-Laboratory survey to evaluate Salmonella prevalence in diarrheic and non-diarrheic dogs and cats-in the USA between 2012 and 2014",
+      "year": 2017,
+      "abstract": "Eleven laboratories collaborated to determine the periodic prevalence of Salmonella in a population of dogs and cats in the USA visiting veterinary clinics. Fecal samples (2965) solicited from 11 geographically dispersed veterinary testing laboratories were collected in 36 states between January 2012 and April 2014 and tested using a harmonized method. The overall study prevalence of Salmonella in cats (3 of 542) was <1%. Prevalence in dogs (60 of 2422) was 2.5%. Diarrhea was present in only 55% of positive dogs; however 3.8% of the all diarrheic dogs were positive, compared with 1.8% non-diarrheic dogs. Salmonella positive dogs were significantly more likely to have consumed raw food (p=0.01), to have consumed probiotics (p=0.002) or to have been given antibiotics (p=0.01). Rural dogs were also more likely to be Salmonella positive than urban (p=0.002) or suburban (p=0.001) dogs. In the 67 isolates, 27 unique serovars were identified with 3 dogs having 2 serovars present. Antimicrobial susceptibility testing of 66 isolates revealed that only 4 of the isolates were resistant to one or more antibiotics. Additional characterization of the 66 isolates was done using pulsed-field gel electrophoresis and whole genome sequencing (WGS). Sequence data compared well to resistance phenotypic data and were submitted to NCBI. This study suggests an overall decline in prevalence of Salmonella positive dogs and cats over the last decades and identifies consumption of raw food as a major risk factor for Salmonella infection. Of note is that almost half of the positive animals were clinically non-diarrheic.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Prevalence and Antimicrobial Resistance of Salmonella Isolated from Cattle Feces in United States Feedlots in 2011",
+      "year": 2016,
+      "abstract": "The objective of this study was to determine the prevalence and characteristics of Salmonella spp. isolated from feces of cattle in feedlots in the United States. Fecal samples were collected from up to three pens of cattle in each of 68 feedlots in 12 states. Samples included up to 25 individual fecal pats from the pen floors and up to five composite samples from the floors of the same pens. The prevalence of Salmonella-positive samples was 9.1% (460/5050) and 11.3% (114/1009) for individual and composite samples, respectively. The prevalences of Salmonella at the pen level were 35.6% (72/202) and 22.8% (46/202) for individual and composite samples, respectively. Dietary factors, including inclusion of cottonseed hulls, coccidiostats, and antimicrobial drugs, were associated with differences in prevalence of Salmonella isolation. Overall, 32 serotypes of Salmonella were identified, but six serotypes accounted for 69.1% (495/716) of the isolates. Nearly two-thirds (64.7%, 44/68) of feedlots had at least one positive sample. All isolates were evaluated for susceptibility to a panel of 15 antimicrobial drugs. Most isolates (74.4%, 533/716) were susceptible to all antimicrobial drugs in the panel. When resistance was detected, it was most commonly to tetracycline (21.7%, 155/716 of isolates) or sulfisoxazole (12.4%, 89/716 of isolates). Less than 10% of the isolates were resistant to any other antimicrobials in the panel. The results of this study indicate that the prevalence of Salmonella in individual fecal samples was less than 10%, but that Salmonella is widely distributed among feedlot cattle. Furthermore, when Salmonella is present in feedlot cattle, there is a low occurrence of antimicrobial resistance with the exception of tetracycline and sulfisoxazole. More research is indicated to understand the ecology of Salmonella and antimicrobial resistance, when present, in cattle-feeding operations.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Genomic diversity of Taylorella equigenitalis introduced into the United States from 1978 to 2012",
+      "year": 2018,
+      "abstract": "Contagious equine metritis is a disease of worldwide concern in equids. The United States is considered to be free of the disease although sporadic outbreaks have occurred over the last few decades that were thought to be associated with the importation of horses. The objective of this study was to create finished, reference quality genomes that characterize the diversity of Taylorella equigenitalis isolates introduced into the USA, and identify their differences. Five isolates of T. equigenitalis associated with introductions into the USA from unique sources were sequenced using both short and long read chemistries allowing for complete assembly and annotation. These sequences were compared to previously published genomes as well as the short read sequences of the 200 isolates in the National Veterinary Services Laboratories’ diagnostic repository to identify unique regions and genes, potential virulence factors, and characterize diversity. The 5 genomes varied in size by up to 100,000 base pairs, but averaged 1.68 megabases. The majority of that diversity in size can be explained by repeat regions and 4 main regions of difference, which ranged in size from 15,000 to 45,000 base pairs. The first region of difference contained mostly hypothetical proteins, the second contained the CRISPR, the third contained primarily hemagglutinin proteins, and the fourth contained primarily segments of a type IV secretion system. As expected and previously reported, little evidence of recombination was found within these genomes. Several additional areas of interest were also observed including a mechanism for streptomycin resistance and other virulence factors. A SNP distance comparison of the T. equigenitalis isolates and Mycobacterium tuberculosis complex (MTBC) showed that relatively, T. equigenitalis was a more diverse species than the entirety of MTBC.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Changes in the prevalence, genotypes and antimicrobial resistance phenotypes of non-typhoidal Salmonella recovered from mail-order hatchling poultry sold at US feed stores, 2013-2015",
+      "year": 2017,
+      "abstract": "Every year, multiple outbreaks of salmonellosis in humans are linked to contact with mail-order chicks and ducks. The objective of this study was to describe the temporal changes in the prevalence of serovars, genotypes and antimicrobial resistance (AMR) phenotypes of non-typhoidal Salmonella (NTS) recovered from shipped boxes of mail-order hatchling poultry in the United States during 2013 to 2015. In each year, a sample of feed stores belonging to a single national chain participated in the study. The store employees submitted swabs or hatchling pads from hatchling boxes and shipment tracking information of the arriving boxes to the investigators. NTS was cultured from the samples and isolates were sent to the National Veterinary Services Laboratories (Ames, IA) for serotyping, pulsed-field gel electrophoresis (PFGE) and AMR phenotyping. The PFGE patterns of Salmonella serovars isolated from hatchling boxes were compared with those from human outbreaks of salmonellosis linked to live poultry contact. The box-level prevalence of NTS was significantly higher in 2015 compared to 2014. Also, the population of Salmonella serovars recovered in 2015 was more diverse and substantially different from those recovered in the previous two years. Of PFGE patterns recovered from hatchling boxes, seven distinct patterns in 2015, three in 2014 and four in 2013 were indistinguishable from the PFGE patterns of human outbreaks-associated strains in the respective years. Importantly, a significant positive correlation was found between the box-level prevalence of PFGE patterns and the number of human illnesses associated with the same patterns. Also, the proportion of multidrug-resistant isolates was higher in 2014 and 2015 compared to that in 2013. The results demonstrate that shipments of mail-order hatchling poultry are frequently contaminated with Salmonella genotypes indistinguishable from human outbreaks-associated strains each year, and control efforts at hatchery level are likely to have an important public health impact.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Comparison of whole genome sequencing to restriction endonuclease analysis and gel diffusion precipitin-based serotyping of Pasteurella multocida",
+      "year": 2017,
+      "abstract": "The gel diffusion precipitin test (GDPT) and restriction endonuclease analysis (REA) have commonly been used in the serotyping and genotyping of Pasteurella multocida. Whole genome sequencing (WGS) and single nucleotide polymorphism (SNP) analysis has become the gold standard for other organisms, offering higher resolution than previously available methods. We compared WGS to REA and GDPT on 163 isolates of P. multocida to determine if WGS produced more precise results. The isolates used represented the 16 reference serovars, isolates with REA profiles matching an attenuated fowl cholera vaccine strain, and isolates from 10 different animal species. Isolates originated from across the United States and from Chile. Identical REA profiles clustered together in the phylogenetic tree. REA profiles that differed by only a few bands had fewer SNP differences than REA profiles with more differences, as expected. The GDPT results were diverse but it was common to see a single serovar show up repeatedly within clusters. Several errors were found when examining the REA profiles. WGS was able to confirm these errors and compensate for the subjectivity in analysis of REA. Also, results of WGS and SNP analysis correlated more closely with the epidemiologic data than GDPT. In silico results were also compared to a lipopolysaccharide rapid multiplex PCR test. From the data produced in our study, WGS and SNP analysis was superior to REA and GDPT and highlighted some of the issues with the older tests.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "source": "researchgate"
+}

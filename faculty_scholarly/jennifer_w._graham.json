@@ -1,0 +1,62 @@
+{
+  "name": "Jennifer W. Graham",
+  "affiliation": "Syracuse University, Department of Electrical Engineering & Computer Science",
+  "interests": [
+    "Electrical & Electronics Engineering",
+    "MATLAB Simulation",
+    "Rectangular Waveguide",
+    "Optics",
+    "Anisotropic Media"
+  ],
+  "citedby": 52,
+  "top_primary_author_publications": [
+    {
+      "title": "Applications of biaxially anisotropic media in review",
+      "year": 2017,
+      "abstract": "This paper provides a review of the work to date in the area of applications of biaxially anisotropic materials in RF devices.",
+      "venue": "IEEE Conference on Antenna Measurements and Applications",
+      "citations": 1,
+      "authors": ["Jennifer W. Graham", "Jay Kyoon Lee"],
+      "url": ""
+    },
+    {
+      "title": "Electromagnetic Waves in Biaxially Anisotropic Media",
+      "year": 2015,
+      "abstract": "The article presents an overview of the wave behavior, governing equations, and some applications of biaxially anisotropic media. As this area of research matures, the governing behaviors described here will be of utmost importance to the understanding of device behavior.",
+      "venue": "Book Chapter",
+      "citations": 0,
+      "authors": ["Jennifer W. Graham", "Jay Kyoon Lee"],
+      "url": ""
+    },
+    {
+      "title": "Rectangular patch antennas on biaxial substrates",
+      "year": 2013,
+      "abstract": "Rectangular patch antennas are modeled using arbitrarily oriented biaxially anisotropic substrates. The Method of Moments is used to compute induced currents and the results are used to calculate input impedance, resonant length, impedance bandwidth and radiation patterns.",
+      "venue": "Conference Paper",
+      "citations": 0,
+      "authors": ["Jennifer W. Graham", "Jay Kyoon Lee"],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Fields and Wave Modes Analysis of Rectangular Waveguide Filled With Uniaxial Medium",
+      "year": 2016,
+      "abstract": "A rectangular waveguide filled with a uniaxial medium is treated. Different orientations of the optic axis are considered, and the transmission characteristics of the guided waves are studied.",
+      "venue": "IEEE Transactions on Microwave Theory and Techniques",
+      "citations": 14,
+      "authors": ["Kepei Sun", "Jay Kyoon Lee", "Jennifer W. Graham"],
+      "url": ""
+    },
+    {
+      "title": "Automating the Shared Resource Laboratory Using Computer Scripts: A Case Report",
+      "year": 2019,
+      "abstract": "Shared resource laboratories (SRLs) offer instrumentation, training, and support to investigators and play an important role in the progress and development of science.",
+      "venue": "",
+      "citations": 0,
+      "authors": ["Christopher Hall", "Laura Brown", "Jennifer W. Graham", "Bee Ling Ng"],
+      "url": ""
+    }
+  ],
+  "source": "researchgate"
+}

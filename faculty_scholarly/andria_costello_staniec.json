@@ -1,0 +1,48 @@
+{
+  "name": "Andria Costello Staniec",
+  "affiliation": "Syracuse University",
+  "interests": ["Environmental Engineering",
+      "Biotechnology"],
+  "citedby": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Diversity and community analysis of ammonia oxidizing bacteria in a streambed surrounding an artificial dam",
+      "year": 2013,
+      "abstract": "The degree to which small natural dams affect the native bacterial nitrogen cycling community was explored by molecular methods. The identities and relative abundances of ammonia oxidizing bacteria in the sediment surrounding an artificial dam both at the surface and in the hyporheic zone were characterized. Analyses were performed using tRFLP of the conserved amoA gene using a semi-nested degenerate PCR approach. Additionally, an amoA gene library was constructed to characterize the most dominant sediment genotypes. The results of the tRFLP analyses showed clear differences between the upstream and downstream communities at different depths in the sediment column. Non-metric multidimensional scaling ordination of the tRFLP data set produced a stable one-dimensional solution with significant correlations to oxygen, pH, nitrate, and dissolved organic nitrogen levels. The sample corresponding to the hyporheic zone downstream of the dam showed 28-50% higher amoA richness and higher diversity than the other samples. All gene fragments sequenced from the samples grouped with sequences of the Nitrosospira type. Ordination of 16S rDNA tRFLP data revealed a two dimensional data structure, one axis of which had similar chemical correlation characteristics as the amoA model axis. Taken together, the results from this study suggest that the presence of the dam creates physical and chemical heterogeneity that may foster genetic diversity and community changes amongst ammonia oxidizing bacteria.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Building a model of polymorphism comprehension",
+      "year": 2022,
+      "abstract": "Mastering subclass polymorphism in object-oriented (OO) programming is critical because polymorphism plays a central role in many commonly used design patterns and in software development generally. However, designing and implementing polymorphic solutions is challenging for novice programmers because polymorphism is an emergent consequence of correctly using multiple OO language features. In order to eventually improve polymorphism instruction, this research focuses on developing a model of polymorphism comprehension, along with a schema for placing students within that model. A case study was conducted with ten students in an OO CS2 course. Participants completed several short assignments, then participated in mock whiteboard interviews. Analyzing these interviews, researchers derived a three-level model of polymorphism comprehension: basic structured software design principles, OO abstraction principles, and OO polymorphism principles. Data show a major gap between OO abstraction and polymorphism, indicating a need to focus on moving from inheritance to substitutability.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Design and Effectiveness of Modeling-Based Mathematics in a Summer Bridge Program",
+      "year": 2014,
+      "abstract": "Background Since students' success in their first-semester college mathematics course is a key factor in their success in engineering, many summer bridge programs for underrepresented students focus on their preparation in mathematics. However, research on the design and efficacy of such programs is limited. We examine the design and effectiveness of a modeling-based approach to mathematics for entering freshmen engineering students. PurposeThe study addresses two questions: Does a modeling-based mathematics course in a bridge program positively affect students' performance in their first-semester college mathematics course? To what extent does a sequence of modeling tasks support the development of students' concepts of average rates of change? Design/Method This quasi-experimental study compared two cohorts of bridge program students over six years to examine the effectiveness of a modeling-based mathematics course on first-semester mathematics course grades. Pre- and post–tests measured changes in students' concepts of average rates of change. ResultsThe modeling-based mathematics course closed the previous letter grade gap between bridge program participants and non-participants in the first mathematics course. We also found significant course grade gains for students who took the modeling-based mathematics course compared with a previous cohort who took a traditional summer mathematics course. Conclusions These results suggest that the modeling-based mathematics course, with its focus on the development of engineering students' abilities to model changing phenomena, was effective in improving students' concepts of average rate of change and their first-semester mathematics course grade.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Rhizosphere disturbance influences fungal colonization and community development on dead fine roots",
+      "year": 2011,
+      "abstract": "Little is known about the community dynamics of fungi on decomposing fine roots, despite the importance of fine roots as a source of carbon to detrital systems in forests. We examined fungal communities on dead roots in a sugar-maple dominated northern hardwood forest to test the hypothesis that community development is sensitive to rhizosphere disruption. We generated cohorts of dead fine roots in root windows and disturbed the rhizosphere microbial community in half of the windows by moving roots into sieved bulk soil. We sampled root fragments repeatedly over time and cultured fungi from these fragments to explore temporal patterns of fungal species composition. Disturbing the root rhizosphere prior to initiating decomposition changed the dominant fungal taxa, the distribution of dominant species within the community, and the temporal development in the culturable fungal community. Dominance in control roots shifted from Neonectria in early decay to Umbelopsis in later decay. Disturbance roots were more evenly dominated over time by Trichoderma, Neonectria, another species of Umbelopsis, and Pochonia. Our results suggest that species interactions are important in the ecology of fine root decay fungi, with the rhizosphere community of the living root influencing development of the decay community. KeywordsFine roots–Fungi–Decomposer community–Disturbance–Hubbard Brook Experimental Forest",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

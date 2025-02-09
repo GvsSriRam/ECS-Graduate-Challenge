@@ -1,0 +1,68 @@
+{
+  "name": "Venkata S.S. Gandikota",
+  "affiliation": "Syracuse University",
+  "interests": ["Theoretical Computer Science",
+      "Discrete Mathematics",
+      "Computational Complexity Theory",
+      "Computational Geometry"],
+  "citedby": 192,
+  "top_primary_author_publications": [
+    {
+      "title": "Robust Distributed Clustering with Redundant Data Assignment",
+      "year": 2025,
+      "abstract": "In this work, we present distributed clustering algorithms that can handle large-scale data across multiple machines in the presence of faulty machines. These faulty machines can either be straggling machines that fail to respond within a stipulated time or Byzantines that send arbitrary responses. We propose redundant data assignment schemes that enable us to obtain clustering solutions based on the entire dataset, even when some machines are stragglers or adversarial in nature. Our proposed robust clustering algorithms generate a constant factor approximate solution in the presence of stragglers or Byzantines. We also provide various constructions of the data assignment scheme that provide resilience against a large fraction of faulty machines. Simulation results show that the distributed algorithms based on the proposed assignment scheme provide good-quality solutions for a variety of clustering problems.",
+      "venue": "IEEE Transactions on Information Theory",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "vqSGD: Vector Quantized Stochastic Gradient Descent",
+      "year": 2022,
+      "abstract": "In this work, we present a family of vector quantization schemes vqSGD (Vector-Quantized Stochastic Gradient Descent) that provide an asymptotic reduction in the communication cost with convergence guarantees in first-order distributed optimization. In the process we derive the following fundamental information theoretic fact: Θ(dR2) bits are necessary and sufficient (up to an additive O(log ⁡d) term) to describe an unbiased estimator g^(g) for any g in the d -dimensional unit sphere, under the constraint that ∥g^(g)∥2 ≤ R almost surely, R>1. In particular, we consider a randomized scheme based on the convex hull of a point set, that returns an unbiased estimator of a d -dimensional gradient vector with almost surely bounded norm. We provide multiple efficient instances of our scheme, that are near optimal, and require o(d) bits of communication at the expense of tolerable increase in error. The instances of our quantization scheme are obtained using well-known families of binary error-correcting codes and provide a smooth tradeoff between the communication and the estimation error of quantization. Furthermore, we show that vqSGD also offers automatic privacy guarantees.",
+      "venue": "IEEE Transactions on Information Theory",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Support Recovery of Sparse Signals from a Mixture of Linear Measurements",
+      "year": 2021,
+      "abstract": "Recovery of support of a sparse vector from simple measurements is a widely studied problem, considered under the frameworks of compressed sensing, 1-bit compressed sensing, and more general single index models. We consider generalizations of this problem: mixtures of linear regressions, and mixtures of linear classifiers, where the goal is to recover supports of multiple sparse vectors using only a small number of possibly noisy linear, and 1-bit measurements respectively. The key challenge is that the measurements from different vectors are randomly mixed. Both of these problems were also extensively studied recently. In mixtures of linear classifiers, the observations correspond to the side of queried hyperplane a random unknown vector lies in, whereas in mixtures of linear regressions we observe the projection of a random unknown vector on the queried hyperplane. The primary step in recovering the unknown vectors from the mixture is to first identify the support of all the individual component vectors. In this work, we study the number of measurements sufficient for recovering the supports of all the component vectors in a mixture in both these models. We provide algorithms that use a number of measurements polynomial in k,log n and quasi-polynomial in , to recover the support of all the unknown vectors in the mixture with high probability when each individual component is a k-sparse n-dimensional vector.",
+      "venue": "IEEE Transactions on Information Theory",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Optimization using Parallel Gradient Evaluations on Multiple Parameters",
+      "year": 2023,
+      "abstract": "We propose a first-order method for convex optimization, where instead of being restricted to the gradient from a single parameter, gradients from multiple parameters can be used during each step of gradient descent. This setup is particularly useful when a few processors are available that can be used in parallel for optimization. Our method uses gradients from multiple parameters in synergy to update these parameters together towards the optima. While doing so, it is ensured that the computational and memory complexity is of the same order as that of gradient descent. Empirical results demonstrate that even using gradients from as low as \textit{two} parameters, our method can often obtain significant acceleration and provide robustness to hyper-parameter settings. We remark that the primary goal of this work is less theoretical, and is instead aimed at exploring the understudied case of using multiple gradients during each step of optimization.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Local Testing of Lattices",
+      "year": 2018,
+      "abstract": "Testing membership in lattices is of practical relevance, with applications to integer programming, error detection in lattice-based communication, and cryptography. In this work, we initiate a systematic study of local testing for membership in lattices, complementing and building upon the extensive body of work on locally testable codes. In particular, we formally define the notion of local tests for lattices and present the following: 1. We show that in order to achieve low query complexity, it is sufficient to design 1-sided nonadaptive canonical tests. This result is akin to, and based on, an analogous result for error-correcting codes due to [E. Ben-Sasson, P. Harsha, and S. Raskhodnikova, SIAM J. Comput., 35 (2005), pp. 1–21]. 2. We demonstrate upper and lower bounds on the query complexity of local testing for membership in code formula lattices. We instantiate our results for code formula lattices constructed from Reed–Muller codes to obtain nearly matching upper and lower bounds on the query complexity of testing such lattices. 3. We contrast lattice testing to code testing by showing lower bounds on the query complexity of testing low-dimensional lattices. This illustrates large lower bounds on the query complexity of testing membership in the well-known knapsack lattices. On the other hand, we show that knapsack lattices with bounded coefficients have low-query testers if the inputs are promised to lie in the span of the lattice.",
+      "venue": "IEEE Transactions on Information theory",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Lattice-based Locality Sensitive Hashing is Optimal",
+      "year": 2017,
+      "abstract": "Locality sensitive hashing (LSH) was introduced by Indyk and Motwani (STOC `98) to give the first sublinear time algorithm for the c-approximate nearest neighbor (ANN) problem using only polynomial space. At a high level, an LSH family hashes "nearby" points to the same bucket and "far away" points to different buckets. The quality of measure of an LSH family is its LSH exponent, which helps determine both query time and space usage. In a seminal work, Andoni and Indyk (FOCS `06) constructed an LSH family based on random ball partitioning of space that achieves an LSH exponent of 1/c^2 for the l_2 norm, which was later shown to be optimal by Motwani, Naor and Panigrahy (SIDMA `07) and O'Donnell, Wu and Zhou (TOCT `14). Although optimal in the LSH exponent, the ball partitioning approach is computationally expensive. So, in the same work, Andoni and Indyk proposed a simpler and more practical hashing scheme based on Euclidean lattices and provided computational results using the 24-dimensional Leech lattice. However, no theoretical analysis of the scheme was given, thus leaving open the question of finding the exponent of lattice based LSH. In this work, we resolve this question by showing the existence of lattices achieving the optimal LSH exponent of 1/c^2 using techniques from the geometry of numbers. At a more conceptual level, our results show that optimal LSH space partitions can have periodic structure. Understanding the extent to which additional structure can be imposed on these partitions, e.g. to yield low space and query complexity, remains an important open problem.",
+      "venue": "IEEE Transactions on Information Theory",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "source": "researchgate"
+}

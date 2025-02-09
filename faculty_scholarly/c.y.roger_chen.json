@@ -1,0 +1,66 @@
+{
+  "name": "C. Y. Roger Chen",
+  "affiliation": "Syracuse University",
+  "interests": ["Environmental Engineering",
+      "Biotechnology"],
+  "citedby": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Transistor and pin reordering for leakage reduction in CMOS circuits",
+      "year": 2016,
+      "abstract": "Leakage power is currently a critical problem in nanometer-scale CMOS circuit technology. In this paper, a novel reordering method for reducing the overall leakage currents is proposed for CMOS logic gates, including CMOS complex gates. This new method takes into account the subthreshold leakage current (ISUB) and gate leakage current (IG) and includes the often-ignored reverse gate tunneling current (IRG). Additionally, this method considers the interaction between leakage components based on the stacking/non-stacking effect case and different <FOR VERIFICATION-sup/inf>W/L<FOR VERIFICATION-sup/inf> ratios of an on-/off-transistor block in a stack. Thus, unlike existing approaches, the proposed method can generate the best configuration for leakage reduction even in CMOS complex gates, and can be used in combination with other leakage reduction techniques to achieve further improvement.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Lookup Table Based Discrete Gate Sizing for Delay Minimization with Modified Elmore Delay Model",
+      "year": 2015,
+      "abstract": "Gate sizing is one of the most important techniques for circuit optimization. Over the years, Elmore delay model (EDM) has been the predominant timing model used in gate sizing due to its simplicity. However, EDM is no longer effective in meeting the increasing demand of timing accuracy. In this paper, we propose a new gate delay model, which characterizes the timing information of lookup tables and creates a model which is mathematically similar to EDM, and can be easily incorporated into well-known EDM based gate sizing techniques using Lagrangian Relaxation (LR) with minor modifications. Experimental data show that it can produce even better results than those directly based on lookup tables, while keeping the benefit of the simplicity of EDM.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "A tool to generate models based on behavioral IBIS models",
+      "year": 2012,
+      "abstract": "Input/Output Buffer Information Specification (IBIS) behavioral models are widely used for circuit-level signal integrity (SI) analysis due to its fast simulation speed and good accuracy. This work presents a tool to generate models of circuits specified by IBIS models. The model generation tool estimates poles, rise time and fall time of a circuit specified by IBIS models. The method consists of two steps; first regression analysis is performed on IBIS data with Weibull distribution function (WCDF) as the regression function. Based on the estimated parameter values, rise time and fall time values are obtained. The second step involves matching moments of WCDF to circuit moments and obtaining the estimated poles of the system. The method is generic and is scalable in nanometer CMOS. CMOS inverters have been used to demonstrate the methodology.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "CWcollab: Presenting Multimedia With Web-Based Context-Aware Collaboration",
+      "year": 2022,
+      "abstract": "Remote collaboration tools for conferencing and presentation are gaining significant popularity during the COVID-19 pandemic period. Most prior work has drawbacks, such as a) limited support for media types, b) lack of interactivity, for example, an efficient replay mechanism, c) large bandwidth consumption for screen sharing tools. In this paper, we propose a general-purpose multimedia collaboration platform-CWcollab. It supports collaboration on general multimedia by using simple messages to represent media controls with an object-prioritized synchronization approach. Thus, CWcollab can not only support fine-grained accurate collaboration, but also rich functionalities such as replay of these collaboration events. The evaluation shows hundreds of kilobytes can be enough to store the events in a collaboration session for accurate replays, compared with hundreds of megabytes of Google Meet.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "CWcollab: A Context-Aware Web-Based Collaborative Multimedia System",
+      "year": 2022,
+      "abstract": "Remote collaboration tools for conferencing and presentation are gaining significant popularity during the COVID-19 pandemic period. Most prior work has issues, such as a) limited support for media types, b) lack of interactivity, for example, an efficient replay mechanism, c) large bandwidth consumption for screen sharing tools. In this paper, we propose a general-purpose multimedia collaboration platform-CWcollab. It supports collaboration on general multimedia by using simple messages to represent media controls with an object-prioritized synchronization approach. Thus, CWcollab can not only support fine-grained accurate collaboration, but also rich functionalities such as replay of these collaboration events. The evaluation shows hundreds of kilobytes can be enough to store the events in a collaboration session for accurate replays, compared with hundreds of megabytes of Google Hangouts.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Partitionable multistage interconnection networks. Part 2: Task migration schemes",
+      "year": 2010,
+      "abstract": "A new subcube migration scheme for maximally utilizing system resources is proposed for multiprocessor systems based on multistage interconnection networks (MINs). The objective is to migrate tasks to create larger free subcubes; this is referred to as subcube migration. After the migration, we can then apply the more conventional subcube compaction schemes. First, the problem formulation is presented and the goals are set for the solution. It is shown that the migration problem is, in fact, not just a one subcube to one subcube migration problem (as treated in the previous work), but rather a many subcubes to many subcubes migration problem. This problem analysis and formulation lead us to a sophisticated subcube migration scheme. This scheme, thus, successfully handles many‐to‐many subcube migrations. It is not only near‐optimal but also scalable for different sizes of the multiprocessors. Extensive experiments were performed over a wide range of load distributions and problem sizes; the results show that for problems sizes of all practical purposes, the proposed scheme achieves very high system utilization, while requiring little computing time.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "source": "researchgate"
+}

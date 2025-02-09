@@ -1,0 +1,84 @@
+{
+  "name": "Katie Cadwell",
+  "affiliation": "Syracuse University",
+  "interests": [
+    "Chemical Engineering Education",
+    "Faculty and Student Professional Development",
+    "Best Practices in Engineering Education"
+  ],
+  "citedby": 4,
+  "top_primary_author_publications": [
+    {
+      "title": "A Gateway Course Redesign Working Group Model",
+      "year": 2018,
+      "abstract": "",
+      "venue": "American Society for Engineering Education",
+      "citations": 2,
+      "authors": [
+        "Katie Cadwell",
+        "Michelle Blum",
+        "Julie Hasenwinkel",
+        "Carol Stokes-Cawley"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Project ENGAGE: A Summer Immersion Experience in Engineering for Middle School Girls",
+      "year": 2015,
+      "abstract": "",
+      "venue": "American Society for Engineering Education St. Lawrence Section Regional Conference",
+      "citations": 0,
+      "authors": [
+        "C. Stokes-Cawley",
+        "Katie Cadwell"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Biodiesel synthesis, viscosity, and quality control for an introductory chemistry lab",
+      "year": 2014,
+      "abstract": "",
+      "venue": "The Chemical Educator",
+      "citations": 0,
+      "authors": [
+        "K.A. Walz",
+        "S. Britton",
+        "J. Crain",
+        "K. Cadwell",
+        "A. Hoffman",
+        "P. Morschauser"
+      ],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "A Model for a Faculty Development Course Redesign Summer Working Group",
+      "year": 2020,
+      "abstract": "",
+      "venue": "American Society for Engineering Education",
+      "citations": 1,
+      "authors": [
+        "Michelle Blum",
+        "Katie Cadwell",
+        "Julie Hasenwinkel"
+      ],
+      "url": ""
+    },
+    {
+      "title": "Board 56: Meeting the Graduate 10K+ Challenge: Enhancing the Climate for Persistence and Success in Engineering (ECliPSE)",
+      "year": 2018,
+      "abstract": "",
+      "venue": "",
+      "citations": 1,
+      "authors": [
+        "Julie Hasenwinkel",
+        "Katie Cadwell",
+        "Joan Dannenhoffer",
+        "Can Isik"
+      ],
+      "url": ""
+    }
+  ],
+  "source": "researchgate and syracuse.edu"
+}

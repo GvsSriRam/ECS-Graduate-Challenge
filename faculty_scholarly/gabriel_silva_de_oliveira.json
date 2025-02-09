@@ -1,0 +1,66 @@
+{
+  "name": "Gabriel Silva de Oliveira",
+  "affiliation": "Syracuse University",
+  "interests": ["Artificial Intelligence",
+      "Machine Learning"],
+  "citedby": 0,
+  "top_primary_author_publications": [
+    {
+      "title": "Typing exercises as interactive worked examples for deliberate practice in cs courses",
+      "year": 2020,
+      "abstract": "Solving complex Computer Science problems require students to utilize both higher level skills like problem translation, decomposition, and implementation, and lower level skills such as implementing solution patterns and debugging. However, novices often struggle with with these lower level skills, preventing them from moving forward. As a consequence, they risk developing a shallow understanding of code concepts and fail to practice crucial higher-level skills. We assert that if students were given the ability to practice these lower level skills outside of traditional programming exercises, they would be more apt to recognize and resolve them. For this we present our analysis of TYPOS, a platform for low-level skill practice using interactive worked examples as typing exercises. In this work we analyzed self-selected students based on their platform usage and the differences in course performance and behavior …",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Building a model of polymorphism comprehension",
+      "year": 2022,
+      "abstract": "Mastering subclass polymorphism in object-oriented (OO) programming is critical because polymorphism plays a central role in many commonly used design patterns and in software development generally. However, designing and implementing polymorphic solutions is challenging for novice programmers because polymorphism is an emergent consequence of correctly using multiple OO language features. In order to eventually improve polymorphism instruction, this research focuses on developing a model of polymorphism comprehension, along with a schema for placing students within that model. A case study was conducted with ten students in an OO CS2 course. Participants completed several short assignments, then participated in mock whiteboard interviews. Analyzing these interviews, researchers derived a three-level model of polymorphism comprehension: basic structured software design principles, OO abstraction principles, and OO polymorphism principles. Data show a major gap between OO abstraction and polymorphism, indicating a need to focus on moving from inheritance to substitutability.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Using Survival Analysis to Model Students' Patience in Online Office Hour Queues",
+      "year": 2024,
+      "abstract": "Promptly and properly addressing students' help requests during office hours is a critical challenge for large CS courses. With a large number of help requests, the queue gets longer and students have to endure long wait times. To address this problem, we try to quantify students' patience in the queue through survival analysis. Our results show that half of the students are willing to stay in the queue after waiting for 142.5 minutes. Moreover, we find that female students, morning requests, returning students, and requests about test failures are more likely to stay in the queue for a longer time.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "top_secondary_author_publications": [
+    {
+      "title": "Exploring Novice Programmers' Testing Behavior: A First Step to Define Coding Struggle",
+      "year": 2024,
+      "abstract": "To promote good coding practices, we need to understand what students do when they are on their own. In this research study, we explore students' testing behavior and response to persistent errors to better understand their coding patterns. We investigate how those patterns change when they struggle, and how help-seeking might influence their coding behaviors. We define struggle during coding as failing the same unit test case consecutively for more than four submission events, considering only unit test cases created by the instructors. To analyze the students' coding data, we use progress indicators, student test implementation indicators, and both student-generated and instructor-generated unit test results from each student submission event. In addition, we use office hours attendance records and amount of assignment-related posts created on the course forum. Results show that students tend not to follow …",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Who Should I Help Next? Simulation of Office Hours Queue Scheduling Strategy in a CS2 Course",
+      "year": 2024,
+      "abstract": "Promptly and properly addressing students’ help requests during office hours is a critical challenge for large CS courses. With a large amount of help requests, instructors often find themselves facing a long office hours queue and need to decide who to help next. Most instructors typically select the earliest arrival students (FCFS), while some instructors prioritize students who haven’t been helped recently to ensure fairness. To better understand and quantify how those different strategies affect the queue and students’ experience, we simulated the office hours queue with four different strategies under three different queue loads using the students’ problem-solving behaviors as a guide. Our simulation results show that when the queue is relaxed, different strategies make no difference. When the queue is busy or normal, prioritizing students who haven’t helped today is the best strategy. Moreover, we also discussed how to develop a strategy based on students’ code commit status, and corresponding simulation results indicate those strategies have no impact on the queue.",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    },
+    {
+      "title": "Understanding the impact of technologies and novel phenotypes on breeding strategies for genetic progress in dairy cattle.",
+      "year": 2019,
+      "abstract": "",
+      "venue": "",
+      "citations": 0,
+      "authors": [],
+      "url": ""
+    }
+  ],
+  "source": "scholar"
+}

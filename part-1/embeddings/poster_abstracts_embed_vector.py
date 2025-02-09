@@ -1,6 +1,10 @@
+import os
 import pandas as pd
 from transformers import AutoTokenizer, AutoModel
 import torch
+import numpy as np
+
+MODEL_NAME = 'all_MiniLM'
 
 # Function to initialize the model and tokenizer
 def load_model():
@@ -29,13 +33,31 @@ def process_data(file_path):
     df['embeddings'] = df['Abstract'].apply(lambda x: get_embedding(x, tokenizer, model))
     df = df.dropna(subset=['Abstract'])
 
+    # Save emneddings in numpy format
+    embeddings = df['embeddings'].values
+    embeddings = np.vstack(embeddings)
+
     # Save the data with embeddings
-    output_file_path = 'poster_abstract_embeddings.csv'
-    df.to_csv(output_file_path, index=False)
-    print(f"Embeddings saved to {output_file_path}")
+    output_file_path_npy = f'part-1/embeddings/embeddings_npy/{MODEL_NAME}/poster_abstract_embeddings.npy'
+    # Create the output directory if it does not exist
+    output_dir = os.path.dirname(output_file_path_npy)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    np.save(output_file_path_npy, embeddings)
+
+    # Save the data with embeddings
+    output_file_path_csv = f'part-1/embeddings/embeddings_csv/{MODEL_NAME}/poster_abstract_embeddings.csv'
+    # Create the output directory if it does not exist
+    output_dir = os.path.dirname(output_file_path_csv)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    df.to_csv(output_file_path_csv, index=False)
+    print(f"Embeddings saved to {output_file_path_csv}")
 
 # Path to the Excel file containing the abstracts
-input_file_path = '/Users/pranathi/Documents/SU courses/ecs_coding_challenge/Sample_input_abstracts.xlsx'
+input_file_path = 'Sample_input_abstracts.xlsx'
 
 # Process the data
 process_data(input_file_path)

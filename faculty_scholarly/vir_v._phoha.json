@@ -1,7 +1,10 @@
 {
   "name": "Vir V Phoha",
   "affiliation": "Syracuse University",
-  "interests": [],
+  "interests": [
+    "biometrics",
+    "machine learning"
+  ],
   "citedby": 5662,
   "h_index": 41,
   "i10_index": 84,

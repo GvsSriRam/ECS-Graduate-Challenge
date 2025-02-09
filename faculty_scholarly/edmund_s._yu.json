@@ -1,7 +1,13 @@
 {
   "name": "E. S. Yu",
   "affiliation": "",
-  "interests": [],
+  "interests": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Information Retrieval",
+    "Natural Language Processing",
+    "Data Mining"
+  ],
   "citedby": 350,
   "h_index": 10,
   "i10_index": 0,

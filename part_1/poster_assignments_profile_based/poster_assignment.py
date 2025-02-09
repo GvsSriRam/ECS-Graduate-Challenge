@@ -27,6 +27,7 @@ class PosterAssignmentSystem:
         
         # Load similarity matrix
         full_similarity_matrix = pd.read_csv(similarity_matrix_file)
+        full_similarity_matrix.drop(columns=['Poster'], inplace=True)
         num_posters = len(self.posters_df)
         num_judges = len(self.judges_df)
         
@@ -313,7 +314,7 @@ def main():
         system.load_data(
             'Sample_input_abstracts.xlsx',
             'Example_list_judges.xlsx',
-            'similarity_scores.csv'
+            'part_1/similarity_computation/allenai/scibert_scivocab_uncased/similarity_scores.csv'
         )
         
         # Create and solve optimization model

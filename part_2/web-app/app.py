@@ -2017,6 +2017,12 @@ def admin_dashboard():
             <p>Upload XLSX file with final poster rankings (Poster-ID, Rank).</p>
             <a href="{{ url_for('upload_results') }}?key=adminsecret">Upload Results</a>
           </div>
+                  
+          <div class="menu-item">
+            <h2>Manage Judges & Posters</h2>
+            <p>Add, edit, reassign, or delete judges and posters.</p>
+            <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret">Manage</a>
+          </div>
         </div>
       </div>
     </body>
@@ -2445,10 +2451,2657 @@ def view_results():
     all_others=all_others
     )
 
+# Judge and poster Management
+@app.route('/admin/manage_judges_posters', methods=['GET'])
+def admin_manage_judges_posters():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+        
+    db = get_db()
+    judges = db.execute("SELECT email, name, judge_id FROM judge_info ORDER BY name").fetchall()
+    
+    # Get all unique posters from assignments
+    all_posters = set()
+    judges_with_posters = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges").fetchall()
+    
+    for row in judges_with_posters:
+        if row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+                for poster in posters:
+                    all_posters.add(poster)
+            except:
+                pass
+    
+    # Convert to list and sort
+    poster_list = sorted(list(all_posters), key=lambda p: int(p.replace("poster", "")))
+    
+    # Get poster titles
+    poster_titles = {}
+    for row in judges_with_posters:
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                poster_titles.update(titles)
+            except:
+                pass
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Manage Judges & Posters</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .card h2 {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          color: #4285F4;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 0.9rem;
+          margin-right: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .btn-danger {
+          background-color: #dc3545;
+        }
+        .btn-danger:hover {
+          background-color: #bd2130;
+        }
+        .btn-success {
+          background-color: #28a745;
+        }
+        .btn-success:hover {
+          background-color: #218838;
+        }
+        .back-link {
+          display: block;
+          text-align: center;
+          margin-top: 2rem;
+        }
+        .cards-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+        .entity-card {
+          background-color: #2a2a2a;
+          border-radius: 8px;
+          padding: 1rem;
+        }
+        .entity-card h3 {
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .entity-card p {
+          font-size: 0.9rem;
+          color: #ccc;
+          margin-bottom: 1rem;
+        }
+        .entity-actions {
+          display: flex;
+          gap: 0.5rem;
+        }
+        
+        /* Form styles */
+        .form-group {
+          margin-bottom: 1rem;
+        }
+        label {
+          display: block;
+          margin-bottom: 0.3rem;
+          font-size: 0.9rem;
+          color: #ccc;
+        }
+        input, select {
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 4px;
+          border: none;
+          background-color: #333;
+          color: white;
+          font-size: 1rem;
+        }
+        .actions {
+          margin-top: 1rem;
+          display: flex;
+          justify-content: space-between;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Manage Judges & Posters</h1>
+        
+        <!-- Quick actions -->
+        <div class="card">
+          <h2>Quick Actions</h2>
+          <a href="{{ url_for('admin_add_judge') }}?key=adminsecret" class="btn btn-success">Add New Judge</a>
+          <a href="{{ url_for('admin_add_poster') }}?key=adminsecret" class="btn btn-success">Add New Poster</a>
+          <a href="{{ url_for('admin_reassign_poster') }}?key=adminsecret" class="btn">Reassign Poster</a>
+          <a href="{{ url_for('admin_export_assignments') }}?key=adminsecret" class="btn">Export Updated Assignments</a>
+        </div>
+        
+        <!-- Judges -->
+        <div class="card">
+          <h2>Judges</h2>
+          <div class="cards-grid">
+            {% for judge in judges %}
+            <div class="entity-card">
+              <h3>{{ judge.name }}</h3>
+              <p>{{ judge.email }}</p>
+              <div class="entity-actions">
+                <a href="{{ url_for('admin_edit_judge', email=judge.email) }}?key=adminsecret" class="btn">Edit</a>
+                <a href="{{ url_for('admin_delete_judge', email=judge.email) }}?key=adminsecret" class="btn btn-danger">Delete</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        
+        <!-- Posters -->
+        <div class="card">
+          <h2>Posters</h2>
+          <div class="cards-grid">
+            {% for poster_id in poster_list %}
+            <div class="entity-card">
+              <h3>{{ poster_id }} ({{ poster_id[6:] }})</h3>
+              <p>{{ poster_titles.get(poster_id, "No title") }}</p>
+              <div class="entity-actions">
+                <a href="{{ url_for('admin_edit_poster', poster_id=poster_id) }}?key=adminsecret" class="btn">Edit</a>
+                <a href="{{ url_for('admin_delete_poster', poster_id=poster_id) }}?key=adminsecret" class="btn btn-danger">Delete</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        
+        <div class="back-link">
+          <a href="{{ url_for('admin_dashboard') }}?key=adminsecret" class="btn">Back to Admin Dashboard</a>
+        </div>
+      </div>
+    </body>
+    </html>
+    ''', judges=judges, poster_list=poster_list, poster_titles=poster_titles)
+
+@app.route('/admin/add_judge', methods=['GET', 'POST'])
+def admin_add_judge():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+    
+    # Get all existing posters for assignments
+    db = get_db()
+    all_posters = set()
+    poster_titles = {}
+    
+    judges_with_posters = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges").fetchall()
+    for row in judges_with_posters:
+        if row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+                for poster in posters:
+                    all_posters.add(poster)
+            except:
+                pass
+        
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                poster_titles.update(titles)
+            except:
+                pass
+    
+    poster_list = sorted(list(all_posters), key=lambda p: int(p.replace("poster", "")))
+    
+    if request.method == 'POST':
+        judge_id = request.form.get('judge_id')
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        email = request.form.get('email')
+        
+        # Validate required fields
+        if not all([judge_id, first_name, last_name, email]):
+            flash("All fields are required")
+            return redirect(url_for('admin_add_judge') + "?key=adminsecret")
+        
+        # Create full name
+        full_name = f"{first_name.strip()} {last_name.strip()}"
+        
+        # Get assigned posters
+        assigned_posters = []
+        assigned_poster_titles = {}
+        
+        for poster_id in poster_list:
+            if request.form.get(f'poster_{poster_id}') == 'on':
+                assigned_posters.append(poster_id)
+                assigned_poster_titles[poster_id] = poster_titles.get(poster_id, "No Title")
+        
+        db = get_db()
+        
+        try:
+            # Insert into judge_info
+            db.execute(
+                "INSERT INTO judge_info (judge_id, name, email) VALUES (?, ?, ?)",
+                (judge_id, full_name, email)
+            )
+            
+            # Insert into judges
+            db.execute(
+                "INSERT INTO judges (email, name, assigned_posters, assigned_poster_titles) VALUES (?, ?, ?, ?)",
+                (email, full_name, json.dumps(assigned_posters), json.dumps(assigned_poster_titles))
+            )
+            
+            db.commit()
+            flash("Judge added successfully")
+            return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+        
+        except sqlite3.IntegrityError:
+            flash("A judge with this email or ID already exists")
+            return redirect(url_for('admin_add_judge') + "?key=adminsecret")
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Add New Judge</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .form-group {
+          margin-bottom: 1rem;
+        }
+        label {
+          display: block;
+          margin-bottom: 0.3rem;
+          font-size: 0.9rem;
+          color: #ccc;
+        }
+        input, select {
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 4px;
+          border: none;
+          background-color: #333;
+          color: white;
+          font-size: 1rem;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .btn-success {
+          background-color: #28a745;
+        }
+        .btn-success:hover {
+          background-color: #218838;
+        }
+        .back-link {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .poster-assignments {
+          margin-top: 1.5rem;
+          border-top: 1px solid #333;
+          padding-top: 1rem;
+        }
+        .poster-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          gap: 0.8rem;
+          margin-top: 0.5rem;
+        }
+        .poster-item {
+          display: flex;
+          align-items: center;
+          background-color: #2a2a2a;
+          border-radius: 6px;
+          padding: 0.5rem;
+        }
+        .poster-item label {
+          margin: 0;
+          margin-left: 0.5rem;
+          cursor: pointer;
+        }
+        .checkbox {
+          width: auto;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+          text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Add New Judge</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <form method="post" class="card">
+          <div class="form-group">
+            <label for="judge_id">Judge ID:</label>
+            <input type="number" id="judge_id" name="judge_id" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="poster-assignments">
+            <h3>Poster Assignments</h3>
+            <p style="color: #aaa; margin-bottom: 0.8rem; font-size: 0.9rem;">
+              Select posters to assign to this judge:
+            </p>
+            
+            <div class="poster-grid">
+              {% for poster_id in poster_list %}
+              <div class="poster-item">
+                <input type="checkbox" id="poster_{{ poster_id }}" name="poster_{{ poster_id }}" class="checkbox">
+                <label for="poster_{{ poster_id }}">
+                  {{ poster_id }} ({{ poster_titles.get(poster_id, "No Title") }})
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-success" style="width: 100%;">Add Judge</button>
+          </div>
+        </form>
+        
+        <div class="back-link">
+          <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Back to Management</a>
+        </div>
+      </div>
+    </body>
+    </html>
+    ''', poster_list=poster_list, poster_titles=poster_titles)
+
+@app.route('/admin/add_poster', methods=['GET', 'POST'])
+def admin_add_poster():
+  if request.args.get('key') != 'adminsecret':
+      return "Unauthorized", 401
+  
+  # Get all judges for possible assignments
+  db = get_db()
+  judges = db.execute("SELECT email, name FROM judges ORDER BY name").fetchall()
+  
+  if request.method == 'POST':
+      poster_num = request.form.get('poster_num')
+      poster_title = request.form.get('poster_title')
+      
+      if not all([poster_num, poster_title]):
+          flash("Poster number and title are required")
+          return redirect(url_for('admin_add_poster') + "?key=adminsecret")
+      
+      # Create poster_id
+      poster_id = f"poster{poster_num}"
+      
+      # Check if this poster already exists
+      poster_exists = False
+      judges_with_posters = db.execute("SELECT email, assigned_posters FROM judges").fetchall()
+      
+      for judge in judges_with_posters:
+          if judge['assigned_posters']:
+              try:
+                  assigned_posters = json.loads(judge['assigned_posters'])
+                  if poster_id in assigned_posters:
+                      poster_exists = True
+                      break
+              except:
+                  pass
+      
+      if poster_exists:
+          flash(f"A poster with ID {poster_id} already exists")
+          return redirect(url_for('admin_add_poster') + "?key=adminsecret")
+      
+      # Get judges to assign this poster to
+      selected_judges = []
+      for judge in judges:
+          if request.form.get(f'judge_{judge["email"]}') == 'on':
+              selected_judges.append(judge)
+      
+      # Update judges table with new poster assignments
+      for judge in selected_judges:
+          # Get current assignments
+          cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", 
+                        (judge['email'],))
+          row = cur.fetchone()
+          
+          if not row:
+              continue
+              
+          assigned_posters = json.loads(row['assigned_posters']) if row['assigned_posters'] else []
+          assigned_titles = json.loads(row['assigned_poster_titles']) if row['assigned_poster_titles'] else {}
+          
+          # Add new poster
+          if poster_id not in assigned_posters:
+              assigned_posters.append(poster_id)
+              assigned_titles[poster_id] = poster_title
+              
+              # Update judge record
+              db.execute(
+                  "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                  (json.dumps(assigned_posters), json.dumps(assigned_titles), judge['email'])
+              )
+      
+      db.commit()
+      flash(f"Poster {poster_id} added successfully")
+      return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+  
+  return render_template_string('''
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Add New Poster</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+    <style>
+      body {
+        background-color: #121212;
+        color: #fff;
+        font-family: 'IBM Plex Sans', sans-serif;
+        padding: 1rem;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      .card {
+        background-color: #1f1f1f;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+      input, select {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: none;
+        background-color: #333;
+        color: white;
+        font-size: 1rem;
+      }
+      .btn {
+        background-color: #4285F4;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .btn:hover {
+        background-color: #357ae8;
+      }
+      .btn-success {
+        background-color: #28a745;
+      }
+      .btn-success:hover {
+        background-color: #218838;
+      }
+      .back-link {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .judge-assignments {
+        margin-top: 1.5rem;
+        border-top: 1px solid #333;
+        padding-top: 1rem;
+      }
+      .judge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+      }
+      .judge-item {
+        display: flex;
+        align-items: center;
+        background-color: #2a2a2a;
+        border-radius: 6px;
+        padding: 0.5rem;
+      }
+      .judge-item label {
+        margin: 0;
+        margin-left: 0.5rem;
+        cursor: pointer;
+      }
+      .checkbox {
+        width: auto;
+      }
+      .flash-messages {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add New Poster</h1>
+      
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      
+      <form method="post" class="card">
+        <div class="form-group">
+          <label for="poster_num">Poster Number:</label>
+          <input type="number" id="poster_num" name="poster_num" required>
+          <small style="color: #aaa; display: block; margin-top: 0.3rem;">
+            This will be used to create a poster ID like "poster1", "poster2", etc.
+          </small>
+        </div>
+        
+        <div class="form-group">
+          <label for="poster_title">Poster Title:</label>
+          <input type="text" id="poster_title" name="poster_title" required>
+        </div>
+        
+        <div class="judge-assignments">
+          <h3>Judge Assignments</h3>
+          <p style="color: #aaa; margin-bottom: 0.8rem; font-size: 0.9rem;">
+            Select judges to assign to this poster:
+          </p>
+          
+          <div class="judge-grid">
+            {% for judge in judges %}
+            <div class="judge-item">
+              <input type="checkbox" id="judge_{{ judge.email }}" name="judge_{{ judge.email }}" class="checkbox">
+              <label for="judge_{{ judge.email }}">
+                {{ judge.name }} ({{ judge.email }})
+              </label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem;">
+          <button type="submit" class="btn btn-success" style="width: 100%;">Add Poster</button>
+        </div>
+      </form>
+      
+      <div class="back-link">
+        <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Back to Management</a>
+      </div>
+    </div>
+  </body>
+  </html>
+  ''', judges=judges)
+
+@app.route('/admin/reassign_poster', methods=['GET', 'POST'])
+def admin_reassign_poster():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+    
+    db = get_db()
+    
+    # Get all unique posters
+    all_posters = set()
+    poster_titles = {}
+    
+    judges_with_posters = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges").fetchall()
+    for row in judges_with_posters:
+        if row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+                for poster in posters:
+                    all_posters.add(poster)
+            except:
+                pass
+        
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                poster_titles.update(titles)
+            except:
+                pass
+    
+    poster_list = sorted(list(all_posters), key=lambda p: int(p.replace("poster", "")))
+    
+    # Get all judges
+    judges = db.execute("SELECT email, name FROM judges ORDER BY name").fetchall()
+    
+    if request.method == 'POST':
+        poster_id = request.form.get('poster_id')
+        target_judge = request.form.get('target_judge')
+        source_judge = request.form.get('source_judge')
+        
+        if not poster_id or not target_judge or not source_judge:
+            flash("Please select a poster, source judge, and target judge")
+            return redirect(url_for('admin_reassign_poster') + "?key=adminsecret")
+        
+        # Remove poster from source judge
+        cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", (source_judge,))
+        source_row = cur.fetchone()
+        
+        if source_row and source_row['assigned_posters']:
+            source_posters = json.loads(source_row['assigned_posters'])
+            source_titles = json.loads(source_row['assigned_poster_titles']) if source_row['assigned_poster_titles'] else {}
+            
+            if poster_id in source_posters:
+                source_posters.remove(poster_id)
+                poster_title = source_titles.get(poster_id, "No Title")
+                if poster_id in source_titles:
+                    del source_titles[poster_id]
+                
+                # Update source judge
+                db.execute(
+                    "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                    (json.dumps(source_posters), json.dumps(source_titles), source_judge)
+                )
+                
+                # Add poster to target judge
+                cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", (target_judge,))
+                target_row = cur.fetchone()
+                
+                if target_row:
+                    target_posters = json.loads(target_row['assigned_posters']) if target_row['assigned_posters'] else []
+                    target_titles = json.loads(target_row['assigned_poster_titles']) if target_row['assigned_poster_titles'] else {}
+                    
+                    if poster_id not in target_posters:
+                        target_posters.append(poster_id)
+                        target_titles[poster_id] = poster_title
+                        
+                        # Update target judge
+                        db.execute(
+                            "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                            (json.dumps(target_posters), json.dumps(target_titles), target_judge)
+                        )
+                
+                db.commit()
+                flash(f"Poster {poster_id} reassigned successfully")
+                return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+            else:
+                flash(f"Source judge doesn't have poster {poster_id} assigned")
+                return redirect(url_for('admin_reassign_poster') + "?key=adminsecret")
+        else:
+            flash("Source judge has no posters assigned")
+            return redirect(url_for('admin_reassign_poster') + "?key=adminsecret")
+    
+    # Get judge-poster assignments for dropdown options
+    judge_poster_map = {}
+    for judge in judges:
+        cur = db.execute("SELECT assigned_posters FROM judges WHERE email = ?", (judge['email'],))
+        row = cur.fetchone()
+        if row and row['assigned_posters']:
+            try:
+                assigned_posters = json.loads(row['assigned_posters'])
+                if assigned_posters:
+                    judge_poster_map[judge['email']] = {
+                        'name': judge['name'],
+                        'posters': assigned_posters
+                    }
+            except:
+                pass
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Reassign Poster</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .form-group {
+          margin-bottom: 1.5rem;
+        }
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+          color: #ccc;
+        }
+        select {
+          width: 100%;
+          padding: 0.7rem;
+          border-radius: 8px;
+          border: none;
+          background-color: #333;
+          color: white;
+          font-size: 1rem;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.7rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 1rem;
+          text-align: center;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .btn-success {
+          background-color: #28a745;
+          width: 100%;
+          margin-top: 1rem;
+          font-size: 1.1rem;
+        }
+        .btn-success:hover {
+          background-color: #218838;
+        }
+        .back-link {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+          text-align: center;
+        }
+        .note {
+          background-color: #2a2a2a;
+          border-radius: 8px;
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        .note p {
+          margin: 0;
+          color: #aaa;
+          font-size: 0.9rem;
+        }
+      </style>
+      <script>
+        function updatePosterOptions() {
+          const sourceJudgeSelect = document.getElementById('source_judge');
+          const posterSelect = document.getElementById('poster_id');
+          const judgeData = JSON.parse(document.getElementById('judge_data').textContent);
+          
+          // Clear current options
+          posterSelect.innerHTML = '<option value="">Select a poster</option>';
+          
+          const selectedJudge = sourceJudgeSelect.value;
+          if (selectedJudge && judgeData[selectedJudge]) {
+            const posters = judgeData[selectedJudge].posters;
+            const posterTitles = JSON.parse(document.getElementById('poster_titles').textContent);
+            
+            posters.forEach(posterId => {
+              const title = posterTitles[posterId] || 'No Title';
+              const option = document.createElement('option');
+              option.value = posterId;
+              option.textContent = `${posterId} (${title})`;
+              posterSelect.appendChild(option);
+            });
+          }
+        }
+      </script>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Reassign Poster</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <div class="note">
+          <p>Move a poster from one judge to another. This will update both judges' assignments.</p>
+        </div>
+        
+        <form method="post" class="card">
+          <div class="form-group">
+            <label for="source_judge">Source Judge (current owner):</label>
+            <select id="source_judge" name="source_judge" required onchange="updatePosterOptions()">
+              <option value="">Select a judge</option>
+              {% for email, data in judge_poster_map.items() %}
+                <option value="{{ email }}">{{ data.name }} ({{ email }})</option>
+              {% endfor %}
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="poster_id">Poster to Reassign:</label>
+            <select id="poster_id" name="poster_id" required>
+              <option value="">Select a poster</option>
+              <!-- Options will be populated by JavaScript -->
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="target_judge">Target Judge (new owner):</label>
+            <select id="target_judge" name="target_judge" required>
+              <option value="">Select a judge</option>
+              {% for judge in judges %}
+                <option value="{{ judge.email }}">{{ judge.name }} ({{ judge.email }})</option>
+              {% endfor %}
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-success">Reassign Poster</button>
+        </form>
+        
+        <div class="back-link">
+          <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Back to Management</a>
+        </div>
+      </div>
+      
+      <!-- Hidden data for JavaScript -->
+      <script id="judge_data" type="application/json">
+        {{ judge_poster_map | tojson }}
+      </script>
+      <script id="poster_titles" type="application/json">
+        {{ poster_titles | tojson }}
+      </script>
+    </body>
+    </html>
+    ''', judges=judges, poster_list=poster_list, poster_titles=poster_titles, judge_poster_map=judge_poster_map)
+
+@app.route('/admin/export_assignments', methods=['GET'])
+def admin_export_assignments():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+    
+    db = get_db()
+    
+    # Get all judge data from the database
+    judge_info = db.execute("""
+        SELECT ji.judge_id, ji.name, ji.email, j.assigned_posters, j.assigned_poster_titles
+        FROM judge_info ji
+        JOIN judges j ON ji.email = j.email
+        ORDER BY ji.judge_id
+    """).fetchall()
+    
+    # Create a new XLSX workbook
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Judge Assignments"
+    
+    # Set up headers - match format from part_1/output/assignments_extended_judges_with_email copy.xlsx
+    headers = ["Judge", "Judge FirstName", "Judge LastName", "Email"]
+    
+    # Add headers for poster columns (up to poster-6)
+    for i in range(1, 7):
+        headers.append(f"poster-{i}")
+        headers.append(f"poster-{i}-title")
+    
+    # Write header row
+    for col_idx, header in enumerate(headers, 1):
+        ws.cell(row=1, column=col_idx, value=header)
+    
+    # Write data for each judge
+    for row_idx, judge in enumerate(judge_info, 2):
+        # Split name into first and last name
+        name_parts = judge['name'].split(maxsplit=1)
+        first_name = name_parts[0] if len(name_parts) > 0 else ""
+        last_name = name_parts[1] if len(name_parts) > 1 else ""
+        
+        # Write judge basic info
+        ws.cell(row=row_idx, column=1, value=judge['judge_id'])
+        ws.cell(row=row_idx, column=2, value=first_name)
+        ws.cell(row=row_idx, column=3, value=last_name)
+        ws.cell(row=row_idx, column=4, value=judge['email'])
+        
+        # Get assigned posters and titles
+        assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
+        poster_titles = json.loads(judge['assigned_poster_titles']) if judge['assigned_poster_titles'] else {}
+        
+        # Write poster assignments (up to 6)
+        for i in range(min(len(assigned_posters), 6)):
+            poster_id = assigned_posters[i]
+            poster_num = int(poster_id.replace("poster", ""))
+            
+            # Poster columns - each poster has 2 columns (ID and title)
+            poster_col = 5 + (i * 2)
+            title_col = 6 + (i * 2)
+            
+            ws.cell(row=row_idx, column=poster_col, value=poster_num)
+            ws.cell(row=row_idx, column=title_col, value=poster_titles.get(poster_id, ""))
+    
+    # Save to a BytesIO stream
+    output = BytesIO()
+    wb.save(output)
+    output.seek(0)
+    
+    # Send file for download
+    return send_file(
+        output,
+        mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        as_attachment=True,
+        download_name="assignments_extended_judges_with_email.xlsx"
+    )
+
+@app.route('/admin/edit_judge', methods=['GET', 'POST'])
+def admin_edit_judge():
+    # Fix for malformed URL with two question marks
+    key = request.args.get('key')
+    
+    # If key isn't found, check if email parameter contains the key
+    if key != 'adminsecret':
+        email = request.args.get('email', '')
+        if '?key=adminsecret' in email:
+            # Extract the actual email
+            request.args = request.args.copy()  # Make args mutable
+            request.args['email'] = email.split('?key=')[0]
+            key = 'adminsecret'
+        else:
+            return "Unauthorized", 401
+    
+    email = request.args.get('email')
+    if not email:
+        flash("Judge email is required")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+ 
+    
+    db = get_db()
+    
+    # Get judge info
+    cur = db.execute("""
+        SELECT ji.judge_id, ji.name, ji.email, j.assigned_posters, j.assigned_poster_titles
+        FROM judge_info ji
+        JOIN judges j ON ji.email = j.email
+        WHERE ji.email = ?
+    """, (email,))
+    judge = cur.fetchone()
+    
+    if not judge:
+        flash("Judge not found")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+    # Get all posters for assignments
+    all_posters = set()
+    poster_titles = {}
+    
+    judges_with_posters = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges").fetchall()
+    for row in judges_with_posters:
+        if row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+                for poster in posters:
+                    all_posters.add(poster)
+            except:
+                pass
+        
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                poster_titles.update(titles)
+            except:
+                pass
+    
+    poster_list = sorted(list(all_posters), key=lambda p: int(p.replace("poster", "")))
+    
+    # Get assigned posters
+    assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
+    
+    if request.method == 'POST':
+        judge_id = request.form.get('judge_id')
+        name = request.form.get('name')
+        new_email = request.form.get('email')
+        
+        if not all([judge_id, name, new_email]):
+            flash("All fields are required")
+            return redirect(url_for('admin_edit_judge', email=email) + "?key=adminsecret")
+        
+        # Check if email is being changed and already exists
+        if new_email != email:
+            cur = db.execute("SELECT email FROM judges WHERE email = ?", (new_email,))
+            if cur.fetchone():
+                flash("A judge with this email already exists")
+                return redirect(url_for('admin_edit_judge', email=email) + "?key=adminsecret")
+        
+        # Get updated poster assignments
+        updated_posters = []
+        updated_titles = {}
+        
+        for poster_id in poster_list:
+            if request.form.get(f'poster_{poster_id}') == 'on':
+                updated_posters.append(poster_id)
+                updated_titles[poster_id] = poster_titles.get(poster_id, "No Title")
+        
+        try:
+            # Begin transaction
+            db.execute("BEGIN TRANSACTION")
+            
+            # Update judge_info
+            db.execute(
+                "UPDATE judge_info SET judge_id = ?, name = ?, email = ? WHERE email = ?",
+                (judge_id, name, new_email, email)
+            )
+            
+            # Update judges table - if email changed, need to delete old and create new
+            if new_email != email:
+                db.execute("DELETE FROM judges WHERE email = ?", (email,))
+                db.execute(
+                    "INSERT INTO judges (email, name, assigned_posters, assigned_poster_titles) VALUES (?, ?, ?, ?)",
+                    (new_email, name, json.dumps(updated_posters), json.dumps(updated_titles))
+                )
+            else:
+                db.execute(
+                    "UPDATE judges SET name = ?, assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                    (name, json.dumps(updated_posters), json.dumps(updated_titles), email)
+                )
+            
+            # Commit transaction
+            db.execute("COMMIT")
+            
+            flash("Judge updated successfully")
+            return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+        
+        except Exception as e:
+            db.execute("ROLLBACK")
+            flash(f"Error updating judge: {str(e)}")
+            return redirect(url_for('admin_edit_judge', email=email) + "?key=adminsecret")
+    
+    # Extract first and last name
+    name_parts = judge['name'].split(maxsplit=1)
+    first_name = name_parts[0] if len(name_parts) > 0 else ""
+    last_name = name_parts[1] if len(name_parts) > 1 else ""
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Edit Judge</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .form-group {
+          margin-bottom: 1rem;
+        }
+        label {
+          display: block;
+          margin-bottom: 0.3rem;
+          font-size: 0.9rem;
+          color: #ccc;
+        }
+        input, select {
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 4px;
+          border: none;
+          background-color: #333;
+          color: white;
+          font-size: 1rem;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .btn-primary {
+          background-color: #28a745;
+        }
+        .btn-primary:hover {
+          background-color: #218838;
+        }
+        .back-link {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .poster-assignments {
+          margin-top: 1.5rem;
+          border-top: 1px solid #333;
+          padding-top: 1rem;
+        }
+        .poster-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+          gap: 0.8rem;
+          margin-top: 0.5rem;
+        }
+        .poster-item {
+          display: flex;
+          align-items: center;
+          background-color: #2a2a2a;
+          border-radius: 6px;
+          padding: 0.5rem;
+        }
+        .poster-item label {
+          margin: 0;
+          margin-left: 0.5rem;
+          cursor: pointer;
+        }
+        .checkbox {
+          width: auto;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+          text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Edit Judge</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <form method="post" class="card">
+          <div class="form-group">
+            <label for="judge_id">Judge ID:</label>
+            <input type="number" id="judge_id" name="judge_id" value="{{ judge.judge_id }}" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ judge.name }}" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ judge.email }}" required>
+          </div>
+          
+          <div class="poster-assignments">
+            <h3>Poster Assignments</h3>
+            <p style="color: #aaa; margin-bottom: 0.8rem; font-size: 0.9rem;">
+              Select posters to assign to this judge:
+            </p>
+            
+            <div class="poster-grid">
+              {% for poster_id in poster_list %}
+              <div class="poster-item">
+                <input type="checkbox" id="poster_{{ poster_id }}" name="poster_{{ poster_id }}" class="checkbox"
+                      {% if poster_id in assigned_posters %}checked{% endif %}>
+                <label for="poster_{{ poster_id }}">
+                  {{ poster_id }} ({{ poster_titles.get(poster_id, "No Title") }})
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <div style="margin-top: 1.5rem; display: flex; justify-content: space-between;">
+            <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </body>
+    </html>
+    ''', judge=judge, poster_list=poster_list, poster_titles=poster_titles, assigned_posters=assigned_posters)
+
+
+# @app.route('/admin/export_assignments', methods=['GET'])
+# def admin_export_assignments():
+#     if request.args.get('key') != 'adminsecret':
+#         return "Unauthorized", 401
+    
+#     db = get_db()
+    
+#     # Get all judge data from the database
+#     judge_info = db.execute("""
+#         SELECT ji.judge_id, ji.name, ji.email, j.assigned_posters, j.assigned_poster_titles
+#         FROM judge_info ji
+#         JOIN judges j ON ji.email = j.email
+#         ORDER BY ji.judge_id
+#     """).fetchall()
+    
+#     # Create a new XLSX workbook
+#     wb = openpyxl.Workbook()
+#     ws = wb.active
+#     ws.title = "Judge Assignments"
+    
+#     # Set up headers - match format from part_1/output/assignments_extended_judges_with_email copy.xlsx
+#     headers = ["Judge", "Judge FirstName", "Judge LastName", "Email"]
+    
+#     # Add headers for poster columns (up to poster-6)
+#     for i in range(1, 7):
+#         headers.append(f"poster-{i}")
+#         headers.append(f"poster-{i}-title")
+    
+#     # Write header row
+#     for col_idx, header in enumerate(headers, 1):
+#         ws.cell(row=1, column=col_idx, value=header)
+    
+#     # Write data for each judge
+#     for row_idx, judge in enumerate(judge_info, 2):
+#         # Split name into first and last name
+#         name_parts = judge['name'].split(maxsplit=1)
+#         first_name = name_parts[0] if len(name_parts) > 0 else ""
+#         last_name = name_parts[1] if len(name_parts) > 1 else ""
+        
+#         # Write judge basic info
+#         ws.cell(row=row_idx, column=1, value=judge['judge_id'])
+#         ws.cell(row=row_idx, column=2, value=first_name)
+#         ws.cell(row=row_idx, column=3, value=last_name)
+#         ws.cell(row=row_idx, column=4, value=judge['email'])
+        
+#         # Get assigned posters and titles
+#         assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
+#         poster_titles = json.loads(judge['assigned_poster_titles']) if judge['assigned_poster_titles'] else {}
+        
+#         # Write poster assignments (up to 6)
+#         for i in range(min(len(assigned_posters), 6)):
+#             poster_id = assigned_posters[i]
+#             poster_num = int(poster_id.replace("poster", ""))
+            
+#             # Poster columns - each poster has 2 columns (ID and title)
+#             poster_col = 5 + (i * 2)
+#             title_col = 6 + (i * 2)
+            
+#             ws.cell(row=row_idx, column=poster_col, value=poster_num)
+#             ws.cell(row=row_idx, column=title_col, value=poster_titles.get(poster_id, ""))
+    
+#     # Save to a BytesIO stream
+#     output = BytesIO()
+#     wb.save(output)
+#     output.seek(0)
+    
+#     # Send file for download
+#     return send_file(
+#         output,
+#         mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+#         as_attachment=True,
+#         download_name="assignments_extended_judges_with_email.xlsx"
+#     )
+
+# @app.route('/admin/edit_judge', methods=['GET', 'POST'])
+# def admin_edit_judge():
+#     if request.args.get('key') != 'adminsecret':
+#         return "Unauthorized", 401
+    
+#     email = request.args.get('email')
+#     if not email:
+#         flash("Judge email is required")
+#         return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+#     db = get_db()
+    
+#     # Get judge info
+#     cur = db.execute("""
+#         SELECT ji.judge_id, ji.name, ji.email, j.assigned_posters, j.assigned_poster_titles
+#         FROM judge_info ji
+#         JOIN judges j ON ji.email = j.email
+#         WHERE ji.email = ?
+#     """, (email,))
+#     judge = cur.fetchone()
+    
+#     if not judge:
+#         flash("Judge not found")
+#         return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+#     # Get all posters for assignments
+#     all_posters = set()
+#     poster_titles = {}
+    
+#     judges_with_posters = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges").fetchall()
+#     for row in judges_with_posters:
+#         if row['assigned_posters']:
+#             try:
+#                 posters = json.loads(row['assigned_posters'])
+#                 for poster in posters:
+#                     all_posters.add(poster)
+#             except:
+#                 pass
+        
+#         if row['assigned_poster_titles']:
+#             try:
+#                 titles = json.loads(row['assigned_poster_titles'])
+#                 poster_titles.update(titles)
+#             except:
+#                 pass
+    
+#     poster_list = sorted(list(all_posters), key=lambda p: int(p.replace("poster", "")))
+    
+#     # Get assigned posters
+#     assigned_posters = json.loads(judge['assigned_posters']) if judge['assigned_posters'] else []
+    
+#     if request.method == 'POST':
+#         judge_id = request.form.get('judge_id')
+#         name = request.form.get('name')
+#         new_email = request.form.get('email')
+        
+#         if not all([judge_id, name, new_email]):
+#             flash("All fields are required")
+#             return redirect(url_for('admin_edit_judge', email=email) + "?key=adminsecret")
+        
+#         # Check if email is being changed and already exists
+#         if new_email != email:
+#             cur = db.execute("SELECT email FROM judges WHERE email = ?", (new_email,))
+#             if cur.fetchone():
+#                 flash("A judge with this email already exists")
+#                 return redirect(url_for('admin_edit_judge', email=email) + "?key=adminsecret")
+        
+#         # Get updated poster assignments
+#         updated_posters = []
+#         updated_titles = {}
+        
+#         for poster_id in poster_list:
+#             if request.form.get(f'poster_{poster_id}') == 'on':
+#                 updated_posters.append(poster_id)
+#                 updated_titles[poster_id] = poster_titles.get(poster_id, "No Title")
+        
+#         try:
+#             # Begin transaction
+#             db.execute("BEGIN TRANSACTION")
+            
+#             # Update judge_info
+#             db.execute(
+#                 "UPDATE judge_info SET judge_id = ?, name = ?, email = ? WHERE email = ?",
+#                 (judge_id, name, new_email, email)
+#             )
+            
+#             # Update judges table - if email changed, need to delete old and create new
+#             if new_email != email:
+#                 db.execute("DELETE FROM judges WHERE email = ?", (email,))
+#                 db.execute(
+#                     "INSERT INTO judges (email, name, assigned_posters, assigned_poster_titles) VALUES (?, ?, ?, ?)",
+#                     (new_email, name, json.dumps(updated_posters), json.dumps(updated_titles))
+#                 )
+#             else:
+#                 db.execute(
+#                     "UPDATE judges SET name = ?, assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+#                     (name, json.dumps(updated_posters), json.dumps(updated_titles), email)
+#                 )
+            
+#             # Commit transaction
+#             db.execute("COMMIT")
+            
+#             flash("Judge updated successfully")
+#             return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+        
+#         except Exception as e:
+#             db.execute("ROLLBACK")
+#             flash(f"Error updating judge: {str(e)}")
+#             return redirect(url_for('admin_edit_judge', email=email) + "?key=adminsecret")
+    
+#     # Extract first and last name
+#     name_parts = judge['name'].split(maxsplit=1)
+#     first_name = name_parts[0] if len(name_parts) > 0 else ""
+#     last_name = name_parts[1] if len(name_parts) > 1 else ""
+    
+#     return render_template_string('''
+#     <!DOCTYPE html>
+#     <html lang="en">
+#     <head>
+#       <meta charset="UTF-8">
+#       <title>Edit Judge</title>
+#       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#       <link rel="stylesheet"
+#             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+#       <style>
+#         body {
+#           background-color: #121212;
+#           color: #fff;
+#           font-family: 'IBM Plex Sans', sans-serif;
+#           padding: 1rem;
+#         }
+#         .container {
+#           max-width: 800px;
+#           margin: 0 auto;
+#         }
+#         h1 {
+#           font-size: 1.8rem;
+#           margin-bottom: 1.5rem;
+#           text-align: center;
+#         }
+#         .card {
+#           background-color: #1f1f1f;
+#           border-radius: 12px;
+#           padding: 1.5rem;
+#           margin-bottom: 2rem;
+#         }
+#         .form-group {
+#           margin-bottom: 1rem;
+#         }
+#         label {
+#           display: block;
+#           margin-bottom: 0.3rem;
+#           font-size: 0.9rem;
+#           color: #ccc;
+#         }
+#         input, select {
+#           width: 100%;
+#           padding: 0.5rem;
+#           border-radius: 4px;
+#           border: none;
+#           background-color: #333;
+#           color: white;
+#           font-size: 1rem;
+#         }
+#         .btn {
+#           background-color: #4285F4;
+#           color: #fff;
+#           padding: 0.5rem 1rem;
+#           border: none;
+#           border-radius: 8px;
+#           text-decoration: none;
+#           cursor: pointer;
+#           display: inline-block;
+#           font-size: 0.9rem;
+#           text-align: center;
+#         }
+#         .btn:hover {
+#           background-color: #357ae8;
+#         }
+#         .btn-primary {
+#           background-color: #28a745;
+#         }
+#         .btn-primary:hover {
+#           background-color: #218838;
+#         }
+#         .back-link {
+#           text-align: center;
+#           margin-top: 1rem;
+#         }
+#         .poster-assignments {
+#           margin-top: 1.5rem;
+#           border-top: 1px solid #333;
+#           padding-top: 1rem;
+#         }
+#         .poster-grid {
+#           display: grid;
+#           grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+#           gap: 0.8rem;
+#           margin-top: 0.5rem;
+#         }
+#         .poster-item {
+#           display: flex;
+#           align-items: center;
+#           background-color: #2a2a2a;
+#           border-radius: 6px;
+#           padding: 0.5rem;
+#         }
+#         .poster-item label {
+#           margin: 0;
+#           margin-left: 0.5rem;
+#           cursor: pointer;
+#         }
+#         .checkbox {
+#           width: auto;
+#         }
+#         .flash-messages {
+#           background-color: #f8d7da;
+#           color: #721c24;
+#           padding: 0.75rem 1.25rem;
+#           margin-bottom: 1rem;
+#           border-radius: 0.25rem;
+#           text-align: center;
+#         }
+#       </style>
+#     </head>
+#     <body>
+#       <div class="container">
+#         <h1>Edit Judge</h1>
+        
+#         {% with messages = get_flashed_messages() %}
+#           {% if messages %}
+#             <div class="flash-messages">
+#               {% for message in messages %}
+#                 {{ message }}
+#               {% endfor %}
+#             </div>
+#           {% endif %}
+#         {% endwith %}
+        
+#         <form method="post" class="card">
+#           <div class="form-group">
+#             <label for="judge_id">Judge ID:</label>
+#             <input type="number" id="judge_id" name="judge_id" value="{{ judge.judge_id }}" required>
+#           </div>
+          
+#           <div class="form-group">
+#             <label for="name">Name:</label>
+#             <input type="text" id="name" name="name" value="{{ judge.name }}" required>
+#           </div>
+          
+#           <div class="form-group">
+#             <label for="email">Email:</label>
+#             <input type="email" id="email" name="email" value="{{ judge.email }}" required>
+#           </div>
+          
+#           <div class="poster-assignments">
+#             <h3>Poster Assignments</h3>
+#             <p style="color: #aaa; margin-bottom: 0.8rem; font-size: 0.9rem;">
+#               Select posters to assign to this judge:
+#             </p>
+            
+#             <div class="poster-grid">
+#               {% for poster_id in poster_list %}
+#               <div class="poster-item">
+#                 <input type="checkbox" id="poster_{{ poster_id }}" name="poster_{{ poster_id }}" class="checkbox"
+#                       {% if poster_id in assigned_posters %}checked{% endif %}>
+#                 <label for="poster_{{ poster_id }}">
+#                   {{ poster_id }} ({{ poster_titles.get(poster_id, "No Title") }})
+#                 </label>
+#               </div>
+#               {% endfor %}
+#             </div>
+#           </div>
+          
+#           <div style="margin-top: 1.5rem; display: flex; justify-content: space-between;">
+#             <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Cancel</a>
+#             <button type="submit" class="btn btn-primary">Save Changes</button>
+#           </div>
+#         </form>
+#       </div>
+#     </body>
+#     </html>
+#     ''', judge=judge, poster_list=poster_list, poster_titles=poster_titles, assigned_posters=assigned_posters)
 
 
 
+def admin_reassign_poster():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+    
+    db = get_db()
+    
+    # Get all unique posters
+    all_posters = set()
+    poster_titles = {}
+    
+    judges_with_posters = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges").fetchall()
+    for row in judges_with_posters:
+        if row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+                for poster in posters:
+                    all_posters.add(poster)
+            except:
+                pass
+        
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                poster_titles.update(titles)
+            except:
+                pass
+    
+    poster_list = sorted(list(all_posters), key=lambda p: int(p.replace("poster", "")))
+    
+    # Get all judges
+    judges = db.execute("SELECT email, name FROM judges ORDER BY name").fetchall()
+    
+    if request.method == 'POST':
+        poster_id = request.form.get('poster_id')
+        target_judge = request.form.get('target_judge')
+        source_judge = request.form.get('source_judge')
+        
+        if not poster_id or not target_judge or not source_judge:
+            flash("Please select a poster, source judge, and target judge")
+            return redirect(url_for('admin_reassign_poster') + "?key=adminsecret")
+        
+        # Remove poster from source judge
+        cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", (source_judge,))
+        source_row = cur.fetchone()
+        
+        if source_row and source_row['assigned_posters']:
+            source_posters = json.loads(source_row['assigned_posters'])
+            source_titles = json.loads(source_row['assigned_poster_titles']) if source_row['assigned_poster_titles'] else {}
+            
+            if poster_id in source_posters:
+                source_posters.remove(poster_id)
+                poster_title = source_titles.get(poster_id, "No Title")
+                if poster_id in source_titles:
+                    del source_titles[poster_id]
+                
+                # Update source judge
+                db.execute(
+                    "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                    (json.dumps(source_posters), json.dumps(source_titles), source_judge)
+                )
+                
+                # Add poster to target judge
+                cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", (target_judge,))
+                target_row = cur.fetchone()
+                
+                if target_row:
+                    target_posters = json.loads(target_row['assigned_posters']) if target_row['assigned_posters'] else []
+                    target_titles = json.loads(target_row['assigned_poster_titles']) if target_row['assigned_poster_titles'] else {}
+                    
+                    if poster_id not in target_posters:
+                        target_posters.append(poster_id)
+                        target_titles[poster_id] = poster_title
+                        
+                        # Update target judge
+                        db.execute(
+                            "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                            (json.dumps(target_posters), json.dumps(target_titles), target_judge)
+                        )
+                
+                db.commit()
+                flash(f"Poster {poster_id} reassigned successfully")
+                return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+            else:
+                flash(f"Source judge doesn't have poster {poster_id} assigned")
+                return redirect(url_for('admin_reassign_poster') + "?key=adminsecret")
+        else:
+            flash("Source judge has no posters assigned")
+            return redirect(url_for('admin_reassign_poster') + "?key=adminsecret")
+    
+    # Get judge-poster assignments for dropdown options
+    judge_poster_map = {}
+    for judge in judges:
+        cur = db.execute("SELECT assigned_posters FROM judges WHERE email = ?", (judge['email'],))
+        row = cur.fetchone()
+        if row and row['assigned_posters']:
+            try:
+                assigned_posters = json.loads(row['assigned_posters'])
+                if assigned_posters:
+                    judge_poster_map[judge['email']] = {
+                        'name': judge['name'],
+                        'posters': assigned_posters
+                    }
+            except:
+                pass
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Reassign Poster</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .form-group {
+          margin-bottom: 1.5rem;
+        }
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+          color: #ccc;
+        }
+        select {
+          width: 100%;
+          padding: 0.7rem;
+          border-radius: 8px;
+          border: none;
+          background-color: #333;
+          color: white;
+          font-size: 1rem;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.7rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 1rem;
+          text-align: center;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .btn-success {
+          background-color: #28a745;
+          width: 100%;
+          margin-top: 1rem;
+          font-size: 1.1rem;
+        }
+        .btn-success:hover {
+          background-color: #218838;
+        }
+        .back-link {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+          text-align: center;
+        }
+        .note {
+          background-color: #2a2a2a;
+          border-radius: 8px;
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        .note p {
+          margin: 0;
+          color: #aaa;
+          font-size: 0.9rem;
+        }
+      </style>
+      <script>
+        function updatePosterOptions() {
+          const sourceJudgeSelect = document.getElementById('source_judge');
+          const posterSelect = document.getElementById('poster_id');
+          const judgeData = JSON.parse(document.getElementById('judge_data').textContent);
+          
+          // Clear current options
+          posterSelect.innerHTML = '<option value="">Select a poster</option>';
+          
+          const selectedJudge = sourceJudgeSelect.value;
+          if (selectedJudge && judgeData[selectedJudge]) {
+            const posters = judgeData[selectedJudge].posters;
+            const posterTitles = JSON.parse(document.getElementById('poster_titles').textContent);
+            
+            posters.forEach(posterId => {
+              const title = posterTitles[posterId] || 'No Title';
+              const option = document.createElement('option');
+              option.value = posterId;
+              option.textContent = `${posterId} (${title})`;
+              posterSelect.appendChild(option);
+            });
+          }
+        }
+      </script>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Reassign Poster</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <div class="note">
+          <p>Move a poster from one judge to another. This will update both judges' assignments.</p>
+        </div>
+        
+        <form method="post" class="card">
+          <div class="form-group">
+            <label for="source_judge">Source Judge (current owner):</label>
+            <select id="source_judge" name="source_judge" required onchange="updatePosterOptions()">
+              <option value="">Select a judge</option>
+              {% for email, data in judge_poster_map.items() %}
+                <option value="{{ email }}">{{ data.name }} ({{ email }})</option>
+              {% endfor %}
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="poster_id">Poster to Reassign:</label>
+            <select id="poster_id" name="poster_id" required>
+              <option value="">Select a poster</option>
+              <!-- Options will be populated by JavaScript -->
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="target_judge">Target Judge (new owner):</label>
+            <select id="target_judge" name="target_judge" required>
+              <option value="">Select a judge</option>
+              {% for judge in judges %}
+                <option value="{{ judge.email }}">{{ judge.name }} ({{ judge.email }})</option>
+              {% endfor %}
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-success">Reassign Poster</button>
+        </form>
+        
+        <div class="back-link">
+          <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Back to Management</a>
+        </div>
+      </div>
+      
+      <!-- Hidden data for JavaScript -->
+      <script id="judge_data" type="application/json">
+        {{ judge_poster_map | tojson }}
+      </script>
+      <script id="poster_titles" type="application/json">
+        {{ poster_titles | tojson }}
+      </script>
+    </body>
+    </html>
+    ''', judges=judges, poster_list=poster_list, poster_titles=poster_titles, judge_poster_map=judge_poster_map)
 
+@app.route('/admin/delete_judge', methods=['GET', 'POST'])
+def admin_delete_judge():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+    
+    email = request.args.get('email')
+    if not email:
+        flash("Judge email is required")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+    db = get_db()
+    
+    # Get judge info
+    cur = db.execute("SELECT name FROM judges WHERE email = ?", (email,))
+    judge = cur.fetchone()
+    
+    if not judge:
+        flash("Judge not found")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+    if request.method == 'POST':
+        try:
+            # Begin transaction
+            db.execute("BEGIN TRANSACTION")
+            
+            # Delete from judge_info and judges tables
+            db.execute("DELETE FROM judge_info WHERE email = ?", (email,))
+            db.execute("DELETE FROM judges WHERE email = ?", (email,))
+            
+            # Delete any scores submitted by this judge
+            db.execute("DELETE FROM scores WHERE judge_email = ?", (email,))
+            db.execute("DELETE FROM score_changes WHERE judge_email = ? OR judge_email LIKE ?", 
+                    (email, f"{email} [ADMIN]"))
+            
+            # Commit transaction
+            db.execute("COMMIT")
+            
+            flash(f"Judge {judge['name']} has been deleted")
+            return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+        
+        except Exception as e:
+            db.execute("ROLLBACK")
+            flash(f"Error deleting judge: {str(e)}")
+            return redirect(url_for('admin_delete_judge', email=email) + "?key=adminsecret")
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Delete Judge</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 500px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 2rem;
+          margin: 2rem 0;
+        }
+        .warning {
+          color: #ff6b6b;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+        }
+        .details {
+          margin-bottom: 2rem;
+          color: #ccc;
+        }
+        .btn {
+          display: inline-block;
+          padding: 0.7rem 1.5rem;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 1rem;
+          margin: 0 0.5rem;
+        }
+        .btn-danger {
+          background-color: #dc3545;
+          color: white;
+          border: none;
+        }
+        .btn-danger:hover {
+          background-color: #bd2130;
+        }
+        .btn-secondary {
+          background-color: #6c757d;
+          color: white;
+        }
+        .btn-secondary:hover {
+          background-color: #5a6268;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Delete Judge</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <div class="card">
+          <p class="warning">Warning: This action cannot be undone!</p>
+          
+          <div class="details">
+            <p>You are about to delete the following judge:</p>
+            <h2>{{ judge.name }}</h2>
+            <p>{{ email }}</p>
+            <p>This will also remove all scores submitted by this judge.</p>
+          </div>
+          
+          <form method="post">
+            <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-danger">Confirm Delete</button>
+          </form>
+        </div>
+      </div>
+    </body>
+    </html>
+    ''', judge=judge, email=email)
+
+
+@app.route('/admin/edit_poster', methods=['GET', 'POST'])
+def admin_edit_poster():
+    # Fix for malformed URL with two question marks
+    key = request.args.get('key')
+    
+    # If key isn't found, check if poster_id parameter contains the key
+    if key != 'adminsecret':
+        poster_id = request.args.get('poster_id', '')
+        if '?key=adminsecret' in poster_id:
+            # Extract the actual poster_id
+            request.args = request.args.copy()  # Make args mutable
+            request.args['poster_id'] = poster_id.split('?key=')[0]
+            key = 'adminsecret'
+        else:
+            return "Unauthorized", 401
+    
+    poster_id = request.args.get('poster_id')
+    if not poster_id:
+        flash("Poster ID is required")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+   
+    
+    db = get_db()
+    
+    # Get poster title from any judge that has it
+    cur = db.execute("SELECT assigned_poster_titles FROM judges WHERE assigned_poster_titles LIKE ?", 
+                    (f'%"{poster_id}"%',))
+    poster_title = None
+    
+    for row in cur.fetchall():
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                if poster_id in titles:
+                    poster_title = titles[poster_id]
+                    break
+            except:
+                pass
+    
+    if poster_title is None:
+        flash(f"Poster {poster_id} not found")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+    # Get all judges
+    judges = db.execute("SELECT email, name FROM judges ORDER BY name").fetchall()
+    
+    # Get which judges this poster is assigned to
+    assigned_judges = []
+    
+    for judge in judges:
+        cur = db.execute("SELECT assigned_posters FROM judges WHERE email = ?", (judge['email'],))
+        row = cur.fetchone()
+        
+        if row and row['assigned_posters']:
+            try:
+                posters = json.loads(row['assigned_posters'])
+                if poster_id in posters:
+                    assigned_judges.append(judge['email'])
+            except:
+                pass
+    
+    if request.method == 'POST':
+        new_title = request.form.get('title')
+        
+        if not new_title:
+            flash("Poster title is required")
+            return redirect(url_for('admin_edit_poster', poster_id=poster_id) + "?key=adminsecret")
+        
+        # Get the judge assignments
+        updated_judges = []
+        
+        for judge in judges:
+            if request.form.get(f'judge_{judge["email"]}') == 'on':
+                updated_judges.append(judge['email'])
+        
+        try:
+            # Begin transaction
+            db.execute("BEGIN TRANSACTION")
+            
+            # Update poster title and assignments for all judges
+            for judge in judges:
+                cur = db.execute("SELECT assigned_posters, assigned_poster_titles FROM judges WHERE email = ?", 
+                              (judge['email'],))
+                row = cur.fetchone()
+                
+                if not row:
+                    continue
+                
+                assigned_posters = json.loads(row['assigned_posters']) if row['assigned_posters'] else []
+                assigned_titles = json.loads(row['assigned_poster_titles']) if row['assigned_poster_titles'] else {}
+                
+                # Determine if this judge should have the poster
+                should_have_poster = judge['email'] in updated_judges
+                has_poster = poster_id in assigned_posters
+                
+                if should_have_poster and not has_poster:
+                    # Add poster to this judge
+                    assigned_posters.append(poster_id)
+                    assigned_titles[poster_id] = new_title
+                    db.execute(
+                        "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                        (json.dumps(assigned_posters), json.dumps(assigned_titles), judge['email'])
+                    )
+                elif not should_have_poster and has_poster:
+                    # Remove poster from this judge
+                    assigned_posters.remove(poster_id)
+                    if poster_id in assigned_titles:
+                        del assigned_titles[poster_id]
+                    db.execute(
+                        "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                        (json.dumps(assigned_posters), json.dumps(assigned_titles), judge['email'])
+                    )
+                elif should_have_poster and has_poster:
+                    # Just update the title
+                    assigned_titles[poster_id] = new_title
+                    db.execute(
+                        "UPDATE judges SET assigned_poster_titles = ? WHERE email = ?",
+                        (json.dumps(assigned_titles), judge['email'])
+                    )
+            
+            # Commit transaction
+            db.execute("COMMIT")
+            
+            flash(f"Poster {poster_id} updated successfully")
+            return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+        
+        except Exception as e:
+            db.execute("ROLLBACK")
+            flash(f"Error updating poster: {str(e)}")
+            return redirect(url_for('admin_edit_poster', poster_id=poster_id) + "?key=adminsecret")
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Edit Poster</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        .form-group {
+          margin-bottom: 1rem;
+        }
+        label {
+          display: block;
+          margin-bottom: 0.3rem;
+          font-size: 0.9rem;
+          color: #ccc;
+        }
+        input, select {
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 4px;
+          border: none;
+          background-color: #333;
+          color: white;
+          font-size: 1rem;
+        }
+        .btn {
+          background-color: #4285F4;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+        .btn:hover {
+          background-color: #357ae8;
+        }
+        .btn-primary {
+          background-color: #28a745;
+        }
+        .btn-primary:hover {
+          background-color: #218838;
+        }
+        .back-link {
+          text-align: center;
+          margin-top: 1rem;
+        }
+        .judge-assignments {
+          margin-top: 1.5rem;
+          border-top: 1px solid #333;
+          padding-top: 1rem;
+        }
+        .judge-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+          gap: 0.8rem;
+          margin-top: 0.5rem;
+        }
+        .judge-item {
+          display: flex;
+          align-items: center;
+          background-color: #2a2a2a;
+          border-radius: 6px;
+          padding: 0.5rem;
+        }
+        .judge-item label {
+          margin: 0;
+          margin-left: 0.5rem;
+          cursor: pointer;
+        }
+        .checkbox {
+          width: auto;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+          text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Edit Poster</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <form method="post" class="card">
+          <div class="form-group">
+            <label for="poster_id">Poster ID:</label>
+            <input type="text" id="poster_id" value="{{ poster_id }}" readonly>
+          </div>
+          
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{ poster_title }}" required>
+          </div>
+          
+          <div class="judge-assignments">
+            <h3>Judge Assignments</h3>
+            <p style="color: #aaa; margin-bottom: 0.8rem; font-size: 0.9rem;">
+              Select judges to assign to this poster:
+            </p>
+            
+            <div class="judge-grid">
+              {% for judge in judges %}
+              <div class="judge-item">
+                <input type="checkbox" id="judge_{{ judge.email }}" name="judge_{{ judge.email }}" class="checkbox"
+                      {% if judge.email in assigned_judges %}checked{% endif %}>
+                <label for="judge_{{ judge.email }}">
+                  {{ judge.name }} ({{ judge.email }})
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <div style="margin-top: 1.5rem; display: flex; justify-content: space-between;">
+            <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </body>
+    </html>
+    ''', poster_id=poster_id, poster_title=poster_title, judges=judges, assigned_judges=assigned_judges)
+
+
+@app.route('/admin/delete_poster', methods=['GET', 'POST'])
+def admin_delete_poster():
+    if request.args.get('key') != 'adminsecret':
+        return "Unauthorized", 401
+    
+    poster_id = request.args.get('poster_id')
+    if not poster_id:
+        flash("Poster ID is required")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+    db = get_db()
+    
+    # Get poster title from any judge that has it
+    cur = db.execute("SELECT assigned_poster_titles FROM judges WHERE assigned_poster_titles LIKE ?", 
+                  (f'%"{poster_id}"%',))
+    poster_title = None
+    
+    for row in cur.fetchall():
+        if row['assigned_poster_titles']:
+            try:
+                titles = json.loads(row['assigned_poster_titles'])
+                if poster_id in titles:
+                    poster_title = titles[poster_id]
+                    break
+            except:
+                pass
+    
+    if poster_title is None:
+        flash(f"Poster {poster_id} not found")
+        return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+    
+    if request.method == 'POST':
+        try:
+            # Begin transaction
+            db.execute("BEGIN TRANSACTION")
+            
+            # Remove this poster from all judges
+            judges = db.execute("SELECT email, assigned_posters, assigned_poster_titles FROM judges").fetchall()
+            
+            for judge in judges:
+                if judge['assigned_posters']:
+                    try:
+                        assigned_posters = json.loads(judge['assigned_posters'])
+                        assigned_titles = json.loads(judge['assigned_poster_titles']) if judge['assigned_poster_titles'] else {}
+                        
+                        if poster_id in assigned_posters:
+                            assigned_posters.remove(poster_id)
+                            if poster_id in assigned_titles:
+                                del assigned_titles[poster_id]
+                            
+                            db.execute(
+                                "UPDATE judges SET assigned_posters = ?, assigned_poster_titles = ? WHERE email = ?",
+                                (json.dumps(assigned_posters), json.dumps(assigned_titles), judge['email'])
+                            )
+                    except:
+                        pass
+            
+            # Delete any scores for this poster
+            db.execute("DELETE FROM scores WHERE poster_id = ?", (poster_id,))
+            db.execute("DELETE FROM score_changes WHERE poster_id = ?", (poster_id,))
+            
+            # Commit transaction
+            db.execute("COMMIT")
+            
+            flash(f"Poster {poster_id} has been deleted")
+            return redirect(url_for('admin_manage_judges_posters') + "?key=adminsecret")
+        
+        except Exception as e:
+            db.execute("ROLLBACK")
+            flash(f"Error deleting poster: {str(e)}")
+            return redirect(url_for('admin_delete_poster', poster_id=poster_id) + "?key=adminsecret")
+    
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Delete Poster</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap">
+      <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: 'IBM Plex Sans', sans-serif;
+          padding: 1rem;
+        }
+        .container {
+          max-width: 500px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        h1 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        .card {
+          background-color: #1f1f1f;
+          border-radius: 12px;
+          padding: 2rem;
+          margin: 2rem 0;
+        }
+        .warning {
+          color: #ff6b6b;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+        }
+        .details {
+          margin-bottom: 2rem;
+          color: #ccc;
+        }
+        .btn {
+          display: inline-block;
+          padding: 0.7rem 1.5rem;
+          border-radius: 8px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 1rem;
+          margin: 0 0.5rem;
+        }
+        .btn-danger {
+          background-color: #dc3545;
+          color: white;
+          border: none;
+        }
+        .btn-danger:hover {
+          background-color: #bd2130;
+        }
+        .btn-secondary {
+          background-color: #6c757d;
+          color: white;
+        }
+        .btn-secondary:hover {
+          background-color: #5a6268;
+        }
+        .flash-messages {
+          background-color: #f8d7da;
+          color: #721c24;
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border-radius: 0.25rem;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Delete Poster</h1>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for message in messages %}
+                {{ message }}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        
+        <div class="card">
+          <p class="warning">Warning: This action cannot be undone!</p>
+          
+          <div class="details">
+            <p>You are about to delete the following poster:</p>
+            <h2>{{ poster_id }}</h2>
+            <p>{{ poster_title }}</p>
+            <p>This will also remove all scores for this poster.</p>
+          </div>
+          
+          <form method="post">
+            <a href="{{ url_for('admin_manage_judges_posters') }}?key=adminsecret" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-danger">Confirm Delete</button>
+          </form>
+        </div>
+      </div>
+    </body>
+    </html>
+    ''', poster_id=poster_id, poster_title=poster_title)
+    
 # ===============================
 # Run the Application
 # ===============================
